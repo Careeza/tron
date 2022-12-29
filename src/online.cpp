@@ -179,6 +179,7 @@ class SampleNetworkLogic
 		void run(void);
 		void disconnect(void);
 		void createRoom(const ExitGames::Common::JString& roomName, nByte maxPlayers);
+		void joinRoom(const ExitGames::Common::JString& roomName);
 	private:
 		ExitGames::LoadBalancing::Client mLoadBalancingClient;
 		MyListener mListener; // your implementation of the ExitGames::LoadBalancing::Listener interface
@@ -212,6 +213,11 @@ void SampleNetworkLogic::disconnect(void)
 void SampleNetworkLogic::createRoom(const ExitGames::Common::JString& roomName, nByte maxPlayers)
 {
 	mLoadBalancingClient.opCreateRoom(roomName, ExitGames::LoadBalancing::RoomOptions().setMaxPlayers(maxPlayers));
+}
+
+void SampleNetworkLogic::joinRoom(const ExitGames::Common::JString& roomName)
+{
+	mLoadBalancingClient.opJoinRoom(roomName, true);
 }
 
 int main(void)
