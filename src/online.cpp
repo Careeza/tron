@@ -6,7 +6,7 @@
 class MyListener : public ExitGames::LoadBalancing::Listener
 {
 	public:
-		MyListener() : ExitGames::LoadBalancing::Listener(), mIsConnected(false), roomJoinedOrCreated(false) {}
+		MyListener() : ExitGames::LoadBalancing::Listener(), mIsConnected(false), roomJoinedOrCreated(false), nbPlayers(0) {}
 		virtual void debugReturn(int debugLevel, const ExitGames::Common::JString& string)
 		{
 			std::cout << "debugReturn: " << string << std::endl;
@@ -40,6 +40,7 @@ class MyListener : public ExitGames::LoadBalancing::Listener
 		virtual void joinRoomEventAction(int playerNr, const ExitGames::Common::JVector<int>& playernrs, const ExitGames::LoadBalancing::Player& player)
 		{
 			roomJoinedOrCreated = true;
+			nbPlayers = playernrs.getSize();
 			std::cout << "Player " << playerNr << " joined the room" << std::endl;
 			// Provide an implementation for the joinRoomEventAction function here
 		}
@@ -192,9 +193,15 @@ class MyListener : public ExitGames::LoadBalancing::Listener
 			return roomJoinedOrCreated;
 		}
 
+		int getNbPlayers()
+		{
+			return nbPlayers;
+		}
+
 	private:
 		bool	mIsConnected;
 		bool	roomJoinedOrCreated;
+		int		nbPlayers;
 };
 
 class SampleNetworkLogic
@@ -208,6 +215,7 @@ class SampleNetworkLogic
 		void	joinRoom(const ExitGames::Common::JString& roomName);
 		bool	isConnected();
 		bool	isRoomJoinedOrCreated();
+		int		getNbPlayers();
 		void	sendEvent(const ExitGames::Common::Object& eventData, bool reliable = true, int eventCode = 1);
 	private:
 		ExitGames::LoadBalancing::Client mLoadBalancingClient;
@@ -264,6 +272,10 @@ void SampleNetworkLogic::sendEvent(const ExitGames::Common::Object& eventData, b
 	mLoadBalancingClient.opRaiseEvent(true, eventData, eventCode);
 }
 
+int SampleNetworkLogic::getNbPlayers() {
+	return mListener.getNbPlayers();
+}
+
 int main(int argc, char** argv) {
 	if (argc < 2) {
 		std::cout << "Usage: " << argv[0] << " <mode>" << std::endl;
@@ -302,7 +314,11 @@ int main(int argc, char** argv) {
 		networkLogic.run();
 	}
 	std::cout << "room joined or created!" << std::endl;
+	while (networkLogic.getNbPlayers() < 2) {
+		networkLogic.run();
+	}
 	if (modeServer) {
+		std::cout << "sending event..." << std::endl;
 		std::string data = "Hello World!";
 		networkLogic.sendEvent(ExitGames::Common::ValueObject<ExitGames::Common::JString>(data.c_str()));
 	}
