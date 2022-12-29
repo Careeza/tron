@@ -1,6 +1,7 @@
 #include "tools.hpp"
 
 #include <SDL.h>
+#include <SDL_render.h>
 #include <random>
 
 SDL_Texture* copyTexture(SDL_Renderer *renderer, SDL_Texture *textureToCopy) {
@@ -22,8 +23,6 @@ SDL_Texture* copyTexture(SDL_Renderer *renderer, SDL_Texture *textureToCopy) {
 	return newTexture;
 }
 
-#include <SDL.h>
-#include <SDL2/SDL_render.h>
 
 // La fonction rotateTexture prend en entrée un pointeur vers un renderer SDL,
 // un pointeur vers une texture SDL à faire pivoter et un angle de rotation en degrés.
