@@ -6,6 +6,7 @@
 class MyListener : public ExitGames::LoadBalancing::Listener
 {
 	public:
+		MyListener() : ExitGames::LoadBalancing::Listener(), mIsConnected(false) {}
 		virtual void debugReturn(int debugLevel, const ExitGames::Common::JString& string)
 		{
 			std::cout << "debugReturn: " << string << std::endl;
@@ -56,6 +57,7 @@ class MyListener : public ExitGames::LoadBalancing::Listener
 
 		virtual void connectReturn(int errorCode, const ExitGames::Common::JString& errorString, const ExitGames::Common::JString& region, const ExitGames::Common::JString& cluster)
 		{
+			mIsConnected = true;
 			std::cout << "Connected to " << region << std::endl;
 			// Provide an implementation for the connectReturn function here
 		}
@@ -169,6 +171,14 @@ class MyListener : public ExitGames::LoadBalancing::Listener
 			std::cout << "Achievement unlocked" << std::endl;
 			// Provide an implementation for the onAchievementUnlocked function here
 		}
+
+		bool isConnected()
+		{
+			return mIsConnected;
+		}
+
+	private:
+		bool	mIsConnected;
 };
 
 class SampleNetworkLogic
@@ -180,6 +190,7 @@ class SampleNetworkLogic
 		void disconnect(void);
 		void createRoom(const ExitGames::Common::JString& roomName, nByte maxPlayers);
 		void joinRoom(const ExitGames::Common::JString& roomName);
+		bool isConnected();
 	private:
 		ExitGames::LoadBalancing::Client mLoadBalancingClient;
 		MyListener mListener; // your implementation of the ExitGames::LoadBalancing::Listener interface
@@ -212,12 +223,18 @@ void SampleNetworkLogic::disconnect(void)
 
 void SampleNetworkLogic::createRoom(const ExitGames::Common::JString& roomName, nByte maxPlayers)
 {
-	mLoadBalancingClient.opCreateRoom(roomName, ExitGames::LoadBalancing::RoomOptions().setMaxPlayers(maxPlayers));
+	ExitGames::LoadBalancing::RoomOptions roomOptions;
+	roomOptions.setMaxPlayers(maxPlayers);
+	mLoadBalancingClient.opCreateRoom(roomName, roomOptions);
 }
 
 void SampleNetworkLogic::joinRoom(const ExitGames::Common::JString& roomName)
 {
 	mLoadBalancingClient.opJoinRoom(roomName, true);
+}
+
+bool SampleNetworkLogic::isConnected() {
+	return mListener.isConnected();
 }
 
 int main(void)
@@ -231,8 +248,12 @@ int main(void)
 	bool shouldExit = false;
 	bool shouldCreateRoom = true;
 
+	std::cout << "waiting for connection..." << std::endl;
+	while (!networkLogic.isConnected()) {
+		networkLogic.run();
+	}
+	std::cout << "connected!" << std::endl;
 	networkLogic.createRoom(L"test", 4);
-
 	while(!shouldExit)
 	{
 		networkLogic.run();
