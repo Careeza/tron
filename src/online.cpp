@@ -6,7 +6,7 @@
 class MyListener : public ExitGames::LoadBalancing::Listener
 {
 	public:
-		MyListener() : ExitGames::LoadBalancing::Listener(), mIsConnected(false) {}
+		MyListener() : ExitGames::LoadBalancing::Listener(), mIsConnected(false), roomJoinedOrCreated(false) {}
 		virtual void debugReturn(int debugLevel, const ExitGames::Common::JString& string)
 		{
 			std::cout << "debugReturn: " << string << std::endl;
@@ -39,6 +39,7 @@ class MyListener : public ExitGames::LoadBalancing::Listener
 
 		virtual void joinRoomEventAction(int playerNr, const ExitGames::Common::JVector<int>& playernrs, const ExitGames::LoadBalancing::Player& player)
 		{
+			roomJoinedOrCreated = true;
 			std::cout << "Player " << playerNr << " joined the room" << std::endl;
 			// Provide an implementation for the joinRoomEventAction function here
 		}
@@ -52,7 +53,16 @@ class MyListener : public ExitGames::LoadBalancing::Listener
 		virtual void customEventAction(int playerNr, nByte eventCode, const ExitGames::Common::Object& eventContent)
 		{
 			std::cout << "Player " << playerNr << " sent a custom event" << std::endl;
-			// Provide an implementation for the customEventAction function here
+			switch(eventCode)
+			{
+				case 1:
+					std::cout << "Event code 1" << std::endl;
+					// ExitGames::Common::Hashtable content = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable>(eventContent).getDataCopy();
+					// ExitGames::Common::Hashtable* pContent = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable>(eventContent).getDataAddress();
+					break;
+				default:
+					break;
+			}
 		}
 
 		virtual void connectReturn(int errorCode, const ExitGames::Common::JString& errorString, const ExitGames::Common::JString& region, const ExitGames::Common::JString& cluster)
@@ -177,20 +187,28 @@ class MyListener : public ExitGames::LoadBalancing::Listener
 			return mIsConnected;
 		}
 
+		bool isRoomJoinedOrCreated()
+		{
+			return roomJoinedOrCreated;
+		}
+
 	private:
 		bool	mIsConnected;
+		bool	roomJoinedOrCreated;
 };
 
 class SampleNetworkLogic
 {
 	public:
 		SampleNetworkLogic(const ExitGames::Common::JString& appID, const ExitGames::Common::JString& appVersion);
-		void connect(void);
-		void run(void);
-		void disconnect(void);
-		void createRoom(const ExitGames::Common::JString& roomName, nByte maxPlayers);
-		void joinRoom(const ExitGames::Common::JString& roomName);
-		bool isConnected();
+		void	connect(void);
+		void	run(void);
+		void	disconnect(void);
+		void	createRoom(const ExitGames::Common::JString& roomName, nByte maxPlayers);
+		void	joinRoom(const ExitGames::Common::JString& roomName);
+		bool	isConnected();
+		bool	isRoomJoinedOrCreated();
+		void	sendEvent(const ExitGames::Common::Object& eventData, bool reliable = true, int eventCode = 1);
 	private:
 		ExitGames::LoadBalancing::Client mLoadBalancingClient;
 		MyListener mListener; // your implementation of the ExitGames::LoadBalancing::Listener interface
@@ -237,8 +255,22 @@ bool SampleNetworkLogic::isConnected() {
 	return mListener.isConnected();
 }
 
-int main(void)
+bool SampleNetworkLogic::isRoomJoinedOrCreated() {
+	return mListener.isRoomJoinedOrCreated();
+}
+
+void SampleNetworkLogic::sendEvent(const ExitGames::Common::Object& eventData, bool reliable, int eventCode)
 {
+	mLoadBalancingClient.opRaiseEvent(true, eventData, eventCode);
+}
+
+int main(int argc, char** argv) {
+	if (argc < 2) {
+		std::cout << "Usage: " << argv[0] << " <mode>" << std::endl;
+		std::cout << "mode: Server or Client" << std::endl;
+		return 1;
+	}
+
 	static const ExitGames::Common::JString appID = L"0baa921c-75d0-4172-8f0c-1e8ddffeedf8"; // set your app id here
 	static const ExitGames::Common::JString appVersion = L"1.0";
 
@@ -253,8 +285,28 @@ int main(void)
 		networkLogic.run();
 	}
 	std::cout << "connected!" << std::endl;
-	// networkLogic.createRoom(L"test", 4);
-	networkLogic.joinRoom(L"test");
+	std::string mode(argv[1]);
+	bool		modeServer = mode.compare("Server") == 0;
+	bool		modeClient = mode.compare("Client") == 0;
+	if (modeServer) {
+		std::cout << "creating room..." << std::endl;
+		networkLogic.createRoom(L"test", 4);
+	} else if (modeClient) {
+		std::cout << "joining room..." << std::endl;
+		networkLogic.joinRoom(L"test");
+	} else {
+		std::cout << "invalid mode" << std::endl;
+		return 1;
+	}
+	while (!networkLogic.isRoomJoinedOrCreated()) {
+		networkLogic.run();
+	}
+	std::cout << "room joined or created!" << std::endl;
+	if (modeServer) {
+		std::string data = "Hello World!";
+		networkLogic.sendEvent(ExitGames::Common::ValueObject<ExitGames::Common::JString>(data.c_str()));
+	}
+	// networkLogic.joinRoom(L"test");
 	while(!shouldExit)
 	{
 		networkLogic.run();
