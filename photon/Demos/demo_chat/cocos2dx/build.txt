@@ -1,0 +1,28 @@
+Windows
+1. md win32-build
+2. cd win32-build
+3. cmake .. -G "Visual Studio 15 2017"
+4. cmake --build . --config Debug
+
+Android
+1. install gradle: https://gradle.org/install/
+2. cd proj.android
+3. gradle build
+
+Mac:
+1. md mac-build
+2. cd mac-build
+3. cmake .. -GXcode
+4. cmake --build . --config Debug
+
+iOS:
+1. md ios-build
+2. cd ios-build
+3. cmake .. -GXcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphoneos
+4. cmake --build . --config Debug
+
+Cocos command line tool
+1. Create new project and copy 'gradle.bat' and 'gradle' folder from it to 'proj.android'
+2. In 'cocos2dx' folder:
+Windows: cocos compile -p win32 -m debug -o bin/win32
+Android: cocos compile -p android -m debug -o bin/android

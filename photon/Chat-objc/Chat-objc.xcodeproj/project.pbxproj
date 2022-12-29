@@ -1,0 +1,758 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		FCE23B6D0E9BDA5600F949F1 /* build all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FCE23B710E9BDA7D00F949F1 /* Build configuration list for PBXAggregateTarget "build all" */;
+			buildPhases = (
+			);
+			dependencies = (
+				84CE55A52628D37D00392002 /* PBXTargetDependency */,
+				84B42A291BBD9A9F00F993B7 /* PBXTargetDependency */,
+				FCE23B7B0E9BDA8A00F949F1 /* PBXTargetDependency */,
+				FCE23B790E9BDA8A00F949F1 /* PBXTargetDependency */,
+			);
+			name = "build all";
+			productName = "build all";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		8448267C1B6A90A1003ABAD9 /* EGChatChannel+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F641B694B1B009CE6B4 /* EGChatChannel+Internal.h */; };
+		8448267D1B6A90BD003ABAD9 /* EGClientState.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A01B4BD1AC0010A5E0 /* EGClientState.h */; };
+		8448267E1B6A90C1003ABAD9 /* EGCustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A11B4BD1AC0010A5E0 /* EGCustomAuthenticationType.h */; };
+		8448267F1B6A90C5003ABAD9 /* EGDisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A21B4BD1AC0010A5E0 /* EGDisconnectCause.h */; };
+		844826801B6A90C9003ABAD9 /* EGErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A31B4BD1AC0010A5E0 /* EGErrorCode.h */; };
+		844826811B6A90CD003ABAD9 /* EGUserStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A41B4BD1AC0010A5E0 /* EGUserStatus.h */; };
+		84AC25B9242D4AE5008C609A /* EGCustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A11B4BD1AC0010A5E0 /* EGCustomAuthenticationType.h */; };
+		84AC25BA242D4AE5008C609A /* EGClientState.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A01B4BD1AC0010A5E0 /* EGClientState.h */; };
+		84AC25BB242D4AE5008C609A /* EGUserStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A41B4BD1AC0010A5E0 /* EGUserStatus.h */; };
+		84AC25BC242D4AE5008C609A /* EGChatChannel+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F641B694B1B009CE6B4 /* EGChatChannel+Internal.h */; };
+		84AC25BD242D4AE5008C609A /* EGChatClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBD165A585400B001EA /* EGChatClient.h */; };
+		84AC25BE242D4AE5008C609A /* EGErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A31B4BD1AC0010A5E0 /* EGErrorCode.h */; };
+		84AC25BF242D4AE5008C609A /* EGChatListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBE165A585400B001EA /* EGChatListener.h */; };
+		84AC25C0242D4AE5008C609A /* EGChatPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBF165A585400B001EA /* EGChatPeer.h */; };
+		84AC25C1242D4AE5008C609A /* EGAuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */; };
+		84AC25C2242D4AE5008C609A /* EGAuthenticationValues+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */; };
+		84AC25C3242D4AE5008C609A /* EGDisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A21B4BD1AC0010A5E0 /* EGDisconnectCause.h */; };
+		84AC25C4242D4AE5008C609A /* EGChatChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB4F29C19619F5E0028AD35 /* EGChatChannel.h */; };
+		84AC25C6242D4AE5008C609A /* EGChatClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCC165A586900B001EA /* EGChatClient.mm */; };
+		84AC25C7242D4AE5008C609A /* EGChatPeer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCD165A586900B001EA /* EGChatPeer.mm */; };
+		84AC25C8242D4AE5008C609A /* EGAuthenticationValues.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */; };
+		84AC25C9242D4AE5008C609A /* EGChatChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84FF311961A5330067FBF8 /* EGChatChannel.m */; };
+		84B428BF1BBD92C600F993B7 /* EGCustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A11B4BD1AC0010A5E0 /* EGCustomAuthenticationType.h */; };
+		84B428C01BBD92C600F993B7 /* EGClientState.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A01B4BD1AC0010A5E0 /* EGClientState.h */; };
+		84B428C11BBD92C600F993B7 /* EGUserStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A41B4BD1AC0010A5E0 /* EGUserStatus.h */; };
+		84B428C21BBD92C600F993B7 /* EGChatChannel+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F641B694B1B009CE6B4 /* EGChatChannel+Internal.h */; };
+		84B428C31BBD92C600F993B7 /* EGChatClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBD165A585400B001EA /* EGChatClient.h */; };
+		84B428C41BBD92C600F993B7 /* EGErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A31B4BD1AC0010A5E0 /* EGErrorCode.h */; };
+		84B428C51BBD92C600F993B7 /* EGChatListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBE165A585400B001EA /* EGChatListener.h */; };
+		84B428C61BBD92C600F993B7 /* EGChatPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBF165A585400B001EA /* EGChatPeer.h */; };
+		84B428C71BBD92C600F993B7 /* EGAuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */; };
+		84B428C81BBD92C600F993B7 /* EGAuthenticationValues+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */; };
+		84B428C91BBD92C600F993B7 /* EGDisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A21B4BD1AC0010A5E0 /* EGDisconnectCause.h */; };
+		84B428CA1BBD92C600F993B7 /* EGChatChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB4F29C19619F5E0028AD35 /* EGChatChannel.h */; };
+		84B428CC1BBD92C600F993B7 /* EGChatClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCC165A586900B001EA /* EGChatClient.mm */; };
+		84B428CD1BBD92C600F993B7 /* EGChatPeer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCD165A586900B001EA /* EGChatPeer.mm */; };
+		84B428CE1BBD92C600F993B7 /* EGAuthenticationValues.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */; };
+		84B428CF1BBD92C600F993B7 /* EGChatChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84FF311961A5330067FBF8 /* EGChatChannel.m */; };
+		84BFB962176B7C8E001C86E1 /* EGAuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */; };
+		84BFB963176B7C8E001C86E1 /* EGAuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */; };
+		84BFB966176B7C9B001C86E1 /* EGAuthenticationValues.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */; };
+		84BFB967176B7C9B001C86E1 /* EGAuthenticationValues.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */; };
+		84BFB969176B915F001C86E1 /* EGAuthenticationValues+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */; };
+		84BFB96A176B915F001C86E1 /* EGAuthenticationValues+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */; };
+		A127AFC2165A585400B001EA /* EGChatClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBD165A585400B001EA /* EGChatClient.h */; };
+		A127AFC3165A585400B001EA /* EGChatClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBD165A585400B001EA /* EGChatClient.h */; };
+		A127AFC4165A585400B001EA /* EGChatListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBE165A585400B001EA /* EGChatListener.h */; };
+		A127AFC5165A585400B001EA /* EGChatListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBE165A585400B001EA /* EGChatListener.h */; };
+		A127AFC6165A585400B001EA /* EGChatPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBF165A585400B001EA /* EGChatPeer.h */; };
+		A127AFC7165A585400B001EA /* EGChatPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBF165A585400B001EA /* EGChatPeer.h */; };
+		A127AFD0165A586900B001EA /* EGChatClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCC165A586900B001EA /* EGChatClient.mm */; };
+		A127AFD1165A586900B001EA /* EGChatClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCC165A586900B001EA /* EGChatClient.mm */; };
+		A127AFD2165A586900B001EA /* EGChatPeer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCD165A586900B001EA /* EGChatPeer.mm */; };
+		A127AFD3165A586900B001EA /* EGChatPeer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCD165A586900B001EA /* EGChatPeer.mm */; };
+		DD176F651B694B1B009CE6B4 /* EGChatChannel+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F641B694B1B009CE6B4 /* EGChatChannel+Internal.h */; };
+		DD21D6A51B4BD1AC0010A5E0 /* EGClientState.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A01B4BD1AC0010A5E0 /* EGClientState.h */; };
+		DD21D6A61B4BD1AC0010A5E0 /* EGCustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A11B4BD1AC0010A5E0 /* EGCustomAuthenticationType.h */; };
+		DD21D6A71B4BD1AC0010A5E0 /* EGDisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A21B4BD1AC0010A5E0 /* EGDisconnectCause.h */; };
+		DD21D6A81B4BD1AC0010A5E0 /* EGErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A31B4BD1AC0010A5E0 /* EGErrorCode.h */; };
+		DD21D6A91B4BD1AC0010A5E0 /* EGUserStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6A41B4BD1AC0010A5E0 /* EGUserStatus.h */; };
+		DD3F847C1B17CF8D002C0773 /* EGChatChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB4F29C19619F5E0028AD35 /* EGChatChannel.h */; };
+		DD3F84801B17CFA4002C0773 /* EGChatChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84FF311961A5330067FBF8 /* EGChatChannel.m */; };
+		DD84FF321961A5330067FBF8 /* EGChatChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84FF311961A5330067FBF8 /* EGChatChannel.m */; };
+		DDB4F29D19619F5E0028AD35 /* EGChatChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB4F29C19619F5E0028AD35 /* EGChatChannel.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84B42A281BBD9A9F00F993B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B428BB1BBD92C600F993B7;
+			remoteInfo = "Chat-objc-tvos";
+		};
+		84CE55A42628D37D00392002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84AC25B7242D4AE5008C609A;
+			remoteInfo = "Chat-objc-catalyst";
+		};
+		FCE23B780E9BDA8A00F949F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE239C60E9BC5CF00F949F1;
+			remoteInfo = "neutron iMac";
+		};
+		FCE23B7A0E9BDA8A00F949F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE239990E9BC5CB00F949F1;
+			remoteInfo = neutron_iPhone_device;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84AC25CE242D4AE5008C609A /* libChat-objc_debug_catalyst.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libChat-objc_debug_catalyst.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B428D41BBD92C600F993B7 /* libChat-objc_debug_appletvos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libChat-objc_debug_appletvos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGAuthenticationValues.h; path = inc/EGAuthenticationValues.h; sourceTree = SOURCE_ROOT; };
+		84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGAuthenticationValues.mm; path = src/EGAuthenticationValues.mm; sourceTree = "<group>"; };
+		84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGAuthenticationValues+Internal.h"; sourceTree = "<group>"; };
+		A127AFBD165A585400B001EA /* EGChatClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGChatClient.h; path = inc/EGChatClient.h; sourceTree = SOURCE_ROOT; };
+		A127AFBE165A585400B001EA /* EGChatListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGChatListener.h; path = inc/EGChatListener.h; sourceTree = SOURCE_ROOT; };
+		A127AFBF165A585400B001EA /* EGChatPeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGChatPeer.h; path = inc/EGChatPeer.h; sourceTree = SOURCE_ROOT; };
+		A127AFCC165A586900B001EA /* EGChatClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGChatClient.mm; path = src/EGChatClient.mm; sourceTree = "<group>"; };
+		A127AFCD165A586900B001EA /* EGChatPeer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGChatPeer.mm; path = src/EGChatPeer.mm; sourceTree = "<group>"; };
+		DD176F641B694B1B009CE6B4 /* EGChatChannel+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGChatChannel+Internal.h"; sourceTree = "<group>"; };
+		DD21D6A01B4BD1AC0010A5E0 /* EGClientState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGClientState.h; sourceTree = "<group>"; };
+		DD21D6A11B4BD1AC0010A5E0 /* EGCustomAuthenticationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGCustomAuthenticationType.h; sourceTree = "<group>"; };
+		DD21D6A21B4BD1AC0010A5E0 /* EGDisconnectCause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGDisconnectCause.h; sourceTree = "<group>"; };
+		DD21D6A31B4BD1AC0010A5E0 /* EGErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGErrorCode.h; sourceTree = "<group>"; };
+		DD21D6A41B4BD1AC0010A5E0 /* EGUserStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGUserStatus.h; sourceTree = "<group>"; };
+		DD84FF311961A5330067FBF8 /* EGChatChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGChatChannel.m; path = src/EGChatChannel.m; sourceTree = "<group>"; };
+		DDB4F29C19619F5E0028AD35 /* EGChatChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGChatChannel.h; path = inc/EGChatChannel.h; sourceTree = SOURCE_ROOT; };
+		FC781CA01346199B0052C26D /* libChat-objc_debug_iphoneos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libChat-objc_debug_iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC781CA11346199B0052C26D /* libChat-objc_debug_macosx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libChat-objc_debug_macosx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84AC25CA242D4AE5008C609A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B428D01BBD92C600F993B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE239BA0E9BC5CB00F949F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE239E70E9BC5CF00F949F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* egn_neutron */ = {
+			isa = PBXGroup;
+			children = (
+				B3CAEE3C1150F8A900E68F51 /* Source */,
+				B3CAEE451150F91400E68F51 /* Headers */,
+				FC781CA01346199B0052C26D /* libChat-objc_debug_iphoneos.a */,
+				FC781CA11346199B0052C26D /* libChat-objc_debug_macosx.a */,
+				84B428D41BBD92C600F993B7 /* libChat-objc_debug_appletvos.a */,
+				84AC25CE242D4AE5008C609A /* libChat-objc_debug_catalyst.a */,
+			);
+			name = egn_neutron;
+			sourceTree = "<group>";
+		};
+		84905E5214F51F8B002E3326 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */,
+				DD176F641B694B1B009CE6B4 /* EGChatChannel+Internal.h */,
+			);
+			name = Internal;
+			path = inc/Internal;
+			sourceTree = SOURCE_ROOT;
+		};
+		B3CAEE3C1150F8A900E68F51 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */,
+				DD84FF311961A5330067FBF8 /* EGChatChannel.m */,
+				A127AFCC165A586900B001EA /* EGChatClient.mm */,
+				A127AFCD165A586900B001EA /* EGChatPeer.mm */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		B3CAEE451150F91400E68F51 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				DD21D69F1B4BD1AC0010A5E0 /* Enums */,
+				84905E5214F51F8B002E3326 /* Internal */,
+				84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */,
+				DDB4F29C19619F5E0028AD35 /* EGChatChannel.h */,
+				A127AFBD165A585400B001EA /* EGChatClient.h */,
+				A127AFBE165A585400B001EA /* EGChatListener.h */,
+				A127AFBF165A585400B001EA /* EGChatPeer.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		DD21D69F1B4BD1AC0010A5E0 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				DD21D6A01B4BD1AC0010A5E0 /* EGClientState.h */,
+				DD21D6A11B4BD1AC0010A5E0 /* EGCustomAuthenticationType.h */,
+				DD21D6A21B4BD1AC0010A5E0 /* EGDisconnectCause.h */,
+				DD21D6A31B4BD1AC0010A5E0 /* EGErrorCode.h */,
+				DD21D6A41B4BD1AC0010A5E0 /* EGUserStatus.h */,
+			);
+			name = Enums;
+			path = "../Chat-objc/inc/Enums";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		84AC25B8242D4AE5008C609A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AC25B9242D4AE5008C609A /* EGCustomAuthenticationType.h in Headers */,
+				84AC25BA242D4AE5008C609A /* EGClientState.h in Headers */,
+				84AC25BB242D4AE5008C609A /* EGUserStatus.h in Headers */,
+				84AC25BC242D4AE5008C609A /* EGChatChannel+Internal.h in Headers */,
+				84AC25BD242D4AE5008C609A /* EGChatClient.h in Headers */,
+				84AC25BE242D4AE5008C609A /* EGErrorCode.h in Headers */,
+				84AC25BF242D4AE5008C609A /* EGChatListener.h in Headers */,
+				84AC25C0242D4AE5008C609A /* EGChatPeer.h in Headers */,
+				84AC25C1242D4AE5008C609A /* EGAuthenticationValues.h in Headers */,
+				84AC25C2242D4AE5008C609A /* EGAuthenticationValues+Internal.h in Headers */,
+				84AC25C3242D4AE5008C609A /* EGDisconnectCause.h in Headers */,
+				84AC25C4242D4AE5008C609A /* EGChatChannel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B428BE1BBD92C600F993B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B428BF1BBD92C600F993B7 /* EGCustomAuthenticationType.h in Headers */,
+				84B428C01BBD92C600F993B7 /* EGClientState.h in Headers */,
+				84B428C11BBD92C600F993B7 /* EGUserStatus.h in Headers */,
+				84B428C21BBD92C600F993B7 /* EGChatChannel+Internal.h in Headers */,
+				84B428C31BBD92C600F993B7 /* EGChatClient.h in Headers */,
+				84B428C41BBD92C600F993B7 /* EGErrorCode.h in Headers */,
+				84B428C51BBD92C600F993B7 /* EGChatListener.h in Headers */,
+				84B428C61BBD92C600F993B7 /* EGChatPeer.h in Headers */,
+				84B428C71BBD92C600F993B7 /* EGAuthenticationValues.h in Headers */,
+				84B428C81BBD92C600F993B7 /* EGAuthenticationValues+Internal.h in Headers */,
+				84B428C91BBD92C600F993B7 /* EGDisconnectCause.h in Headers */,
+				84B428CA1BBD92C600F993B7 /* EGChatChannel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE2399A0E9BC5CB00F949F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD21D6A61B4BD1AC0010A5E0 /* EGCustomAuthenticationType.h in Headers */,
+				DD21D6A51B4BD1AC0010A5E0 /* EGClientState.h in Headers */,
+				DD21D6A91B4BD1AC0010A5E0 /* EGUserStatus.h in Headers */,
+				DD176F651B694B1B009CE6B4 /* EGChatChannel+Internal.h in Headers */,
+				A127AFC2165A585400B001EA /* EGChatClient.h in Headers */,
+				DD21D6A81B4BD1AC0010A5E0 /* EGErrorCode.h in Headers */,
+				A127AFC4165A585400B001EA /* EGChatListener.h in Headers */,
+				A127AFC6165A585400B001EA /* EGChatPeer.h in Headers */,
+				84BFB962176B7C8E001C86E1 /* EGAuthenticationValues.h in Headers */,
+				84BFB969176B915F001C86E1 /* EGAuthenticationValues+Internal.h in Headers */,
+				DD21D6A71B4BD1AC0010A5E0 /* EGDisconnectCause.h in Headers */,
+				DDB4F29D19619F5E0028AD35 /* EGChatChannel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE239C70E9BC5CF00F949F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8448267E1B6A90C1003ABAD9 /* EGCustomAuthenticationType.h in Headers */,
+				DD3F847C1B17CF8D002C0773 /* EGChatChannel.h in Headers */,
+				8448267D1B6A90BD003ABAD9 /* EGClientState.h in Headers */,
+				844826811B6A90CD003ABAD9 /* EGUserStatus.h in Headers */,
+				A127AFC3165A585400B001EA /* EGChatClient.h in Headers */,
+				844826801B6A90C9003ABAD9 /* EGErrorCode.h in Headers */,
+				A127AFC5165A585400B001EA /* EGChatListener.h in Headers */,
+				A127AFC7165A585400B001EA /* EGChatPeer.h in Headers */,
+				8448267C1B6A90A1003ABAD9 /* EGChatChannel+Internal.h in Headers */,
+				84BFB963176B7C8E001C86E1 /* EGAuthenticationValues.h in Headers */,
+				8448267F1B6A90C5003ABAD9 /* EGDisconnectCause.h in Headers */,
+				84BFB96A176B915F001C86E1 /* EGAuthenticationValues+Internal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		84AC25B7242D4AE5008C609A /* Chat-objc-catalyst */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84AC25CB242D4AE5008C609A /* Build configuration list for PBXNativeTarget "Chat-objc-catalyst" */;
+			buildPhases = (
+				84AC25B8242D4AE5008C609A /* Headers */,
+				84AC25C5242D4AE5008C609A /* Sources */,
+				84AC25CA242D4AE5008C609A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chat-objc-catalyst";
+			productName = egn_neutron;
+			productReference = 84AC25CE242D4AE5008C609A /* libChat-objc_debug_catalyst.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84B428BB1BBD92C600F993B7 /* Chat-objc-tvos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B428D11BBD92C600F993B7 /* Build configuration list for PBXNativeTarget "Chat-objc-tvos" */;
+			buildPhases = (
+				84B428BE1BBD92C600F993B7 /* Headers */,
+				84B428CB1BBD92C600F993B7 /* Sources */,
+				84B428D01BBD92C600F993B7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chat-objc-tvos";
+			productName = egn_neutron;
+			productReference = 84B428D41BBD92C600F993B7 /* libChat-objc_debug_appletvos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FCE239990E9BC5CB00F949F1 /* Chat-objc-iphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCE239BE0E9BC5CB00F949F1 /* Build configuration list for PBXNativeTarget "Chat-objc-iphone" */;
+			buildPhases = (
+				FCE2399A0E9BC5CB00F949F1 /* Headers */,
+				FCE239AC0E9BC5CB00F949F1 /* Sources */,
+				FCE239BA0E9BC5CB00F949F1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chat-objc-iphone";
+			productName = egn_neutron;
+			productReference = FC781CA01346199B0052C26D /* libChat-objc_debug_iphoneos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FCE239C60E9BC5CF00F949F1 /* Chat-objc-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCE239EB0E9BC5CF00F949F1 /* Build configuration list for PBXNativeTarget "Chat-objc-macos" */;
+			buildPhases = (
+				FCE239C70E9BC5CF00F949F1 /* Headers */,
+				FCE239D90E9BC5CF00F949F1 /* Sources */,
+				FCE239E70E9BC5CF00F949F1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chat-objc-macos";
+			productName = egn_neutron;
+			productReference = FC781CA11346199B0052C26D /* libChat-objc_debug_macosx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+			};
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "Chat-objc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* egn_neutron */;
+			productRefGroup = 08FB7794FE84155DC02AAC07 /* egn_neutron */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84AC25B7242D4AE5008C609A /* Chat-objc-catalyst */,
+				FCE239990E9BC5CB00F949F1 /* Chat-objc-iphone */,
+				FCE239C60E9BC5CF00F949F1 /* Chat-objc-macos */,
+				84B428BB1BBD92C600F993B7 /* Chat-objc-tvos */,
+				FCE23B6D0E9BDA5600F949F1 /* build all */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84AC25C5242D4AE5008C609A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AC25C6242D4AE5008C609A /* EGChatClient.mm in Sources */,
+				84AC25C7242D4AE5008C609A /* EGChatPeer.mm in Sources */,
+				84AC25C8242D4AE5008C609A /* EGAuthenticationValues.mm in Sources */,
+				84AC25C9242D4AE5008C609A /* EGChatChannel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B428CB1BBD92C600F993B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B428CC1BBD92C600F993B7 /* EGChatClient.mm in Sources */,
+				84B428CD1BBD92C600F993B7 /* EGChatPeer.mm in Sources */,
+				84B428CE1BBD92C600F993B7 /* EGAuthenticationValues.mm in Sources */,
+				84B428CF1BBD92C600F993B7 /* EGChatChannel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE239AC0E9BC5CB00F949F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A127AFD0165A586900B001EA /* EGChatClient.mm in Sources */,
+				A127AFD2165A586900B001EA /* EGChatPeer.mm in Sources */,
+				84BFB966176B7C9B001C86E1 /* EGAuthenticationValues.mm in Sources */,
+				DD84FF321961A5330067FBF8 /* EGChatChannel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE239D90E9BC5CF00F949F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD3F84801B17CFA4002C0773 /* EGChatChannel.m in Sources */,
+				A127AFD1165A586900B001EA /* EGChatClient.mm in Sources */,
+				A127AFD3165A586900B001EA /* EGChatPeer.mm in Sources */,
+				84BFB967176B7C9B001C86E1 /* EGAuthenticationValues.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84B42A291BBD9A9F00F993B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B428BB1BBD92C600F993B7 /* Chat-objc-tvos */;
+			targetProxy = 84B42A281BBD9A9F00F993B7 /* PBXContainerItemProxy */;
+		};
+		84CE55A52628D37D00392002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84AC25B7242D4AE5008C609A /* Chat-objc-catalyst */;
+			targetProxy = 84CE55A42628D37D00392002 /* PBXContainerItemProxy */;
+		};
+		FCE23B790E9BDA8A00F949F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCE239C60E9BC5CF00F949F1 /* Chat-objc-macos */;
+			targetProxy = FCE23B780E9BDA8A00F949F1 /* PBXContainerItemProxy */;
+		};
+		FCE23B7B0E9BDA8A00F949F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCE239990E9BC5CB00F949F1 /* Chat-objc-iphone */;
+			targetProxy = FCE23B7A0E9BDA8A00F949F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91F008733DB70010E9CD /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = lib;
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_PPC64 = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"../Photon-objc/lib",
+					"../Common-objc/lib",
+				);
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "Chat-objc_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = iphoneos;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+			};
+			name = debug;
+		};
+		1DEB91F108733DB70010E9CD /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = lib;
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_PPC64 = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"../Photon-objc/lib",
+					"../Common-objc/lib",
+				);
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "Chat-objc_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = iphoneos;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+			};
+			name = release;
+		};
+		84AC25CC242D4AE5008C609A /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = "Chat-objc_$(CONFIGURATION)_catalyst";
+				SUPPORTS_MACCATALYST = YES;
+			};
+			name = debug;
+		};
+		84AC25CD242D4AE5008C609A /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = "Chat-objc_$(CONFIGURATION)_catalyst";
+				SUPPORTS_MACCATALYST = YES;
+			};
+			name = release;
+		};
+		84B428D21BBD92C600F993B7 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				SDKROOT = appletvos;
+			};
+			name = debug;
+		};
+		84B428D31BBD92C600F993B7 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				GCC_THUMB_SUPPORT = NO;
+				SDKROOT = appletvos;
+			};
+			name = release;
+		};
+		FCE239BF0E9BC5CB00F949F1 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXCLUDED_ARCHS = i386;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = debug;
+		};
+		FCE239C20E9BC5CB00F949F1 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXCLUDED_ARCHS = i386;
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = release;
+		};
+		FCE239EC0E9BC5CF00F949F1 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IMAC_PLATFORM,
+					EG_DEBUGGER,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = debug;
+		};
+		FCE239EF0E9BC5CF00F949F1 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IMAC_PLATFORM;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = release;
+		};
+		FCE23B6E0E9BDA5700F949F1 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_THUMB_SUPPORT = NO;
+			};
+			name = debug;
+		};
+		FCE23B6F0E9BDA5700F949F1 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_THUMB_SUPPORT = NO;
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "Chat-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* debug */,
+				1DEB91F108733DB70010E9CD /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		84AC25CB242D4AE5008C609A /* Build configuration list for PBXNativeTarget "Chat-objc-catalyst" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84AC25CC242D4AE5008C609A /* debug */,
+				84AC25CD242D4AE5008C609A /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		84B428D11BBD92C600F993B7 /* Build configuration list for PBXNativeTarget "Chat-objc-tvos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B428D21BBD92C600F993B7 /* debug */,
+				84B428D31BBD92C600F993B7 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		FCE239BE0E9BC5CB00F949F1 /* Build configuration list for PBXNativeTarget "Chat-objc-iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE239BF0E9BC5CB00F949F1 /* debug */,
+				FCE239C20E9BC5CB00F949F1 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		FCE239EB0E9BC5CF00F949F1 /* Build configuration list for PBXNativeTarget "Chat-objc-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE239EC0E9BC5CF00F949F1 /* debug */,
+				FCE239EF0E9BC5CF00F949F1 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		FCE23B710E9BDA7D00F949F1 /* Build configuration list for PBXAggregateTarget "build all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE23B6E0E9BDA5700F949F1 /* debug */,
+				FCE23B6F0E9BDA5700F949F1 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

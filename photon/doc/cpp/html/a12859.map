@@ -1,0 +1,4 @@
+<map id="VoiceDetectorDummy" name="VoiceDetectorDummy">
+<area shape="rect" id="node1" title="Dummy VoiceDetector that doesn&#39;t actually do anything." alt="" coords="4,81,128,106"/>
+<area shape="rect" id="node2" href="$a12856.html" title="Voice Activity Detector interface." alt="" coords="21,6,112,31"/>
+</map>

@@ -1,0 +1,22 @@
+<map id="EGBase" name="EGBase">
+<area shape="rect" id="node1" title=" " alt="" coords="120,302,181,327"/>
+<area shape="rect" id="node3" href="$interface_e_g_authentication_values.html" title=" " alt="" coords="235,6,371,31"/>
+<area shape="rect" id="node5" href="$interface_e_g_chat_channel.html" title=" " alt="" coords="253,56,352,80"/>
+<area shape="rect" id="node6" href="$interface_e_g_custom_type_utils.html" title=" " alt="" coords="244,105,361,130"/>
+<area shape="rect" id="node7" href="$interface_e_g_friend_info.html" title=" " alt="" coords="260,154,345,179"/>
+<area shape="rect" id="node8" href="$interface_e_g_load_balancing_player.html" title=" " alt="" coords="234,204,371,228"/>
+<area shape="rect" id="node10" href="$interface_e_g_load_balancing_room.html" title=" " alt="" coords="235,253,371,278"/>
+<area shape="rect" id="node12" href="$interface_e_g_lobby_stats_request.html" title=" " alt="" coords="238,302,368,327"/>
+<area shape="rect" id="node13" href="$interface_e_g_lobby_stats_response.html" title=" " alt="" coords="234,352,372,376"/>
+<area shape="rect" id="node14" href="$interface_e_g_raise_event_options.html" title=" " alt="" coords="239,401,367,426"/>
+<area shape="rect" id="node16" href="$interface_e_g_room_options.html" title=" " alt="" coords="252,450,354,475"/>
+<area shape="rect" id="node18" href="$interface_e_g_time.html" title=" " alt="" coords="273,500,333,524"/>
+<area shape="rect" id="node19" href="$interface_e_g_traffic_stats_game_level.html" title=" " alt="" coords="230,549,375,574"/>
+<area shape="rect" id="node20" href="$interface_e_g_utils.html" title=" " alt="" coords="274,598,331,623"/>
+<area shape="rect" id="node2" href="$class_n_s_object.html" title=" " alt="" coords="5,302,72,327"/>
+<area shape="rect" id="node4" href="$interface_e_g_mutable_authentication_values.html" title=" " alt="" coords="425,6,599,31"/>
+<area shape="rect" id="node9" href="$interface_e_g_load_balancing_mutable_player.html" title=" " alt="" coords="424,204,600,228"/>
+<area shape="rect" id="node11" href="$interface_e_g_load_balancing_mutable_room.html" title=" " alt="" coords="425,253,599,278"/>
+<area shape="rect" id="node15" href="$interface_e_g_mutable_raise_event_options.html" title=" " alt="" coords="429,401,595,426"/>
+<area shape="rect" id="node17" href="$interface_e_g_mutable_room_options.html" title=" " alt="" coords="442,450,582,475"/>
+</map>

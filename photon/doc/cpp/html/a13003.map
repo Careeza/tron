@@ -1,0 +1,10 @@
+<map id="IProcessor&lt; T &gt;" name="IProcessor&lt; T &gt;">
+<area shape="rect" id="node1" title="Audio Processor interface." alt="" coords="332,104,428,128"/>
+<area shape="rect" id="node4" href="$a12852.html" title="Audio Level Meter." alt="" coords="513,5,612,30"/>
+<area shape="rect" id="node5" href="$a12840.html" title=" " alt="" coords="514,54,611,79"/>
+<area shape="rect" id="node6" href="$a12868.html" title="Simple voice activity detector triggered by signal level." alt="" coords="507,104,619,128"/>
+<area shape="rect" id="node7" href="$a12864.html" title="Calibration Utility for Voice Detector" alt="" coords="481,153,644,178"/>
+<area shape="rect" id="node8" href="$a12872.html" title="Utility Audio Processor Voice Detection Calibration." alt="" coords="477,202,648,227"/>
+<area shape="rect" id="node2" href="$a12580.html" title=" " alt="" coords="115,104,282,128"/>
+<area shape="rect" id="node3" href="$a12576.html" title=" " alt="" coords="6,104,66,128"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ILocalVoiceAudio" name="ILocalVoiceAudio">
+<area shape="rect" id="node1" title="Interface for an outgoing audio stream." alt="" coords="92,6,195,31"/>
+<area shape="rect" id="node2" href="$a12956.html" title="Outgoing audio stream." alt="" coords="4,81,128,106"/>
+<area shape="rect" id="node3" href="$a12960.html" title="Dummy LocalVoiceAudio" alt="" coords="153,81,289,106"/>
+</map>

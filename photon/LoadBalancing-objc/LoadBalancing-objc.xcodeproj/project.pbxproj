@@ -1,0 +1,977 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		FCE23B6D0E9BDA5600F949F1 /* build all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FCE23B710E9BDA7D00F949F1 /* Build configuration list for PBXAggregateTarget "build all" */;
+			buildPhases = (
+			);
+			dependencies = (
+				84CE55AC2628D3A300392002 /* PBXTargetDependency */,
+				84B42A211BBD9A7300F993B7 /* PBXTargetDependency */,
+				FCE23B7B0E9BDA8A00F949F1 /* PBXTargetDependency */,
+				FCE23B790E9BDA8A00F949F1 /* PBXTargetDependency */,
+			);
+			name = "build all";
+			productName = "build all";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		8448723A1BFCB8C3007FBFB4 /* EGRaiseEventOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 844872381BFCB8C3007FBFB4 /* EGRaiseEventOptions.h */; };
+		8448723B1BFCB8C3007FBFB4 /* EGRoomOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 844872391BFCB8C3007FBFB4 /* EGRoomOptions.h */; };
+		8448723E1BFCB8EF007FBFB4 /* EGRaiseEventOptions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8448723C1BFCB8EF007FBFB4 /* EGRaiseEventOptions.mm */; };
+		8448723F1BFCB8EF007FBFB4 /* EGRoomOptions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8448723D1BFCB8EF007FBFB4 /* EGRoomOptions.mm */; };
+		844872401BFCBD7E007FBFB4 /* EGRoomOptions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8448723D1BFCB8EF007FBFB4 /* EGRoomOptions.mm */; };
+		844872411BFCBD7E007FBFB4 /* EGRoomOptions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8448723D1BFCB8EF007FBFB4 /* EGRoomOptions.mm */; };
+		844872421BFCBD83007FBFB4 /* EGRaiseEventOptions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8448723C1BFCB8EF007FBFB4 /* EGRaiseEventOptions.mm */; };
+		844872431BFCBD83007FBFB4 /* EGRaiseEventOptions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8448723C1BFCB8EF007FBFB4 /* EGRaiseEventOptions.mm */; };
+		84AC258C242D4AC1008C609A /* EGPeerStates.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6761B4BAE340010A5E0 /* EGPeerStates.h */; };
+		84AC258D242D4AC1008C609A /* EGLoadBalancingPeer+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB4165A584700B001EA /* EGLoadBalancingPeer+Internal.h */; };
+		84AC258E242D4AC1008C609A /* EGLoadBalancingPlayer+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB5165A584700B001EA /* EGLoadBalancingPlayer+Internal.h */; };
+		84AC258F242D4AC1008C609A /* EGLoadBalancingRoom+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB6165A584700B001EA /* EGLoadBalancingRoom+Internal.h */; };
+		84AC2590242D4AC1008C609A /* EGLoadBalancingClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBD165A585400B001EA /* EGLoadBalancingClient.h */; };
+		84AC2591242D4AC1008C609A /* EGLoadBalancingListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBE165A585400B001EA /* EGLoadBalancingListener.h */; };
+		84AC2592242D4AC1008C609A /* EGLoadBalancingPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBF165A585400B001EA /* EGLoadBalancingPeer.h */; };
+		84AC2593242D4AC1008C609A /* EGLoadBalancingPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFC0165A585400B001EA /* EGLoadBalancingPlayer.h */; };
+		84AC2594242D4AC1008C609A /* EGDisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6721B4BAE340010A5E0 /* EGDisconnectCause.h */; };
+		84AC2595242D4AC1008C609A /* EGLoadBalancingRoom.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFC1165A585400B001EA /* EGLoadBalancingRoom.h */; };
+		84AC2596242D4AC1008C609A /* EGFriendInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B68C0817340241007AFBE4 /* EGFriendInfo.h */; };
+		84AC2597242D4AC1008C609A /* EGRaiseEventOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 844872381BFCB8C3007FBFB4 /* EGRaiseEventOptions.h */; };
+		84AC2598242D4AC1008C609A /* EGLobbyStatsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F6C1B694B7D009CE6B4 /* EGLobbyStatsRequest.h */; };
+		84AC2599242D4AC1008C609A /* EGServerType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6771B4BAE340010A5E0 /* EGServerType.h */; };
+		84AC259A242D4AC1008C609A /* EGLobbyStatsResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F6D1B694B7D009CE6B4 /* EGLobbyStatsResponse.h */; };
+		84AC259B242D4AC1008C609A /* EGErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6731B4BAE340010A5E0 /* EGErrorCode.h */; };
+		84AC259C242D4AC1008C609A /* EGAuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */; };
+		84AC259D242D4AC1008C609A /* EGLoadBalancingClient+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F701B694B87009CE6B4 /* EGLoadBalancingClient+Internal.h */; };
+		84AC259E242D4AC1008C609A /* EGAuthenticationValues+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */; };
+		84AC259F242D4AC1008C609A /* EGLobbyType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6741B4BAE340010A5E0 /* EGLobbyType.h */; };
+		84AC25A0242D4AC1008C609A /* EGRoomOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 844872391BFCB8C3007FBFB4 /* EGRoomOptions.h */; };
+		84AC25A1242D4AC1008C609A /* EGRegionSelectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D47F4D1CF32C2B002562B8 /* EGRegionSelectionMode.h */; };
+		84AC25A2242D4AC1008C609A /* EGCustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6711B4BAE340010A5E0 /* EGCustomAuthenticationType.h */; };
+		84AC25A3242D4AC1008C609A /* EGLoadBalancingPlayer+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7A717E7754A00D1F8F4 /* EGLoadBalancingPlayer+Protected.h */; };
+		84AC25A4242D4AC1008C609A /* EGLoadBalancingRoom+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7A817E7754A00D1F8F4 /* EGLoadBalancingRoom+Protected.h */; };
+		84AC25A5242D4AC1008C609A /* EGLoadBalancingClient+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7AE17E77BA000D1F8F4 /* EGLoadBalancingClient+Protected.h */; };
+		84AC25A6242D4AC1008C609A /* EGMatchmakingMode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6751B4BAE340010A5E0 /* EGMatchmakingMode.h */; };
+		84AC25A8242D4AC1008C609A /* EGLoadBalancingClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCC165A586900B001EA /* EGLoadBalancingClient.mm */; };
+		84AC25A9242D4AC1008C609A /* EGLobbyStatsResponse.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD176F721B694D4A009CE6B4 /* EGLobbyStatsResponse.mm */; };
+		84AC25AA242D4AC1008C609A /* EGRaiseEventOptions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8448723C1BFCB8EF007FBFB4 /* EGRaiseEventOptions.mm */; };
+		84AC25AB242D4AC1008C609A /* EGRoomOptions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8448723D1BFCB8EF007FBFB4 /* EGRoomOptions.mm */; };
+		84AC25AC242D4AC1008C609A /* EGLoadBalancingPeer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCD165A586900B001EA /* EGLoadBalancingPeer.mm */; };
+		84AC25AD242D4AC1008C609A /* EGLobbyStatsRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD176F671B694B5B009CE6B4 /* EGLobbyStatsRequest.mm */; };
+		84AC25AE242D4AC1008C609A /* EGLoadBalancingPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCE165A586900B001EA /* EGLoadBalancingPlayer.mm */; };
+		84AC25AF242D4AC1008C609A /* EGLoadBalancingRoom.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCF165A586900B001EA /* EGLoadBalancingRoom.mm */; };
+		84AC25B0242D4AC1008C609A /* EGFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B68C0417340226007AFBE4 /* EGFriendInfo.m */; };
+		84AC25B1242D4AC1008C609A /* EGAuthenticationValues.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */; };
+		84B4295E1BBD933300F993B7 /* EGPeerStates.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6761B4BAE340010A5E0 /* EGPeerStates.h */; };
+		84B4295F1BBD933300F993B7 /* EGLoadBalancingPeer+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB4165A584700B001EA /* EGLoadBalancingPeer+Internal.h */; };
+		84B429601BBD933300F993B7 /* EGLoadBalancingPlayer+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB5165A584700B001EA /* EGLoadBalancingPlayer+Internal.h */; };
+		84B429611BBD933300F993B7 /* EGLoadBalancingRoom+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB6165A584700B001EA /* EGLoadBalancingRoom+Internal.h */; };
+		84B429621BBD933300F993B7 /* EGLoadBalancingClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBD165A585400B001EA /* EGLoadBalancingClient.h */; };
+		84B429631BBD933300F993B7 /* EGLoadBalancingListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBE165A585400B001EA /* EGLoadBalancingListener.h */; };
+		84B429641BBD933300F993B7 /* EGLoadBalancingPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBF165A585400B001EA /* EGLoadBalancingPeer.h */; };
+		84B429651BBD933300F993B7 /* EGLoadBalancingPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFC0165A585400B001EA /* EGLoadBalancingPlayer.h */; };
+		84B429661BBD933300F993B7 /* EGDisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6721B4BAE340010A5E0 /* EGDisconnectCause.h */; };
+		84B429671BBD933300F993B7 /* EGLoadBalancingRoom.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFC1165A585400B001EA /* EGLoadBalancingRoom.h */; };
+		84B429681BBD933300F993B7 /* EGFriendInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B68C0817340241007AFBE4 /* EGFriendInfo.h */; };
+		84B429691BBD933300F993B7 /* EGLobbyStatsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F6C1B694B7D009CE6B4 /* EGLobbyStatsRequest.h */; };
+		84B4296A1BBD933300F993B7 /* EGServerType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6771B4BAE340010A5E0 /* EGServerType.h */; };
+		84B4296B1BBD933300F993B7 /* EGLobbyStatsResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F6D1B694B7D009CE6B4 /* EGLobbyStatsResponse.h */; };
+		84B4296C1BBD933300F993B7 /* EGErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6731B4BAE340010A5E0 /* EGErrorCode.h */; };
+		84B4296D1BBD933300F993B7 /* EGAuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */; };
+		84B4296E1BBD933300F993B7 /* EGLoadBalancingClient+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F701B694B87009CE6B4 /* EGLoadBalancingClient+Internal.h */; };
+		84B4296F1BBD933300F993B7 /* EGAuthenticationValues+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */; };
+		84B429701BBD933300F993B7 /* EGLobbyType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6741B4BAE340010A5E0 /* EGLobbyType.h */; };
+		84B429711BBD933300F993B7 /* EGCustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6711B4BAE340010A5E0 /* EGCustomAuthenticationType.h */; };
+		84B429721BBD933300F993B7 /* EGLoadBalancingPlayer+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7A717E7754A00D1F8F4 /* EGLoadBalancingPlayer+Protected.h */; };
+		84B429731BBD933300F993B7 /* EGLoadBalancingRoom+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7A817E7754A00D1F8F4 /* EGLoadBalancingRoom+Protected.h */; };
+		84B429741BBD933300F993B7 /* EGLoadBalancingClient+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7AE17E77BA000D1F8F4 /* EGLoadBalancingClient+Protected.h */; };
+		84B429751BBD933300F993B7 /* EGMatchmakingMode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6751B4BAE340010A5E0 /* EGMatchmakingMode.h */; };
+		84B429771BBD933300F993B7 /* EGLoadBalancingClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCC165A586900B001EA /* EGLoadBalancingClient.mm */; };
+		84B429781BBD933300F993B7 /* EGLobbyStatsResponse.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD176F721B694D4A009CE6B4 /* EGLobbyStatsResponse.mm */; };
+		84B429791BBD933300F993B7 /* EGLoadBalancingPeer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCD165A586900B001EA /* EGLoadBalancingPeer.mm */; };
+		84B4297A1BBD933300F993B7 /* EGLobbyStatsRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD176F671B694B5B009CE6B4 /* EGLobbyStatsRequest.mm */; };
+		84B4297B1BBD933300F993B7 /* EGLoadBalancingPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCE165A586900B001EA /* EGLoadBalancingPlayer.mm */; };
+		84B4297C1BBD933300F993B7 /* EGLoadBalancingRoom.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCF165A586900B001EA /* EGLoadBalancingRoom.mm */; };
+		84B4297D1BBD933300F993B7 /* EGFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B68C0417340226007AFBE4 /* EGFriendInfo.m */; };
+		84B4297E1BBD933300F993B7 /* EGAuthenticationValues.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */; };
+		84B68C0517340226007AFBE4 /* EGFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B68C0417340226007AFBE4 /* EGFriendInfo.m */; };
+		84B68C0617340226007AFBE4 /* EGFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B68C0417340226007AFBE4 /* EGFriendInfo.m */; };
+		84B68C0917340241007AFBE4 /* EGFriendInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B68C0817340241007AFBE4 /* EGFriendInfo.h */; };
+		84B68C0A17340241007AFBE4 /* EGFriendInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B68C0817340241007AFBE4 /* EGFriendInfo.h */; };
+		84BFB962176B7C8E001C86E1 /* EGAuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */; };
+		84BFB963176B7C8E001C86E1 /* EGAuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */; };
+		84BFB966176B7C9B001C86E1 /* EGAuthenticationValues.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */; };
+		84BFB967176B7C9B001C86E1 /* EGAuthenticationValues.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */; };
+		84BFB969176B915F001C86E1 /* EGAuthenticationValues+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */; };
+		84BFB96A176B915F001C86E1 /* EGAuthenticationValues+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */; };
+		84D47F4E1CF32C2B002562B8 /* EGRegionSelectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D47F4D1CF32C2B002562B8 /* EGRegionSelectionMode.h */; };
+		84D47F4F1CF32C5B002562B8 /* EGRegionSelectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D47F4D1CF32C2B002562B8 /* EGRegionSelectionMode.h */; };
+		84D47F501CF32C5C002562B8 /* EGRegionSelectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D47F4D1CF32C2B002562B8 /* EGRegionSelectionMode.h */; };
+		84D47F511CF32C71002562B8 /* EGRaiseEventOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 844872381BFCB8C3007FBFB4 /* EGRaiseEventOptions.h */; };
+		84D47F521CF32C72002562B8 /* EGRaiseEventOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 844872381BFCB8C3007FBFB4 /* EGRaiseEventOptions.h */; };
+		84D47F531CF32C75002562B8 /* EGRoomOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 844872391BFCB8C3007FBFB4 /* EGRoomOptions.h */; };
+		84D47F541CF32C75002562B8 /* EGRoomOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 844872391BFCB8C3007FBFB4 /* EGRoomOptions.h */; };
+		84EDD7A917E7754A00D1F8F4 /* EGLoadBalancingPlayer+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7A717E7754A00D1F8F4 /* EGLoadBalancingPlayer+Protected.h */; };
+		84EDD7AA17E7754A00D1F8F4 /* EGLoadBalancingPlayer+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7A717E7754A00D1F8F4 /* EGLoadBalancingPlayer+Protected.h */; };
+		84EDD7AB17E7754A00D1F8F4 /* EGLoadBalancingRoom+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7A817E7754A00D1F8F4 /* EGLoadBalancingRoom+Protected.h */; };
+		84EDD7AC17E7754A00D1F8F4 /* EGLoadBalancingRoom+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7A817E7754A00D1F8F4 /* EGLoadBalancingRoom+Protected.h */; };
+		84EDD7AF17E77BA000D1F8F4 /* EGLoadBalancingClient+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7AE17E77BA000D1F8F4 /* EGLoadBalancingClient+Protected.h */; };
+		84EDD7B017E77BA000D1F8F4 /* EGLoadBalancingClient+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 84EDD7AE17E77BA000D1F8F4 /* EGLoadBalancingClient+Protected.h */; };
+		A127AFB7165A584700B001EA /* EGLoadBalancingPeer+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB4165A584700B001EA /* EGLoadBalancingPeer+Internal.h */; };
+		A127AFB8165A584700B001EA /* EGLoadBalancingPeer+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB4165A584700B001EA /* EGLoadBalancingPeer+Internal.h */; };
+		A127AFB9165A584700B001EA /* EGLoadBalancingPlayer+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB5165A584700B001EA /* EGLoadBalancingPlayer+Internal.h */; };
+		A127AFBA165A584700B001EA /* EGLoadBalancingPlayer+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB5165A584700B001EA /* EGLoadBalancingPlayer+Internal.h */; };
+		A127AFBB165A584700B001EA /* EGLoadBalancingRoom+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB6165A584700B001EA /* EGLoadBalancingRoom+Internal.h */; };
+		A127AFBC165A584700B001EA /* EGLoadBalancingRoom+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFB6165A584700B001EA /* EGLoadBalancingRoom+Internal.h */; };
+		A127AFC2165A585400B001EA /* EGLoadBalancingClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBD165A585400B001EA /* EGLoadBalancingClient.h */; };
+		A127AFC3165A585400B001EA /* EGLoadBalancingClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBD165A585400B001EA /* EGLoadBalancingClient.h */; };
+		A127AFC4165A585400B001EA /* EGLoadBalancingListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBE165A585400B001EA /* EGLoadBalancingListener.h */; };
+		A127AFC5165A585400B001EA /* EGLoadBalancingListener.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBE165A585400B001EA /* EGLoadBalancingListener.h */; };
+		A127AFC6165A585400B001EA /* EGLoadBalancingPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBF165A585400B001EA /* EGLoadBalancingPeer.h */; };
+		A127AFC7165A585400B001EA /* EGLoadBalancingPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFBF165A585400B001EA /* EGLoadBalancingPeer.h */; };
+		A127AFC8165A585400B001EA /* EGLoadBalancingPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFC0165A585400B001EA /* EGLoadBalancingPlayer.h */; };
+		A127AFC9165A585400B001EA /* EGLoadBalancingPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFC0165A585400B001EA /* EGLoadBalancingPlayer.h */; };
+		A127AFCA165A585400B001EA /* EGLoadBalancingRoom.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFC1165A585400B001EA /* EGLoadBalancingRoom.h */; };
+		A127AFCB165A585400B001EA /* EGLoadBalancingRoom.h in Headers */ = {isa = PBXBuildFile; fileRef = A127AFC1165A585400B001EA /* EGLoadBalancingRoom.h */; };
+		A127AFD0165A586900B001EA /* EGLoadBalancingClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCC165A586900B001EA /* EGLoadBalancingClient.mm */; };
+		A127AFD1165A586900B001EA /* EGLoadBalancingClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCC165A586900B001EA /* EGLoadBalancingClient.mm */; };
+		A127AFD2165A586900B001EA /* EGLoadBalancingPeer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCD165A586900B001EA /* EGLoadBalancingPeer.mm */; };
+		A127AFD3165A586900B001EA /* EGLoadBalancingPeer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCD165A586900B001EA /* EGLoadBalancingPeer.mm */; };
+		A127AFD4165A586900B001EA /* EGLoadBalancingPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCE165A586900B001EA /* EGLoadBalancingPlayer.mm */; };
+		A127AFD5165A586900B001EA /* EGLoadBalancingPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCE165A586900B001EA /* EGLoadBalancingPlayer.mm */; };
+		A127AFD6165A586900B001EA /* EGLoadBalancingRoom.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCF165A586900B001EA /* EGLoadBalancingRoom.mm */; };
+		A127AFD7165A586900B001EA /* EGLoadBalancingRoom.mm in Sources */ = {isa = PBXBuildFile; fileRef = A127AFCF165A586900B001EA /* EGLoadBalancingRoom.mm */; };
+		DD176F691B694B5B009CE6B4 /* EGLobbyStatsRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD176F671B694B5B009CE6B4 /* EGLobbyStatsRequest.mm */; };
+		DD176F6E1B694B7D009CE6B4 /* EGLobbyStatsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F6C1B694B7D009CE6B4 /* EGLobbyStatsRequest.h */; };
+		DD176F6F1B694B7D009CE6B4 /* EGLobbyStatsResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F6D1B694B7D009CE6B4 /* EGLobbyStatsResponse.h */; };
+		DD176F711B694B87009CE6B4 /* EGLoadBalancingClient+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F701B694B87009CE6B4 /* EGLoadBalancingClient+Internal.h */; };
+		DD176F731B694D4A009CE6B4 /* EGLobbyStatsResponse.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD176F721B694D4A009CE6B4 /* EGLobbyStatsResponse.mm */; };
+		DD176F7C1B694E9E009CE6B4 /* EGLobbyStatsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F6C1B694B7D009CE6B4 /* EGLobbyStatsRequest.h */; };
+		DD176F7D1B694E9E009CE6B4 /* EGLobbyStatsResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F6D1B694B7D009CE6B4 /* EGLobbyStatsResponse.h */; };
+		DD176F7E1B694E9E009CE6B4 /* EGCustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6711B4BAE340010A5E0 /* EGCustomAuthenticationType.h */; };
+		DD176F7F1B694E9E009CE6B4 /* EGDisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6721B4BAE340010A5E0 /* EGDisconnectCause.h */; };
+		DD176F801B694E9E009CE6B4 /* EGErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6731B4BAE340010A5E0 /* EGErrorCode.h */; };
+		DD176F811B694E9E009CE6B4 /* EGLobbyType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6741B4BAE340010A5E0 /* EGLobbyType.h */; };
+		DD176F821B694E9E009CE6B4 /* EGMatchmakingMode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6751B4BAE340010A5E0 /* EGMatchmakingMode.h */; };
+		DD176F831B694E9E009CE6B4 /* EGPeerStates.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6761B4BAE340010A5E0 /* EGPeerStates.h */; };
+		DD176F841B694E9E009CE6B4 /* EGServerType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6771B4BAE340010A5E0 /* EGServerType.h */; };
+		DD176F851B694E9E009CE6B4 /* EGLoadBalancingClient+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD176F701B694B87009CE6B4 /* EGLoadBalancingClient+Internal.h */; };
+		DD176F861B694ED3009CE6B4 /* EGLobbyStatsResponse.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD176F721B694D4A009CE6B4 /* EGLobbyStatsResponse.mm */; };
+		DD176F871B694ED3009CE6B4 /* EGLobbyStatsRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD176F671B694B5B009CE6B4 /* EGLobbyStatsRequest.mm */; };
+		DD21D6781B4BAE340010A5E0 /* EGCustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6711B4BAE340010A5E0 /* EGCustomAuthenticationType.h */; };
+		DD21D6791B4BAE340010A5E0 /* EGDisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6721B4BAE340010A5E0 /* EGDisconnectCause.h */; };
+		DD21D67A1B4BAE340010A5E0 /* EGErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6731B4BAE340010A5E0 /* EGErrorCode.h */; };
+		DD21D67B1B4BAE340010A5E0 /* EGLobbyType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6741B4BAE340010A5E0 /* EGLobbyType.h */; };
+		DD21D67C1B4BAE340010A5E0 /* EGMatchmakingMode.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6751B4BAE340010A5E0 /* EGMatchmakingMode.h */; };
+		DD21D67D1B4BAE340010A5E0 /* EGPeerStates.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6761B4BAE340010A5E0 /* EGPeerStates.h */; };
+		DD21D67E1B4BAE340010A5E0 /* EGServerType.h in Headers */ = {isa = PBXBuildFile; fileRef = DD21D6771B4BAE340010A5E0 /* EGServerType.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84B42A201BBD9A7300F993B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B4295C1BBD933300F993B7;
+			remoteInfo = "LoadBalancing-objc-tvos";
+		};
+		84CE55AB2628D3A300392002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84AC258A242D4AC1008C609A;
+			remoteInfo = "LoadBalancing-objc-catalyst";
+		};
+		FCE23B780E9BDA8A00F949F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE239C60E9BC5CF00F949F1;
+			remoteInfo = "neutron iMac";
+		};
+		FCE23B7A0E9BDA8A00F949F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE239990E9BC5CB00F949F1;
+			remoteInfo = neutron_iPhone_device;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		844872381BFCB8C3007FBFB4 /* EGRaiseEventOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGRaiseEventOptions.h; path = inc/EGRaiseEventOptions.h; sourceTree = SOURCE_ROOT; };
+		844872391BFCB8C3007FBFB4 /* EGRoomOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGRoomOptions.h; path = inc/EGRoomOptions.h; sourceTree = SOURCE_ROOT; };
+		8448723C1BFCB8EF007FBFB4 /* EGRaiseEventOptions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGRaiseEventOptions.mm; path = src/EGRaiseEventOptions.mm; sourceTree = "<group>"; };
+		8448723D1BFCB8EF007FBFB4 /* EGRoomOptions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGRoomOptions.mm; path = src/EGRoomOptions.mm; sourceTree = "<group>"; };
+		84AC25B6242D4AC1008C609A /* libLoadBalancing-objc_debug_catalyst.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLoadBalancing-objc_debug_catalyst.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B429831BBD933300F993B7 /* libLoadBalancing-objc_debug_appletvos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLoadBalancing-objc_debug_appletvos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B68C0417340226007AFBE4 /* EGFriendInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGFriendInfo.m; path = src/EGFriendInfo.m; sourceTree = "<group>"; };
+		84B68C0817340241007AFBE4 /* EGFriendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGFriendInfo.h; path = inc/EGFriendInfo.h; sourceTree = SOURCE_ROOT; };
+		84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGAuthenticationValues.h; path = inc/EGAuthenticationValues.h; sourceTree = SOURCE_ROOT; };
+		84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGAuthenticationValues.mm; path = src/EGAuthenticationValues.mm; sourceTree = "<group>"; };
+		84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGAuthenticationValues+Internal.h"; sourceTree = "<group>"; };
+		84D47F4D1CF32C2B002562B8 /* EGRegionSelectionMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGRegionSelectionMode.h; sourceTree = "<group>"; };
+		84EDD7A717E7754A00D1F8F4 /* EGLoadBalancingPlayer+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGLoadBalancingPlayer+Protected.h"; sourceTree = "<group>"; };
+		84EDD7A817E7754A00D1F8F4 /* EGLoadBalancingRoom+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGLoadBalancingRoom+Protected.h"; sourceTree = "<group>"; };
+		84EDD7AE17E77BA000D1F8F4 /* EGLoadBalancingClient+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGLoadBalancingClient+Protected.h"; sourceTree = "<group>"; };
+		A127AFB4165A584700B001EA /* EGLoadBalancingPeer+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGLoadBalancingPeer+Internal.h"; sourceTree = "<group>"; };
+		A127AFB5165A584700B001EA /* EGLoadBalancingPlayer+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGLoadBalancingPlayer+Internal.h"; sourceTree = "<group>"; };
+		A127AFB6165A584700B001EA /* EGLoadBalancingRoom+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGLoadBalancingRoom+Internal.h"; sourceTree = "<group>"; };
+		A127AFBD165A585400B001EA /* EGLoadBalancingClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGLoadBalancingClient.h; path = inc/EGLoadBalancingClient.h; sourceTree = SOURCE_ROOT; };
+		A127AFBE165A585400B001EA /* EGLoadBalancingListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGLoadBalancingListener.h; path = inc/EGLoadBalancingListener.h; sourceTree = SOURCE_ROOT; };
+		A127AFBF165A585400B001EA /* EGLoadBalancingPeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGLoadBalancingPeer.h; path = inc/EGLoadBalancingPeer.h; sourceTree = SOURCE_ROOT; };
+		A127AFC0165A585400B001EA /* EGLoadBalancingPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGLoadBalancingPlayer.h; path = inc/EGLoadBalancingPlayer.h; sourceTree = SOURCE_ROOT; };
+		A127AFC1165A585400B001EA /* EGLoadBalancingRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGLoadBalancingRoom.h; path = inc/EGLoadBalancingRoom.h; sourceTree = SOURCE_ROOT; };
+		A127AFCC165A586900B001EA /* EGLoadBalancingClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGLoadBalancingClient.mm; path = src/EGLoadBalancingClient.mm; sourceTree = "<group>"; };
+		A127AFCD165A586900B001EA /* EGLoadBalancingPeer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGLoadBalancingPeer.mm; path = src/EGLoadBalancingPeer.mm; sourceTree = "<group>"; };
+		A127AFCE165A586900B001EA /* EGLoadBalancingPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGLoadBalancingPlayer.mm; path = src/EGLoadBalancingPlayer.mm; sourceTree = "<group>"; };
+		A127AFCF165A586900B001EA /* EGLoadBalancingRoom.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGLoadBalancingRoom.mm; path = src/EGLoadBalancingRoom.mm; sourceTree = "<group>"; };
+		DD176F671B694B5B009CE6B4 /* EGLobbyStatsRequest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGLobbyStatsRequest.mm; path = src/EGLobbyStatsRequest.mm; sourceTree = "<group>"; };
+		DD176F6C1B694B7D009CE6B4 /* EGLobbyStatsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGLobbyStatsRequest.h; path = inc/EGLobbyStatsRequest.h; sourceTree = SOURCE_ROOT; };
+		DD176F6D1B694B7D009CE6B4 /* EGLobbyStatsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGLobbyStatsResponse.h; path = inc/EGLobbyStatsResponse.h; sourceTree = SOURCE_ROOT; };
+		DD176F701B694B87009CE6B4 /* EGLoadBalancingClient+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGLoadBalancingClient+Internal.h"; sourceTree = "<group>"; };
+		DD176F721B694D4A009CE6B4 /* EGLobbyStatsResponse.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EGLobbyStatsResponse.mm; path = src/EGLobbyStatsResponse.mm; sourceTree = "<group>"; };
+		DD21D6711B4BAE340010A5E0 /* EGCustomAuthenticationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGCustomAuthenticationType.h; sourceTree = "<group>"; };
+		DD21D6721B4BAE340010A5E0 /* EGDisconnectCause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGDisconnectCause.h; sourceTree = "<group>"; };
+		DD21D6731B4BAE340010A5E0 /* EGErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGErrorCode.h; sourceTree = "<group>"; };
+		DD21D6741B4BAE340010A5E0 /* EGLobbyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGLobbyType.h; sourceTree = "<group>"; };
+		DD21D6751B4BAE340010A5E0 /* EGMatchmakingMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGMatchmakingMode.h; sourceTree = "<group>"; };
+		DD21D6761B4BAE340010A5E0 /* EGPeerStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGPeerStates.h; sourceTree = "<group>"; };
+		DD21D6771B4BAE340010A5E0 /* EGServerType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGServerType.h; sourceTree = "<group>"; };
+		FC781CA01346199B0052C26D /* libLoadBalancing-objc_debug_iphoneos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLoadBalancing-objc_debug_iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC781CA11346199B0052C26D /* libLoadBalancing-objc_debug_macosx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLoadBalancing-objc_debug_macosx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84AC25B2242D4AC1008C609A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B4297F1BBD933300F993B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE239BA0E9BC5CB00F949F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE239E70E9BC5CF00F949F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* egn_neutron */ = {
+			isa = PBXGroup;
+			children = (
+				B3CAEE3C1150F8A900E68F51 /* Source */,
+				B3CAEE451150F91400E68F51 /* Headers */,
+				FC781CA01346199B0052C26D /* libLoadBalancing-objc_debug_iphoneos.a */,
+				FC781CA11346199B0052C26D /* libLoadBalancing-objc_debug_macosx.a */,
+				84B429831BBD933300F993B7 /* libLoadBalancing-objc_debug_appletvos.a */,
+				84AC25B6242D4AC1008C609A /* libLoadBalancing-objc_debug_catalyst.a */,
+			);
+			name = egn_neutron;
+			sourceTree = "<group>";
+		};
+		84905E5214F51F8B002E3326 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				84BFB968176B915F001C86E1 /* EGAuthenticationValues+Internal.h */,
+				DD176F701B694B87009CE6B4 /* EGLoadBalancingClient+Internal.h */,
+				A127AFB4165A584700B001EA /* EGLoadBalancingPeer+Internal.h */,
+				A127AFB5165A584700B001EA /* EGLoadBalancingPlayer+Internal.h */,
+				A127AFB6165A584700B001EA /* EGLoadBalancingRoom+Internal.h */,
+			);
+			name = Internal;
+			path = inc/Internal;
+			sourceTree = SOURCE_ROOT;
+		};
+		84EDD7A617E7754A00D1F8F4 /* Protected */ = {
+			isa = PBXGroup;
+			children = (
+				84EDD7AE17E77BA000D1F8F4 /* EGLoadBalancingClient+Protected.h */,
+				84EDD7A717E7754A00D1F8F4 /* EGLoadBalancingPlayer+Protected.h */,
+				84EDD7A817E7754A00D1F8F4 /* EGLoadBalancingRoom+Protected.h */,
+			);
+			name = Protected;
+			path = inc/Protected;
+			sourceTree = SOURCE_ROOT;
+		};
+		B3CAEE3C1150F8A900E68F51 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				84BFB965176B7C9B001C86E1 /* EGAuthenticationValues.mm */,
+				84B68C0417340226007AFBE4 /* EGFriendInfo.m */,
+				A127AFCC165A586900B001EA /* EGLoadBalancingClient.mm */,
+				A127AFCD165A586900B001EA /* EGLoadBalancingPeer.mm */,
+				A127AFCE165A586900B001EA /* EGLoadBalancingPlayer.mm */,
+				A127AFCF165A586900B001EA /* EGLoadBalancingRoom.mm */,
+				DD176F721B694D4A009CE6B4 /* EGLobbyStatsResponse.mm */,
+				DD176F671B694B5B009CE6B4 /* EGLobbyStatsRequest.mm */,
+				8448723C1BFCB8EF007FBFB4 /* EGRaiseEventOptions.mm */,
+				8448723D1BFCB8EF007FBFB4 /* EGRoomOptions.mm */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		B3CAEE451150F91400E68F51 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				DD21D6701B4BAE340010A5E0 /* Enums */,
+				84905E5214F51F8B002E3326 /* Internal */,
+				84EDD7A617E7754A00D1F8F4 /* Protected */,
+				84BFB961176B7C8E001C86E1 /* EGAuthenticationValues.h */,
+				84B68C0817340241007AFBE4 /* EGFriendInfo.h */,
+				A127AFBD165A585400B001EA /* EGLoadBalancingClient.h */,
+				A127AFBE165A585400B001EA /* EGLoadBalancingListener.h */,
+				A127AFBF165A585400B001EA /* EGLoadBalancingPeer.h */,
+				A127AFC0165A585400B001EA /* EGLoadBalancingPlayer.h */,
+				A127AFC1165A585400B001EA /* EGLoadBalancingRoom.h */,
+				DD176F6C1B694B7D009CE6B4 /* EGLobbyStatsRequest.h */,
+				DD176F6D1B694B7D009CE6B4 /* EGLobbyStatsResponse.h */,
+				844872381BFCB8C3007FBFB4 /* EGRaiseEventOptions.h */,
+				844872391BFCB8C3007FBFB4 /* EGRoomOptions.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		DD21D6701B4BAE340010A5E0 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				DD21D6711B4BAE340010A5E0 /* EGCustomAuthenticationType.h */,
+				DD21D6721B4BAE340010A5E0 /* EGDisconnectCause.h */,
+				DD21D6731B4BAE340010A5E0 /* EGErrorCode.h */,
+				DD21D6741B4BAE340010A5E0 /* EGLobbyType.h */,
+				DD21D6751B4BAE340010A5E0 /* EGMatchmakingMode.h */,
+				DD21D6761B4BAE340010A5E0 /* EGPeerStates.h */,
+				84D47F4D1CF32C2B002562B8 /* EGRegionSelectionMode.h */,
+				DD21D6771B4BAE340010A5E0 /* EGServerType.h */,
+			);
+			name = Enums;
+			path = inc/Enums;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		84AC258B242D4AC1008C609A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AC258C242D4AC1008C609A /* EGPeerStates.h in Headers */,
+				84AC258D242D4AC1008C609A /* EGLoadBalancingPeer+Internal.h in Headers */,
+				84AC258E242D4AC1008C609A /* EGLoadBalancingPlayer+Internal.h in Headers */,
+				84AC258F242D4AC1008C609A /* EGLoadBalancingRoom+Internal.h in Headers */,
+				84AC2590242D4AC1008C609A /* EGLoadBalancingClient.h in Headers */,
+				84AC2591242D4AC1008C609A /* EGLoadBalancingListener.h in Headers */,
+				84AC2592242D4AC1008C609A /* EGLoadBalancingPeer.h in Headers */,
+				84AC2593242D4AC1008C609A /* EGLoadBalancingPlayer.h in Headers */,
+				84AC2594242D4AC1008C609A /* EGDisconnectCause.h in Headers */,
+				84AC2595242D4AC1008C609A /* EGLoadBalancingRoom.h in Headers */,
+				84AC2596242D4AC1008C609A /* EGFriendInfo.h in Headers */,
+				84AC2597242D4AC1008C609A /* EGRaiseEventOptions.h in Headers */,
+				84AC2598242D4AC1008C609A /* EGLobbyStatsRequest.h in Headers */,
+				84AC2599242D4AC1008C609A /* EGServerType.h in Headers */,
+				84AC259A242D4AC1008C609A /* EGLobbyStatsResponse.h in Headers */,
+				84AC259B242D4AC1008C609A /* EGErrorCode.h in Headers */,
+				84AC259C242D4AC1008C609A /* EGAuthenticationValues.h in Headers */,
+				84AC259D242D4AC1008C609A /* EGLoadBalancingClient+Internal.h in Headers */,
+				84AC259E242D4AC1008C609A /* EGAuthenticationValues+Internal.h in Headers */,
+				84AC259F242D4AC1008C609A /* EGLobbyType.h in Headers */,
+				84AC25A0242D4AC1008C609A /* EGRoomOptions.h in Headers */,
+				84AC25A1242D4AC1008C609A /* EGRegionSelectionMode.h in Headers */,
+				84AC25A2242D4AC1008C609A /* EGCustomAuthenticationType.h in Headers */,
+				84AC25A3242D4AC1008C609A /* EGLoadBalancingPlayer+Protected.h in Headers */,
+				84AC25A4242D4AC1008C609A /* EGLoadBalancingRoom+Protected.h in Headers */,
+				84AC25A5242D4AC1008C609A /* EGLoadBalancingClient+Protected.h in Headers */,
+				84AC25A6242D4AC1008C609A /* EGMatchmakingMode.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B4295D1BBD933300F993B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B4295E1BBD933300F993B7 /* EGPeerStates.h in Headers */,
+				84B4295F1BBD933300F993B7 /* EGLoadBalancingPeer+Internal.h in Headers */,
+				84B429601BBD933300F993B7 /* EGLoadBalancingPlayer+Internal.h in Headers */,
+				84B429611BBD933300F993B7 /* EGLoadBalancingRoom+Internal.h in Headers */,
+				84B429621BBD933300F993B7 /* EGLoadBalancingClient.h in Headers */,
+				84B429631BBD933300F993B7 /* EGLoadBalancingListener.h in Headers */,
+				84B429641BBD933300F993B7 /* EGLoadBalancingPeer.h in Headers */,
+				84B429651BBD933300F993B7 /* EGLoadBalancingPlayer.h in Headers */,
+				84B429661BBD933300F993B7 /* EGDisconnectCause.h in Headers */,
+				84B429671BBD933300F993B7 /* EGLoadBalancingRoom.h in Headers */,
+				84B429681BBD933300F993B7 /* EGFriendInfo.h in Headers */,
+				84B429691BBD933300F993B7 /* EGLobbyStatsRequest.h in Headers */,
+				84B4296A1BBD933300F993B7 /* EGServerType.h in Headers */,
+				84B4296B1BBD933300F993B7 /* EGLobbyStatsResponse.h in Headers */,
+				84B4296C1BBD933300F993B7 /* EGErrorCode.h in Headers */,
+				84B4296D1BBD933300F993B7 /* EGAuthenticationValues.h in Headers */,
+				84B4296E1BBD933300F993B7 /* EGLoadBalancingClient+Internal.h in Headers */,
+				84B4296F1BBD933300F993B7 /* EGAuthenticationValues+Internal.h in Headers */,
+				84B429701BBD933300F993B7 /* EGLobbyType.h in Headers */,
+				84B429711BBD933300F993B7 /* EGCustomAuthenticationType.h in Headers */,
+				84D47F541CF32C75002562B8 /* EGRoomOptions.h in Headers */,
+				84B429721BBD933300F993B7 /* EGLoadBalancingPlayer+Protected.h in Headers */,
+				84D47F501CF32C5C002562B8 /* EGRegionSelectionMode.h in Headers */,
+				84B429731BBD933300F993B7 /* EGLoadBalancingRoom+Protected.h in Headers */,
+				84B429741BBD933300F993B7 /* EGLoadBalancingClient+Protected.h in Headers */,
+				84B429751BBD933300F993B7 /* EGMatchmakingMode.h in Headers */,
+				84D47F521CF32C72002562B8 /* EGRaiseEventOptions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE2399A0E9BC5CB00F949F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD21D67D1B4BAE340010A5E0 /* EGPeerStates.h in Headers */,
+				A127AFB7165A584700B001EA /* EGLoadBalancingPeer+Internal.h in Headers */,
+				A127AFB9165A584700B001EA /* EGLoadBalancingPlayer+Internal.h in Headers */,
+				A127AFBB165A584700B001EA /* EGLoadBalancingRoom+Internal.h in Headers */,
+				A127AFC2165A585400B001EA /* EGLoadBalancingClient.h in Headers */,
+				A127AFC4165A585400B001EA /* EGLoadBalancingListener.h in Headers */,
+				A127AFC6165A585400B001EA /* EGLoadBalancingPeer.h in Headers */,
+				A127AFC8165A585400B001EA /* EGLoadBalancingPlayer.h in Headers */,
+				DD21D6791B4BAE340010A5E0 /* EGDisconnectCause.h in Headers */,
+				A127AFCA165A585400B001EA /* EGLoadBalancingRoom.h in Headers */,
+				84B68C0917340241007AFBE4 /* EGFriendInfo.h in Headers */,
+				8448723A1BFCB8C3007FBFB4 /* EGRaiseEventOptions.h in Headers */,
+				DD176F6E1B694B7D009CE6B4 /* EGLobbyStatsRequest.h in Headers */,
+				DD21D67E1B4BAE340010A5E0 /* EGServerType.h in Headers */,
+				DD176F6F1B694B7D009CE6B4 /* EGLobbyStatsResponse.h in Headers */,
+				DD21D67A1B4BAE340010A5E0 /* EGErrorCode.h in Headers */,
+				84BFB962176B7C8E001C86E1 /* EGAuthenticationValues.h in Headers */,
+				DD176F711B694B87009CE6B4 /* EGLoadBalancingClient+Internal.h in Headers */,
+				84BFB969176B915F001C86E1 /* EGAuthenticationValues+Internal.h in Headers */,
+				DD21D67B1B4BAE340010A5E0 /* EGLobbyType.h in Headers */,
+				8448723B1BFCB8C3007FBFB4 /* EGRoomOptions.h in Headers */,
+				84D47F4E1CF32C2B002562B8 /* EGRegionSelectionMode.h in Headers */,
+				DD21D6781B4BAE340010A5E0 /* EGCustomAuthenticationType.h in Headers */,
+				84EDD7A917E7754A00D1F8F4 /* EGLoadBalancingPlayer+Protected.h in Headers */,
+				84EDD7AB17E7754A00D1F8F4 /* EGLoadBalancingRoom+Protected.h in Headers */,
+				84EDD7AF17E77BA000D1F8F4 /* EGLoadBalancingClient+Protected.h in Headers */,
+				DD21D67C1B4BAE340010A5E0 /* EGMatchmakingMode.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE239C70E9BC5CF00F949F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD176F7C1B694E9E009CE6B4 /* EGLobbyStatsRequest.h in Headers */,
+				DD176F7D1B694E9E009CE6B4 /* EGLobbyStatsResponse.h in Headers */,
+				DD176F7E1B694E9E009CE6B4 /* EGCustomAuthenticationType.h in Headers */,
+				DD176F7F1B694E9E009CE6B4 /* EGDisconnectCause.h in Headers */,
+				DD176F801B694E9E009CE6B4 /* EGErrorCode.h in Headers */,
+				DD176F811B694E9E009CE6B4 /* EGLobbyType.h in Headers */,
+				DD176F821B694E9E009CE6B4 /* EGMatchmakingMode.h in Headers */,
+				DD176F831B694E9E009CE6B4 /* EGPeerStates.h in Headers */,
+				DD176F841B694E9E009CE6B4 /* EGServerType.h in Headers */,
+				DD176F851B694E9E009CE6B4 /* EGLoadBalancingClient+Internal.h in Headers */,
+				A127AFB8165A584700B001EA /* EGLoadBalancingPeer+Internal.h in Headers */,
+				A127AFBA165A584700B001EA /* EGLoadBalancingPlayer+Internal.h in Headers */,
+				A127AFBC165A584700B001EA /* EGLoadBalancingRoom+Internal.h in Headers */,
+				A127AFC3165A585400B001EA /* EGLoadBalancingClient.h in Headers */,
+				A127AFC5165A585400B001EA /* EGLoadBalancingListener.h in Headers */,
+				A127AFC7165A585400B001EA /* EGLoadBalancingPeer.h in Headers */,
+				A127AFC9165A585400B001EA /* EGLoadBalancingPlayer.h in Headers */,
+				A127AFCB165A585400B001EA /* EGLoadBalancingRoom.h in Headers */,
+				84B68C0A17340241007AFBE4 /* EGFriendInfo.h in Headers */,
+				84BFB963176B7C8E001C86E1 /* EGAuthenticationValues.h in Headers */,
+				84D47F531CF32C75002562B8 /* EGRoomOptions.h in Headers */,
+				84BFB96A176B915F001C86E1 /* EGAuthenticationValues+Internal.h in Headers */,
+				84D47F4F1CF32C5B002562B8 /* EGRegionSelectionMode.h in Headers */,
+				84EDD7AA17E7754A00D1F8F4 /* EGLoadBalancingPlayer+Protected.h in Headers */,
+				84EDD7AC17E7754A00D1F8F4 /* EGLoadBalancingRoom+Protected.h in Headers */,
+				84EDD7B017E77BA000D1F8F4 /* EGLoadBalancingClient+Protected.h in Headers */,
+				84D47F511CF32C71002562B8 /* EGRaiseEventOptions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		84AC258A242D4AC1008C609A /* LoadBalancing-objc-catalyst */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84AC25B3242D4AC1008C609A /* Build configuration list for PBXNativeTarget "LoadBalancing-objc-catalyst" */;
+			buildPhases = (
+				84AC258B242D4AC1008C609A /* Headers */,
+				84AC25A7242D4AC1008C609A /* Sources */,
+				84AC25B2242D4AC1008C609A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LoadBalancing-objc-catalyst";
+			productName = egn_neutron;
+			productReference = 84AC25B6242D4AC1008C609A /* libLoadBalancing-objc_debug_catalyst.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84B4295C1BBD933300F993B7 /* LoadBalancing-objc-tvos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B429801BBD933300F993B7 /* Build configuration list for PBXNativeTarget "LoadBalancing-objc-tvos" */;
+			buildPhases = (
+				84B4295D1BBD933300F993B7 /* Headers */,
+				84B429761BBD933300F993B7 /* Sources */,
+				84B4297F1BBD933300F993B7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LoadBalancing-objc-tvos";
+			productName = egn_neutron;
+			productReference = 84B429831BBD933300F993B7 /* libLoadBalancing-objc_debug_appletvos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FCE239990E9BC5CB00F949F1 /* LoadBalancing-objc-iphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCE239BE0E9BC5CB00F949F1 /* Build configuration list for PBXNativeTarget "LoadBalancing-objc-iphone" */;
+			buildPhases = (
+				FCE2399A0E9BC5CB00F949F1 /* Headers */,
+				FCE239AC0E9BC5CB00F949F1 /* Sources */,
+				FCE239BA0E9BC5CB00F949F1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LoadBalancing-objc-iphone";
+			productName = egn_neutron;
+			productReference = FC781CA01346199B0052C26D /* libLoadBalancing-objc_debug_iphoneos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FCE239C60E9BC5CF00F949F1 /* LoadBalancing-objc-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCE239EB0E9BC5CF00F949F1 /* Build configuration list for PBXNativeTarget "LoadBalancing-objc-macos" */;
+			buildPhases = (
+				FCE239C70E9BC5CF00F949F1 /* Headers */,
+				FCE239D90E9BC5CF00F949F1 /* Sources */,
+				FCE239E70E9BC5CF00F949F1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LoadBalancing-objc-macos";
+			productName = egn_neutron;
+			productReference = FC781CA11346199B0052C26D /* libLoadBalancing-objc_debug_macosx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+			};
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "LoadBalancing-objc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* egn_neutron */;
+			productRefGroup = 08FB7794FE84155DC02AAC07 /* egn_neutron */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84AC258A242D4AC1008C609A /* LoadBalancing-objc-catalyst */,
+				FCE239990E9BC5CB00F949F1 /* LoadBalancing-objc-iphone */,
+				FCE239C60E9BC5CF00F949F1 /* LoadBalancing-objc-macos */,
+				84B4295C1BBD933300F993B7 /* LoadBalancing-objc-tvos */,
+				FCE23B6D0E9BDA5600F949F1 /* build all */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84AC25A7242D4AC1008C609A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AC25A8242D4AC1008C609A /* EGLoadBalancingClient.mm in Sources */,
+				84AC25A9242D4AC1008C609A /* EGLobbyStatsResponse.mm in Sources */,
+				84AC25AA242D4AC1008C609A /* EGRaiseEventOptions.mm in Sources */,
+				84AC25AB242D4AC1008C609A /* EGRoomOptions.mm in Sources */,
+				84AC25AC242D4AC1008C609A /* EGLoadBalancingPeer.mm in Sources */,
+				84AC25AD242D4AC1008C609A /* EGLobbyStatsRequest.mm in Sources */,
+				84AC25AE242D4AC1008C609A /* EGLoadBalancingPlayer.mm in Sources */,
+				84AC25AF242D4AC1008C609A /* EGLoadBalancingRoom.mm in Sources */,
+				84AC25B0242D4AC1008C609A /* EGFriendInfo.m in Sources */,
+				84AC25B1242D4AC1008C609A /* EGAuthenticationValues.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B429761BBD933300F993B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B429771BBD933300F993B7 /* EGLoadBalancingClient.mm in Sources */,
+				84B429781BBD933300F993B7 /* EGLobbyStatsResponse.mm in Sources */,
+				84B429791BBD933300F993B7 /* EGLoadBalancingPeer.mm in Sources */,
+				84B4297A1BBD933300F993B7 /* EGLobbyStatsRequest.mm in Sources */,
+				844872431BFCBD83007FBFB4 /* EGRaiseEventOptions.mm in Sources */,
+				84B4297B1BBD933300F993B7 /* EGLoadBalancingPlayer.mm in Sources */,
+				84B4297C1BBD933300F993B7 /* EGLoadBalancingRoom.mm in Sources */,
+				844872411BFCBD7E007FBFB4 /* EGRoomOptions.mm in Sources */,
+				84B4297D1BBD933300F993B7 /* EGFriendInfo.m in Sources */,
+				84B4297E1BBD933300F993B7 /* EGAuthenticationValues.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE239AC0E9BC5CB00F949F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A127AFD0165A586900B001EA /* EGLoadBalancingClient.mm in Sources */,
+				DD176F731B694D4A009CE6B4 /* EGLobbyStatsResponse.mm in Sources */,
+				8448723E1BFCB8EF007FBFB4 /* EGRaiseEventOptions.mm in Sources */,
+				8448723F1BFCB8EF007FBFB4 /* EGRoomOptions.mm in Sources */,
+				A127AFD2165A586900B001EA /* EGLoadBalancingPeer.mm in Sources */,
+				DD176F691B694B5B009CE6B4 /* EGLobbyStatsRequest.mm in Sources */,
+				A127AFD4165A586900B001EA /* EGLoadBalancingPlayer.mm in Sources */,
+				A127AFD6165A586900B001EA /* EGLoadBalancingRoom.mm in Sources */,
+				84B68C0517340226007AFBE4 /* EGFriendInfo.m in Sources */,
+				84BFB966176B7C9B001C86E1 /* EGAuthenticationValues.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE239D90E9BC5CF00F949F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD176F861B694ED3009CE6B4 /* EGLobbyStatsResponse.mm in Sources */,
+				DD176F871B694ED3009CE6B4 /* EGLobbyStatsRequest.mm in Sources */,
+				A127AFD1165A586900B001EA /* EGLoadBalancingClient.mm in Sources */,
+				A127AFD3165A586900B001EA /* EGLoadBalancingPeer.mm in Sources */,
+				844872421BFCBD83007FBFB4 /* EGRaiseEventOptions.mm in Sources */,
+				A127AFD5165A586900B001EA /* EGLoadBalancingPlayer.mm in Sources */,
+				A127AFD7165A586900B001EA /* EGLoadBalancingRoom.mm in Sources */,
+				844872401BFCBD7E007FBFB4 /* EGRoomOptions.mm in Sources */,
+				84B68C0617340226007AFBE4 /* EGFriendInfo.m in Sources */,
+				84BFB967176B7C9B001C86E1 /* EGAuthenticationValues.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84B42A211BBD9A7300F993B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B4295C1BBD933300F993B7 /* LoadBalancing-objc-tvos */;
+			targetProxy = 84B42A201BBD9A7300F993B7 /* PBXContainerItemProxy */;
+		};
+		84CE55AC2628D3A300392002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84AC258A242D4AC1008C609A /* LoadBalancing-objc-catalyst */;
+			targetProxy = 84CE55AB2628D3A300392002 /* PBXContainerItemProxy */;
+		};
+		FCE23B790E9BDA8A00F949F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCE239C60E9BC5CF00F949F1 /* LoadBalancing-objc-macos */;
+			targetProxy = FCE23B780E9BDA8A00F949F1 /* PBXContainerItemProxy */;
+		};
+		FCE23B7B0E9BDA8A00F949F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCE239990E9BC5CB00F949F1 /* LoadBalancing-objc-iphone */;
+			targetProxy = FCE23B7A0E9BDA8A00F949F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91F008733DB70010E9CD /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = lib;
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_PPC64 = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"../Photon-objc/lib",
+					"../Common-objc/lib",
+				);
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "LoadBalancing-objc_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = iphoneos;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+			};
+			name = debug;
+		};
+		1DEB91F108733DB70010E9CD /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = lib;
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_PPC64 = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"../Photon-objc/lib",
+					"../Common-objc/lib",
+				);
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "LoadBalancing-objc_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = iphoneos;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+			};
+			name = release;
+		};
+		84AC25B4242D4AC1008C609A /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = "LoadBalancing-objc_$(CONFIGURATION)_catalyst";
+				SUPPORTS_MACCATALYST = YES;
+			};
+			name = debug;
+		};
+		84AC25B5242D4AC1008C609A /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = "LoadBalancing-objc_$(CONFIGURATION)_catalyst";
+				SUPPORTS_MACCATALYST = YES;
+			};
+			name = release;
+		};
+		84B429811BBD933300F993B7 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				SDKROOT = appletvos;
+			};
+			name = debug;
+		};
+		84B429821BBD933300F993B7 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				GCC_THUMB_SUPPORT = NO;
+				SDKROOT = appletvos;
+			};
+			name = release;
+		};
+		FCE239BF0E9BC5CB00F949F1 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXCLUDED_ARCHS = i386;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = debug;
+		};
+		FCE239C20E9BC5CB00F949F1 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXCLUDED_ARCHS = i386;
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = release;
+		};
+		FCE239EC0E9BC5CF00F949F1 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IMAC_PLATFORM,
+					EG_DEBUGGER,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = debug;
+		};
+		FCE239EF0E9BC5CF00F949F1 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IMAC_PLATFORM;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = release;
+		};
+		FCE23B6E0E9BDA5700F949F1 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_THUMB_SUPPORT = NO;
+			};
+			name = debug;
+		};
+		FCE23B6F0E9BDA5700F949F1 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_THUMB_SUPPORT = NO;
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "LoadBalancing-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* debug */,
+				1DEB91F108733DB70010E9CD /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		84AC25B3242D4AC1008C609A /* Build configuration list for PBXNativeTarget "LoadBalancing-objc-catalyst" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84AC25B4242D4AC1008C609A /* debug */,
+				84AC25B5242D4AC1008C609A /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		84B429801BBD933300F993B7 /* Build configuration list for PBXNativeTarget "LoadBalancing-objc-tvos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B429811BBD933300F993B7 /* debug */,
+				84B429821BBD933300F993B7 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		FCE239BE0E9BC5CB00F949F1 /* Build configuration list for PBXNativeTarget "LoadBalancing-objc-iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE239BF0E9BC5CB00F949F1 /* debug */,
+				FCE239C20E9BC5CB00F949F1 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		FCE239EB0E9BC5CF00F949F1 /* Build configuration list for PBXNativeTarget "LoadBalancing-objc-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE239EC0E9BC5CF00F949F1 /* debug */,
+				FCE239EF0E9BC5CF00F949F1 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		FCE23B710E9BDA7D00F949F1 /* Build configuration list for PBXAggregateTarget "build all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE23B6E0E9BDA5700F949F1 /* debug */,
+				FCE23B6F0E9BDA5700F949F1 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

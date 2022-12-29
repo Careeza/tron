@@ -1,0 +1,19 @@
+<map id="EGChatClient" name="EGChatClient">
+<area shape="rect" id="node1" title=" " alt="" coords="734,450,821,475"/>
+<area shape="rect" id="node2" href="$class_n_s_object.html" title=" " alt="" coords="5,534,72,559"/>
+<area shape="rect" id="node13" href="$interface_e_g_base.html" title=" " alt="" coords="148,534,209,559"/>
+<area shape="rect" id="node17" href="$interface_e_g_traffic_stats.html" title=" " alt="" coords="455,901,545,926"/>
+<area shape="rect" id="node3" href="$protocol_e_g_photon_listener-p.html" title=" " alt="" coords="440,162,560,187"/>
+<area shape="rect" id="node4" href="$protocol_e_g_base_listener-p.html" title=" " alt="" coords="123,108,234,133"/>
+<area shape="rect" id="node5" href="$interface_e_g_array.html" title=" " alt="" coords="469,268,531,293"/>
+<area shape="rect" id="node6" href="$class_n_s_array.html" title=" " alt="" coords="148,157,209,182"/>
+<area shape="rect" id="node7" title=" " alt="" coords="140,206,217,231"/>
+<area shape="rect" id="node8" title=" " alt="" coords="144,256,213,281"/>
+<area shape="rect" id="node9" title=" " alt="" coords="140,305,217,330"/>
+<area shape="rect" id="node10" href="$class_n_s_string.html" title=" " alt="" coords="147,368,211,393"/>
+<area shape="rect" id="node11" title=" " alt="" coords="477,425,523,450"/>
+<area shape="rect" id="node12" href="$interface_e_g_traffic_stats_game_level.html" title=" " alt="" coords="428,534,572,559"/>
+<area shape="rect" id="node14" title=" " alt="" coords="159,740,198,765"/>
+<area shape="rect" id="node15" title=" " alt="" coords="154,458,203,483"/>
+<area shape="rect" id="node16" title=" " alt="" coords="479,800,521,825"/>
+</map>

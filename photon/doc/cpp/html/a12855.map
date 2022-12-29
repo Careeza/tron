@@ -1,0 +1,5 @@
+<map id="IVoiceDetector" name="IVoiceDetector">
+<area shape="rect" id="node1" title="Voice Activity Detector interface." alt="" coords="87,6,177,31"/>
+<area shape="rect" id="node2" href="$a12868.html" title="Simple voice activity detector triggered by signal level." alt="" coords="5,81,117,106"/>
+<area shape="rect" id="node3" href="$a12860.html" title="Dummy VoiceDetector that doesn&#39;t actually do anything." alt="" coords="142,81,265,106"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ILevelMeter" name="ILevelMeter">
+<area shape="rect" id="node1" title="Audio Level Metering interface." alt="" coords="79,6,155,31"/>
+<area shape="rect" id="node2" href="$a12852.html" title="Audio Level Meter." alt="" coords="4,81,101,106"/>
+<area shape="rect" id="node3" href="$a12848.html" title="Dummy Audio Level Meter that doesn&#39;t actually do anything." alt="" coords="127,81,237,106"/>
+</map>

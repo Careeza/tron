@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84F445AC232BFD5200159435 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F445AB232BFD4D00159435 /* Security.framework */; };
+		84F44623232C000700159435 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F44622232C000300159435 /* CFNetwork.framework */; };
+		84F4463D232C019A00159435 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F4463C232C019600159435 /* Foundation.framework */; };
+		DD475C251B5421A30085EE47 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD475C241B5421A30085EE47 /* main.swift */; };
+		DD475C371B544D0E0085EE47 /* DemoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD475C351B544D0E0085EE47 /* DemoConstants.swift */; };
+		DD475C381B544D0E0085EE47 /* NetworkLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD475C361B544D0E0085EE47 /* NetworkLogic.swift */; };
+		DDE393AE1B54666B000D16CA /* getchar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE393AD1B54666B000D16CA /* getchar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84577308268F7A1A00C4C373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD475C3C1B5459150085EE47 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84AC25B6242D4AC1008C609A;
+			remoteInfo = "LoadBalancing-objc-catalyst";
+		};
+		847935301BE0D814006BDC61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD475C3C1B5459150085EE47 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84B429831BBD933300F993B7;
+			remoteInfo = "LoadBalancing-objc-tvos";
+		};
+		DD475C421B5459150085EE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD475C3C1B5459150085EE47 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FC781CA01346199B0052C26D;
+			remoteInfo = "LoadBalancing-objc-iphone";
+		};
+		DD475C441B5459150085EE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD475C3C1B5459150085EE47 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FC781CA11346199B0052C26D;
+			remoteInfo = "LoadBalancing-objc-macos";
+		};
+		DD475C461B5459630085EE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD475C3C1B5459150085EE47 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE239C60E9BC5CF00F949F1;
+			remoteInfo = "LoadBalancing-objc-macos";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DD475C1F1B5421A30085EE47 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		84F445AB232BFD4D00159435 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		84F44622232C000300159435 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		84F4463C232C019600159435 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD475C211B5421A30085EE47 /* demo_loadBalancing_swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = demo_loadBalancing_swift; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD475C241B5421A30085EE47 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DD475C351B544D0E0085EE47 /* DemoConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoConstants.swift; path = ../src/DemoConstants.swift; sourceTree = "<group>"; };
+		DD475C361B544D0E0085EE47 /* NetworkLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkLogic.swift; path = ../src/NetworkLogic.swift; sourceTree = "<group>"; };
+		DD475C3B1B5454C20085EE47 /* demo_iMac_loadBalancing_swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "demo_iMac_loadBalancing_swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		DD475C3C1B5459150085EE47 /* LoadBalancing-objc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LoadBalancing-objc.xcodeproj"; path = "../../../LoadBalancing-objc/LoadBalancing-objc.xcodeproj"; sourceTree = "<group>"; };
+		DDE393AD1B54666B000D16CA /* getchar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getchar.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD475C1E1B5421A30085EE47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F4463D232C019A00159435 /* Foundation.framework in Frameworks */,
+				84F44623232C000700159435 /* CFNetwork.framework in Frameworks */,
+				84F445AC232BFD5200159435 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84F445A7232BFD4D00159435 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84F4463C232C019600159435 /* Foundation.framework */,
+				84F44622232C000300159435 /* CFNetwork.framework */,
+				84F445AB232BFD4D00159435 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD475C181B5421A30085EE47 = {
+			isa = PBXGroup;
+			children = (
+				DD475C3C1B5459150085EE47 /* LoadBalancing-objc.xcodeproj */,
+				DD475C341B544CFB0085EE47 /* src */,
+				DD475C231B5421A30085EE47 /* demo_iMac_loadBalancing_swift */,
+				DD475C221B5421A30085EE47 /* Products */,
+				84F445A7232BFD4D00159435 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DD475C221B5421A30085EE47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD475C211B5421A30085EE47 /* demo_loadBalancing_swift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD475C231B5421A30085EE47 /* demo_iMac_loadBalancing_swift */ = {
+			isa = PBXGroup;
+			children = (
+				DDE393AD1B54666B000D16CA /* getchar.m */,
+				DD475C241B5421A30085EE47 /* main.swift */,
+				DD475C3B1B5454C20085EE47 /* demo_iMac_loadBalancing_swift-Bridging-Header.h */,
+			);
+			path = demo_iMac_loadBalancing_swift;
+			sourceTree = "<group>";
+		};
+		DD475C341B544CFB0085EE47 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DD475C351B544D0E0085EE47 /* DemoConstants.swift */,
+				DD475C361B544D0E0085EE47 /* NetworkLogic.swift */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		DD475C3D1B5459150085EE47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84577309268F7A1A00C4C373 /* libLoadBalancing-objc_debug_catalyst.a */,
+				DD475C431B5459150085EE47 /* libLoadBalancing-objc_debug_iphoneos.a */,
+				DD475C451B5459150085EE47 /* libLoadBalancing-objc_debug_macosx.a */,
+				847935311BE0D814006BDC61 /* libLoadBalancing-objc_debug_appletvos.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD475C201B5421A30085EE47 /* demo_loadBalancing_swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD475C281B5421A30085EE47 /* Build configuration list for PBXNativeTarget "demo_loadBalancing_swift" */;
+			buildPhases = (
+				DD475C1D1B5421A30085EE47 /* Sources */,
+				DD475C1E1B5421A30085EE47 /* Frameworks */,
+				DD475C1F1B5421A30085EE47 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD475C471B5459630085EE47 /* PBXTargetDependency */,
+			);
+			name = demo_loadBalancing_swift;
+			productName = demo_iMac_loadBalancing_swift;
+			productReference = DD475C211B5421A30085EE47 /* demo_loadBalancing_swift */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD475C191B5421A30085EE47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = vadim;
+				TargetAttributes = {
+					DD475C201B5421A30085EE47 = {
+						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0910;
+					};
+				};
+			};
+			buildConfigurationList = DD475C1C1B5421A30085EE47 /* Build configuration list for PBXProject "demo_iMac_loadBalancing_swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = DD475C181B5421A30085EE47;
+			productRefGroup = DD475C221B5421A30085EE47 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DD475C3D1B5459150085EE47 /* Products */;
+					ProjectRef = DD475C3C1B5459150085EE47 /* LoadBalancing-objc.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				DD475C201B5421A30085EE47 /* demo_loadBalancing_swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		84577309268F7A1A00C4C373 /* libLoadBalancing-objc_debug_catalyst.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_catalyst.a";
+			remoteRef = 84577308268F7A1A00C4C373 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		847935311BE0D814006BDC61 /* libLoadBalancing-objc_debug_appletvos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_appletvos.a";
+			remoteRef = 847935301BE0D814006BDC61 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DD475C431B5459150085EE47 /* libLoadBalancing-objc_debug_iphoneos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_iphoneos.a";
+			remoteRef = DD475C421B5459150085EE47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DD475C451B5459150085EE47 /* libLoadBalancing-objc_debug_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_macosx.a";
+			remoteRef = DD475C441B5459150085EE47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD475C1D1B5421A30085EE47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE393AE1B54666B000D16CA /* getchar.m in Sources */,
+				DD475C371B544D0E0085EE47 /* DemoConstants.swift in Sources */,
+				DD475C381B544D0E0085EE47 /* NetworkLogic.swift in Sources */,
+				DD475C251B5421A30085EE47 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD475C471B5459630085EE47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LoadBalancing-objc-macos";
+			targetProxy = DD475C461B5459630085EE47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DD475C261B5421A30085EE47 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+			};
+			name = debug;
+		};
+		DD475C271B5421A30085EE47 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 2.3;
+			};
+			name = release;
+		};
+		DD475C291B5421A30085EE47 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IMAC_PLATFORM;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../..,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../Common-objc/lib",
+					"../../../Photon-objc/lib",
+					"../../../LoadBalancing-objc/lib",
+					../../../3rdparty/lib/apple,
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lstdc++",
+					"-lCommon-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lPhoton-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lcrypto_$(CONFIGURATION)_$(PLATFORM_NAME)",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "demo_iMac_loadBalancing_swift/demo_iMac_loadBalancing_swift-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = debug;
+		};
+		DD475C2A1B5421A30085EE47 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IMAC_PLATFORM;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../..,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../Common-objc/lib",
+					"../../../Photon-objc/lib",
+					"../../../LoadBalancing-objc/lib",
+					../../../3rdparty/lib/apple,
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lstdc++",
+					"-lCommon-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lPhoton-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lcrypto_$(CONFIGURATION)_$(PLATFORM_NAME)",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "demo_iMac_loadBalancing_swift/demo_iMac_loadBalancing_swift-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD475C1C1B5421A30085EE47 /* Build configuration list for PBXProject "demo_iMac_loadBalancing_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD475C261B5421A30085EE47 /* debug */,
+				DD475C271B5421A30085EE47 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		DD475C281B5421A30085EE47 /* Build configuration list for PBXNativeTarget "demo_loadBalancing_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD475C291B5421A30085EE47 /* debug */,
+				DD475C2A1B5421A30085EE47 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD475C191B5421A30085EE47 /* Project object */;
+}

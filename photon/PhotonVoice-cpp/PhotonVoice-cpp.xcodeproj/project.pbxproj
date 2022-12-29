@@ -1,0 +1,1222 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		84C4E071262A03D3005824B9 /* build all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 84C4E072262A03D3005824B9 /* Build configuration list for PBXAggregateTarget "build all" */;
+			buildPhases = (
+			);
+			dependencies = (
+				84C4E076262A03F1005824B9 /* PBXTargetDependency */,
+				84C4E10F262A3F91005824B9 /* PBXTargetDependency */,
+				84C4E111262A3F91005824B9 /* PBXTargetDependency */,
+				84C4E113262A3F91005824B9 /* PBXTargetDependency */,
+			);
+			name = "build all";
+			productName = "build-all";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		84629A2928174DB4004FBE22 /* AudioOutDelayControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 84629A2828174DB4004FBE22 /* AudioOutDelayControl.h */; };
+		84629A2A28174DB4004FBE22 /* AudioOutDelayControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 84629A2828174DB4004FBE22 /* AudioOutDelayControl.h */; };
+		84629A2B28174DB4004FBE22 /* AudioOutDelayControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 84629A2828174DB4004FBE22 /* AudioOutDelayControl.h */; };
+		84629A2C28174DB4004FBE22 /* AudioOutDelayControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 84629A2828174DB4004FBE22 /* AudioOutDelayControl.h */; };
+		84629A2E28174DC9004FBE22 /* AudioOutDelayControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84629A2D28174DC9004FBE22 /* AudioOutDelayControl.cpp */; };
+		84629A2F28174DC9004FBE22 /* AudioOutDelayControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84629A2D28174DC9004FBE22 /* AudioOutDelayControl.cpp */; };
+		84629A3028174DC9004FBE22 /* AudioOutDelayControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84629A2D28174DC9004FBE22 /* AudioOutDelayControl.cpp */; };
+		84629A3128174DC9004FBE22 /* AudioOutDelayControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84629A2D28174DC9004FBE22 /* AudioOutDelayControl.cpp */; };
+		84C4E046262A038B005824B9 /* AudioUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAF262A034E005824B9 /* AudioUtil.h */; };
+		84C4E047262A038B005824B9 /* RemoteVoiceOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAA262A034E005824B9 /* RemoteVoiceOptions.h */; };
+		84C4E048262A038B005824B9 /* Codec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA8262A0341005824B9 /* Codec.h */; };
+		84C4E049262A038B005824B9 /* Voice.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB0262A034E005824B9 /* Voice.h */; };
+		84C4E04A262A038B005824B9 /* PhotonTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA1262A0325005824B9 /* PhotonTransport.h */; };
+		84C4E04B262A038B005824B9 /* RemoteVoice.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA6262A033A005824B9 /* RemoteVoice.h */; };
+		84C4E04C262A038B005824B9 /* VoiceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB7262A034E005824B9 /* VoiceInfo.h */; };
+		84C4E04E262A038B005824B9 /* defines.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB2262A034E005824B9 /* defines.h */; };
+		84C4E04F262A038B005824B9 /* OpusCodec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB3262A034E005824B9 /* OpusCodec.h */; };
+		84C4E050262A038B005824B9 /* LoadBalancingTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA0262A0325005824B9 /* LoadBalancingTransport.h */; };
+		84C4E051262A038B005824B9 /* VoiceAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB6262A034E005824B9 /* VoiceAudio.h */; };
+		84C4E052262A038B005824B9 /* ILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAE262A034E005824B9 /* ILogger.h */; };
+		84C4E053262A038B005824B9 /* VoiceCodec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB1262A034E005824B9 /* VoiceCodec.h */; };
+		84C4E054262A038B005824B9 /* AudioGen.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB4262A034E005824B9 /* AudioGen.h */; };
+		84C4E055262A038B005824B9 /* Buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB9262A034E005824B9 /* Buffer.h */; };
+		84C4E056262A038B005824B9 /* RemoteVoiceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAC262A034E005824B9 /* RemoteVoiceInfo.h */; };
+		84C4E057262A038B005824B9 /* VoiceClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB8262A034E005824B9 /* VoiceClient.h */; };
+		84C4E058262A038B005824B9 /* LoadBalancingListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA2262A0325005824B9 /* LoadBalancingListener.h */; };
+		84C4E059262A038B005824B9 /* VoiceFramed.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAB262A034E005824B9 /* VoiceFramed.h */; };
+		84C4E05C262A038B005824B9 /* PhotonTransport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCA262A0356005824B9 /* PhotonTransport.cpp */; };
+		84C4E05D262A038B005824B9 /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD7262A0369005824B9 /* Buffer.cpp */; };
+		84C4E05E262A038B005824B9 /* VoiceClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDC262A0369005824B9 /* VoiceClient.cpp */; };
+		84C4E05F262A038B005824B9 /* OpusCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDD262A0369005824B9 /* OpusCodec.cpp */; };
+		84C4E061262A038B005824B9 /* VoiceFramed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD8262A0369005824B9 /* VoiceFramed.cpp */; };
+		84C4E062262A038B005824B9 /* VoiceInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD9262A0369005824B9 /* VoiceInfo.cpp */; };
+		84C4E063262A038B005824B9 /* AudioGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD4262A0369005824B9 /* AudioGen.cpp */; };
+		84C4E064262A038B005824B9 /* RemoteVoiceOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD6262A0369005824B9 /* RemoteVoiceOptions.cpp */; };
+		84C4E065262A038B005824B9 /* VoiceCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDA262A0369005824B9 /* VoiceCodec.cpp */; };
+		84C4E066262A038B005824B9 /* LoadBalancingListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCC262A0356005824B9 /* LoadBalancingListener.cpp */; };
+		84C4E067262A038B005824B9 /* VoiceAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDB262A0369005824B9 /* VoiceAudio.cpp */; };
+		84C4E068262A038B005824B9 /* RemoteVoice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD0262A035C005824B9 /* RemoteVoice.cpp */; };
+		84C4E069262A038B005824B9 /* Voice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD2262A0369005824B9 /* Voice.cpp */; };
+		84C4E06A262A038B005824B9 /* AudioUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD3262A0369005824B9 /* AudioUtil.cpp */; };
+		84C4E06B262A038B005824B9 /* LoadBalancingTransport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCB262A0356005824B9 /* LoadBalancingTransport.cpp */; };
+		84C4E089262A2F55005824B9 /* AudioUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAF262A034E005824B9 /* AudioUtil.h */; };
+		84C4E08A262A2F55005824B9 /* RemoteVoiceOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAA262A034E005824B9 /* RemoteVoiceOptions.h */; };
+		84C4E08B262A2F55005824B9 /* Codec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA8262A0341005824B9 /* Codec.h */; };
+		84C4E08C262A2F55005824B9 /* Voice.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB0262A034E005824B9 /* Voice.h */; };
+		84C4E08D262A2F55005824B9 /* PhotonTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA1262A0325005824B9 /* PhotonTransport.h */; };
+		84C4E08E262A2F55005824B9 /* RemoteVoice.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA6262A033A005824B9 /* RemoteVoice.h */; };
+		84C4E08F262A2F55005824B9 /* VoiceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB7262A034E005824B9 /* VoiceInfo.h */; };
+		84C4E091262A2F55005824B9 /* defines.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB2262A034E005824B9 /* defines.h */; };
+		84C4E092262A2F55005824B9 /* OpusCodec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB3262A034E005824B9 /* OpusCodec.h */; };
+		84C4E093262A2F55005824B9 /* LoadBalancingTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA0262A0325005824B9 /* LoadBalancingTransport.h */; };
+		84C4E094262A2F55005824B9 /* VoiceAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB6262A034E005824B9 /* VoiceAudio.h */; };
+		84C4E095262A2F55005824B9 /* ILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAE262A034E005824B9 /* ILogger.h */; };
+		84C4E096262A2F55005824B9 /* VoiceCodec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB1262A034E005824B9 /* VoiceCodec.h */; };
+		84C4E097262A2F55005824B9 /* AudioGen.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB4262A034E005824B9 /* AudioGen.h */; };
+		84C4E098262A2F55005824B9 /* Buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB9262A034E005824B9 /* Buffer.h */; };
+		84C4E099262A2F55005824B9 /* RemoteVoiceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAC262A034E005824B9 /* RemoteVoiceInfo.h */; };
+		84C4E09A262A2F55005824B9 /* VoiceClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB8262A034E005824B9 /* VoiceClient.h */; };
+		84C4E09B262A2F55005824B9 /* LoadBalancingListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA2262A0325005824B9 /* LoadBalancingListener.h */; };
+		84C4E09C262A2F55005824B9 /* VoiceFramed.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAB262A034E005824B9 /* VoiceFramed.h */; };
+		84C4E09F262A2F55005824B9 /* PhotonTransport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCA262A0356005824B9 /* PhotonTransport.cpp */; };
+		84C4E0A0262A2F55005824B9 /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD7262A0369005824B9 /* Buffer.cpp */; };
+		84C4E0A1262A2F55005824B9 /* VoiceClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDC262A0369005824B9 /* VoiceClient.cpp */; };
+		84C4E0A2262A2F55005824B9 /* OpusCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDD262A0369005824B9 /* OpusCodec.cpp */; };
+		84C4E0A4262A2F55005824B9 /* VoiceFramed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD8262A0369005824B9 /* VoiceFramed.cpp */; };
+		84C4E0A5262A2F55005824B9 /* VoiceInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD9262A0369005824B9 /* VoiceInfo.cpp */; };
+		84C4E0A6262A2F55005824B9 /* AudioGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD4262A0369005824B9 /* AudioGen.cpp */; };
+		84C4E0A7262A2F55005824B9 /* RemoteVoiceOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD6262A0369005824B9 /* RemoteVoiceOptions.cpp */; };
+		84C4E0A8262A2F55005824B9 /* VoiceCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDA262A0369005824B9 /* VoiceCodec.cpp */; };
+		84C4E0A9262A2F55005824B9 /* LoadBalancingListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCC262A0356005824B9 /* LoadBalancingListener.cpp */; };
+		84C4E0AA262A2F55005824B9 /* VoiceAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDB262A0369005824B9 /* VoiceAudio.cpp */; };
+		84C4E0AB262A2F55005824B9 /* RemoteVoice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD0262A035C005824B9 /* RemoteVoice.cpp */; };
+		84C4E0AC262A2F55005824B9 /* Voice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD2262A0369005824B9 /* Voice.cpp */; };
+		84C4E0AD262A2F55005824B9 /* AudioUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD3262A0369005824B9 /* AudioUtil.cpp */; };
+		84C4E0AE262A2F55005824B9 /* LoadBalancingTransport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCB262A0356005824B9 /* LoadBalancingTransport.cpp */; };
+		84C4E0B6262A2F57005824B9 /* AudioUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAF262A034E005824B9 /* AudioUtil.h */; };
+		84C4E0B7262A2F57005824B9 /* RemoteVoiceOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAA262A034E005824B9 /* RemoteVoiceOptions.h */; };
+		84C4E0B8262A2F57005824B9 /* Codec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA8262A0341005824B9 /* Codec.h */; };
+		84C4E0B9262A2F57005824B9 /* Voice.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB0262A034E005824B9 /* Voice.h */; };
+		84C4E0BA262A2F57005824B9 /* PhotonTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA1262A0325005824B9 /* PhotonTransport.h */; };
+		84C4E0BB262A2F57005824B9 /* RemoteVoice.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA6262A033A005824B9 /* RemoteVoice.h */; };
+		84C4E0BC262A2F57005824B9 /* VoiceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB7262A034E005824B9 /* VoiceInfo.h */; };
+		84C4E0BE262A2F57005824B9 /* defines.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB2262A034E005824B9 /* defines.h */; };
+		84C4E0BF262A2F57005824B9 /* OpusCodec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB3262A034E005824B9 /* OpusCodec.h */; };
+		84C4E0C0262A2F57005824B9 /* LoadBalancingTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA0262A0325005824B9 /* LoadBalancingTransport.h */; };
+		84C4E0C1262A2F57005824B9 /* VoiceAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB6262A034E005824B9 /* VoiceAudio.h */; };
+		84C4E0C2262A2F57005824B9 /* ILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAE262A034E005824B9 /* ILogger.h */; };
+		84C4E0C3262A2F57005824B9 /* VoiceCodec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB1262A034E005824B9 /* VoiceCodec.h */; };
+		84C4E0C4262A2F57005824B9 /* AudioGen.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB4262A034E005824B9 /* AudioGen.h */; };
+		84C4E0C5262A2F57005824B9 /* Buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB9262A034E005824B9 /* Buffer.h */; };
+		84C4E0C6262A2F57005824B9 /* RemoteVoiceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAC262A034E005824B9 /* RemoteVoiceInfo.h */; };
+		84C4E0C7262A2F57005824B9 /* VoiceClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB8262A034E005824B9 /* VoiceClient.h */; };
+		84C4E0C8262A2F57005824B9 /* LoadBalancingListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA2262A0325005824B9 /* LoadBalancingListener.h */; };
+		84C4E0C9262A2F57005824B9 /* VoiceFramed.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAB262A034E005824B9 /* VoiceFramed.h */; };
+		84C4E0CC262A2F57005824B9 /* PhotonTransport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCA262A0356005824B9 /* PhotonTransport.cpp */; };
+		84C4E0CD262A2F57005824B9 /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD7262A0369005824B9 /* Buffer.cpp */; };
+		84C4E0CE262A2F57005824B9 /* VoiceClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDC262A0369005824B9 /* VoiceClient.cpp */; };
+		84C4E0CF262A2F57005824B9 /* OpusCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDD262A0369005824B9 /* OpusCodec.cpp */; };
+		84C4E0D1262A2F57005824B9 /* VoiceFramed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD8262A0369005824B9 /* VoiceFramed.cpp */; };
+		84C4E0D2262A2F57005824B9 /* VoiceInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD9262A0369005824B9 /* VoiceInfo.cpp */; };
+		84C4E0D3262A2F57005824B9 /* AudioGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD4262A0369005824B9 /* AudioGen.cpp */; };
+		84C4E0D4262A2F57005824B9 /* RemoteVoiceOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD6262A0369005824B9 /* RemoteVoiceOptions.cpp */; };
+		84C4E0D5262A2F57005824B9 /* VoiceCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDA262A0369005824B9 /* VoiceCodec.cpp */; };
+		84C4E0D6262A2F57005824B9 /* LoadBalancingListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCC262A0356005824B9 /* LoadBalancingListener.cpp */; };
+		84C4E0D7262A2F57005824B9 /* VoiceAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDB262A0369005824B9 /* VoiceAudio.cpp */; };
+		84C4E0D8262A2F57005824B9 /* RemoteVoice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD0262A035C005824B9 /* RemoteVoice.cpp */; };
+		84C4E0D9262A2F57005824B9 /* Voice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD2262A0369005824B9 /* Voice.cpp */; };
+		84C4E0DA262A2F57005824B9 /* AudioUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD3262A0369005824B9 /* AudioUtil.cpp */; };
+		84C4E0DB262A2F57005824B9 /* LoadBalancingTransport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCB262A0356005824B9 /* LoadBalancingTransport.cpp */; };
+		84C4E0E3262A2F59005824B9 /* AudioUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAF262A034E005824B9 /* AudioUtil.h */; };
+		84C4E0E4262A2F59005824B9 /* RemoteVoiceOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAA262A034E005824B9 /* RemoteVoiceOptions.h */; };
+		84C4E0E5262A2F59005824B9 /* Codec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA8262A0341005824B9 /* Codec.h */; };
+		84C4E0E6262A2F59005824B9 /* Voice.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB0262A034E005824B9 /* Voice.h */; };
+		84C4E0E7262A2F59005824B9 /* PhotonTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA1262A0325005824B9 /* PhotonTransport.h */; };
+		84C4E0E8262A2F59005824B9 /* RemoteVoice.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA6262A033A005824B9 /* RemoteVoice.h */; };
+		84C4E0E9262A2F59005824B9 /* VoiceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB7262A034E005824B9 /* VoiceInfo.h */; };
+		84C4E0EB262A2F59005824B9 /* defines.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB2262A034E005824B9 /* defines.h */; };
+		84C4E0EC262A2F59005824B9 /* OpusCodec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB3262A034E005824B9 /* OpusCodec.h */; };
+		84C4E0ED262A2F59005824B9 /* LoadBalancingTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA0262A0325005824B9 /* LoadBalancingTransport.h */; };
+		84C4E0EE262A2F59005824B9 /* VoiceAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB6262A034E005824B9 /* VoiceAudio.h */; };
+		84C4E0EF262A2F59005824B9 /* ILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAE262A034E005824B9 /* ILogger.h */; };
+		84C4E0F0262A2F59005824B9 /* VoiceCodec.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB1262A034E005824B9 /* VoiceCodec.h */; };
+		84C4E0F1262A2F59005824B9 /* AudioGen.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB4262A034E005824B9 /* AudioGen.h */; };
+		84C4E0F2262A2F59005824B9 /* Buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB9262A034E005824B9 /* Buffer.h */; };
+		84C4E0F3262A2F59005824B9 /* RemoteVoiceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAC262A034E005824B9 /* RemoteVoiceInfo.h */; };
+		84C4E0F4262A2F59005824B9 /* VoiceClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFB8262A034E005824B9 /* VoiceClient.h */; };
+		84C4E0F5262A2F59005824B9 /* LoadBalancingListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFA2262A0325005824B9 /* LoadBalancingListener.h */; };
+		84C4E0F6262A2F59005824B9 /* VoiceFramed.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C4DFAB262A034E005824B9 /* VoiceFramed.h */; };
+		84C4E0F9262A2F59005824B9 /* PhotonTransport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCA262A0356005824B9 /* PhotonTransport.cpp */; };
+		84C4E0FA262A2F59005824B9 /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD7262A0369005824B9 /* Buffer.cpp */; };
+		84C4E0FB262A2F59005824B9 /* VoiceClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDC262A0369005824B9 /* VoiceClient.cpp */; };
+		84C4E0FC262A2F59005824B9 /* OpusCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDD262A0369005824B9 /* OpusCodec.cpp */; };
+		84C4E0FE262A2F59005824B9 /* VoiceFramed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD8262A0369005824B9 /* VoiceFramed.cpp */; };
+		84C4E0FF262A2F59005824B9 /* VoiceInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD9262A0369005824B9 /* VoiceInfo.cpp */; };
+		84C4E100262A2F59005824B9 /* AudioGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD4262A0369005824B9 /* AudioGen.cpp */; };
+		84C4E101262A2F59005824B9 /* RemoteVoiceOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD6262A0369005824B9 /* RemoteVoiceOptions.cpp */; };
+		84C4E102262A2F59005824B9 /* VoiceCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDA262A0369005824B9 /* VoiceCodec.cpp */; };
+		84C4E103262A2F59005824B9 /* LoadBalancingListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCC262A0356005824B9 /* LoadBalancingListener.cpp */; };
+		84C4E104262A2F59005824B9 /* VoiceAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFDB262A0369005824B9 /* VoiceAudio.cpp */; };
+		84C4E105262A2F59005824B9 /* RemoteVoice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD0262A035C005824B9 /* RemoteVoice.cpp */; };
+		84C4E106262A2F59005824B9 /* Voice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD2262A0369005824B9 /* Voice.cpp */; };
+		84C4E107262A2F59005824B9 /* AudioUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFD3262A0369005824B9 /* AudioUtil.cpp */; };
+		84C4E108262A2F59005824B9 /* LoadBalancingTransport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C4DFCB262A0356005824B9 /* LoadBalancingTransport.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84A40319269E2DDC0049D99F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E124262A3FCA005824B9 /* opus_egpv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 847A2FE5263A0A9D00714D2D;
+			remoteInfo = "opus_egpv-catalyst";
+		};
+		84A4031B269E2DDC0049D99F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E124262A3FCA005824B9 /* opus_egpv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD79C6131AFA272400F9FB3B;
+			remoteInfo = "opus_egpv-iphone";
+		};
+		84A4031D269E2DDC0049D99F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E124262A3FCA005824B9 /* opus_egpv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8483445E268284A000668731;
+			remoteInfo = "opus_egpv-macos";
+		};
+		84A4031F269E2DDC0049D99F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E124262A3FCA005824B9 /* opus_egpv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 848343C026825A1700668731;
+			remoteInfo = "opus_egpv-macos_bundle";
+		};
+		84A40321269E2DDC0049D99F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E124262A3FCA005824B9 /* opus_egpv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 847A2F54263A0A8E00714D2D;
+			remoteInfo = "opus_egpv-tvos";
+		};
+		84C4E075262A03F1005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4DF212629FDE6005824B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84C4E044262A038B005824B9;
+			remoteInfo = "PhotonVoice-cpp-catalyst";
+		};
+		84C4E10E262A3F91005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4DF212629FDE6005824B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84C4E087262A2F55005824B9;
+			remoteInfo = "PhotonVoice-cpp-iphone";
+		};
+		84C4E110262A3F91005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4DF212629FDE6005824B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84C4E0B4262A2F57005824B9;
+			remoteInfo = "PhotonVoice-cpp-macos";
+		};
+		84C4E112262A3F91005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4DF212629FDE6005824B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84C4E0E1262A2F59005824B9;
+			remoteInfo = "PhotonVoice-cpp-tvos";
+		};
+		84C4E11C262A3FBC005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E114262A3FBC005824B9 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84AC2503242D49C2008C609A;
+			remoteInfo = "LoadBalancing-cpp-catalyst";
+		};
+		84C4E11E262A3FBC005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E114262A3FBC005824B9 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E99AB53D14C5B84300F08070;
+			remoteInfo = "LoadBalancing-cpp-iphone";
+		};
+		84C4E120262A3FBC005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E114262A3FBC005824B9 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E99AB57914C5B90900F08070;
+			remoteInfo = "LoadBalancing-cpp-macos";
+		};
+		84C4E122262A3FBC005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E114262A3FBC005824B9 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84B4295B1BBD931100F993B7;
+			remoteInfo = "LoadBalancing-cpp-tvos";
+		};
+		84C4E12D262A414A005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E114262A3FBC005824B9 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 84AC24B4242D49C2008C609A;
+			remoteInfo = "LoadBalancing-cpp-catalyst";
+		};
+		84C4E12F262A415B005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E114262A3FBC005824B9 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E99AB53C14C5B84300F08070;
+			remoteInfo = "LoadBalancing-cpp-iphone";
+		};
+		84C4E133262A4166005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E114262A3FBC005824B9 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E99AB57814C5B90900F08070;
+			remoteInfo = "LoadBalancing-cpp-macos";
+		};
+		84C4E137262A4176005824B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C4E114262A3FBC005824B9 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B4291F1BBD931100F993B7;
+			remoteInfo = "LoadBalancing-cpp-tvos";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84629A2828174DB4004FBE22 /* AudioOutDelayControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioOutDelayControl.h; sourceTree = "<group>"; };
+		84629A2D28174DC9004FBE22 /* AudioOutDelayControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioOutDelayControl.cpp; sourceTree = "<group>"; };
+		84C4DFA0262A0325005824B9 /* LoadBalancingTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadBalancingTransport.h; sourceTree = "<group>"; };
+		84C4DFA1262A0325005824B9 /* PhotonTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotonTransport.h; sourceTree = "<group>"; };
+		84C4DFA2262A0325005824B9 /* LoadBalancingListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadBalancingListener.h; sourceTree = "<group>"; };
+		84C4DFA6262A033A005824B9 /* RemoteVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteVoice.h; sourceTree = "<group>"; };
+		84C4DFA8262A0341005824B9 /* Codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Codec.h; sourceTree = "<group>"; };
+		84C4DFAA262A034E005824B9 /* RemoteVoiceOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteVoiceOptions.h; sourceTree = "<group>"; };
+		84C4DFAB262A034E005824B9 /* VoiceFramed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceFramed.h; sourceTree = "<group>"; };
+		84C4DFAC262A034E005824B9 /* RemoteVoiceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteVoiceInfo.h; sourceTree = "<group>"; };
+		84C4DFAE262A034E005824B9 /* ILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILogger.h; sourceTree = "<group>"; };
+		84C4DFAF262A034E005824B9 /* AudioUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUtil.h; sourceTree = "<group>"; };
+		84C4DFB0262A034E005824B9 /* Voice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice.h; sourceTree = "<group>"; };
+		84C4DFB1262A034E005824B9 /* VoiceCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceCodec.h; sourceTree = "<group>"; };
+		84C4DFB2262A034E005824B9 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		84C4DFB3262A034E005824B9 /* OpusCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpusCodec.h; sourceTree = "<group>"; };
+		84C4DFB4262A034E005824B9 /* AudioGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioGen.h; sourceTree = "<group>"; };
+		84C4DFB6262A034E005824B9 /* VoiceAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceAudio.h; sourceTree = "<group>"; };
+		84C4DFB7262A034E005824B9 /* VoiceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceInfo.h; sourceTree = "<group>"; };
+		84C4DFB8262A034E005824B9 /* VoiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceClient.h; sourceTree = "<group>"; };
+		84C4DFB9262A034E005824B9 /* Buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
+		84C4DFCA262A0356005824B9 /* PhotonTransport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhotonTransport.cpp; sourceTree = "<group>"; };
+		84C4DFCB262A0356005824B9 /* LoadBalancingTransport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoadBalancingTransport.cpp; sourceTree = "<group>"; };
+		84C4DFCC262A0356005824B9 /* LoadBalancingListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoadBalancingListener.cpp; sourceTree = "<group>"; };
+		84C4DFD0262A035C005824B9 /* RemoteVoice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RemoteVoice.cpp; sourceTree = "<group>"; };
+		84C4DFD2262A0369005824B9 /* Voice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Voice.cpp; sourceTree = "<group>"; };
+		84C4DFD3262A0369005824B9 /* AudioUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioUtil.cpp; sourceTree = "<group>"; };
+		84C4DFD4262A0369005824B9 /* AudioGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioGen.cpp; sourceTree = "<group>"; };
+		84C4DFD6262A0369005824B9 /* RemoteVoiceOptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RemoteVoiceOptions.cpp; sourceTree = "<group>"; };
+		84C4DFD7262A0369005824B9 /* Buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Buffer.cpp; sourceTree = "<group>"; };
+		84C4DFD8262A0369005824B9 /* VoiceFramed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VoiceFramed.cpp; sourceTree = "<group>"; };
+		84C4DFD9262A0369005824B9 /* VoiceInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VoiceInfo.cpp; sourceTree = "<group>"; };
+		84C4DFDA262A0369005824B9 /* VoiceCodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VoiceCodec.cpp; sourceTree = "<group>"; };
+		84C4DFDB262A0369005824B9 /* VoiceAudio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VoiceAudio.cpp; sourceTree = "<group>"; };
+		84C4DFDC262A0369005824B9 /* VoiceClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VoiceClient.cpp; sourceTree = "<group>"; };
+		84C4DFDD262A0369005824B9 /* OpusCodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpusCodec.cpp; sourceTree = "<group>"; };
+		84C4E070262A038B005824B9 /* libPhotonVoice-cpp_debug_catalyst.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPhotonVoice-cpp_debug_catalyst.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C4E0B3262A2F55005824B9 /* libPhotonVoice-cpp_debug_iphoneos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPhotonVoice-cpp_debug_iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C4E0E0262A2F57005824B9 /* libPhotonVoice-cpp_debug_macosx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPhotonVoice-cpp_debug_macosx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C4E10D262A2F59005824B9 /* libPhotonVoice-cpp_debug_appletvos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPhotonVoice-cpp_debug_appletvos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C4E114262A3FBC005824B9 /* LoadBalancing-cpp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LoadBalancing-cpp.xcodeproj"; path = "../LoadBalancing-cpp/LoadBalancing-cpp.xcodeproj"; sourceTree = "<group>"; };
+		84C4E124262A3FCA005824B9 /* opus_egpv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = opus_egpv.xcodeproj; path = opus/opus_egpv.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84C4E06C262A038B005824B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C4E0AF262A2F55005824B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C4E0DC262A2F57005824B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C4E109262A2F59005824B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84A40311269E2DDC0049D99F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84A4031A269E2DDC0049D99F /* libopus_egpv_debug_catalyst.a */,
+				84A4031C269E2DDC0049D99F /* libopus_egpv_debug_iphoneos.a */,
+				84A4031E269E2DDC0049D99F /* libopus_egpv_debug_macosx.a */,
+				84A40320269E2DDC0049D99F /* opus_egpv_debug_macosx.bundle */,
+				84A40322269E2DDC0049D99F /* libopus_egpv_debug_appletvos.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84C4DF202629FDE6005824B9 = {
+			isa = PBXGroup;
+			children = (
+				84C4E114262A3FBC005824B9 /* LoadBalancing-cpp.xcodeproj */,
+				84C4E124262A3FCA005824B9 /* opus_egpv.xcodeproj */,
+				84C4DF312629FF26005824B9 /* src */,
+				84C4DF302629FF1F005824B9 /* inc */,
+				84C4DF2C2629FE79005824B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84C4DF2C2629FE79005824B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84C4E070262A038B005824B9 /* libPhotonVoice-cpp_debug_catalyst.a */,
+				84C4E0B3262A2F55005824B9 /* libPhotonVoice-cpp_debug_iphoneos.a */,
+				84C4E0E0262A2F57005824B9 /* libPhotonVoice-cpp_debug_macosx.a */,
+				84C4E10D262A2F59005824B9 /* libPhotonVoice-cpp_debug_appletvos.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84C4DF302629FF1F005824B9 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				84C4DFB4262A034E005824B9 /* AudioGen.h */,
+				84629A2828174DB4004FBE22 /* AudioOutDelayControl.h */,
+				84C4DFAF262A034E005824B9 /* AudioUtil.h */,
+				84C4DFB9262A034E005824B9 /* Buffer.h */,
+				84C4DFB2262A034E005824B9 /* defines.h */,
+				84C4DFAE262A034E005824B9 /* ILogger.h */,
+				84C4DFB3262A034E005824B9 /* OpusCodec.h */,
+				84C4DFAC262A034E005824B9 /* RemoteVoiceInfo.h */,
+				84C4DFAA262A034E005824B9 /* RemoteVoiceOptions.h */,
+				84C4DFB0262A034E005824B9 /* Voice.h */,
+				84C4DFB6262A034E005824B9 /* VoiceAudio.h */,
+				84C4DFB8262A034E005824B9 /* VoiceClient.h */,
+				84C4DFB1262A034E005824B9 /* VoiceCodec.h */,
+				84C4DFAB262A034E005824B9 /* VoiceFramed.h */,
+				84C4DFB7262A034E005824B9 /* VoiceInfo.h */,
+				84C4DF342629FF53005824B9 /* Enums */,
+				84C4DF332629FF46005824B9 /* Internal */,
+				84C4DF322629FF3E005824B9 /* Transport */,
+			);
+			path = inc;
+			sourceTree = "<group>";
+		};
+		84C4DF312629FF26005824B9 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				84C4DFD4262A0369005824B9 /* AudioGen.cpp */,
+				84629A2D28174DC9004FBE22 /* AudioOutDelayControl.cpp */,
+				84C4DFD3262A0369005824B9 /* AudioUtil.cpp */,
+				84C4DFD7262A0369005824B9 /* Buffer.cpp */,
+				84C4DFDD262A0369005824B9 /* OpusCodec.cpp */,
+				84C4DFD6262A0369005824B9 /* RemoteVoiceOptions.cpp */,
+				84C4DFD2262A0369005824B9 /* Voice.cpp */,
+				84C4DFDB262A0369005824B9 /* VoiceAudio.cpp */,
+				84C4DFDC262A0369005824B9 /* VoiceClient.cpp */,
+				84C4DFDA262A0369005824B9 /* VoiceCodec.cpp */,
+				84C4DFD8262A0369005824B9 /* VoiceFramed.cpp */,
+				84C4DFD9262A0369005824B9 /* VoiceInfo.cpp */,
+				84C4DF362629FF5F005824B9 /* Internal */,
+				84C4DF352629FF59005824B9 /* Transport */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		84C4DF322629FF3E005824B9 /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				84C4DFA2262A0325005824B9 /* LoadBalancingListener.h */,
+				84C4DFA0262A0325005824B9 /* LoadBalancingTransport.h */,
+				84C4DFA1262A0325005824B9 /* PhotonTransport.h */,
+			);
+			path = Transport;
+			sourceTree = "<group>";
+		};
+		84C4DF332629FF46005824B9 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				84C4DFA6262A033A005824B9 /* RemoteVoice.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		84C4DF342629FF53005824B9 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				84C4DFA8262A0341005824B9 /* Codec.h */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		84C4DF352629FF59005824B9 /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				84C4DFCC262A0356005824B9 /* LoadBalancingListener.cpp */,
+				84C4DFCB262A0356005824B9 /* LoadBalancingTransport.cpp */,
+				84C4DFCA262A0356005824B9 /* PhotonTransport.cpp */,
+			);
+			path = Transport;
+			sourceTree = "<group>";
+		};
+		84C4DF362629FF5F005824B9 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				84C4DFD0262A035C005824B9 /* RemoteVoice.cpp */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		84C4E115262A3FBC005824B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84C4E11D262A3FBC005824B9 /* libLoadBalancing-cpp_debug_catalyst.a */,
+				84C4E11F262A3FBC005824B9 /* libLoadBalancing-cpp_debug_iphoneos.a */,
+				84C4E121262A3FBC005824B9 /* libLoadBalancing-cpp_debug_macosx.a */,
+				84C4E123262A3FBC005824B9 /* libLoadBalancing-cpp_debug_appletvos.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		84C4E045262A038B005824B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C4E046262A038B005824B9 /* AudioUtil.h in Headers */,
+				84C4E047262A038B005824B9 /* RemoteVoiceOptions.h in Headers */,
+				84C4E048262A038B005824B9 /* Codec.h in Headers */,
+				84C4E049262A038B005824B9 /* Voice.h in Headers */,
+				84C4E04A262A038B005824B9 /* PhotonTransport.h in Headers */,
+				84C4E04B262A038B005824B9 /* RemoteVoice.h in Headers */,
+				84C4E04C262A038B005824B9 /* VoiceInfo.h in Headers */,
+				84C4E04E262A038B005824B9 /* defines.h in Headers */,
+				84C4E04F262A038B005824B9 /* OpusCodec.h in Headers */,
+				84C4E050262A038B005824B9 /* LoadBalancingTransport.h in Headers */,
+				84C4E051262A038B005824B9 /* VoiceAudio.h in Headers */,
+				84C4E052262A038B005824B9 /* ILogger.h in Headers */,
+				84C4E053262A038B005824B9 /* VoiceCodec.h in Headers */,
+				84C4E054262A038B005824B9 /* AudioGen.h in Headers */,
+				84629A2928174DB4004FBE22 /* AudioOutDelayControl.h in Headers */,
+				84C4E055262A038B005824B9 /* Buffer.h in Headers */,
+				84C4E056262A038B005824B9 /* RemoteVoiceInfo.h in Headers */,
+				84C4E057262A038B005824B9 /* VoiceClient.h in Headers */,
+				84C4E058262A038B005824B9 /* LoadBalancingListener.h in Headers */,
+				84C4E059262A038B005824B9 /* VoiceFramed.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C4E088262A2F55005824B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C4E089262A2F55005824B9 /* AudioUtil.h in Headers */,
+				84C4E08A262A2F55005824B9 /* RemoteVoiceOptions.h in Headers */,
+				84C4E08B262A2F55005824B9 /* Codec.h in Headers */,
+				84C4E08C262A2F55005824B9 /* Voice.h in Headers */,
+				84C4E08D262A2F55005824B9 /* PhotonTransport.h in Headers */,
+				84C4E08E262A2F55005824B9 /* RemoteVoice.h in Headers */,
+				84C4E08F262A2F55005824B9 /* VoiceInfo.h in Headers */,
+				84C4E091262A2F55005824B9 /* defines.h in Headers */,
+				84C4E092262A2F55005824B9 /* OpusCodec.h in Headers */,
+				84C4E093262A2F55005824B9 /* LoadBalancingTransport.h in Headers */,
+				84C4E094262A2F55005824B9 /* VoiceAudio.h in Headers */,
+				84C4E095262A2F55005824B9 /* ILogger.h in Headers */,
+				84C4E096262A2F55005824B9 /* VoiceCodec.h in Headers */,
+				84C4E097262A2F55005824B9 /* AudioGen.h in Headers */,
+				84629A2A28174DB4004FBE22 /* AudioOutDelayControl.h in Headers */,
+				84C4E098262A2F55005824B9 /* Buffer.h in Headers */,
+				84C4E099262A2F55005824B9 /* RemoteVoiceInfo.h in Headers */,
+				84C4E09A262A2F55005824B9 /* VoiceClient.h in Headers */,
+				84C4E09B262A2F55005824B9 /* LoadBalancingListener.h in Headers */,
+				84C4E09C262A2F55005824B9 /* VoiceFramed.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C4E0B5262A2F57005824B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C4E0B6262A2F57005824B9 /* AudioUtil.h in Headers */,
+				84C4E0B7262A2F57005824B9 /* RemoteVoiceOptions.h in Headers */,
+				84C4E0B8262A2F57005824B9 /* Codec.h in Headers */,
+				84C4E0B9262A2F57005824B9 /* Voice.h in Headers */,
+				84C4E0BA262A2F57005824B9 /* PhotonTransport.h in Headers */,
+				84C4E0BB262A2F57005824B9 /* RemoteVoice.h in Headers */,
+				84C4E0BC262A2F57005824B9 /* VoiceInfo.h in Headers */,
+				84C4E0BE262A2F57005824B9 /* defines.h in Headers */,
+				84C4E0BF262A2F57005824B9 /* OpusCodec.h in Headers */,
+				84C4E0C0262A2F57005824B9 /* LoadBalancingTransport.h in Headers */,
+				84C4E0C1262A2F57005824B9 /* VoiceAudio.h in Headers */,
+				84C4E0C2262A2F57005824B9 /* ILogger.h in Headers */,
+				84C4E0C3262A2F57005824B9 /* VoiceCodec.h in Headers */,
+				84C4E0C4262A2F57005824B9 /* AudioGen.h in Headers */,
+				84629A2B28174DB4004FBE22 /* AudioOutDelayControl.h in Headers */,
+				84C4E0C5262A2F57005824B9 /* Buffer.h in Headers */,
+				84C4E0C6262A2F57005824B9 /* RemoteVoiceInfo.h in Headers */,
+				84C4E0C7262A2F57005824B9 /* VoiceClient.h in Headers */,
+				84C4E0C8262A2F57005824B9 /* LoadBalancingListener.h in Headers */,
+				84C4E0C9262A2F57005824B9 /* VoiceFramed.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C4E0E2262A2F59005824B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C4E0E3262A2F59005824B9 /* AudioUtil.h in Headers */,
+				84C4E0E4262A2F59005824B9 /* RemoteVoiceOptions.h in Headers */,
+				84C4E0E5262A2F59005824B9 /* Codec.h in Headers */,
+				84C4E0E6262A2F59005824B9 /* Voice.h in Headers */,
+				84C4E0E7262A2F59005824B9 /* PhotonTransport.h in Headers */,
+				84C4E0E8262A2F59005824B9 /* RemoteVoice.h in Headers */,
+				84C4E0E9262A2F59005824B9 /* VoiceInfo.h in Headers */,
+				84C4E0EB262A2F59005824B9 /* defines.h in Headers */,
+				84C4E0EC262A2F59005824B9 /* OpusCodec.h in Headers */,
+				84C4E0ED262A2F59005824B9 /* LoadBalancingTransport.h in Headers */,
+				84C4E0EE262A2F59005824B9 /* VoiceAudio.h in Headers */,
+				84C4E0EF262A2F59005824B9 /* ILogger.h in Headers */,
+				84C4E0F0262A2F59005824B9 /* VoiceCodec.h in Headers */,
+				84C4E0F1262A2F59005824B9 /* AudioGen.h in Headers */,
+				84629A2C28174DB4004FBE22 /* AudioOutDelayControl.h in Headers */,
+				84C4E0F2262A2F59005824B9 /* Buffer.h in Headers */,
+				84C4E0F3262A2F59005824B9 /* RemoteVoiceInfo.h in Headers */,
+				84C4E0F4262A2F59005824B9 /* VoiceClient.h in Headers */,
+				84C4E0F5262A2F59005824B9 /* LoadBalancingListener.h in Headers */,
+				84C4E0F6262A2F59005824B9 /* VoiceFramed.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		84C4E044262A038B005824B9 /* PhotonVoice-cpp-catalyst */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84C4E06D262A038B005824B9 /* Build configuration list for PBXNativeTarget "PhotonVoice-cpp-catalyst" */;
+			buildPhases = (
+				84C4E045262A038B005824B9 /* Headers */,
+				84C4E05B262A038B005824B9 /* Sources */,
+				84C4E06C262A038B005824B9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84C4E12E262A414A005824B9 /* PBXTargetDependency */,
+			);
+			name = "PhotonVoice-cpp-catalyst";
+			productName = "PhotonVoice-cpp macOS";
+			productReference = 84C4E070262A038B005824B9 /* libPhotonVoice-cpp_debug_catalyst.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84C4E087262A2F55005824B9 /* PhotonVoice-cpp-iphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84C4E0B0262A2F55005824B9 /* Build configuration list for PBXNativeTarget "PhotonVoice-cpp-iphone" */;
+			buildPhases = (
+				84C4E088262A2F55005824B9 /* Headers */,
+				84C4E09E262A2F55005824B9 /* Sources */,
+				84C4E0AF262A2F55005824B9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84C4E130262A415B005824B9 /* PBXTargetDependency */,
+			);
+			name = "PhotonVoice-cpp-iphone";
+			productName = "PhotonVoice-cpp macOS";
+			productReference = 84C4E0B3262A2F55005824B9 /* libPhotonVoice-cpp_debug_iphoneos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84C4E0B4262A2F57005824B9 /* PhotonVoice-cpp-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84C4E0DD262A2F57005824B9 /* Build configuration list for PBXNativeTarget "PhotonVoice-cpp-macos" */;
+			buildPhases = (
+				84C4E0B5262A2F57005824B9 /* Headers */,
+				84C4E0CB262A2F57005824B9 /* Sources */,
+				84C4E0DC262A2F57005824B9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84C4E134262A4166005824B9 /* PBXTargetDependency */,
+			);
+			name = "PhotonVoice-cpp-macos";
+			productName = "PhotonVoice-cpp macOS";
+			productReference = 84C4E0E0262A2F57005824B9 /* libPhotonVoice-cpp_debug_macosx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84C4E0E1262A2F59005824B9 /* PhotonVoice-cpp-tvos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84C4E10A262A2F59005824B9 /* Build configuration list for PBXNativeTarget "PhotonVoice-cpp-tvos" */;
+			buildPhases = (
+				84C4E0E2262A2F59005824B9 /* Headers */,
+				84C4E0F8262A2F59005824B9 /* Sources */,
+				84C4E109262A2F59005824B9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84C4E138262A4176005824B9 /* PBXTargetDependency */,
+			);
+			name = "PhotonVoice-cpp-tvos";
+			productName = "PhotonVoice-cpp macOS";
+			productReference = 84C4E10D262A2F59005824B9 /* libPhotonVoice-cpp_debug_appletvos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84C4DF212629FDE6005824B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				TargetAttributes = {
+					84C4E071262A03D3005824B9 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 84C4DF242629FDE6005824B9 /* Build configuration list for PBXProject "PhotonVoice-cpp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84C4DF202629FDE6005824B9;
+			productRefGroup = 84C4DF2C2629FE79005824B9 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 84C4E115262A3FBC005824B9 /* Products */;
+					ProjectRef = 84C4E114262A3FBC005824B9 /* LoadBalancing-cpp.xcodeproj */;
+				},
+				{
+					ProductGroup = 84A40311269E2DDC0049D99F /* Products */;
+					ProjectRef = 84C4E124262A3FCA005824B9 /* opus_egpv.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				84C4E044262A038B005824B9 /* PhotonVoice-cpp-catalyst */,
+				84C4E087262A2F55005824B9 /* PhotonVoice-cpp-iphone */,
+				84C4E0B4262A2F57005824B9 /* PhotonVoice-cpp-macos */,
+				84C4E0E1262A2F59005824B9 /* PhotonVoice-cpp-tvos */,
+				84C4E071262A03D3005824B9 /* build all */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		84A4031A269E2DDC0049D99F /* libopus_egpv_debug_catalyst.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libopus_egpv_debug_catalyst.a;
+			remoteRef = 84A40319269E2DDC0049D99F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84A4031C269E2DDC0049D99F /* libopus_egpv_debug_iphoneos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libopus_egpv_debug_iphoneos.a;
+			remoteRef = 84A4031B269E2DDC0049D99F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84A4031E269E2DDC0049D99F /* libopus_egpv_debug_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libopus_egpv_debug_macosx.a;
+			remoteRef = 84A4031D269E2DDC0049D99F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84A40320269E2DDC0049D99F /* opus_egpv_debug_macosx.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = opus_egpv_debug_macosx.bundle;
+			remoteRef = 84A4031F269E2DDC0049D99F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84A40322269E2DDC0049D99F /* libopus_egpv_debug_appletvos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libopus_egpv_debug_appletvos.a;
+			remoteRef = 84A40321269E2DDC0049D99F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C4E11D262A3FBC005824B9 /* libLoadBalancing-cpp_debug_catalyst.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-cpp_debug_catalyst.a";
+			remoteRef = 84C4E11C262A3FBC005824B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C4E11F262A3FBC005824B9 /* libLoadBalancing-cpp_debug_iphoneos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-cpp_debug_iphoneos.a";
+			remoteRef = 84C4E11E262A3FBC005824B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C4E121262A3FBC005824B9 /* libLoadBalancing-cpp_debug_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-cpp_debug_macosx.a";
+			remoteRef = 84C4E120262A3FBC005824B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C4E123262A3FBC005824B9 /* libLoadBalancing-cpp_debug_appletvos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-cpp_debug_appletvos.a";
+			remoteRef = 84C4E122262A3FBC005824B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84C4E05B262A038B005824B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C4E05C262A038B005824B9 /* PhotonTransport.cpp in Sources */,
+				84C4E05D262A038B005824B9 /* Buffer.cpp in Sources */,
+				84C4E05E262A038B005824B9 /* VoiceClient.cpp in Sources */,
+				84629A2E28174DC9004FBE22 /* AudioOutDelayControl.cpp in Sources */,
+				84C4E05F262A038B005824B9 /* OpusCodec.cpp in Sources */,
+				84C4E061262A038B005824B9 /* VoiceFramed.cpp in Sources */,
+				84C4E062262A038B005824B9 /* VoiceInfo.cpp in Sources */,
+				84C4E063262A038B005824B9 /* AudioGen.cpp in Sources */,
+				84C4E064262A038B005824B9 /* RemoteVoiceOptions.cpp in Sources */,
+				84C4E065262A038B005824B9 /* VoiceCodec.cpp in Sources */,
+				84C4E066262A038B005824B9 /* LoadBalancingListener.cpp in Sources */,
+				84C4E067262A038B005824B9 /* VoiceAudio.cpp in Sources */,
+				84C4E068262A038B005824B9 /* RemoteVoice.cpp in Sources */,
+				84C4E069262A038B005824B9 /* Voice.cpp in Sources */,
+				84C4E06A262A038B005824B9 /* AudioUtil.cpp in Sources */,
+				84C4E06B262A038B005824B9 /* LoadBalancingTransport.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C4E09E262A2F55005824B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C4E09F262A2F55005824B9 /* PhotonTransport.cpp in Sources */,
+				84C4E0A0262A2F55005824B9 /* Buffer.cpp in Sources */,
+				84C4E0A1262A2F55005824B9 /* VoiceClient.cpp in Sources */,
+				84629A2F28174DC9004FBE22 /* AudioOutDelayControl.cpp in Sources */,
+				84C4E0A2262A2F55005824B9 /* OpusCodec.cpp in Sources */,
+				84C4E0A4262A2F55005824B9 /* VoiceFramed.cpp in Sources */,
+				84C4E0A5262A2F55005824B9 /* VoiceInfo.cpp in Sources */,
+				84C4E0A6262A2F55005824B9 /* AudioGen.cpp in Sources */,
+				84C4E0A7262A2F55005824B9 /* RemoteVoiceOptions.cpp in Sources */,
+				84C4E0A8262A2F55005824B9 /* VoiceCodec.cpp in Sources */,
+				84C4E0A9262A2F55005824B9 /* LoadBalancingListener.cpp in Sources */,
+				84C4E0AA262A2F55005824B9 /* VoiceAudio.cpp in Sources */,
+				84C4E0AB262A2F55005824B9 /* RemoteVoice.cpp in Sources */,
+				84C4E0AC262A2F55005824B9 /* Voice.cpp in Sources */,
+				84C4E0AD262A2F55005824B9 /* AudioUtil.cpp in Sources */,
+				84C4E0AE262A2F55005824B9 /* LoadBalancingTransport.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C4E0CB262A2F57005824B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C4E0CC262A2F57005824B9 /* PhotonTransport.cpp in Sources */,
+				84C4E0CD262A2F57005824B9 /* Buffer.cpp in Sources */,
+				84C4E0CE262A2F57005824B9 /* VoiceClient.cpp in Sources */,
+				84629A3028174DC9004FBE22 /* AudioOutDelayControl.cpp in Sources */,
+				84C4E0CF262A2F57005824B9 /* OpusCodec.cpp in Sources */,
+				84C4E0D1262A2F57005824B9 /* VoiceFramed.cpp in Sources */,
+				84C4E0D2262A2F57005824B9 /* VoiceInfo.cpp in Sources */,
+				84C4E0D3262A2F57005824B9 /* AudioGen.cpp in Sources */,
+				84C4E0D4262A2F57005824B9 /* RemoteVoiceOptions.cpp in Sources */,
+				84C4E0D5262A2F57005824B9 /* VoiceCodec.cpp in Sources */,
+				84C4E0D6262A2F57005824B9 /* LoadBalancingListener.cpp in Sources */,
+				84C4E0D7262A2F57005824B9 /* VoiceAudio.cpp in Sources */,
+				84C4E0D8262A2F57005824B9 /* RemoteVoice.cpp in Sources */,
+				84C4E0D9262A2F57005824B9 /* Voice.cpp in Sources */,
+				84C4E0DA262A2F57005824B9 /* AudioUtil.cpp in Sources */,
+				84C4E0DB262A2F57005824B9 /* LoadBalancingTransport.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C4E0F8262A2F59005824B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C4E0F9262A2F59005824B9 /* PhotonTransport.cpp in Sources */,
+				84C4E0FA262A2F59005824B9 /* Buffer.cpp in Sources */,
+				84C4E0FB262A2F59005824B9 /* VoiceClient.cpp in Sources */,
+				84629A3128174DC9004FBE22 /* AudioOutDelayControl.cpp in Sources */,
+				84C4E0FC262A2F59005824B9 /* OpusCodec.cpp in Sources */,
+				84C4E0FE262A2F59005824B9 /* VoiceFramed.cpp in Sources */,
+				84C4E0FF262A2F59005824B9 /* VoiceInfo.cpp in Sources */,
+				84C4E100262A2F59005824B9 /* AudioGen.cpp in Sources */,
+				84C4E101262A2F59005824B9 /* RemoteVoiceOptions.cpp in Sources */,
+				84C4E102262A2F59005824B9 /* VoiceCodec.cpp in Sources */,
+				84C4E103262A2F59005824B9 /* LoadBalancingListener.cpp in Sources */,
+				84C4E104262A2F59005824B9 /* VoiceAudio.cpp in Sources */,
+				84C4E105262A2F59005824B9 /* RemoteVoice.cpp in Sources */,
+				84C4E106262A2F59005824B9 /* Voice.cpp in Sources */,
+				84C4E107262A2F59005824B9 /* AudioUtil.cpp in Sources */,
+				84C4E108262A2F59005824B9 /* LoadBalancingTransport.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84C4E076262A03F1005824B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84C4E044262A038B005824B9 /* PhotonVoice-cpp-catalyst */;
+			targetProxy = 84C4E075262A03F1005824B9 /* PBXContainerItemProxy */;
+		};
+		84C4E10F262A3F91005824B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84C4E087262A2F55005824B9 /* PhotonVoice-cpp-iphone */;
+			targetProxy = 84C4E10E262A3F91005824B9 /* PBXContainerItemProxy */;
+		};
+		84C4E111262A3F91005824B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84C4E0B4262A2F57005824B9 /* PhotonVoice-cpp-macos */;
+			targetProxy = 84C4E110262A3F91005824B9 /* PBXContainerItemProxy */;
+		};
+		84C4E113262A3F91005824B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84C4E0E1262A2F59005824B9 /* PhotonVoice-cpp-tvos */;
+			targetProxy = 84C4E112262A3F91005824B9 /* PBXContainerItemProxy */;
+		};
+		84C4E12E262A414A005824B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LoadBalancing-cpp-catalyst";
+			targetProxy = 84C4E12D262A414A005824B9 /* PBXContainerItemProxy */;
+		};
+		84C4E130262A415B005824B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LoadBalancing-cpp-iphone";
+			targetProxy = 84C4E12F262A415B005824B9 /* PBXContainerItemProxy */;
+		};
+		84C4E134262A4166005824B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LoadBalancing-cpp-macos";
+			targetProxy = 84C4E133262A4166005824B9 /* PBXContainerItemProxy */;
+		};
+		84C4E138262A4176005824B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LoadBalancing-cpp-tvos";
+			targetProxy = 84C4E137262A4176005824B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		84C4DF252629FDE6005824B9 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = lib;
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "PhotonVoice-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = debug;
+		};
+		84C4DF262629FDE6005824B9 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = lib;
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "PhotonVoice-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = release;
+		};
+		84C4E06E262A038B005824B9 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = "PhotonVoice-cpp_$(CONFIGURATION)_catalyst";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+			};
+			name = debug;
+		};
+		84C4E06F262A038B005824B9 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = "PhotonVoice-cpp_$(CONFIGURATION)_catalyst";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+			};
+			name = release;
+		};
+		84C4E073262A03D3005824B9 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = debug;
+		};
+		84C4E074262A03D3005824B9 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = release;
+		};
+		84C4E0B1262A2F55005824B9 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXCLUDED_ARCHS = i386;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = debug;
+		};
+		84C4E0B2262A2F55005824B9 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXCLUDED_ARCHS = i386;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = release;
+		};
+		84C4E0DE262A2F57005824B9 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IMAC_PLATFORM,
+					EG_DEBUGGER,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = debug;
+		};
+		84C4E0DF262A2F57005824B9 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IMAC_PLATFORM;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = release;
+		};
+		84C4E10B262A2F59005824B9 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = debug;
+		};
+		84C4E10C262A2F59005824B9 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84C4DF242629FDE6005824B9 /* Build configuration list for PBXProject "PhotonVoice-cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C4DF252629FDE6005824B9 /* debug */,
+				84C4DF262629FDE6005824B9 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		84C4E06D262A038B005824B9 /* Build configuration list for PBXNativeTarget "PhotonVoice-cpp-catalyst" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C4E06E262A038B005824B9 /* debug */,
+				84C4E06F262A038B005824B9 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		84C4E072262A03D3005824B9 /* Build configuration list for PBXAggregateTarget "build all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C4E073262A03D3005824B9 /* debug */,
+				84C4E074262A03D3005824B9 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		84C4E0B0262A2F55005824B9 /* Build configuration list for PBXNativeTarget "PhotonVoice-cpp-iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C4E0B1262A2F55005824B9 /* debug */,
+				84C4E0B2262A2F55005824B9 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		84C4E0DD262A2F57005824B9 /* Build configuration list for PBXNativeTarget "PhotonVoice-cpp-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C4E0DE262A2F57005824B9 /* debug */,
+				84C4E0DF262A2F57005824B9 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		84C4E10A262A2F59005824B9 /* Build configuration list for PBXNativeTarget "PhotonVoice-cpp-tvos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C4E10B262A2F59005824B9 /* debug */,
+				84C4E10C262A2F59005824B9 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84C4DF212629FDE6005824B9 /* Project object */;
+}

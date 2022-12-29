@@ -1,0 +1,67 @@
+* release_history-chat-objc.txt
+* Release history for the Exit Games Chat Objective C Client Library
+
+Copyright (C) 2004-2022 Exit Games GmbH, http://www.photonengine.com
+
+Questions? Visit:
+	http://doc.photonengine.com/en/chat
+	http://forum.photonengine.com
+
+
+*** version 4.1.15.2
+	Date: 12-05-2019
+	- fixed: in the scenario that an atemmpt to join a room failed because the room disappeared while the client switched to the game server that hosted the room, the client called EGLOG with an objC NSString* as parameter for a format specifier of %ls (for which a wchar_t must be passed), which resulted in illegal unicode characters (as EGLOG would interpret that NSString* as a wchar_t*)
+	- fixed: EGMutableAuthenticationValues::initWithAuthenticationValues() caused a leak of the instance on which it was called and an overrelease of the parameter instance
+
+
+*** version 4.1.8.0
+	Date: 08-01-2017
+	- added: bitcode support for iOS, OS X and tvOS
+
+
+*** version 4.1.6.2
+	Date: 06-01-2017
+	- fixed: EGAuthenticationValues::initWithAuthenticationValues() did leak and also did create an invalid instance
+	- fixed: EGChatPeer::opSetOnlineStatus() crashed when attempting to pass nil for the 'message' parameter
+
+
+*** version 4.1.6.0
+	Date: 01-25-2017
+	- fixed: class EGChatClient did not in all cases of connection errors set its state accordingly, so, while reconnects still worked as they should in such cases, EGChatClient.State did not return the correct state in these cases
+	- fixed: for UDP connections EGChatListener::disconnectReturn() did not get called in case of some connection errors, even when they appeared while the EGChatClient was fully connected, while it did get called for others - it now always gets called, when a connection error appears on a connected EGChatClient (but it is intentionally not getting called, when the connectionError already happens during the attempt to establish a connection: only connected EGChatClient instances can change their state from being connected to being disconnected)
+
+
+*** version 4.1.5.0
+	Date: 10-21-2016
+	- changed: renamed EGChatClient.CrcEnabled into CRCEnabled
+	- changed: renamed EGChatClient.PacketLossByCrc into PacketLossByCRC
+
+
+*** version 4.1.1.0
+	Date: 03-16-2016
+	- fixed: a performance bottleneck on receiving very large messages
+
+
+*** version 4.0.5.0
+	Date: 12-02-2015
+	- added: EGAuthenticationValues.UserID
+	- removed: EGAuthenticationValues::initWithType()
+	- removed: EGAuthenticationValues::initWithTypeAndParameters()
+	- removed: EGAuthenticationValues::initWithTypeParametersAndData()
+	- removed: EGAuthenticationValues::initWithData()
+	- removed: EGAuthenticationValues::initWithUsernameAndToken()
+	- removed: EGAuthenticationValues::initWithUsernameTokenAndData()
+	- removed: EGAuthenticationValues::initWithParameters()
+	- removed: EGAuthenticationValues::initWithParametersAndData()
+	- added: EGAuthenticationValues::initWithAuthenticationValues()
+	- added: EGAuthenticationValues::authenticationValuesWithAuthenticationValues()
+	- added: class EGMutableAuthenticationValues
+	- removed: parameter 'username' from EGChatClient::initClient()
+	- moved: parameter 'authenticationValues' from EGChatClient::initClient() to EGChatClient::connect()
+	- changed: renamed EGChatClient.UserId to UserID and made it readonly
+	- removed: parameter 'userID' from EGChatPeer::opAuthenticateOnNameServer()
+
+
+*** version 4.0.4.0
+	Date: 08-07-2014
+	Initial Version

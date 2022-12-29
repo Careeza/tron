@@ -1,0 +1,17 @@
+#pragma once
+
+#define EGParameterCode_GAMEID           ((nByte)255)
+#define EGParameterCode_ACTORNR          ((nByte)254)
+#define EGParameterCode_TARGET_ACTORNR   ((nByte)253)
+#define EGParameterCode_ACTOR_LIST       ((nByte)252)
+#define EGParameterCode_PROPERTIES       ((nByte)251)
+#define EGParameterCode_BROADCAST        ((nByte)250)
+#define EGParameterCode_ACTOR_PROPERTIES ((nByte)249)
+#define EGParameterCode_GAME_PROPERTIES  ((nByte)248)
+#define EGParameterCode_CACHE            ((nByte)247)
+#define EGParameterCode_RECEIVER_GROUP   ((nByte)246)
+#define EGParameterCode_DATA             ((nByte)245)
+#define EGParameterCode_CODE             ((nByte)244)
+#define EGParameterCode_GROUP            ((nByte)240)
+#define EGParameterCode_REMOVE           ((nByte)239)
+#define EGParameterCode_ADD              ((nByte)238)

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'demo_iMac_typeSupport_objc' target in the 'demo_iMac_typeSupport_objc' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif

@@ -1,0 +1,6 @@
+<map id="IAudioDesc" name="IAudioDesc">
+<area shape="rect" id="node1" title="Audio description interface." alt="" coords="61,6,136,31"/>
+<area shape="rect" id="node2" href="$a12944.html" title=" " alt="" coords="5,81,77,106"/>
+<area shape="rect" id="node3" href="$a12948.html" title="Audio Pusher interface." alt="" coords="102,81,212,106"/>
+<area shape="rect" id="node4" href="$a12828.html" title="IAudioPusher that provides a constant tone signal." alt="" coords="92,156,221,180"/>
+</map>

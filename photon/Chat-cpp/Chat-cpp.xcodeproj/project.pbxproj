@@ -1,0 +1,892 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		E99AB59114C5BC8700F08070 /* build all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E99AB59214C5BC8700F08070 /* Build configuration list for PBXAggregateTarget "build all" */;
+			buildPhases = (
+			);
+			dependencies = (
+				84CE55A32628D37000392002 /* PBXTargetDependency */,
+				84B42A271BBD9A9500F993B7 /* PBXTargetDependency */,
+				E99AB5BA14C5C4F300F08070 /* PBXTargetDependency */,
+				E99AB5BC14C5C4F300F08070 /* PBXTargetDependency */,
+			);
+			name = "build all";
+			productName = "build all";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		841B1D4323195E2E002C534A /* ChannelPropertiesSetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD59135522C65F8800BDE60A /* ChannelPropertiesSetter.cpp */; };
+		841B1D4423195E2E002C534A /* ChannelPropertiesSetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD59135522C65F8800BDE60A /* ChannelPropertiesSetter.cpp */; };
+		841B1D4523195E34002C534A /* ChannelPropertiesSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = DD59135322C65F7B00BDE60A /* ChannelPropertiesSetter.h */; };
+		841B1D4623195E34002C534A /* ChannelPropertiesSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = DD59135322C65F7B00BDE60A /* ChannelPropertiesSetter.h */; };
+		843622E81A167EC6006124AF /* Channel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD496397190955EB0079FA84 /* Channel.cpp */; };
+		843622E91A167ED3006124AF /* Channel.h in Headers */ = {isa = PBXBuildFile; fileRef = DD49639F1909567E0079FA84 /* Channel.h */; };
+		843622EA1A167ED3006124AF /* ClientState.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4963A1190956900079FA84 /* ClientState.h */; };
+		843622EB1A167ED3006124AF /* UserStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4963A2190956900079FA84 /* UserStatus.h */; };
+		843622EC1A167ED3006124AF /* CustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBE02E11857068500412CCE /* CustomAuthenticationType.h */; };
+		843622ED1A167ED3006124AF /* DisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBE02E21857068500412CCE /* DisconnectCause.h */; };
+		849B108B1757A7DC0059D4AC /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10781757A7DC0059D4AC /* Client.cpp */; };
+		849B108C1757A7DC0059D4AC /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10781757A7DC0059D4AC /* Client.cpp */; };
+		849B10A91757A7DC0059D4AC /* Peer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10881757A7DC0059D4AC /* Peer.cpp */; };
+		849B10AA1757A7DC0059D4AC /* Peer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10881757A7DC0059D4AC /* Peer.cpp */; };
+		849B10CE1757A80F0059D4AC /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10AF1757A80F0059D4AC /* Client.h */; };
+		849B10CF1757A80F0059D4AC /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10AF1757A80F0059D4AC /* Client.h */; };
+		849B10D81757A80F0059D4AC /* OperationCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B71757A80F0059D4AC /* OperationCode.h */; };
+		849B10D91757A80F0059D4AC /* OperationCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B71757A80F0059D4AC /* OperationCode.h */; };
+		849B10DA1757A80F0059D4AC /* ParameterCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B81757A80F0059D4AC /* ParameterCode.h */; };
+		849B10DB1757A80F0059D4AC /* ParameterCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B81757A80F0059D4AC /* ParameterCode.h */; };
+		849B10F21757A80F0059D4AC /* Listener.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C51757A80F0059D4AC /* Listener.h */; };
+		849B10F31757A80F0059D4AC /* Listener.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C51757A80F0059D4AC /* Listener.h */; };
+		849B10FE1757A80F0059D4AC /* Peer.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CB1757A80F0059D4AC /* Peer.h */; };
+		849B10FF1757A80F0059D4AC /* Peer.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CB1757A80F0059D4AC /* Peer.h */; };
+		84AC250A242D49FA008C609A /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10781757A7DC0059D4AC /* Client.cpp */; };
+		84AC250B242D49FA008C609A /* ChannelPropertiesSetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD59135522C65F8800BDE60A /* ChannelPropertiesSetter.cpp */; };
+		84AC250C242D49FA008C609A /* Peer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10881757A7DC0059D4AC /* Peer.cpp */; };
+		84AC250D242D49FA008C609A /* ChannelFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C42B1B0F9469003E621B /* ChannelFactory.cpp */; };
+		84AC250E242D49FA008C609A /* AuthenticationValues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F3176B57E7001C86E1 /* AuthenticationValues.cpp */; };
+		84AC250F242D49FA008C609A /* ChannelMessageAdder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C42C1B0F9469003E621B /* ChannelMessageAdder.cpp */; };
+		84AC2510242D49FA008C609A /* AuthenticationValuesSecretSetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F7176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp */; };
+		84AC2511242D49FA008C609A /* Channel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD496397190955EB0079FA84 /* Channel.cpp */; };
+		84AC2514242D49FA008C609A /* ErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = E99AB54F14C5B8C600F08070 /* ErrorCode.h */; };
+		84AC2515242D49FA008C609A /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10AF1757A80F0059D4AC /* Client.h */; };
+		84AC2516242D49FA008C609A /* OperationCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B71757A80F0059D4AC /* OperationCode.h */; };
+		84AC2517242D49FA008C609A /* ParameterCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B81757A80F0059D4AC /* ParameterCode.h */; };
+		84AC2518242D49FA008C609A /* ChannelPropertiesSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = DD59135322C65F7B00BDE60A /* ChannelPropertiesSetter.h */; };
+		84AC2519242D49FA008C609A /* EventCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B6EFD41A307156006B600C /* EventCode.h */; };
+		84AC251A242D49FA008C609A /* Listener.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C51757A80F0059D4AC /* Listener.h */; };
+		84AC251B242D49FA008C609A /* Peer.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CB1757A80F0059D4AC /* Peer.h */; };
+		84AC251C242D49FA008C609A /* AuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FA176B5818001C86E1 /* AuthenticationValues.h */; };
+		84AC251D242D49FA008C609A /* AuthenticationValuesSecretSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FD176B5827001C86E1 /* AuthenticationValuesSecretSetter.h */; };
+		84AC251E242D49FA008C609A /* ChannelMessageAdder.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C8C4261B0F9453003E621B /* ChannelMessageAdder.h */; };
+		84AC251F242D49FA008C609A /* ChannelFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C8C4251B0F9453003E621B /* ChannelFactory.h */; };
+		84AC2520242D49FA008C609A /* CustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBE02E11857068500412CCE /* CustomAuthenticationType.h */; };
+		84AC2521242D49FA008C609A /* DisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBE02E21857068500412CCE /* DisconnectCause.h */; };
+		84AC2522242D49FA008C609A /* Channel.h in Headers */ = {isa = PBXBuildFile; fileRef = DD49639F1909567E0079FA84 /* Channel.h */; };
+		84AC2523242D49FA008C609A /* ClientState.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4963A1190956900079FA84 /* ClientState.h */; };
+		84AC2524242D49FA008C609A /* UserStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4963A2190956900079FA84 /* UserStatus.h */; };
+		84B428D81BBD92DA00F993B7 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10781757A7DC0059D4AC /* Client.cpp */; };
+		84B428D91BBD92DA00F993B7 /* Peer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B10881757A7DC0059D4AC /* Peer.cpp */; };
+		84B428DA1BBD92DA00F993B7 /* ChannelFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C42B1B0F9469003E621B /* ChannelFactory.cpp */; };
+		84B428DB1BBD92DA00F993B7 /* AuthenticationValues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F3176B57E7001C86E1 /* AuthenticationValues.cpp */; };
+		84B428DC1BBD92DA00F993B7 /* ChannelMessageAdder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C42C1B0F9469003E621B /* ChannelMessageAdder.cpp */; };
+		84B428DD1BBD92DA00F993B7 /* AuthenticationValuesSecretSetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F7176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp */; };
+		84B428DE1BBD92DA00F993B7 /* Channel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD496397190955EB0079FA84 /* Channel.cpp */; };
+		84B428E11BBD92DA00F993B7 /* ErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = E99AB54F14C5B8C600F08070 /* ErrorCode.h */; };
+		84B428E21BBD92DA00F993B7 /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10AF1757A80F0059D4AC /* Client.h */; };
+		84B428E31BBD92DA00F993B7 /* OperationCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B71757A80F0059D4AC /* OperationCode.h */; };
+		84B428E41BBD92DA00F993B7 /* ParameterCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10B81757A80F0059D4AC /* ParameterCode.h */; };
+		84B428E51BBD92DA00F993B7 /* EventCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B6EFD41A307156006B600C /* EventCode.h */; };
+		84B428E61BBD92DA00F993B7 /* Listener.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10C51757A80F0059D4AC /* Listener.h */; };
+		84B428E71BBD92DA00F993B7 /* Peer.h in Headers */ = {isa = PBXBuildFile; fileRef = 849B10CB1757A80F0059D4AC /* Peer.h */; };
+		84B428E81BBD92DA00F993B7 /* AuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FA176B5818001C86E1 /* AuthenticationValues.h */; };
+		84B428E91BBD92DA00F993B7 /* AuthenticationValuesSecretSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FD176B5827001C86E1 /* AuthenticationValuesSecretSetter.h */; };
+		84B428EA1BBD92DA00F993B7 /* ChannelMessageAdder.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C8C4261B0F9453003E621B /* ChannelMessageAdder.h */; };
+		84B428EB1BBD92DA00F993B7 /* ChannelFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C8C4251B0F9453003E621B /* ChannelFactory.h */; };
+		84B428EC1BBD92DA00F993B7 /* CustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBE02E11857068500412CCE /* CustomAuthenticationType.h */; };
+		84B428ED1BBD92DA00F993B7 /* DisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBE02E21857068500412CCE /* DisconnectCause.h */; };
+		84B428EE1BBD92DA00F993B7 /* Channel.h in Headers */ = {isa = PBXBuildFile; fileRef = DD49639F1909567E0079FA84 /* Channel.h */; };
+		84B428EF1BBD92DA00F993B7 /* ClientState.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4963A1190956900079FA84 /* ClientState.h */; };
+		84B428F01BBD92DA00F993B7 /* UserStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4963A2190956900079FA84 /* UserStatus.h */; };
+		84B6EFD51A307156006B600C /* EventCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B6EFD41A307156006B600C /* EventCode.h */; };
+		84B6EFD61A307156006B600C /* EventCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B6EFD41A307156006B600C /* EventCode.h */; };
+		84BFB8F4176B57E7001C86E1 /* AuthenticationValues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F3176B57E7001C86E1 /* AuthenticationValues.cpp */; };
+		84BFB8F5176B57E7001C86E1 /* AuthenticationValues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F3176B57E7001C86E1 /* AuthenticationValues.cpp */; };
+		84BFB8F8176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F7176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp */; };
+		84BFB8F9176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB8F7176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp */; };
+		84BFB8FB176B5818001C86E1 /* AuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FA176B5818001C86E1 /* AuthenticationValues.h */; };
+		84BFB8FC176B5818001C86E1 /* AuthenticationValues.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FA176B5818001C86E1 /* AuthenticationValues.h */; };
+		84BFB8FF176B5827001C86E1 /* AuthenticationValuesSecretSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FD176B5827001C86E1 /* AuthenticationValuesSecretSetter.h */; };
+		84BFB900176B5827001C86E1 /* AuthenticationValuesSecretSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BFB8FD176B5827001C86E1 /* AuthenticationValuesSecretSetter.h */; };
+		84C8C4271B0F9453003E621B /* ChannelFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C8C4251B0F9453003E621B /* ChannelFactory.h */; };
+		84C8C4281B0F9453003E621B /* ChannelFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C8C4251B0F9453003E621B /* ChannelFactory.h */; };
+		84C8C4291B0F9453003E621B /* ChannelMessageAdder.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C8C4261B0F9453003E621B /* ChannelMessageAdder.h */; };
+		84C8C42A1B0F9453003E621B /* ChannelMessageAdder.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C8C4261B0F9453003E621B /* ChannelMessageAdder.h */; };
+		84C8C42D1B0F9469003E621B /* ChannelFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C42B1B0F9469003E621B /* ChannelFactory.cpp */; };
+		84C8C42E1B0F9469003E621B /* ChannelFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C42B1B0F9469003E621B /* ChannelFactory.cpp */; };
+		84C8C42F1B0F9469003E621B /* ChannelMessageAdder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C42C1B0F9469003E621B /* ChannelMessageAdder.cpp */; };
+		84C8C4301B0F9469003E621B /* ChannelMessageAdder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C42C1B0F9469003E621B /* ChannelMessageAdder.cpp */; };
+		DD496398190955EB0079FA84 /* Channel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD496397190955EB0079FA84 /* Channel.cpp */; };
+		DD4963A01909567E0079FA84 /* Channel.h in Headers */ = {isa = PBXBuildFile; fileRef = DD49639F1909567E0079FA84 /* Channel.h */; };
+		DD4963A3190956900079FA84 /* ClientState.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4963A1190956900079FA84 /* ClientState.h */; };
+		DD4963A4190956900079FA84 /* UserStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4963A2190956900079FA84 /* UserStatus.h */; };
+		DD59135422C65F7B00BDE60A /* ChannelPropertiesSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = DD59135322C65F7B00BDE60A /* ChannelPropertiesSetter.h */; };
+		DD59135622C65F8800BDE60A /* ChannelPropertiesSetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD59135522C65F8800BDE60A /* ChannelPropertiesSetter.cpp */; };
+		DDBE02E51857068500412CCE /* CustomAuthenticationType.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBE02E11857068500412CCE /* CustomAuthenticationType.h */; };
+		DDBE02E61857068500412CCE /* DisconnectCause.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBE02E21857068500412CCE /* DisconnectCause.h */; };
+		E99AB55F14C5B8C600F08070 /* ErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = E99AB54F14C5B8C600F08070 /* ErrorCode.h */; };
+		E99AB5A814C5C40F00F08070 /* ErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = E99AB54F14C5B8C600F08070 /* ErrorCode.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84B42A261BBD9A9500F993B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E99AB53414C5B84300F08070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B428D61BBD92DA00F993B7;
+			remoteInfo = "Chat-cpp-tvos";
+		};
+		84CE55A22628D37000392002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E99AB53414C5B84300F08070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84AC2508242D49FA008C609A;
+			remoteInfo = "Chat-cpp-catalyst";
+		};
+		E99AB5B914C5C4F300F08070 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E99AB53414C5B84300F08070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E99AB53C14C5B84300F08070;
+			remoteInfo = "Chat-cpp-iphone";
+		};
+		E99AB5BB14C5C4F300F08070 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E99AB53414C5B84300F08070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E99AB57814C5B90900F08070;
+			remoteInfo = "Chat-cpp-macos";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		849B10781757A7DC0059D4AC /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
+		849B10881757A7DC0059D4AC /* Peer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Peer.cpp; sourceTree = "<group>"; };
+		849B10AF1757A80F0059D4AC /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		849B10B71757A80F0059D4AC /* OperationCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationCode.h; sourceTree = "<group>"; };
+		849B10B81757A80F0059D4AC /* ParameterCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterCode.h; sourceTree = "<group>"; };
+		849B10C51757A80F0059D4AC /* Listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listener.h; sourceTree = "<group>"; };
+		849B10CB1757A80F0059D4AC /* Peer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Peer.h; sourceTree = "<group>"; };
+		84AC252A242D49FA008C609A /* libChat-cpp_debug_catalyst.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libChat-cpp_debug_catalyst.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B428F41BBD92DA00F993B7 /* libChat-cpp_debug_appletvos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libChat-cpp_debug_appletvos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B6EFD41A307156006B600C /* EventCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCode.h; sourceTree = "<group>"; };
+		84BFB8F3176B57E7001C86E1 /* AuthenticationValues.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AuthenticationValues.cpp; sourceTree = "<group>"; };
+		84BFB8F7176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AuthenticationValuesSecretSetter.cpp; sourceTree = "<group>"; };
+		84BFB8FA176B5818001C86E1 /* AuthenticationValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationValues.h; sourceTree = "<group>"; };
+		84BFB8FD176B5827001C86E1 /* AuthenticationValuesSecretSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationValuesSecretSetter.h; sourceTree = "<group>"; };
+		84C8C4251B0F9453003E621B /* ChannelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelFactory.h; sourceTree = "<group>"; };
+		84C8C4261B0F9453003E621B /* ChannelMessageAdder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelMessageAdder.h; sourceTree = "<group>"; };
+		84C8C42B1B0F9469003E621B /* ChannelFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChannelFactory.cpp; sourceTree = "<group>"; };
+		84C8C42C1B0F9469003E621B /* ChannelMessageAdder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChannelMessageAdder.cpp; sourceTree = "<group>"; };
+		DD496397190955EB0079FA84 /* Channel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Channel.cpp; sourceTree = "<group>"; };
+		DD49639F1909567E0079FA84 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		DD4963A1190956900079FA84 /* ClientState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientState.h; sourceTree = "<group>"; };
+		DD4963A2190956900079FA84 /* UserStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserStatus.h; sourceTree = "<group>"; };
+		DD59135322C65F7B00BDE60A /* ChannelPropertiesSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelPropertiesSetter.h; sourceTree = "<group>"; };
+		DD59135522C65F8800BDE60A /* ChannelPropertiesSetter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChannelPropertiesSetter.cpp; sourceTree = "<group>"; };
+		DDBE02E11857068500412CCE /* CustomAuthenticationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAuthenticationType.h; sourceTree = "<group>"; };
+		DDBE02E21857068500412CCE /* DisconnectCause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisconnectCause.h; sourceTree = "<group>"; };
+		E99AB53D14C5B84300F08070 /* libChat-cpp_debug_iphoneos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libChat-cpp_debug_iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E99AB54F14C5B8C600F08070 /* ErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorCode.h; sourceTree = "<group>"; };
+		E99AB57914C5B90900F08070 /* libChat-cpp_debug_macosx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libChat-cpp_debug_macosx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84AC2512242D49FA008C609A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B428DF1BBD92DA00F993B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E99AB53A14C5B84300F08070 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E99AB57614C5B90900F08070 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		849B10791757A7DC0059D4AC /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				84BFB8F7176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp */,
+				84C8C42B1B0F9469003E621B /* ChannelFactory.cpp */,
+				84C8C42C1B0F9469003E621B /* ChannelMessageAdder.cpp */,
+				DD59135522C65F8800BDE60A /* ChannelPropertiesSetter.cpp */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		849B10B31757A80F0059D4AC /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				849B10B41757A80F0059D4AC /* Enums */,
+				84BFB8FD176B5827001C86E1 /* AuthenticationValuesSecretSetter.h */,
+				84C8C4251B0F9453003E621B /* ChannelFactory.h */,
+				84C8C4261B0F9453003E621B /* ChannelMessageAdder.h */,
+				DD59135322C65F7B00BDE60A /* ChannelPropertiesSetter.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		849B10B41757A80F0059D4AC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				84B6EFD41A307156006B600C /* EventCode.h */,
+				849B10B71757A80F0059D4AC /* OperationCode.h */,
+				849B10B81757A80F0059D4AC /* ParameterCode.h */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E99AB53214C5B84300F08070 = {
+			isa = PBXGroup;
+			children = (
+				E99AB56C14C5B8D700F08070 /* src */,
+				E99AB54D14C5B8C600F08070 /* inc */,
+				E99AB53E14C5B84300F08070 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E99AB53E14C5B84300F08070 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E99AB53D14C5B84300F08070 /* libChat-cpp_debug_iphoneos.a */,
+				E99AB57914C5B90900F08070 /* libChat-cpp_debug_macosx.a */,
+				84B428F41BBD92DA00F993B7 /* libChat-cpp_debug_appletvos.a */,
+				84AC252A242D49FA008C609A /* libChat-cpp_debug_catalyst.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E99AB54D14C5B8C600F08070 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				E99AB54E14C5B8C600F08070 /* Enums */,
+				849B10B31757A80F0059D4AC /* Internal */,
+				84BFB8FA176B5818001C86E1 /* AuthenticationValues.h */,
+				DD49639F1909567E0079FA84 /* Channel.h */,
+				849B10AF1757A80F0059D4AC /* Client.h */,
+				849B10C51757A80F0059D4AC /* Listener.h */,
+				849B10CB1757A80F0059D4AC /* Peer.h */,
+			);
+			path = inc;
+			sourceTree = "<group>";
+		};
+		E99AB54E14C5B8C600F08070 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				DD4963A1190956900079FA84 /* ClientState.h */,
+				DDBE02E11857068500412CCE /* CustomAuthenticationType.h */,
+				DDBE02E21857068500412CCE /* DisconnectCause.h */,
+				E99AB54F14C5B8C600F08070 /* ErrorCode.h */,
+				DD4963A2190956900079FA84 /* UserStatus.h */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E99AB56C14C5B8D700F08070 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				849B10791757A7DC0059D4AC /* Internal */,
+				84BFB8F3176B57E7001C86E1 /* AuthenticationValues.cpp */,
+				DD496397190955EB0079FA84 /* Channel.cpp */,
+				849B10781757A7DC0059D4AC /* Client.cpp */,
+				849B10881757A7DC0059D4AC /* Peer.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		84AC2513242D49FA008C609A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AC2514242D49FA008C609A /* ErrorCode.h in Headers */,
+				84AC2515242D49FA008C609A /* Client.h in Headers */,
+				84AC2516242D49FA008C609A /* OperationCode.h in Headers */,
+				84AC2517242D49FA008C609A /* ParameterCode.h in Headers */,
+				84AC2518242D49FA008C609A /* ChannelPropertiesSetter.h in Headers */,
+				84AC2519242D49FA008C609A /* EventCode.h in Headers */,
+				84AC251A242D49FA008C609A /* Listener.h in Headers */,
+				84AC251B242D49FA008C609A /* Peer.h in Headers */,
+				84AC251C242D49FA008C609A /* AuthenticationValues.h in Headers */,
+				84AC251D242D49FA008C609A /* AuthenticationValuesSecretSetter.h in Headers */,
+				84AC251E242D49FA008C609A /* ChannelMessageAdder.h in Headers */,
+				84AC251F242D49FA008C609A /* ChannelFactory.h in Headers */,
+				84AC2520242D49FA008C609A /* CustomAuthenticationType.h in Headers */,
+				84AC2521242D49FA008C609A /* DisconnectCause.h in Headers */,
+				84AC2522242D49FA008C609A /* Channel.h in Headers */,
+				84AC2523242D49FA008C609A /* ClientState.h in Headers */,
+				84AC2524242D49FA008C609A /* UserStatus.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B428E01BBD92DA00F993B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B428E11BBD92DA00F993B7 /* ErrorCode.h in Headers */,
+				84B428E21BBD92DA00F993B7 /* Client.h in Headers */,
+				84B428E31BBD92DA00F993B7 /* OperationCode.h in Headers */,
+				84B428E41BBD92DA00F993B7 /* ParameterCode.h in Headers */,
+				841B1D4623195E34002C534A /* ChannelPropertiesSetter.h in Headers */,
+				84B428E51BBD92DA00F993B7 /* EventCode.h in Headers */,
+				84B428E61BBD92DA00F993B7 /* Listener.h in Headers */,
+				84B428E71BBD92DA00F993B7 /* Peer.h in Headers */,
+				84B428E81BBD92DA00F993B7 /* AuthenticationValues.h in Headers */,
+				84B428E91BBD92DA00F993B7 /* AuthenticationValuesSecretSetter.h in Headers */,
+				84B428EA1BBD92DA00F993B7 /* ChannelMessageAdder.h in Headers */,
+				84B428EB1BBD92DA00F993B7 /* ChannelFactory.h in Headers */,
+				84B428EC1BBD92DA00F993B7 /* CustomAuthenticationType.h in Headers */,
+				84B428ED1BBD92DA00F993B7 /* DisconnectCause.h in Headers */,
+				84B428EE1BBD92DA00F993B7 /* Channel.h in Headers */,
+				84B428EF1BBD92DA00F993B7 /* ClientState.h in Headers */,
+				84B428F01BBD92DA00F993B7 /* UserStatus.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E99AB53B14C5B84300F08070 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E99AB55F14C5B8C600F08070 /* ErrorCode.h in Headers */,
+				849B10CE1757A80F0059D4AC /* Client.h in Headers */,
+				849B10D81757A80F0059D4AC /* OperationCode.h in Headers */,
+				849B10DA1757A80F0059D4AC /* ParameterCode.h in Headers */,
+				DD59135422C65F7B00BDE60A /* ChannelPropertiesSetter.h in Headers */,
+				84B6EFD51A307156006B600C /* EventCode.h in Headers */,
+				849B10F21757A80F0059D4AC /* Listener.h in Headers */,
+				849B10FE1757A80F0059D4AC /* Peer.h in Headers */,
+				84BFB8FB176B5818001C86E1 /* AuthenticationValues.h in Headers */,
+				84BFB8FF176B5827001C86E1 /* AuthenticationValuesSecretSetter.h in Headers */,
+				84C8C4291B0F9453003E621B /* ChannelMessageAdder.h in Headers */,
+				84C8C4271B0F9453003E621B /* ChannelFactory.h in Headers */,
+				DDBE02E51857068500412CCE /* CustomAuthenticationType.h in Headers */,
+				DDBE02E61857068500412CCE /* DisconnectCause.h in Headers */,
+				DD4963A01909567E0079FA84 /* Channel.h in Headers */,
+				DD4963A3190956900079FA84 /* ClientState.h in Headers */,
+				DD4963A4190956900079FA84 /* UserStatus.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E99AB57714C5B90900F08070 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843622E91A167ED3006124AF /* Channel.h in Headers */,
+				843622EA1A167ED3006124AF /* ClientState.h in Headers */,
+				843622EB1A167ED3006124AF /* UserStatus.h in Headers */,
+				843622EC1A167ED3006124AF /* CustomAuthenticationType.h in Headers */,
+				841B1D4523195E34002C534A /* ChannelPropertiesSetter.h in Headers */,
+				84B6EFD61A307156006B600C /* EventCode.h in Headers */,
+				843622ED1A167ED3006124AF /* DisconnectCause.h in Headers */,
+				E99AB5A814C5C40F00F08070 /* ErrorCode.h in Headers */,
+				849B10CF1757A80F0059D4AC /* Client.h in Headers */,
+				849B10D91757A80F0059D4AC /* OperationCode.h in Headers */,
+				84C8C42A1B0F9453003E621B /* ChannelMessageAdder.h in Headers */,
+				84C8C4281B0F9453003E621B /* ChannelFactory.h in Headers */,
+				849B10DB1757A80F0059D4AC /* ParameterCode.h in Headers */,
+				849B10F31757A80F0059D4AC /* Listener.h in Headers */,
+				849B10FF1757A80F0059D4AC /* Peer.h in Headers */,
+				84BFB8FC176B5818001C86E1 /* AuthenticationValues.h in Headers */,
+				84BFB900176B5827001C86E1 /* AuthenticationValuesSecretSetter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		84AC2508242D49FA008C609A /* Chat-cpp-catalyst */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84AC2525242D49FA008C609A /* Build configuration list for PBXNativeTarget "Chat-cpp-catalyst" */;
+			buildPhases = (
+				84AC2509242D49FA008C609A /* Sources */,
+				84AC2512242D49FA008C609A /* Frameworks */,
+				84AC2513242D49FA008C609A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chat-cpp-catalyst";
+			productName = "Chat-cpp";
+			productReference = 84AC252A242D49FA008C609A /* libChat-cpp_debug_catalyst.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84B428D61BBD92DA00F993B7 /* Chat-cpp-tvos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B428F11BBD92DA00F993B7 /* Build configuration list for PBXNativeTarget "Chat-cpp-tvos" */;
+			buildPhases = (
+				84B428D71BBD92DA00F993B7 /* Sources */,
+				84B428DF1BBD92DA00F993B7 /* Frameworks */,
+				84B428E01BBD92DA00F993B7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chat-cpp-tvos";
+			productName = "Chat-cpp";
+			productReference = 84B428F41BBD92DA00F993B7 /* libChat-cpp_debug_appletvos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E99AB53C14C5B84300F08070 /* Chat-cpp-iphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E99AB54A14C5B84300F08070 /* Build configuration list for PBXNativeTarget "Chat-cpp-iphone" */;
+			buildPhases = (
+				E99AB53914C5B84300F08070 /* Sources */,
+				E99AB53A14C5B84300F08070 /* Frameworks */,
+				E99AB53B14C5B84300F08070 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chat-cpp-iphone";
+			productName = "Chat-cpp";
+			productReference = E99AB53D14C5B84300F08070 /* libChat-cpp_debug_iphoneos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E99AB57814C5B90900F08070 /* Chat-cpp-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E99AB58714C5B90900F08070 /* Build configuration list for PBXNativeTarget "Chat-cpp-macos" */;
+			buildPhases = (
+				E99AB57514C5B90900F08070 /* Sources */,
+				E99AB57614C5B90900F08070 /* Frameworks */,
+				E99AB57714C5B90900F08070 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chat-cpp-macos";
+			productName = "Chat-cpp-macos";
+			productReference = E99AB57914C5B90900F08070 /* libChat-cpp_debug_macosx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E99AB53414C5B84300F08070 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+			};
+			buildConfigurationList = E99AB53714C5B84300F08070 /* Build configuration list for PBXProject "Chat-cpp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = E99AB53214C5B84300F08070;
+			productRefGroup = E99AB53E14C5B84300F08070 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84AC2508242D49FA008C609A /* Chat-cpp-catalyst */,
+				E99AB53C14C5B84300F08070 /* Chat-cpp-iphone */,
+				E99AB57814C5B90900F08070 /* Chat-cpp-macos */,
+				84B428D61BBD92DA00F993B7 /* Chat-cpp-tvos */,
+				E99AB59114C5BC8700F08070 /* build all */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84AC2509242D49FA008C609A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AC250A242D49FA008C609A /* Client.cpp in Sources */,
+				84AC250B242D49FA008C609A /* ChannelPropertiesSetter.cpp in Sources */,
+				84AC250C242D49FA008C609A /* Peer.cpp in Sources */,
+				84AC250D242D49FA008C609A /* ChannelFactory.cpp in Sources */,
+				84AC250E242D49FA008C609A /* AuthenticationValues.cpp in Sources */,
+				84AC250F242D49FA008C609A /* ChannelMessageAdder.cpp in Sources */,
+				84AC2510242D49FA008C609A /* AuthenticationValuesSecretSetter.cpp in Sources */,
+				84AC2511242D49FA008C609A /* Channel.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B428D71BBD92DA00F993B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B428D81BBD92DA00F993B7 /* Client.cpp in Sources */,
+				841B1D4423195E2E002C534A /* ChannelPropertiesSetter.cpp in Sources */,
+				84B428D91BBD92DA00F993B7 /* Peer.cpp in Sources */,
+				84B428DA1BBD92DA00F993B7 /* ChannelFactory.cpp in Sources */,
+				84B428DB1BBD92DA00F993B7 /* AuthenticationValues.cpp in Sources */,
+				84B428DC1BBD92DA00F993B7 /* ChannelMessageAdder.cpp in Sources */,
+				84B428DD1BBD92DA00F993B7 /* AuthenticationValuesSecretSetter.cpp in Sources */,
+				84B428DE1BBD92DA00F993B7 /* Channel.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E99AB53914C5B84300F08070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849B108B1757A7DC0059D4AC /* Client.cpp in Sources */,
+				DD59135622C65F8800BDE60A /* ChannelPropertiesSetter.cpp in Sources */,
+				849B10A91757A7DC0059D4AC /* Peer.cpp in Sources */,
+				84C8C42D1B0F9469003E621B /* ChannelFactory.cpp in Sources */,
+				84BFB8F4176B57E7001C86E1 /* AuthenticationValues.cpp in Sources */,
+				84C8C42F1B0F9469003E621B /* ChannelMessageAdder.cpp in Sources */,
+				84BFB8F8176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp in Sources */,
+				DD496398190955EB0079FA84 /* Channel.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E99AB57514C5B90900F08070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843622E81A167EC6006124AF /* Channel.cpp in Sources */,
+				841B1D4323195E2E002C534A /* ChannelPropertiesSetter.cpp in Sources */,
+				849B108C1757A7DC0059D4AC /* Client.cpp in Sources */,
+				84C8C42E1B0F9469003E621B /* ChannelFactory.cpp in Sources */,
+				849B10AA1757A7DC0059D4AC /* Peer.cpp in Sources */,
+				84C8C4301B0F9469003E621B /* ChannelMessageAdder.cpp in Sources */,
+				84BFB8F5176B57E7001C86E1 /* AuthenticationValues.cpp in Sources */,
+				84BFB8F9176B57F9001C86E1 /* AuthenticationValuesSecretSetter.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84B42A271BBD9A9500F993B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B428D61BBD92DA00F993B7 /* Chat-cpp-tvos */;
+			targetProxy = 84B42A261BBD9A9500F993B7 /* PBXContainerItemProxy */;
+		};
+		84CE55A32628D37000392002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84AC2508242D49FA008C609A /* Chat-cpp-catalyst */;
+			targetProxy = 84CE55A22628D37000392002 /* PBXContainerItemProxy */;
+		};
+		E99AB5BA14C5C4F300F08070 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E99AB53C14C5B84300F08070 /* Chat-cpp-iphone */;
+			targetProxy = E99AB5B914C5C4F300F08070 /* PBXContainerItemProxy */;
+		};
+		E99AB5BC14C5C4F300F08070 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E99AB57814C5B90900F08070 /* Chat-cpp-macos */;
+			targetProxy = E99AB5BB14C5C4F300F08070 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		84AC2526242D49FA008C609A /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = "Chat-cpp_$(CONFIGURATION)_catalyst";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+			};
+			name = debug;
+		};
+		84AC2528242D49FA008C609A /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = "Chat-cpp_$(CONFIGURATION)_catalyst";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+			};
+			name = release;
+		};
+		84B428F21BBD92DA00F993B7 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = debug;
+		};
+		84B428F31BBD92DA00F993B7 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				GCC_THUMB_SUPPORT = NO;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = release;
+		};
+		E99AB54814C5B84300F08070 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = lib;
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "Chat-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = debug;
+		};
+		E99AB54914C5B84300F08070 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = lib;
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "Chat-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = release;
+		};
+		E99AB54B14C5B84300F08070 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXCLUDED_ARCHS = i386;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IPHONE_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = debug;
+		};
+		E99AB54C14C5B84300F08070 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXCLUDED_ARCHS = i386;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IPHONE_PLATFORM;
+				GCC_THUMB_SUPPORT = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = release;
+		};
+		E99AB58814C5B90900F08070 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IMAC_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = debug;
+		};
+		E99AB58914C5B90900F08070 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IMAC_PLATFORM;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = release;
+		};
+		E99AB59314C5BC8700F08070 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "Chat-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+			};
+			name = debug;
+		};
+		E99AB59414C5BC8700F08070 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "Chat-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)";
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84AC2525242D49FA008C609A /* Build configuration list for PBXNativeTarget "Chat-cpp-catalyst" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84AC2526242D49FA008C609A /* debug */,
+				84AC2528242D49FA008C609A /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		84B428F11BBD92DA00F993B7 /* Build configuration list for PBXNativeTarget "Chat-cpp-tvos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B428F21BBD92DA00F993B7 /* debug */,
+				84B428F31BBD92DA00F993B7 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		E99AB53714C5B84300F08070 /* Build configuration list for PBXProject "Chat-cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99AB54814C5B84300F08070 /* debug */,
+				E99AB54914C5B84300F08070 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		E99AB54A14C5B84300F08070 /* Build configuration list for PBXNativeTarget "Chat-cpp-iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99AB54B14C5B84300F08070 /* debug */,
+				E99AB54C14C5B84300F08070 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		E99AB58714C5B90900F08070 /* Build configuration list for PBXNativeTarget "Chat-cpp-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99AB58814C5B90900F08070 /* debug */,
+				E99AB58914C5B90900F08070 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		E99AB59214C5BC8700F08070 /* Build configuration list for PBXAggregateTarget "build all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E99AB59314C5BC8700F08070 /* debug */,
+				E99AB59414C5BC8700F08070 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E99AB53414C5B84300F08070 /* Project object */;
+}

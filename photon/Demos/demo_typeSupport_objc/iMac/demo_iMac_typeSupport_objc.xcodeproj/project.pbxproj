@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84F445F6232BFE1700159435 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F445F1232BFE1300159435 /* Security.framework */; };
+		84F4460B232BFF3500159435 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F4460A232BFF3100159435 /* CFNetwork.framework */; };
+		B383649A147FE066000E2D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3836499147FE066000E2D94 /* Foundation.framework */; };
+		B38364B3147FE0FF000E2D94 /* DemoApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = B38364AF147FE0FF000E2D94 /* DemoApplication.mm */; };
+		B38364B4147FE0FF000E2D94 /* PhotonLib.mm in Sources */ = {isa = PBXBuildFile; fileRef = B38364B0147FE0FF000E2D94 /* PhotonLib.mm */; };
+		B38364C8147FE41D000E2D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B38364C7147FE41D000E2D94 /* main.m */; };
+		E9F6580514A249C80035EBF5 /* demo_photon_CustomType_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9F6580314A249C80035EBF5 /* demo_photon_CustomType_objc.mm */; };
+		E9F6580614A249C80035EBF5 /* demo_photon_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9F6580414A249C80035EBF5 /* demo_photon_objc.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		840DEF9D1FEC209200B24027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840DEF961FEC209200B24027 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FC781CA01346199B0052C26D;
+			remoteInfo = "LoadBalancing-objc-iphone";
+		};
+		840DEF9F1FEC209200B24027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840DEF961FEC209200B24027 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FC781CA11346199B0052C26D;
+			remoteInfo = "LoadBalancing-objc-macos";
+		};
+		840DEFA11FEC209200B24027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840DEF961FEC209200B24027 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84B429831BBD933300F993B7;
+			remoteInfo = "LoadBalancing-objc-tvos";
+		};
+		846CA9EA242E76D700CC4A3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840DEF961FEC209200B24027 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE239C60E9BC5CF00F949F1;
+			remoteInfo = "LoadBalancing-objc-macos";
+		};
+		846CA9F1242E76D700CC4A3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840DEF961FEC209200B24027 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84AC25B6242D4AC1008C609A;
+			remoteInfo = "LoadBalancing-objc-catalyst";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3836493147FE066000E2D94 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		840DEF961FEC209200B24027 /* LoadBalancing-objc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LoadBalancing-objc.xcodeproj"; path = "../../../LoadBalancing-objc/LoadBalancing-objc.xcodeproj"; sourceTree = "<group>"; };
+		84F445F1232BFE1300159435 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		84F4460A232BFF3100159435 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B3836495147FE066000E2D94 /* demo_iMac_typeSupport_objc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = demo_iMac_typeSupport_objc; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3836499147FE066000E2D94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B383649F147FE066000E2D94 /* demo_iMac_typeSupport_objc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "demo_iMac_typeSupport_objc-Prefix.pch"; sourceTree = "<group>"; };
+		B38364AF147FE0FF000E2D94 /* DemoApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DemoApplication.mm; sourceTree = "<group>"; };
+		B38364B0147FE0FF000E2D94 /* PhotonLib.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhotonLib.mm; sourceTree = "<group>"; };
+		B38364B8147FE107000E2D94 /* DemoApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoApplication.h; sourceTree = "<group>"; };
+		B38364B9147FE107000E2D94 /* PhotonLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotonLib.h; sourceTree = "<group>"; };
+		B38364BA147FE107000E2D94 /* UIListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIListener.h; sourceTree = "<group>"; };
+		B38364C7147FE41D000E2D94 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		E9F6580114A249C00035EBF5 /* demo_photon_CustomType_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = demo_photon_CustomType_objc.h; sourceTree = "<group>"; };
+		E9F6580214A249C00035EBF5 /* demo_photon_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = demo_photon_objc.h; sourceTree = "<group>"; };
+		E9F6580314A249C80035EBF5 /* demo_photon_CustomType_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = demo_photon_CustomType_objc.mm; sourceTree = "<group>"; };
+		E9F6580414A249C80035EBF5 /* demo_photon_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = demo_photon_objc.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3836492147FE066000E2D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F4460B232BFF3500159435 /* CFNetwork.framework in Frameworks */,
+				84F445F6232BFE1700159435 /* Security.framework in Frameworks */,
+				B383649A147FE066000E2D94 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		840DEF971FEC209200B24027 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				846CA9F2242E76D700CC4A3F /* libLoadBalancing-objc_debug_catalyst.a */,
+				840DEF9E1FEC209200B24027 /* libLoadBalancing-objc_debug_iphoneos.a */,
+				840DEFA01FEC209200B24027 /* libLoadBalancing-objc_debug_macosx.a */,
+				840DEFA21FEC209200B24027 /* libLoadBalancing-objc_debug_appletvos.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B383648A147FE066000E2D94 = {
+			isa = PBXGroup;
+			children = (
+				840DEF961FEC209200B24027 /* LoadBalancing-objc.xcodeproj */,
+				B38364B5147FE107000E2D94 /* inc */,
+				B38364AC147FE0FF000E2D94 /* src */,
+				B383649B147FE066000E2D94 /* demo_iMac_typeSupport_objc */,
+				B3836498147FE066000E2D94 /* Frameworks */,
+				B3836496147FE066000E2D94 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3836496147FE066000E2D94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3836495147FE066000E2D94 /* demo_iMac_typeSupport_objc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3836498147FE066000E2D94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84F4460A232BFF3100159435 /* CFNetwork.framework */,
+				84F445F1232BFE1300159435 /* Security.framework */,
+				B3836499147FE066000E2D94 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B383649B147FE066000E2D94 /* demo_iMac_typeSupport_objc */ = {
+			isa = PBXGroup;
+			children = (
+				B38364C7147FE41D000E2D94 /* main.m */,
+				B383649E147FE066000E2D94 /* Supporting Files */,
+			);
+			path = demo_iMac_typeSupport_objc;
+			sourceTree = "<group>";
+		};
+		B383649E147FE066000E2D94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B383649F147FE066000E2D94 /* demo_iMac_typeSupport_objc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B38364AC147FE0FF000E2D94 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E9F6580314A249C80035EBF5 /* demo_photon_CustomType_objc.mm */,
+				E9F6580414A249C80035EBF5 /* demo_photon_objc.mm */,
+				B38364AF147FE0FF000E2D94 /* DemoApplication.mm */,
+				B38364B0147FE0FF000E2D94 /* PhotonLib.mm */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
+		B38364B5147FE107000E2D94 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				E9F6580114A249C00035EBF5 /* demo_photon_CustomType_objc.h */,
+				E9F6580214A249C00035EBF5 /* demo_photon_objc.h */,
+				B38364B8147FE107000E2D94 /* DemoApplication.h */,
+				B38364B9147FE107000E2D94 /* PhotonLib.h */,
+				B38364BA147FE107000E2D94 /* UIListener.h */,
+			);
+			name = inc;
+			path = ../inc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3836494147FE066000E2D94 /* demo_iMac_typeSupport_objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B38364A4147FE066000E2D94 /* Build configuration list for PBXNativeTarget "demo_iMac_typeSupport_objc" */;
+			buildPhases = (
+				B3836491147FE066000E2D94 /* Sources */,
+				B3836492147FE066000E2D94 /* Frameworks */,
+				B3836493147FE066000E2D94 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				846CA9EB242E76D700CC4A3F /* PBXTargetDependency */,
+			);
+			name = demo_iMac_typeSupport_objc;
+			productName = demo_iMac_typeSupport_objc;
+			productReference = B3836495147FE066000E2D94 /* demo_iMac_typeSupport_objc */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B383648C147FE066000E2D94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+			};
+			buildConfigurationList = B383648F147FE066000E2D94 /* Build configuration list for PBXProject "demo_iMac_typeSupport_objc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = B383648A147FE066000E2D94;
+			productRefGroup = B3836496147FE066000E2D94 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 840DEF971FEC209200B24027 /* Products */;
+					ProjectRef = 840DEF961FEC209200B24027 /* LoadBalancing-objc.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B3836494147FE066000E2D94 /* demo_iMac_typeSupport_objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		840DEF9E1FEC209200B24027 /* libLoadBalancing-objc_debug_iphoneos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_iphoneos.a";
+			remoteRef = 840DEF9D1FEC209200B24027 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		840DEFA01FEC209200B24027 /* libLoadBalancing-objc_debug_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_macosx.a";
+			remoteRef = 840DEF9F1FEC209200B24027 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		840DEFA21FEC209200B24027 /* libLoadBalancing-objc_debug_appletvos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_appletvos.a";
+			remoteRef = 840DEFA11FEC209200B24027 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		846CA9F2242E76D700CC4A3F /* libLoadBalancing-objc_debug_catalyst.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_catalyst.a";
+			remoteRef = 846CA9F1242E76D700CC4A3F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3836491147FE066000E2D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B38364B3147FE0FF000E2D94 /* DemoApplication.mm in Sources */,
+				B38364B4147FE0FF000E2D94 /* PhotonLib.mm in Sources */,
+				B38364C8147FE41D000E2D94 /* main.m in Sources */,
+				E9F6580514A249C80035EBF5 /* demo_photon_CustomType_objc.mm in Sources */,
+				E9F6580614A249C80035EBF5 /* demo_photon_objc.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		846CA9EB242E76D700CC4A3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LoadBalancing-objc-macos";
+			targetProxy = 846CA9EA242E76D700CC4A3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B38364A2147FE066000E2D94 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = debug;
+		};
+		B38364A3147FE066000E2D94 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = release;
+		};
+		B38364A5147FE066000E2D94 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "demo_iMac_typeSupport_objc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IMAC_PLATFORM,
+					EG_DEBUGGER,
+				);
+				HEADER_SEARCH_PATHS = (
+					../inc,
+					../../..,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../Common-objc/lib",
+					"../../../Photon-objc/lib",
+					"../../../LoadBalancing-objc/lib",
+					../../../3rdparty/lib/apple,
+				);
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-force_load",
+					"../../../Common-objc/lib/libCommon-objc_$(CONFIGURATION)_$(PLATFORM_NAME).a",
+					"-lCommon-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lPhoton-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lcrypto_$(CONFIGURATION)_$(PLATFORM_NAME)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = debug;
+		};
+		B38364A6147FE066000E2D94 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "demo_iMac_typeSupport_objc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IMAC_PLATFORM;
+				HEADER_SEARCH_PATHS = (
+					../inc,
+					../../..,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../Common-objc/lib",
+					"../../../Photon-objc/lib",
+					"../../../LoadBalancing-objc/lib",
+					../../../3rdparty/lib/apple,
+				);
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-force_load",
+					"../../../Common-objc/lib/libCommon-objc_$(CONFIGURATION)_$(PLATFORM_NAME).a",
+					"-lCommon-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lPhoton-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lcrypto_$(CONFIGURATION)_$(PLATFORM_NAME)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B383648F147FE066000E2D94 /* Build configuration list for PBXProject "demo_iMac_typeSupport_objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38364A2147FE066000E2D94 /* debug */,
+				B38364A3147FE066000E2D94 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		B38364A4147FE066000E2D94 /* Build configuration list for PBXNativeTarget "demo_iMac_typeSupport_objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38364A5147FE066000E2D94 /* debug */,
+				B38364A6147FE066000E2D94 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B383648C147FE066000E2D94 /* Project object */;
+}

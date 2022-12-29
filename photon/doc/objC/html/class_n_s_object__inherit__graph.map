@@ -1,0 +1,33 @@
+<map id="NSObject" name="NSObject">
+<area shape="rect" id="node1" title=" " alt="" coords="5,536,72,560"/>
+<area shape="rect" id="node2" href="$interface_e_g_base.html" title=" " alt="" coords="157,314,219,339"/>
+<area shape="rect" id="node21" href="$interface_e_g_chat_client.html" title=" " alt="" coords="145,388,231,412"/>
+<area shape="rect" id="node22" href="$interface_e_g_event_data.html" title=" " alt="" coords="145,437,231,462"/>
+<area shape="rect" id="node23" href="$interface_e_g_load_balancing_client.html" title=" " alt="" coords="121,486,255,511"/>
+<area shape="rect" id="node24" href="$interface_e_g_logger.html" title=" " alt="" coords="153,536,223,560"/>
+<area shape="rect" id="node25" href="$interface_e_g_operation_request.html" title=" " alt="" coords="126,585,250,610"/>
+<area shape="rect" id="node26" href="$interface_e_g_operation_response.html" title=" " alt="" coords="122,634,254,659"/>
+<area shape="rect" id="node27" href="$interface_e_g_photon_peer.html" title=" " alt="" coords="141,684,235,708"/>
+<area shape="rect" id="node31" href="$interface_e_g_traffic_stats.html" title=" " alt="" coords="143,733,233,758"/>
+<area shape="rect" id="node3" href="$interface_e_g_authentication_values.html" title=" " alt="" coords="309,5,445,30"/>
+<area shape="rect" id="node5" href="$interface_e_g_chat_channel.html" title=" " alt="" coords="328,54,427,79"/>
+<area shape="rect" id="node6" href="$interface_e_g_custom_type_utils.html" title=" " alt="" coords="319,104,436,128"/>
+<area shape="rect" id="node7" href="$interface_e_g_friend_info.html" title=" " alt="" coords="335,153,420,178"/>
+<area shape="rect" id="node8" href="$interface_e_g_load_balancing_player.html" title=" " alt="" coords="309,202,446,227"/>
+<area shape="rect" id="node10" href="$interface_e_g_load_balancing_room.html" title=" " alt="" coords="309,252,445,276"/>
+<area shape="rect" id="node12" href="$interface_e_g_lobby_stats_request.html" title=" " alt="" coords="312,301,442,326"/>
+<area shape="rect" id="node13" href="$interface_e_g_lobby_stats_response.html" title=" " alt="" coords="308,350,446,375"/>
+<area shape="rect" id="node14" href="$interface_e_g_raise_event_options.html" title=" " alt="" coords="313,400,441,424"/>
+<area shape="rect" id="node16" href="$interface_e_g_room_options.html" title=" " alt="" coords="326,449,428,474"/>
+<area shape="rect" id="node18" href="$interface_e_g_time.html" title=" " alt="" coords="347,498,407,523"/>
+<area shape="rect" id="node19" href="$interface_e_g_traffic_stats_game_level.html" title=" " alt="" coords="305,548,450,572"/>
+<area shape="rect" id="node20" href="$interface_e_g_utils.html" title=" " alt="" coords="349,597,406,622"/>
+<area shape="rect" id="node4" href="$interface_e_g_mutable_authentication_values.html" title=" " alt="" coords="500,5,674,30"/>
+<area shape="rect" id="node9" href="$interface_e_g_load_balancing_mutable_player.html" title=" " alt="" coords="499,202,674,227"/>
+<area shape="rect" id="node11" href="$interface_e_g_load_balancing_mutable_room.html" title=" " alt="" coords="500,252,674,276"/>
+<area shape="rect" id="node15" href="$interface_e_g_mutable_raise_event_options.html" title=" " alt="" coords="504,400,670,424"/>
+<area shape="rect" id="node17" href="$interface_e_g_mutable_room_options.html" title=" " alt="" coords="517,449,657,474"/>
+<area shape="rect" id="node28" href="$interface_e_g_chat_peer.html" title=" " alt="" coords="336,646,418,671"/>
+<area shape="rect" id="node29" href="$interface_e_g_lite_peer.html" title=" " alt="" coords="339,696,416,720"/>
+<area shape="rect" id="node30" href="$interface_e_g_load_balancing_peer.html" title=" " alt="" coords="312,745,442,770"/>
+</map>

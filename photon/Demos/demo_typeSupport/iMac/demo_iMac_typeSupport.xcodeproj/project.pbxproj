@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84F44603232BFE3A00159435 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F44602232BFE3500159435 /* Security.framework */; };
+		84F44607232BFF1B00159435 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F44606232BFF1500159435 /* CFNetwork.framework */; };
+		84F44637232C014300159435 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F44636232C013C00159435 /* Foundation.framework */; };
+		B3810AE41472A85E00347575 /* Listener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3810ADC1472A85E00347575 /* Listener.cpp */; };
+		B3810AE51472A85E00347575 /* StdIO_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3810ADE1472A85E00347575 /* StdIO_main.cpp */; };
+		B3810AE61472A85E00347575 /* Photon_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3810ADF1472A85E00347575 /* Photon_lib.cpp */; };
+		B3810AE71472A85E00347575 /* StdIO_UIListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3810AE11472A85E00347575 /* StdIO_UIListener.cpp */; };
+		B383C1BD1473D4F400BD4B76 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B383C1BC1473D4F400BD4B76 /* CoreFoundation.framework */; };
+		B384A860147BD1A20068C044 /* TypeSupportApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B384A85F147BD1A20068C044 /* TypeSupportApplication.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		840DEF901FEC208400B24027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840DEF891FEC208400B24027 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E99AB53D14C5B84300F08070;
+			remoteInfo = "LoadBalancing-cpp-iphone";
+		};
+		840DEF921FEC208400B24027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840DEF891FEC208400B24027 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E99AB57914C5B90900F08070;
+			remoteInfo = "LoadBalancing-cpp-macos";
+		};
+		840DEF941FEC208400B24027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840DEF891FEC208400B24027 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84B4295B1BBD931100F993B7;
+			remoteInfo = "LoadBalancing-cpp-tvos";
+		};
+		846CA9E1242E75D400CC4A3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840DEF891FEC208400B24027 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E99AB57814C5B90900F08070;
+			remoteInfo = "LoadBalancing-cpp-macos";
+		};
+		846CA9E8242E75D400CC4A3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840DEF891FEC208400B24027 /* LoadBalancing-cpp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84AC2503242D49C2008C609A;
+			remoteInfo = "LoadBalancing-cpp-catalyst";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3810ABF1472A18A00347575 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		840DEF891FEC208400B24027 /* LoadBalancing-cpp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LoadBalancing-cpp.xcodeproj"; path = "../../../LoadBalancing-cpp/LoadBalancing-cpp.xcodeproj"; sourceTree = "<group>"; };
+		84F44602232BFE3500159435 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		84F44606232BFF1500159435 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		84F44636232C013C00159435 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B3810AC11472A18A00347575 /* demo_iMac_typeSupport */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = demo_iMac_typeSupport; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3810ADC1472A85E00347575 /* Listener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Listener.cpp; path = ../src/Listener.cpp; sourceTree = "<group>"; };
+		B3810ADE1472A85E00347575 /* StdIO_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StdIO_main.cpp; path = ../src/StdIO_main.cpp; sourceTree = "<group>"; };
+		B3810ADF1472A85E00347575 /* Photon_lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Photon_lib.cpp; path = ../src/Photon_lib.cpp; sourceTree = "<group>"; };
+		B3810AE11472A85E00347575 /* StdIO_UIListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StdIO_UIListener.cpp; path = ../src/StdIO_UIListener.cpp; sourceTree = "<group>"; };
+		B382A76A147A9ABB00FB25E3 /* Listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Listener.h; path = ../inc/Listener.h; sourceTree = "<group>"; };
+		B382A76B147A9ABB00FB25E3 /* Photon_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photon_lib.h; path = ../inc/Photon_lib.h; sourceTree = "<group>"; };
+		B382A76C147A9ABB00FB25E3 /* StdIO_UIListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StdIO_UIListener.h; path = ../inc/StdIO_UIListener.h; sourceTree = "<group>"; };
+		B382A76D147A9ABB00FB25E3 /* UIListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIListener.h; path = ../inc/UIListener.h; sourceTree = "<group>"; };
+		B383C1BC1473D4F400BD4B76 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		B384A85E147BD1970068C044 /* TypeSupportApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TypeSupportApplication.h; path = ../inc/TypeSupportApplication.h; sourceTree = "<group>"; };
+		B384A85F147BD1A20068C044 /* TypeSupportApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TypeSupportApplication.cpp; path = ../src/TypeSupportApplication.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3810ABE1472A18A00347575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F44637232C014300159435 /* Foundation.framework in Frameworks */,
+				84F44607232BFF1B00159435 /* CFNetwork.framework in Frameworks */,
+				84F44603232BFE3A00159435 /* Security.framework in Frameworks */,
+				B383C1BD1473D4F400BD4B76 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		840DEF8A1FEC208400B24027 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				846CA9E9242E75D400CC4A3F /* libLoadBalancing-cpp_debug_catalyst.a */,
+				840DEF911FEC208400B24027 /* libLoadBalancing-cpp_debug_iphoneos.a */,
+				840DEF931FEC208400B24027 /* libLoadBalancing-cpp_debug_macosx.a */,
+				840DEF951FEC208400B24027 /* libLoadBalancing-cpp_debug_appletvos.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84F445FD232BFE3500159435 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84F44636232C013C00159435 /* Foundation.framework */,
+				84F44606232BFF1500159435 /* CFNetwork.framework */,
+				84F44602232BFE3500159435 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3810AB61472A18A00347575 = {
+			isa = PBXGroup;
+			children = (
+				840DEF891FEC208400B24027 /* LoadBalancing-cpp.xcodeproj */,
+				B3810AE81472A88600347575 /* inc */,
+				B3810AE91472A89000347575 /* src */,
+				B3810AC21472A18A00347575 /* Products */,
+				B383C1BC1473D4F400BD4B76 /* CoreFoundation.framework */,
+				84F445FD232BFE3500159435 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B3810AC21472A18A00347575 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3810AC11472A18A00347575 /* demo_iMac_typeSupport */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3810AE81472A88600347575 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				B384A85E147BD1970068C044 /* TypeSupportApplication.h */,
+				B382A76A147A9ABB00FB25E3 /* Listener.h */,
+				B382A76B147A9ABB00FB25E3 /* Photon_lib.h */,
+				B382A76C147A9ABB00FB25E3 /* StdIO_UIListener.h */,
+				B382A76D147A9ABB00FB25E3 /* UIListener.h */,
+			);
+			name = inc;
+			sourceTree = "<group>";
+		};
+		B3810AE91472A89000347575 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B384A85F147BD1A20068C044 /* TypeSupportApplication.cpp */,
+				B3810ADC1472A85E00347575 /* Listener.cpp */,
+				B3810ADE1472A85E00347575 /* StdIO_main.cpp */,
+				B3810ADF1472A85E00347575 /* Photon_lib.cpp */,
+				B3810AE11472A85E00347575 /* StdIO_UIListener.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3810AC01472A18A00347575 /* demo_iMac_typeSupport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3810ACB1472A18A00347575 /* Build configuration list for PBXNativeTarget "demo_iMac_typeSupport" */;
+			buildPhases = (
+				B3810ABD1472A18A00347575 /* Sources */,
+				B3810ABE1472A18A00347575 /* Frameworks */,
+				B3810ABF1472A18A00347575 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				846CA9E2242E75D400CC4A3F /* PBXTargetDependency */,
+			);
+			name = demo_iMac_typeSupport;
+			productName = demo_iMac_typeSupport;
+			productReference = B3810AC11472A18A00347575 /* demo_iMac_typeSupport */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3810AB81472A18A00347575 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+			};
+			buildConfigurationList = B3810ABB1472A18A00347575 /* Build configuration list for PBXProject "demo_iMac_typeSupport" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = B3810AB61472A18A00347575;
+			productRefGroup = B3810AC21472A18A00347575 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 840DEF8A1FEC208400B24027 /* Products */;
+					ProjectRef = 840DEF891FEC208400B24027 /* LoadBalancing-cpp.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B3810AC01472A18A00347575 /* demo_iMac_typeSupport */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		840DEF911FEC208400B24027 /* libLoadBalancing-cpp_debug_iphoneos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-cpp_debug_iphoneos.a";
+			remoteRef = 840DEF901FEC208400B24027 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		840DEF931FEC208400B24027 /* libLoadBalancing-cpp_debug_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-cpp_debug_macosx.a";
+			remoteRef = 840DEF921FEC208400B24027 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		840DEF951FEC208400B24027 /* libLoadBalancing-cpp_debug_appletvos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-cpp_debug_appletvos.a";
+			remoteRef = 840DEF941FEC208400B24027 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		846CA9E9242E75D400CC4A3F /* libLoadBalancing-cpp_debug_catalyst.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-cpp_debug_catalyst.a";
+			remoteRef = 846CA9E8242E75D400CC4A3F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3810ABD1472A18A00347575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3810AE41472A85E00347575 /* Listener.cpp in Sources */,
+				B3810AE51472A85E00347575 /* StdIO_main.cpp in Sources */,
+				B3810AE61472A85E00347575 /* Photon_lib.cpp in Sources */,
+				B3810AE71472A85E00347575 /* StdIO_UIListener.cpp in Sources */,
+				B384A860147BD1A20068C044 /* TypeSupportApplication.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		846CA9E2242E75D400CC4A3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LoadBalancing-cpp-macos";
+			targetProxy = 846CA9E1242E75D400CC4A3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B3810AC91472A18A00347575 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = debug;
+		};
+		B3810ACA1472A18A00347575 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = release;
+		};
+		B3810ACC1472A18A00347575 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IMAC_PLATFORM,
+					EG_DEBUGGER,
+				);
+				HEADER_SEARCH_PATHS = (
+					../inc,
+					../../..,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../Common-cpp/lib",
+					"../../../Photon-cpp/lib",
+					"../../../LoadBalancing-cpp/lib",
+					../../../3rdparty/lib/apple,
+				);
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = (
+					"-lCommon-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lPhoton-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lcrypto_$(CONFIGURATION)_$(PLATFORM_NAME)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = build;
+			};
+			name = debug;
+		};
+		B3810ACD1472A18A00347575 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IMAC_PLATFORM;
+				HEADER_SEARCH_PATHS = (
+					../inc,
+					../../..,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../Common-cpp/lib",
+					"../../../Photon-cpp/lib",
+					"../../../LoadBalancing-cpp/lib",
+					../../../3rdparty/lib/apple,
+				);
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = (
+					"-lCommon-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lPhoton-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lcrypto_$(CONFIGURATION)_$(PLATFORM_NAME)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = build;
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3810ABB1472A18A00347575 /* Build configuration list for PBXProject "demo_iMac_typeSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3810AC91472A18A00347575 /* debug */,
+				B3810ACA1472A18A00347575 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		B3810ACB1472A18A00347575 /* Build configuration list for PBXNativeTarget "demo_iMac_typeSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3810ACC1472A18A00347575 /* debug */,
+				B3810ACD1472A18A00347575 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3810AB81472A18A00347575 /* Project object */;
+}

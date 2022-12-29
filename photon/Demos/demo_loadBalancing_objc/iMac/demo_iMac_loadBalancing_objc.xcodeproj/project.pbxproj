@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8490295214EBAFC7009FA965 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8490295114EBAFC7009FA965 /* main.mm */; };
+		84F445B6232BFD6A00159435 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F445B2232BFD6600159435 /* Security.framework */; };
+		84F4461F232BFFF100159435 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F4461E232BFFEE00159435 /* CFNetwork.framework */; };
+		E996B9D714C80402008A28F4 /* NetworkLogic.mm in Sources */ = {isa = PBXBuildFile; fileRef = E996B9D514C80402008A28F4 /* NetworkLogic.mm */; };
+		FC12AF8214A2227900684CE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC12AF8114A2227900684CE7 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84577302268F7A0E00C4C373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F1F0EF15125DD900218CD1 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84AC25B6242D4AC1008C609A;
+			remoteInfo = "LoadBalancing-objc-catalyst";
+		};
+		84A80F5A1512634900264951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F1F0EF15125DD900218CD1 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE239C60E9BC5CF00F949F1;
+			remoteInfo = "LoadBalancing-objc-macos";
+		};
+		84D47EFB1CE62F0A002562B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F1F0EF15125DD900218CD1 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84B429831BBD933300F993B7;
+			remoteInfo = "LoadBalancing-objc-tvos";
+		};
+		84F1F0F515125DD900218CD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F1F0EF15125DD900218CD1 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FC781CA01346199B0052C26D;
+			remoteInfo = "LoadBalancing-objc-iphone";
+		};
+		84F1F0F715125DD900218CD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F1F0EF15125DD900218CD1 /* LoadBalancing-objc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FC781CA11346199B0052C26D;
+			remoteInfo = "LoadBalancing-objc-macos";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC12AF7B14A2227900684CE7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8490295114EBAFC7009FA965 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		84F1F0EF15125DD900218CD1 /* LoadBalancing-objc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LoadBalancing-objc.xcodeproj"; path = "../../../LoadBalancing-objc/LoadBalancing-objc.xcodeproj"; sourceTree = "<group>"; };
+		84F445B2232BFD6600159435 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		84F4461E232BFFEE00159435 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E996B9D114C803F7008A28F4 /* NetworkLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkLogic.h; sourceTree = "<group>"; };
+		E996B9D214C803F7008A28F4 /* OutputListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputListener.h; sourceTree = "<group>"; };
+		E996B9D514C80402008A28F4 /* NetworkLogic.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NetworkLogic.mm; sourceTree = "<group>"; };
+		FC12AF7D14A2227900684CE7 /* demo_loadBalancing_objc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = demo_loadBalancing_objc; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC12AF8114A2227900684CE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FC12B02A14A2363A00684CE7 /* demo_iMac_loadBalancing_objc-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "demo_iMac_loadBalancing_objc-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC12AF7A14A2227900684CE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F4461F232BFFF100159435 /* CFNetwork.framework in Frameworks */,
+				84F445B6232BFD6A00159435 /* Security.framework in Frameworks */,
+				FC12AF8214A2227900684CE7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84F1F0F015125DD900218CD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84577303268F7A0E00C4C373 /* libLoadBalancing-objc_debug_catalyst.a */,
+				84F1F0F615125DD900218CD1 /* libLoadBalancing-objc_debug_iphoneos.a */,
+				84F1F0F815125DD900218CD1 /* libLoadBalancing-objc_debug_macosx.a */,
+				84D47EFC1CE62F0A002562B8 /* libLoadBalancing-objc_debug_appletvos.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E996B9D014C803F7008A28F4 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				E996B9D114C803F7008A28F4 /* NetworkLogic.h */,
+				E996B9D214C803F7008A28F4 /* OutputListener.h */,
+			);
+			name = inc;
+			path = ../inc;
+			sourceTree = "<group>";
+		};
+		E996B9D314C80402008A28F4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E996B9D514C80402008A28F4 /* NetworkLogic.mm */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
+		FC12AF7214A2227800684CE7 = {
+			isa = PBXGroup;
+			children = (
+				84F1F0EF15125DD900218CD1 /* LoadBalancing-objc.xcodeproj */,
+				E996B9D314C80402008A28F4 /* src */,
+				E996B9D014C803F7008A28F4 /* inc */,
+				FC12B00C14A22FA100684CE7 /* iMac */,
+				FC12AF8014A2227900684CE7 /* Frameworks */,
+				FC12AF7E14A2227900684CE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC12AF7E14A2227900684CE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC12AF7D14A2227900684CE7 /* demo_loadBalancing_objc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC12AF8014A2227900684CE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84F4461E232BFFEE00159435 /* CFNetwork.framework */,
+				84F445B2232BFD6600159435 /* Security.framework */,
+				FC12AF8114A2227900684CE7 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC12B00C14A22FA100684CE7 /* iMac */ = {
+			isa = PBXGroup;
+			children = (
+				8490295114EBAFC7009FA965 /* main.mm */,
+				FC12B02A14A2363A00684CE7 /* demo_iMac_loadBalancing_objc-Prefix.pch */,
+			);
+			name = iMac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC12AF7C14A2227900684CE7 /* demo_loadBalancing_objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC12AF8C14A2227900684CE7 /* Build configuration list for PBXNativeTarget "demo_loadBalancing_objc" */;
+			buildPhases = (
+				FC12AF7914A2227900684CE7 /* Sources */,
+				FC12AF7A14A2227900684CE7 /* Frameworks */,
+				FC12AF7B14A2227900684CE7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84A80F5B1512634900264951 /* PBXTargetDependency */,
+			);
+			name = demo_loadBalancing_objc;
+			productName = demo_iMac_loadBalancing_objc;
+			productReference = FC12AF7D14A2227900684CE7 /* demo_loadBalancing_objc */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC12AF7414A2227800684CE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+			};
+			buildConfigurationList = FC12AF7714A2227800684CE7 /* Build configuration list for PBXProject "demo_iMac_loadBalancing_objc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = FC12AF7214A2227800684CE7;
+			productRefGroup = FC12AF7E14A2227900684CE7 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 84F1F0F015125DD900218CD1 /* Products */;
+					ProjectRef = 84F1F0EF15125DD900218CD1 /* LoadBalancing-objc.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				FC12AF7C14A2227900684CE7 /* demo_loadBalancing_objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		84577303268F7A0E00C4C373 /* libLoadBalancing-objc_debug_catalyst.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_catalyst.a";
+			remoteRef = 84577302268F7A0E00C4C373 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84D47EFC1CE62F0A002562B8 /* libLoadBalancing-objc_debug_appletvos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_appletvos.a";
+			remoteRef = 84D47EFB1CE62F0A002562B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84F1F0F615125DD900218CD1 /* libLoadBalancing-objc_debug_iphoneos.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_iphoneos.a";
+			remoteRef = 84F1F0F515125DD900218CD1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84F1F0F815125DD900218CD1 /* libLoadBalancing-objc_debug_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLoadBalancing-objc_debug_macosx.a";
+			remoteRef = 84F1F0F715125DD900218CD1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC12AF7914A2227900684CE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E996B9D714C80402008A28F4 /* NetworkLogic.mm in Sources */,
+				8490295214EBAFC7009FA965 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84A80F5B1512634900264951 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LoadBalancing-objc-macos";
+			targetProxy = 84A80F5A1512634900264951 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FC12AF8A14A2227900684CE7 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_EG_IMAC_PLATFORM,
+					EG_DEBUGGER,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../inc,
+					../../..,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../Common-objc/lib",
+					"../../../Photon-objc/lib",
+					"../../../LoadBalancing-objc/lib",
+					../../../3rdparty/lib/apple,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-force_load",
+					"../../../Common-objc/lib/libCommon-objc_$(CONFIGURATION)_$(PLATFORM_NAME).a",
+					"-lCommon-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lPhoton-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lcrypto_$(CONFIGURATION)_$(PLATFORM_NAME)",
+				);
+				SDKROOT = macosx;
+			};
+			name = debug;
+		};
+		FC12AF8B14A2227900684CE7 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = _EG_IMAC_PLATFORM;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../inc,
+					../../..,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../Common-objc/lib",
+					"../../../Photon-objc/lib",
+					"../../../LoadBalancing-objc/lib",
+					../../../3rdparty/lib/apple,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-force_load",
+					"../../../Common-objc/lib/libCommon-objc_$(CONFIGURATION)_$(PLATFORM_NAME).a",
+					"-lCommon-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lPhoton-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-objc_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lcrypto_$(CONFIGURATION)_$(PLATFORM_NAME)",
+				);
+				SDKROOT = macosx;
+			};
+			name = release;
+		};
+		FC12AF8D14A2227900684CE7 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = debug;
+		};
+		FC12AF8E14A2227900684CE7 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC12AF7714A2227800684CE7 /* Build configuration list for PBXProject "demo_iMac_loadBalancing_objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC12AF8A14A2227900684CE7 /* debug */,
+				FC12AF8B14A2227900684CE7 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+		FC12AF8C14A2227900684CE7 /* Build configuration list for PBXNativeTarget "demo_loadBalancing_objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC12AF8D14A2227900684CE7 /* debug */,
+				FC12AF8E14A2227900684CE7 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC12AF7414A2227800684CE7 /* Project object */;
+}
