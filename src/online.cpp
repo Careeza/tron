@@ -230,7 +230,7 @@ void SampleNetworkLogic::createRoom(const ExitGames::Common::JString& roomName, 
 
 void SampleNetworkLogic::joinRoom(const ExitGames::Common::JString& roomName)
 {
-	mLoadBalancingClient.opJoinRoom(roomName, true);
+	mLoadBalancingClient.opJoinRoom(roomName);
 }
 
 bool SampleNetworkLogic::isConnected() {
@@ -253,7 +253,8 @@ int main(void)
 		networkLogic.run();
 	}
 	std::cout << "connected!" << std::endl;
-	networkLogic.createRoom(L"test", 4);
+	// networkLogic.createRoom(L"test", 4);
+	networkLogic.joinRoom(L"test");
 	while(!shouldExit)
 	{
 		networkLogic.run();
