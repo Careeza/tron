@@ -1,5 +1,6 @@
 #include "game.hpp"
 #include "player.hpp"
+#include "tools.hpp"
 #include <iostream>
 
 void SinglePlayerScene::handleEvents(Game* game) {
@@ -37,7 +38,9 @@ void SinglePlayerScene::handleEvents(Game* game) {
 }
 
 void SinglePlayerScene::initScene(GameWindow& window) {
-	background = IMG_LoadTexture(window.getRenderer(), "ressources/background1.png");
+	background = copyTexture(window.getRenderer(), IMG_LoadTexture(window.getRenderer(), "ressources/background3.png"));
+	SDL_SetRenderTarget(window.getRenderer(), background);
+	window.drawNumber(1234567890, 300, 800);
 	SDL_SetRenderTarget(window.getRenderer(), NULL);
 	map = std::vector<std::vector<CELL_TYPE>>(MAP_HEIGHT, std::vector<CELL_TYPE>(MAP_WIDTH, CELL_TYPE::EMPTY));
 	snake = Snake(10, 10, 30, DIRECTION::RIGHT, &map);
@@ -46,10 +49,12 @@ void SinglePlayerScene::initScene(GameWindow& window) {
 }
 
 //510 18 1392 x 1044
+//256 370
 void SinglePlayerScene::renderGameObjects(GameWindow& window) {
 	SDL_SetRenderTarget(window.getRenderer(), window.getVirtualWindow());
 	SDL_SetRenderDrawBlendMode(window.getRenderer(), SDL_BLENDMODE_NONE);
 	snake.render(window.getRenderer());
+	window.drawNumber(snake.getScore(), 254, 370);
 	SDL_SetRenderTarget(window.getRenderer(), NULL);
 }
 

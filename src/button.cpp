@@ -2,7 +2,7 @@
 #include "tools.hpp"
 #include <iostream>
 
-Button::Button(SDL_Renderer *renderer, SDL_Rect rect_, SDL_Texture *texture_) : rect(rect_), texture(copyTexture(renderer, texture_)), over(false), overTexture(NULL) {
+Button::Button(SDL_Renderer *renderer, SDL_Rect rect_, SDL_Texture *texture_, std::function<void(Game*)> onClick_) : rect(rect_), texture(copyTexture(renderer, texture_)), over(false), overTexture(NULL), onClick(onClick_) {
 	SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND);
 }
 
@@ -18,12 +18,6 @@ Button::~Button() {
 void Button::addOverTexture(SDL_Renderer *renderer, SDL_Texture *texture_) {
 	overTexture = copyTexture(renderer, texture_);
 	SDL_SetTextureBlendMode(overTexture, SDL_BLENDMODE_ADD);
-	// overTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, rect.w, rect.h);
-	// SDL_SetTextureBlendMode(overTexture, SDL_BLENDMODE_MUL);
-	// SDL_SetRenderTarget(renderer, overTexture);
-	// SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0xFF);
-	// SDL_RenderClear(renderer);
-	// SDL_SetRenderTarget(renderer, NULL);
 }
 
 void Button::addOverTexture(SDL_Renderer *renderer, std::tuple<int, int, int, int> color) {
@@ -63,4 +57,8 @@ void Button::setOver(bool over_) {
 
 bool Button::getOver() {
 	return (over);
+}
+
+void Button::onClickEvent(Game *game) {
+	onClick(game);
 }

@@ -276,62 +276,62 @@ int SampleNetworkLogic::getNbPlayers() {
 	return mListener.getNbPlayers();
 }
 
-int main(int argc, char** argv) {
-	if (argc < 2) {
-		std::cout << "Usage: " << argv[0] << " <mode>" << std::endl;
-		std::cout << "mode: Server or Client" << std::endl;
-		return 1;
-	}
+// int main(int argc, char** argv) {
+// 	if (argc < 2) {
+// 		std::cout << "Usage: " << argv[0] << " <mode>" << std::endl;
+// 		std::cout << "mode: Server or Client" << std::endl;
+// 		return 1;
+// 	}
 
-	static const ExitGames::Common::JString appID = L"0baa921c-75d0-4172-8f0c-1e8ddffeedf8"; // set your app id here
-	static const ExitGames::Common::JString appVersion = L"1.0";
+// 	static const ExitGames::Common::JString appID = L"0baa921c-75d0-4172-8f0c-1e8ddffeedf8"; // set your app id here
+// 	static const ExitGames::Common::JString appVersion = L"1.0";
 
-	SampleNetworkLogic networkLogic(appID, appVersion);
+// 	SampleNetworkLogic networkLogic(appID, appVersion);
 
-	networkLogic.connect();
-	bool shouldExit = false;
-	bool shouldCreateRoom = true;
+// 	networkLogic.connect();
+// 	bool shouldExit = false;
+// 	bool shouldCreateRoom = true;
 
-	std::cout << "waiting for connection..." << std::endl;
-	while (!networkLogic.isConnected()) {
-		networkLogic.run();
-	}
-	std::cout << "connected!" << std::endl;
-	std::string mode(argv[1]);
-	bool		modeServer = mode.compare("Server") == 0;
-	bool		modeClient = mode.compare("Client") == 0;
-	if (modeServer) {
-		std::cout << "creating room..." << std::endl;
-		networkLogic.createRoom(L"test", 4);
-	} else if (modeClient) {
-		std::cout << "joining room..." << std::endl;
-		networkLogic.joinRoom(L"test");
-	} else {
-		std::cout << "invalid mode" << std::endl;
-		return 1;
-	}
-	while (!networkLogic.isRoomJoinedOrCreated()) {
-		networkLogic.run();
-	}
-	std::cout << "room joined or created!" << std::endl;
-	while (networkLogic.getNbPlayers() < 2) {
-		networkLogic.run();
-	}
-	if (modeServer) {
-		std::cout << "sending event..." << std::endl;
-		std::string data = "Hello World!";
-		networkLogic.sendEvent(ExitGames::Common::ValueObject<ExitGames::Common::JString>(data.c_str()));
-	}
-	// networkLogic.joinRoom(L"test");
-	while(!shouldExit)
-	{
-		networkLogic.run();
-		if (shouldCreateRoom)
-		{
-			shouldCreateRoom = false;
-			// networkLogic.createRoom(L"test", 4);
-		}
-	}
-	networkLogic.disconnect();
-}
+// 	std::cout << "waiting for connection..." << std::endl;
+// 	while (!networkLogic.isConnected()) {
+// 		networkLogic.run();
+// 	}
+// 	std::cout << "connected!" << std::endl;
+// 	std::string mode(argv[1]);
+// 	bool		modeServer = mode.compare("Server") == 0;
+// 	bool		modeClient = mode.compare("Client") == 0;
+// 	if (modeServer) {
+// 		std::cout << "creating room..." << std::endl;
+// 		networkLogic.createRoom(L"test", 4);
+// 	} else if (modeClient) {
+// 		std::cout << "joining room..." << std::endl;
+// 		networkLogic.joinRoom(L"test");
+// 	} else {
+// 		std::cout << "invalid mode" << std::endl;
+// 		return 1;
+// 	}
+// 	while (!networkLogic.isRoomJoinedOrCreated()) {
+// 		networkLogic.run();
+// 	}
+// 	std::cout << "room joined or created!" << std::endl;
+// 	while (networkLogic.getNbPlayers() < 2) {
+// 		networkLogic.run();
+// 	}
+// 	if (modeServer) {
+// 		std::cout << "sending event..." << std::endl;
+// 		std::string data = "Hello World!";
+// 		networkLogic.sendEvent(ExitGames::Common::ValueObject<ExitGames::Common::JString>(data.c_str()));
+// 	}
+// 	// networkLogic.joinRoom(L"test");
+// 	while(!shouldExit)
+// 	{
+// 		networkLogic.run();
+// 		if (shouldCreateRoom)
+// 		{
+// 			shouldCreateRoom = false;
+// 			// networkLogic.createRoom(L"test", 4);
+// 		}
+// 	}
+// 	networkLogic.disconnect();
+// }
 

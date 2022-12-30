@@ -22,7 +22,7 @@ void GameWindow::init() {
 	SDL_GL_GetDrawableSize(window, &width, &height);
 	highDPI = width / w;
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-	SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_MUL);
+	// SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_MUL);
 	if (!renderer) {
 		std::cerr << "Renderer could not be created! SDL_Error: " << SDL_GetError() << std::endl;
 	}
@@ -38,6 +38,7 @@ void GameWindow::init() {
 	} else {
 		virtualWindowRect = {static_cast<int>((width - height * ratioVirtual) / 2), 0, static_cast<int>(height * ratioVirtual), height};
 	}
+	neoNumberRenderer.init(renderer);
 }
 
 std::tuple<int, int> GameWindow::transformPosition(int x, int y) {
@@ -89,4 +90,12 @@ float GameWindow::getRatioVirtual() {
 
 SDL_Texture *GameWindow::getVirtualWindow() {
 	return (virtualWindow);
+}
+
+void GameWindow::drawNumber(int number, int x, int y) {
+	neoNumberRenderer.draw(getRenderer(), number, x, y);
+}
+
+int GameWindow::getNumberWidth(int number) {
+	return (neoNumberRenderer.getWidth(number));
 }

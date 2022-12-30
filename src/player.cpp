@@ -56,7 +56,7 @@ void	Snake::move() {
 	SDL_Rect rect2 = {fx * CELL_SIZE + 510 - (FOOD_SIZE - CELL_SIZE) / 2, fy * CELL_SIZE + 18 - (FOOD_SIZE - CELL_SIZE) / 2, FOOD_SIZE, FOOD_SIZE};
 	if (collide(rect, rect2)) {
 		grow();
-		increaseScore(1);
+		increaseScore(10);
 		map->at(food.second)[food.first] = CELL_TYPE::EMPTY;
 		spawnRandomScene(*map);
 	}
