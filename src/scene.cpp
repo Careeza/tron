@@ -3,7 +3,7 @@
 
 Scene::Scene() : time(0) {}
 Scene::~Scene() {
-	SDL_DestroyTexture(background);
+	deleteScene();
 }
 
 void			Scene::renderScene(GameWindow& window) {
@@ -20,4 +20,29 @@ void			Scene::renderScene(GameWindow& window) {
 	}
 	SDL_SetTextureBlendMode(window.getVirtualWindow(), SDL_BLENDMODE_BLEND);
 	renderGameObjects(window);
+}
+
+void			Scene::playMusic() {
+	if (music) {
+		Mix_PlayMusic(music, -1);
+	}
+}
+
+void			Scene::stopMusic() {
+	if (music) {
+		Mix_HaltMusic();
+	}
+}
+
+void			Scene::deleteScene() {
+	SDL_DestroyTexture(background);
+	for (auto button : buttons) {
+		if (button.getTexture()) {
+			SDL_DestroyTexture(button.getTexture());
+		}
+		if (button.getOverTexture()) {
+			SDL_DestroyTexture(button.getOverTexture());
+		}
+	}
+	Mix_FreeMusic(music);
 }

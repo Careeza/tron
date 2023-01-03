@@ -1,4 +1,4 @@
-CFLAGS+= -Wall -Iinc -Iinc -Iphoton -std=c++17
+CFLAGS+= -Iinc -Iinc -Iphoton -std=c++17
 CFLAGS+= `sdl2-config --cflags`
 
 LDFLAGS+= -framework CoreFoundation -framework Foundation -framework Security -framework CFNetwork

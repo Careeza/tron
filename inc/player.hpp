@@ -45,6 +45,7 @@ public:
 	void		grow();
 	void		spawnRandomScene(Map &map);
 	void		render(SDL_Renderer *renderer);
+	void		deletePlayer();
 private:
 	int									score;
 	DIRECTION							direction;

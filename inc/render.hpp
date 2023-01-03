@@ -5,6 +5,7 @@
 # include <SDL.h>
 # include <SDL_image.h>
 # include <tuple>
+# include <string>
 
 # include "neoNumberRenderer.hpp"
 
@@ -28,8 +29,11 @@ public:
 	float					getRatioVirtual();
 	std::tuple<int, int>	transformPosition(int x, int y);
 	SDL_Texture				*getVirtualWindow();
-	void					drawNumber(int number, int x, int y);
-	int						getNumberWidth(int number);
+	void					drawNumber(int number, int x, int y, float ratio = 5.0f);
+	void					drawNumber(std::string number, int x, int y, float ratio = 5.0f);
+	int						getNumberWidth(int number, float ratio);
+	int						getNumberWidth(std::string number, float ratio);
+	int						getNumberHeight(float ratio);
 private:
 	SDL_Window			*window;
 	SDL_Renderer		*renderer;

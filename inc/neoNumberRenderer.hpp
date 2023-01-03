@@ -5,22 +5,22 @@
 # include <SDL.h>
 # include <SDL_image.h>
 # include <vector>
-
-# define RATIO 5
+# include <string>
 
 class NeoNumberRenderer {
 	public:
 		NeoNumberRenderer();
 		~NeoNumberRenderer();
 		void	init(SDL_Renderer *renderer);
-		void	draw(SDL_Renderer *renderer, int number, int x, int y);
-		int		getWidth(int number);
+		void	draw(SDL_Renderer *renderer, int number, int x, int y, float ratio);
+		void	draw(SDL_Renderer *renderer, std::string number, int x, int y, float ratio);
+		int		getWidth(int number, float ratio);
+		int		getWidth(std::string number, float ratio);
+		int		getHeight(float ratio);
 	private:
 		std::vector<SDL_Texture*>	textures;
 		std::vector<int>			widths;
-		std::vector<int>			widthsTrandformed;
 		int							height;
-		int							heightTransformed;
 };
 
 #endif

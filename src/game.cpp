@@ -4,19 +4,38 @@
 
 void	Game::init() {
 	window.init();
+	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
+		fprintf(stderr, "Erreur lors de l'initialisation de SDL_mixer: %s\n", Mix_GetError());
+	}
+	initScenes();
+}
 
-	Scene *menu = addScene("mainMenu", new MainMenuScene());
-	menu->initScene(getWindow());
+void	Game::initScenes() {
+	addScene("mainMenu", new MainMenuScene());
+	addScene("singlePlayer", new SinglePlayerScene());
+	addScene("joinGame", new JoinScene());
+}
 
-	Scene *singlePlayer = addScene("singlePlayer", new SinglePlayerScene());
-	singlePlayer->initScene(getWindow());
+Scene	*Game::addScene(std::string name, Scene *scene) {
+	scenes[name] = scene;
+	return (scene);
+}
+
+void	Game::setScene(std::string name) {
+	currentScene->stopMusic();
+	currentScene->deleteScene();
+	currentScene = scenes[name];
+	currentScene->initScene(window);
+	currentScene->playMusic();
 }
 
 void	Game::run() {
 	Timer		frameRate;
 	Timer		gameTimer;
-	
+
 	currentScene = scenes["mainMenu"];
+	currentScene->initScene(window);
+	currentScene->playMusic();
 	gameTimer.start();
 	while (!quit) {
 		frameRate.start();
@@ -30,13 +49,4 @@ void	Game::run() {
 			SDL_Delay((1000 / 60) - frameRate.getTicks());
 		}
 	}
-}
-
-Scene	*Game::addScene(std::string name, Scene *scene) {
-	scenes[name] = scene;
-	return (scene);
-}
-
-void	Game::setScene(std::string name) {
-	currentScene = scenes[name];
 }

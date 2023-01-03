@@ -27,6 +27,7 @@ void Button::addOverTexture(SDL_Renderer *renderer, std::tuple<int, int, int, in
 	SDL_SetRenderTarget(renderer, overTexture);
 	SDL_SetRenderDrawColor(renderer, r, g, b, a);
 	SDL_RenderClear(renderer);
+	// SDL_RenderCopy(renderer, overTexture, NULL, NULL);
 	SDL_SetRenderTarget(renderer, NULL);
 }
 

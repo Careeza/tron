@@ -4,8 +4,9 @@
 #include <iostream>
 
 void SinglePlayerScene::handleEvents(Game* game) {
-	SDL_Event	event;
-	DIRECTION	direction = snake.getNextDirection();
+	static SDL_Event	event;
+	DIRECTION			direction = snake.getNextDirection();
+	Button				*buttonPressed = nullptr;
 
 	while (SDL_PollEvent(&event)) {
 		if (event.type == SDL_KEYDOWN) {
@@ -33,19 +34,38 @@ void SinglePlayerScene::handleEvents(Game* game) {
 					break;
 			}
 		}
+		buttonPressed = handleButtons(game, this, event);
 	}
-	snake.setNextDirection(direction);
+	if (buttonPressed) {
+		buttonPressed->onClickEvent(game);
+	} else {
+		snake.setNextDirection(direction);
+	}
 }
 
 void SinglePlayerScene::initScene(GameWindow& window) {
-	background = copyTexture(window.getRenderer(), IMG_LoadTexture(window.getRenderer(), "ressources/background3.png"));
-	SDL_SetRenderTarget(window.getRenderer(), background);
-	window.drawNumber(1234567890, 300, 800);
+	std::cout << "[[SinglePlayerScene]]" << std::endl;
+	background = IMG_LoadTexture(window.getRenderer(), "ressources/background3.png");
 	SDL_SetRenderTarget(window.getRenderer(), NULL);
 	map = std::vector<std::vector<CELL_TYPE>>(MAP_HEIGHT, std::vector<CELL_TYPE>(MAP_WIDTH, CELL_TYPE::EMPTY));
 	snake = Snake(10, 10, 30, DIRECTION::RIGHT, &map);
 	snake.initPlayer(window.getRenderer());
 	snake.spawnRandomScene(map);
+
+	SDL_Texture *exitButtonOff = IMG_LoadTexture(window.getRenderer(), "ressources/btnOff.png");
+	SDL_Texture *exitButtonOn = IMG_LoadTexture(window.getRenderer(), "ressources/btnOn.png");
+	Button exit(window.getRenderer(), {108, 934, 185, 74}, exitButtonOff, returnToMenu);
+	exit.addOverTexture(window.getRenderer(), exitButtonOn);
+
+	SDL_DestroyTexture(exitButtonOff);
+	SDL_DestroyTexture(exitButtonOn);
+
+	buttons.push_back(exit);
+
+	music = Mix_LoadMUS("ressources/gamePlay.mp3");
+	if (!music) {
+		std::cout << "Error loading music: " << Mix_GetError() << std::endl;
+	}
 }
 
 //510 18 1392 x 1044
@@ -65,4 +85,18 @@ void SinglePlayerScene::updateScene(GameWindow& window, int deltaTime) {
 		snake.turn();
 		snake.move();
 	}
+}
+
+void SinglePlayerScene::deleteScene() {
+	SDL_DestroyTexture(background);
+	for (auto button : buttons) {
+		if (button.getTexture()) {
+			SDL_DestroyTexture(button.getTexture());
+		}
+		if (button.getOverTexture()) {
+			SDL_DestroyTexture(button.getOverTexture());
+		}
+	}
+	Mix_FreeMusic(music);
+	snake.deletePlayer();
 }

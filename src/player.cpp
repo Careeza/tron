@@ -156,3 +156,11 @@ void	Snake::render(SDL_Renderer *renderer) {
 	SDL_Rect rect2 = {fx * CELL_SIZE + 510 - (FOOD_SIZE - CELL_SIZE) / 2, fy * CELL_SIZE + 18 - (FOOD_SIZE - CELL_SIZE) / 2, FOOD_SIZE, FOOD_SIZE};
 	SDL_RenderCopy(renderer, foodTexture, NULL, &rect2);
 }
+
+void	Snake::deletePlayer() {
+	SDL_DestroyTexture(headTextures[DIRECTION::UP]);
+	SDL_DestroyTexture(headTextures[DIRECTION::RIGHT]);
+	SDL_DestroyTexture(headTextures[DIRECTION::DOWN]);
+	SDL_DestroyTexture(headTextures[DIRECTION::LEFT]);
+	SDL_DestroyTexture(foodTexture);
+}

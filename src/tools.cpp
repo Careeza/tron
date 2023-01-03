@@ -17,6 +17,8 @@ SDL_Texture* copyTexture(SDL_Renderer *renderer, SDL_Texture *textureToCopy) {
 	newTexture = SDL_CreateTexture(renderer, format, SDL_TEXTUREACCESS_TARGET, w, h);
 
 	SDL_SetRenderTarget(renderer, newTexture);
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
+	SDL_RenderClear(renderer);
 	SDL_RenderCopy(renderer, textureToCopy, NULL, NULL);
 	SDL_SetRenderTarget(renderer, NULL);
 

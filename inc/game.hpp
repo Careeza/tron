@@ -27,11 +27,13 @@ public:
 	Game() : quit(false) {};
 	~Game() {};
 	void	init();
+	void	initScenes();
 	void	run();
 	Scene	*addScene(std::string name, Scene *scene);
 	void	setScene(std::string name);
 	void	quitGame() { quit = true; }
 	bool	isQuit() { return (quit); }
+	Scene	*getCurrentScene() { return (currentScene); }
 
 	GameWindow& getWindow() { return (window); }
 private:
