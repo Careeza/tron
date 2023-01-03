@@ -1,8 +1,10 @@
 #include "game.hpp"
 #include "tools.hpp"
 #include <iostream>
+#include "timer.hpp"
+#include <string>
 
-void MainMenuScene::handleEvents(Game* game) {
+void CreateRoomScene::handleEvents(Game* game) {
 	static SDL_Event	event;
 	Button				*buttonPressed = nullptr;
 
@@ -26,14 +28,8 @@ void MainMenuScene::handleEvents(Game* game) {
 	}
 }
 
-void MainMenuScene::initScene(GameWindow& window) {
-	std::cout << "[[MainMenuScene]]" << std::endl;
-	background = IMG_LoadTexture(window.getRenderer(), "ressources/background2.png");
-	//make the background an SDL_TEXTUREACCESS_TARGET
-	Button play(window.getRenderer(), {105, 370, 701, 111}, NULL, playGame);
-	play.addOverTexture(window.getRenderer(), {15, 166, 255, 152});
-	Button multiPlayer(window.getRenderer(), {105, 540, 701, 111}, NULL, joinOrCreateRoom);
-	multiPlayer.addOverTexture(window.getRenderer(), {15, 166, 255, 152});
+void CreateRoomScene::initScene(GameWindow& window) {
+	background = IMG_LoadTexture(window.getRenderer(), "ressources/joinBackGround.png");
 	SDL_Texture *exitButtonOff = IMG_LoadTexture(window.getRenderer(), "ressources/btnOff.png");
 	SDL_Texture *exitButtonOn = IMG_LoadTexture(window.getRenderer(), "ressources/btnOn.png");
 	Button exit(window.getRenderer(), {108, 934, 185, 74}, exitButtonOff, exitGame);
@@ -42,12 +38,18 @@ void MainMenuScene::initScene(GameWindow& window) {
 	SDL_DestroyTexture(exitButtonOff);
 	SDL_DestroyTexture(exitButtonOn);
 
-	buttons.push_back(play);
-	buttons.push_back(multiPlayer);
+	music = NULL;
+	roomNumber = getRandomNumbers(6);
+
 	buttons.push_back(exit);
-	// buttons.push_back(settings);
-	music = Mix_LoadMUS("ressources/mainMenu.mp3");
-	if (!music) {
-		fprintf(stderr, "Erreur lors du chargement de la musique [%s]: %s\n", "ressources/mainMenu.mp3", Mix_GetError());
+}
+
+void	CreateRoomScene::renderGameObjects(GameWindow& window) {
+	if (roomNumber.size() > 0) {
+		std::string	roomNumberString = "";
+		for (int i = 0; i < roomNumber.size(); i++) {
+			roomNumberString += std::to_string(roomNumber[i]);
+		}
+		window.drawNumber(roomNumberString, 960, 540, 2);
 	}
 }

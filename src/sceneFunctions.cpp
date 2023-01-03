@@ -11,9 +11,19 @@ void	playGame(Game *game) {
 	game->setScene("singlePlayer");
 }
 
-void	joinGame(Game *game) {
-	std::cout << "join game" << std::endl;
-	game->setScene("joinGame");
+void	joinOrCreateRoom(Game *game) {
+	std::cout << "join or create room" << std::endl;
+	game->setScene("joinOrCreateRoom");
+}
+
+void	createRoom(Game *game) {
+	std::cout << "create room" << std::endl;
+	game->setScene("createRoom");
+}
+
+void	joinRoom(Game *game) {
+	std::cout << "join room" << std::endl;
+	game->setScene("joinRoom");
 }
 
 void	returnToMenu(Game *game) {

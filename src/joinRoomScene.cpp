@@ -10,7 +10,7 @@ void	addNumber(std::vector<int> &roomNumber, int number) {
 	}
 }
 
-void JoinScene::handleEvents(Game* game) {
+void JoinRoomScene::handleEvents(Game* game) {
 	static SDL_Event	event;
 	Button				*buttonPressed = nullptr;
 
@@ -70,9 +70,8 @@ void JoinScene::handleEvents(Game* game) {
 	}
 }
 
-void JoinScene::initScene(GameWindow& window) {
+void JoinRoomScene::initScene(GameWindow& window) {
 	background = IMG_LoadTexture(window.getRenderer(), "ressources/joinBackGround.png");
-	Button play(window.getRenderer(), {105, 370, 701, 111}, NULL, playGame);
 	SDL_Texture *exitButtonOff = IMG_LoadTexture(window.getRenderer(), "ressources/btnOff.png");
 	SDL_Texture *exitButtonOn = IMG_LoadTexture(window.getRenderer(), "ressources/btnOn.png");
 	Button exit(window.getRenderer(), {108, 934, 185, 74}, exitButtonOff, exitGame);
@@ -88,7 +87,7 @@ void JoinScene::initScene(GameWindow& window) {
 	buttons.push_back(exit);
 }
 
-void	JoinScene::renderGameObjects(GameWindow& window) {
+void	JoinRoomScene::renderGameObjects(GameWindow& window) {
 	static Timer	timer;
 	static bool		draw = true;
 	int 			w = 0;

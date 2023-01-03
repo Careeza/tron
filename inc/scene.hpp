@@ -36,7 +36,25 @@ public:
 	void initScene(GameWindow& window) override;
 };
 
-class JoinScene : public Scene {
+
+class JoinOrCreateRoomScene : public Scene {
+public:
+	void handleEvents(Game* game) override;
+	void initScene(GameWindow& window) override;
+private:
+};
+
+
+class CreateRoomScene : public Scene {
+public:
+	void handleEvents(Game* game) override;
+	void initScene(GameWindow& window) override;
+	void renderGameObjects(GameWindow& window) override;
+private:
+	std::vector<int>	roomNumber;
+};
+
+class JoinRoomScene : public Scene {
 public:
 	void handleEvents(Game* game) override;
 	void initScene(GameWindow& window) override;
@@ -62,6 +80,8 @@ Button	*handleButtons(Game *game, Scene *scene, SDL_Event& event);
 void	exitGame(Game *game);
 void	playGame(Game *game);
 void	returnToMenu(Game *game);
-void	joinGame(Game *game);
+void	joinOrCreateRoom(Game *game);
+void	createRoom(Game *game);
+void	joinRoom(Game *game);
 
 #endif

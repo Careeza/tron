@@ -76,3 +76,15 @@ bool	collide(SDL_Rect rect1, SDL_Rect rect2) {
 	}
 	return true;
 }
+
+std::vector<int> getRandomNumbers(int n, int min, int max) {
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_int_distribution<int> dist(min, max);
+
+	std::vector<int> numbers;
+	for (int i = 0; i < n; ++i) {
+		numbers.push_back(dist(gen));
+	}
+	return numbers;
+}

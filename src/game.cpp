@@ -13,7 +13,9 @@ void	Game::init() {
 void	Game::initScenes() {
 	addScene("mainMenu", new MainMenuScene());
 	addScene("singlePlayer", new SinglePlayerScene());
-	addScene("joinGame", new JoinScene());
+	addScene("joinRoom", new JoinRoomScene());
+	addScene("joinOrCreateRoom", new JoinOrCreateRoomScene());
+	addScene("createRoom", new CreateRoomScene());
 }
 
 Scene	*Game::addScene(std::string name, Scene *scene) {
