@@ -6,6 +6,9 @@
 # include "render.hpp"
 # include "scene.hpp"
 # include "player.hpp"
+# include "LoadBalancing-cpp/inc/Client.h"
+# include "LoadBalancing-cpp/inc/Listener.h"
+
 
 # include <map>
 # include <vector>
@@ -24,13 +27,17 @@
 class Game
 {
 public:
-	Game() : quit(false) {};
+	Game();
 	~Game() {};
 	void	init();
 	void	initScenes();
 	void	run();
 	Scene	*addScene(std::string name, Scene *scene);
-	void	setScene(std::string name);
+	void	connectToNetwork();
+	void	createRoom(const std::vector<int>& roomNumber);
+	void	joinRoom(const std::vector<int>& roomNumber);
+	void	disconnectFromNetwork();
+	void	setScene(std::string name, void *data = nullptr);
 	void	quitGame() { quit = true; }
 	bool	isQuit() { return (quit); }
 	Scene	*getCurrentScene() { return (currentScene); }
@@ -41,6 +48,10 @@ private:
 	std::map<std::string, Scene*>	scenes;
 	Scene 							*currentScene;
 	bool							quit;
+
+	const ExitGames::Common::JString 	appID = L"0baa921c-75d0-4172-8f0c-1e8ddffeedf8";
+	const ExitGames::Common::JString 	appVersion = L"1.0";
+	SampleNetworkLogic 					networkLogic;
 };
 
 #endif

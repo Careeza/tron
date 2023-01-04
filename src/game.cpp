@@ -2,6 +2,9 @@
 #include "timer.hpp"
 #include <algorithm>
 
+Game::Game() : quit(false), networkLogic(appID, appVersion) {}
+
+
 void	Game::init() {
 	window.init();
 	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
@@ -15,7 +18,7 @@ void	Game::initScenes() {
 	addScene("singlePlayer", new SinglePlayerScene());
 	addScene("joinRoom", new JoinRoomScene());
 	addScene("joinOrCreateRoom", new JoinOrCreateRoomScene());
-	addScene("createRoom", new CreateRoomScene());
+	addScene("lobby", new LobbyScene());
 }
 
 Scene	*Game::addScene(std::string name, Scene *scene) {
@@ -23,11 +26,11 @@ Scene	*Game::addScene(std::string name, Scene *scene) {
 	return (scene);
 }
 
-void	Game::setScene(std::string name) {
+void	Game::setScene(std::string name, void *data) {
 	currentScene->stopMusic();
 	currentScene->deleteScene();
 	currentScene = scenes[name];
-	currentScene->initScene(window);
+	currentScene->initScene(window, data);
 	currentScene->playMusic();
 }
 
@@ -50,5 +53,46 @@ void	Game::run() {
 		if (frameRate.getTicks() < 1000 / 60) {
 			SDL_Delay((1000 / 60) - frameRate.getTicks());
 		}
+	}
+}
+
+void	Game::connectToNetwork() {
+	networkLogic.connect();
+
+	std::cout << "waiting for connection..." << std::endl;
+	while (!networkLogic.isConnected()) {
+		networkLogic.run();
+	}
+}
+
+void	Game::disconnectFromNetwork() {
+	networkLogic.disconnect();
+}
+
+void	Game::joinRoom(const std::vector<int>& roomNumber) {
+	std::string	roomName = "";
+	for (int n : roomNumber) {
+		roomName += std::to_string(n);
+	}
+	// std::cout << "join room " << roomName << std::endl;
+	ExitGames::Common::JString jRoomName = roomName.c_str();
+	std::cout << "join room " << jRoomName.UTF8Representation().cstr() << std::endl;
+	networkLogic.joinRoom(jRoomName);
+	while (!networkLogic.isRoomJoinedOrCreated()) {
+		networkLogic.run();
+	}
+}
+
+void	Game::createRoom(const std::vector<int>& roomNumber) {
+	std::string	roomName = "";
+	for (int n : roomNumber) {
+		roomName += std::to_string(n);
+	}
+	// std::cout << "creating room " << roomName << std::endl;
+	ExitGames::Common::JString jRoomName = roomName.c_str();
+	std::cout << "creating room " << jRoomName.UTF8Representation().cstr() << std::endl;
+	networkLogic.createRoom(jRoomName);
+	while (!networkLogic.isRoomJoinedOrCreated()) {
+		networkLogic.run();
 	}
 }

@@ -15,10 +15,11 @@ public:
 	Scene();
 	~Scene();
 	virtual void			handleEvents(Game* game) = 0;
-	virtual void			initScene(GameWindow& widnow) = 0;
+	virtual void			initScene(GameWindow& widnow, void *data = nullptr) = 0;
 	virtual void			renderGameObjects(GameWindow& window) {};
 	virtual void			updateScene(GameWindow& window, int deltaTime) {};
 	std::vector<Button>&	getButtons() { return buttons; };
+	virtual void			*getInfo() { return nullptr; };
 	void					renderScene(GameWindow& window);
 	void					playMusic();
 	void					stopMusic();
@@ -33,32 +34,33 @@ protected:
 class MainMenuScene : public Scene {
 public:
 	void handleEvents(Game* game) override;
-	void initScene(GameWindow& window) override;
+	void initScene(GameWindow& window, void *data = nullptr) override;
 };
 
 
 class JoinOrCreateRoomScene : public Scene {
 public:
 	void handleEvents(Game* game) override;
-	void initScene(GameWindow& window) override;
+	void initScene(GameWindow& window, void *data = nullptr) override;
 private:
-};
-
-
-class CreateRoomScene : public Scene {
-public:
-	void handleEvents(Game* game) override;
-	void initScene(GameWindow& window) override;
-	void renderGameObjects(GameWindow& window) override;
-private:
-	std::vector<int>	roomNumber;
 };
 
 class JoinRoomScene : public Scene {
 public:
-	void handleEvents(Game* game) override;
-	void initScene(GameWindow& window) override;
-	void renderGameObjects(GameWindow& window) override;
+	void	handleEvents(Game* game) override;
+	void	initScene(GameWindow& window, void *data = nullptr) override;
+	void	renderGameObjects(GameWindow& window) override;
+	void	*getInfo() override;
+private:
+	std::vector<int>	roomNumber;
+};
+
+class LobbyScene : public Scene {
+public:
+	void	handleEvents(Game* game) override;
+	void	initScene(GameWindow& window, void *data = nullptr) override;
+	void	renderGameObjects(GameWindow& window) override;
+	void	*getInfo() override;
 private:
 	std::vector<int>	roomNumber;
 };
@@ -67,7 +69,7 @@ private:
 class SinglePlayerScene : public Scene {
 public:
 	void	handleEvents(Game* game) override;
-	void	initScene(GameWindow& window) override;
+	void	initScene(GameWindow& window, void *data = nullptr) override;
 	void	renderGameObjects(GameWindow& window) override;
 	void	updateScene(GameWindow& window, int deltaTime) override;
 	void	deleteScene() override;
@@ -83,5 +85,6 @@ void	returnToMenu(Game *game);
 void	joinOrCreateRoom(Game *game);
 void	createRoom(Game *game);
 void	joinRoom(Game *game);
+void	goToLobby(Game *game);
 
 #endif

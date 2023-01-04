@@ -28,7 +28,7 @@ void JoinOrCreateRoomScene::handleEvents(Game* game) {
 	}
 }
 
-void JoinOrCreateRoomScene::initScene(GameWindow& window) {
+void JoinOrCreateRoomScene::initScene(GameWindow& window, void *data) {
 	background = IMG_LoadTexture(window.getRenderer(), "ressources/joinBackGround.png");
 	Button join(window.getRenderer(), {480, 500, 320, 80}, NULL, joinRoom);
 	join.addOverTexture(window.getRenderer(), {15, 166, 255, 152});

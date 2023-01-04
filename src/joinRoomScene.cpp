@@ -70,12 +70,15 @@ void JoinRoomScene::handleEvents(Game* game) {
 	}
 }
 
-void JoinRoomScene::initScene(GameWindow& window) {
+void JoinRoomScene::initScene(GameWindow& window, void *data) {
 	background = IMG_LoadTexture(window.getRenderer(), "ressources/joinBackGround.png");
 	SDL_Texture *exitButtonOff = IMG_LoadTexture(window.getRenderer(), "ressources/btnOff.png");
 	SDL_Texture *exitButtonOn = IMG_LoadTexture(window.getRenderer(), "ressources/btnOn.png");
 	Button exit(window.getRenderer(), {108, 934, 185, 74}, exitButtonOff, exitGame);
 	exit.addOverTexture(window.getRenderer(), exitButtonOn);
+
+	Button join(window.getRenderer(), {800, 700, 320, 80}, NULL, goToLobby);
+	join.addOverTexture(window.getRenderer(), {15, 166, 255, 152});
 
 
 	SDL_DestroyTexture(exitButtonOff);
@@ -85,6 +88,7 @@ void JoinRoomScene::initScene(GameWindow& window) {
 	roomNumber.clear();
 
 	buttons.push_back(exit);
+	buttons.push_back(join);
 }
 
 void	JoinRoomScene::renderGameObjects(GameWindow& window) {
@@ -114,4 +118,8 @@ void	JoinRoomScene::renderGameObjects(GameWindow& window) {
 		SDL_SetRenderDrawColor(window.getRenderer(), 255, 255, 255, 255);
 		SDL_RenderFillRect(window.getRenderer(), &rect);
 	}
+}
+
+void	*JoinRoomScene::getInfo() {
+	return (void *)&roomNumber;
 }

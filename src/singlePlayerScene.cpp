@@ -43,7 +43,7 @@ void SinglePlayerScene::handleEvents(Game* game) {
 	}
 }
 
-void SinglePlayerScene::initScene(GameWindow& window) {
+void SinglePlayerScene::initScene(GameWindow& window, void *data) {
 	std::cout << "[[SinglePlayerScene]]" << std::endl;
 	background = IMG_LoadTexture(window.getRenderer(), "ressources/background3.png");
 	SDL_SetRenderTarget(window.getRenderer(), NULL);

@@ -1,227 +1,201 @@
 #include "LoadBalancing-cpp/inc/Client.h"
 #include "LoadBalancing-cpp/inc/Listener.h"
+#include "online.hpp"
 #include <unistd.h>
 // #include "game.hpp"
 
-class MyListener : public ExitGames::LoadBalancing::Listener
+MyListener::MyListener() : ExitGames::LoadBalancing::Listener(), mIsConnected(false), roomJoinedOrCreated(false), nbPlayers(0) {}
+void MyListener::debugReturn(int debugLevel, const ExitGames::Common::JString& string)
 {
-	public:
-		MyListener() : ExitGames::LoadBalancing::Listener(), mIsConnected(false), roomJoinedOrCreated(false), nbPlayers(0) {}
-		virtual void debugReturn(int debugLevel, const ExitGames::Common::JString& string)
-		{
-			std::cout << "debugReturn: " << string << std::endl;
-			// Provide an implementation for the debugReturn function here
-		}
+	std::cout << "debugReturn: " << string << std::endl;
+	// Provide an implementation for the debugReturn function here
+}
 
-		virtual void connectionErrorReturn(int errorCode)
-		{
-			std::cerr << "Error in connection: " << errorCode << std::endl;
-			// Provide an implementation for the connectionErrorReturn function here
-		}
-
-		virtual void clientErrorReturn(int errorCode)
-		{
-			std::cerr << "Error in client: " << errorCode << std::endl;
-			// Provide an implementation for the clientErrorReturn function here
-		}
-
-		virtual void warningReturn(int warningCode)
-		{
-			std::cerr << "Warning: " << warningCode << std::endl;
-			// Provide an implementation for the warningReturn function here
-		}
-
-		virtual void serverErrorReturn(int errorCode)
-		{
-			std::cerr << "Error in server: " << errorCode << std::endl;
-			// Provide an implementation for the serverErrorReturn function here
-		}
-
-		virtual void joinRoomEventAction(int playerNr, const ExitGames::Common::JVector<int>& playernrs, const ExitGames::LoadBalancing::Player& player)
-		{
-			roomJoinedOrCreated = true;
-			nbPlayers = playernrs.getSize();
-			std::cout << "Player " << playerNr << " joined the room" << std::endl;
-			// Provide an implementation for the joinRoomEventAction function here
-		}
-
-		virtual void leaveRoomEventAction(int playerNr, bool isInactive)
-		{
-			std::cout << "Player " << playerNr << " left the room" << std::endl;
-			// Provide an implementation for the leaveRoomEventAction function here
-		}
-
-		virtual void customEventAction(int playerNr, nByte eventCode, const ExitGames::Common::Object& eventContent)
-		{
-			std::cout << "Player " << playerNr << " sent a custom event" << std::endl;
-			switch(eventCode)
-			{
-				case 1:
-					std::cout << "Event code 1" << std::endl;
-					// ExitGames::Common::Hashtable content = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable>(eventContent).getDataCopy();
-					// ExitGames::Common::Hashtable* pContent = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable>(eventContent).getDataAddress();
-					break;
-				default:
-					break;
-			}
-		}
-
-		virtual void connectReturn(int errorCode, const ExitGames::Common::JString& errorString, const ExitGames::Common::JString& region, const ExitGames::Common::JString& cluster)
-		{
-			mIsConnected = true;
-			std::cout << "Connected to " << region << std::endl;
-			// Provide an implementation for the connectReturn function here
-		}
-
-		virtual void disconnectReturn(void)
-		{
-			std::cout << "Disconnected" << std::endl;
-			// Provide an implementation for the disconnectReturn function here
-		}
-
-		virtual void createRoomReturn(int localPlayerNr, const ExitGames::Common::Hashtable& roomProperties, const ExitGames::Common::Hashtable& playerProperties, int errorCode, const ExitGames::Common::JString& errorString)
-		{
-			std::cout << "Room created" << std::endl;
-			// Provide an implementation for the createRoomReturn function here
-		}
-		virtual void joinOrCreateRoomReturn(int localPlayerNr, const ExitGames::Common::Hashtable& roomProperties, const ExitGames::Common::Hashtable& playerProperties, int errorCode, const ExitGames::Common::JString& errorString)
-		{
-			std::cout << "Room joined or created" << std::endl;
-			// Provide an implementation for the joinOrCreateRoomReturn function here
-		}
-
-		virtual void joinRandomOrCreateRoomReturn(int localPlayerNr, const ExitGames::Common::Hashtable& roomProperties, const ExitGames::Common::Hashtable& playerProperties, int errorCode, const ExitGames::Common::JString& errorString)
-		{
-			std::cout << "Room joined or created" << std::endl;
-			// Provide an implementation for the joinRandomOrCreateRoomReturn function here
-		}
-
-		virtual void joinRoomReturn(int localPlayerNr, const ExitGames::Common::Hashtable& roomProperties, const ExitGames::Common::Hashtable& playerProperties, int errorCode, const ExitGames::Common::JString& errorString)
-		{
-			std::cout << "Room joined" << std::endl;
-			// Provide an implementation for the joinRoomReturn function here
-		}
-
-		virtual void joinRandomRoomReturn(int /*localPlayerNr*/, const ExitGames::Common::Hashtable& /*roomProperties*/, const ExitGames::Common::Hashtable& /*playerProperties*/, int /*errorCode*/, const ExitGames::Common::JString& /*errorString*/) {
-			std::cout << "Room joined" << std::endl;
-		}
-		virtual void leaveRoomReturn(int errorCode, const ExitGames::Common::JString& errorString)
-		{
-			std::cout << "Room left" << std::endl;
-			// Provide an implementation for the leaveRoomReturn function here
-		}
-
-		virtual void joinLobbyReturn(void)
-		{
-			std::cout << "Joined lobby" << std::endl;
-			// Provide an implementation for the joinLobbyReturn function here
-		}
-
-		virtual void leaveLobbyReturn(void)
-		{
-			std::cout << "Left lobby" << std::endl;
-			// Provide an implementation for the leaveLobbyReturn function here
-		}
-
-		virtual void onFindFriendsResponse(void)
-		{
-			std::cout << "Friends found" << std::endl;
-			// Provide an implementation for the onFindFriendsResponse function here
-		}
-
-		virtual void onLobbyStatsResponse(const ExitGames::Common::JVector<ExitGames::LoadBalancing::LobbyStatsResponse>& lobbyStats)
-		{
-			std::cout << "Lobby stats received" << std::endl;
-			// Provide an implementation for the onLobbyStatsResponse function here
-		}
-
-		virtual void webRpcReturn(int errorCode, const ExitGames::Common::JString& errorString, const ExitGames::Common::JString& uriPath, int resultCode, const ExitGames::Common::Dictionary<ExitGames::Common::Object, ExitGames::Common::Object>& returnData)
-		{
-			std::cout << "WebRPC returned" << std::endl;
-			// Provide an implementation for the webRpcReturn function here
-		}
-
-		virtual void onRoomListUpdate(void)
-		{
-			std::cout << "Room list updated" << std::endl;
-			// Provide an implementation for the onRoomListUpdate function here
-		}
-
-		virtual void onRoomPropertiesChange(const ExitGames::Common::Hashtable& changes)
-		{
-			std::cout << "Room properties changed" << std::endl;
-			// Provide an implementation for the onRoomPropertiesChange function here
-		}
-
-		virtual void onPlayerPropertiesChange(int playerNr, const ExitGames::Common::Hashtable& changes)
-		{
-			std::cout << "Player properties changed" << std::endl;
-			// Provide an implementation for the onPlayerPropertiesChange function here
-		}
-
-		virtual void onAppStatsUpdate(void)
-		{
-			std::cout << "App stats updated" << std::endl;
-			// Provide an implementation for the onAppStatsUpdate function here
-		}
-
-		virtual void onLobbyStatsUpdate(const ExitGames::Common::JVector<ExitGames::LoadBalancing::LobbyStatsResponse>& lobbyStats)
-		{
-			std::cout << "Lobby stats updated" << std::endl;
-			// Provide an implementation for the onLobbyStatsUpdate function here
-		}
-
-		virtual void onCacheSliceChanged(int cacheSliceIndex)
-		{
-			std::cout << "Cache slice changed" << std::endl;
-			// Provide an implementation for the onCacheSliceChanged function here
-		}
-
-		virtual void onAchievementUnlocked(int achievementId)
-		{
-			std::cout << "Achievement unlocked" << std::endl;
-			// Provide an implementation for the onAchievementUnlocked function here
-		}
-
-		bool isConnected()
-		{
-			return mIsConnected;
-		}
-
-		bool isRoomJoinedOrCreated()
-		{
-			return roomJoinedOrCreated;
-		}
-
-		int getNbPlayers()
-		{
-			return nbPlayers;
-		}
-
-	private:
-		bool	mIsConnected;
-		bool	roomJoinedOrCreated;
-		int		nbPlayers;
-};
-
-class SampleNetworkLogic
+void MyListener::connectionErrorReturn(int errorCode)
 {
-	public:
-		SampleNetworkLogic(const ExitGames::Common::JString& appID, const ExitGames::Common::JString& appVersion);
-		void	connect(void);
-		void	run(void);
-		void	disconnect(void);
-		void	createRoom(const ExitGames::Common::JString& roomName, nByte maxPlayers);
-		void	joinRoom(const ExitGames::Common::JString& roomName);
-		bool	isConnected();
-		bool	isRoomJoinedOrCreated();
-		int		getNbPlayers();
-		void	sendEvent(const ExitGames::Common::Object& eventData, bool reliable = true, int eventCode = 1);
-	private:
-		ExitGames::LoadBalancing::Client mLoadBalancingClient;
-		MyListener mListener; // your implementation of the ExitGames::LoadBalancing::Listener interface
-		ExitGames::Common::Logger mLogger; // accessed by EGLOG()
-};
+	std::cerr << "Error in connection: " << errorCode << std::endl;
+	// Provide an implementation for the connectionErrorReturn function here
+}
+
+void MyListener::clientErrorReturn(int errorCode)
+{
+	std::cerr << "Error in client: " << errorCode << std::endl;
+	// Provide an implementation for the clientErrorReturn function here
+}
+
+void MyListener::warningReturn(int warningCode)
+{
+	std::cerr << "Warning: " << warningCode << std::endl;
+	// Provide an implementation for the warningReturn function here
+}
+
+void MyListener::serverErrorReturn(int errorCode)
+{
+	std::cerr << "Error in server: " << errorCode << std::endl;
+	// Provide an implementation for the serverErrorReturn function here
+}
+
+void MyListener::joinRoomEventAction(int playerNr, const ExitGames::Common::JVector<int>& playernrs, const ExitGames::LoadBalancing::Player& player)
+{
+	roomJoinedOrCreated = true;
+	nbPlayers = playernrs.getSize();
+	std::cout << "Player " << playerNr << " joined the room" << std::endl;
+	// Provide an implementation for the joinRoomEventAction function here
+}
+
+void MyListener::leaveRoomEventAction(int playerNr, bool isInactive)
+{
+	std::cout << "Player " << playerNr << " left the room" << std::endl;
+	// Provide an implementation for the leaveRoomEventAction function here
+}
+
+void MyListener::customEventAction(int playerNr, nByte eventCode, const ExitGames::Common::Object& eventContent)
+{
+	std::cout << "Player " << playerNr << " sent a custom event" << std::endl;
+	switch(eventCode)
+	{
+		case 1:
+			std::cout << "Event code 1" << std::endl;
+			// ExitGames::Common::Hashtable content = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable>(eventContent).getDataCopy();
+			// ExitGames::Common::Hashtable* pContent = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable>(eventContent).getDataAddress();
+			break;
+		default:
+			break;
+	}
+}
+
+void MyListener::connectReturn(int errorCode, const ExitGames::Common::JString& errorString, const ExitGames::Common::JString& region, const ExitGames::Common::JString& cluster)
+{
+	mIsConnected = true;
+	std::cout << "Connected to " << region << std::endl;
+	// Provide an implementation for the connectReturn function here
+}
+
+void MyListener::disconnectReturn(void)
+{
+	std::cout << "Disconnected" << std::endl;
+	// Provide an implementation for the disconnectReturn function here
+}
+
+void MyListener::createRoomReturn(int localPlayerNr, const ExitGames::Common::Hashtable& roomProperties, const ExitGames::Common::Hashtable& playerProperties, int errorCode, const ExitGames::Common::JString& errorString)
+{
+	std::cout << "Room created" << std::endl;
+	// Provide an implementation for the createRoomReturn function here
+}
+void MyListener::joinOrCreateRoomReturn(int localPlayerNr, const ExitGames::Common::Hashtable& roomProperties, const ExitGames::Common::Hashtable& playerProperties, int errorCode, const ExitGames::Common::JString& errorString)
+{
+	std::cout << "Room joined or created" << std::endl;
+	// Provide an implementation for the joinOrCreateRoomReturn function here
+}
+
+void MyListener::joinRandomOrCreateRoomReturn(int localPlayerNr, const ExitGames::Common::Hashtable& roomProperties, const ExitGames::Common::Hashtable& playerProperties, int errorCode, const ExitGames::Common::JString& errorString)
+{
+	std::cout << "Room joined or created" << std::endl;
+	// Provide an implementation for the joinRandomOrCreateRoomReturn function here
+}
+
+void MyListener::joinRoomReturn(int localPlayerNr, const ExitGames::Common::Hashtable& roomProperties, const ExitGames::Common::Hashtable& playerProperties, int errorCode, const ExitGames::Common::JString& errorString)
+{
+	std::cout << "Room joined" << std::endl;
+	// Provide an implementation for the joinRoomReturn function here
+}
+
+void MyListener::joinRandomRoomReturn(int /*localPlayerNr*/, const ExitGames::Common::Hashtable& /*roomProperties*/, const ExitGames::Common::Hashtable& /*playerProperties*/, int /*errorCode*/, const ExitGames::Common::JString& /*errorString*/) {
+	std::cout << "Room joined" << std::endl;
+}
+
+void MyListener::leaveRoomReturn(int errorCode, const ExitGames::Common::JString& errorString)
+{
+	std::cout << "Room left" << std::endl;
+	// Provide an implementation for the leaveRoomReturn function here
+}
+
+void MyListener::joinLobbyReturn(void)
+{
+	std::cout << "Joined lobby" << std::endl;
+	// Provide an implementation for the joinLobbyReturn function here
+}
+
+void MyListener::leaveLobbyReturn(void)
+{
+	std::cout << "Left lobby" << std::endl;
+	// Provide an implementation for the leaveLobbyReturn function here
+}
+
+void MyListener::onFindFriendsResponse(void)
+{
+	std::cout << "Friends found" << std::endl;
+	// Provide an implementation for the onFindFriendsResponse function here
+}
+
+void MyListener::onLobbyStatsResponse(const ExitGames::Common::JVector<ExitGames::LoadBalancing::LobbyStatsResponse>& lobbyStats)
+{
+	std::cout << "Lobby stats received" << std::endl;
+	// Provide an implementation for the onLobbyStatsResponse function here
+}
+
+void MyListener::webRpcReturn(int errorCode, const ExitGames::Common::JString& errorString, const ExitGames::Common::JString& uriPath, int resultCode, const ExitGames::Common::Dictionary<ExitGames::Common::Object, ExitGames::Common::Object>& returnData)
+{
+	std::cout << "WebRPC returned" << std::endl;
+	// Provide an implementation for the webRpcReturn function here
+}
+
+void MyListener::onRoomListUpdate(void)
+{
+	std::cout << "Room list updated" << std::endl;
+	// Provide an implementation for the onRoomListUpdate function here
+}
+
+void MyListener::onRoomPropertiesChange(const ExitGames::Common::Hashtable& changes)
+{
+	std::cout << "Room properties changed" << std::endl;
+	// Provide an implementation for the onRoomPropertiesChange function here
+}
+
+void MyListener::onPlayerPropertiesChange(int playerNr, const ExitGames::Common::Hashtable& changes)
+{
+	std::cout << "Player properties changed" << std::endl;
+	// Provide an implementation for the onPlayerPropertiesChange function here
+}
+
+void MyListener::onAppStatsUpdate(void)
+{
+	std::cout << "App stats updated" << std::endl;
+	// Provide an implementation for the onAppStatsUpdate function here
+}
+
+void MyListener::onLobbyStatsUpdate(const ExitGames::Common::JVector<ExitGames::LoadBalancing::LobbyStatsResponse>& lobbyStats)
+{
+	std::cout << "Lobby stats updated" << std::endl;
+	// Provide an implementation for the onLobbyStatsUpdate function here
+}
+
+void MyListener::onCacheSliceChanged(int cacheSliceIndex)
+{
+	std::cout << "Cache slice changed" << std::endl;
+	// Provide an implementation for the onCacheSliceChanged function here
+}
+
+void MyListener::onAchievementUnlocked(int achievementId)
+{
+	std::cout << "Achievement unlocked" << std::endl;
+	// Provide an implementation for the onAchievementUnlocked function here
+}
+
+bool MyListener::isConnected()
+{
+	return mIsConnected;
+}
+
+bool MyListener::isRoomJoinedOrCreated()
+{
+	return roomJoinedOrCreated;
+}
+
+int MyListener::getNbPlayers()
+{
+	return nbPlayers;
+}
 
 SampleNetworkLogic::SampleNetworkLogic(const ExitGames::Common::JString& appID, const ExitGames::Common::JString& appVersion)
 	: mLoadBalancingClient(mListener, appID, appVersion)

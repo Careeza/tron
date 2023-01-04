@@ -1,5 +1,6 @@
 #include "game.hpp"
 #include "scene.hpp"
+#include "tools.hpp"
 #include <iostream>
 
 void	exitGame(Game *game) {
@@ -13,12 +14,23 @@ void	playGame(Game *game) {
 
 void	joinOrCreateRoom(Game *game) {
 	std::cout << "join or create room" << std::endl;
+	game->connectToNetwork();
 	game->setScene("joinOrCreateRoom");
 }
 
 void	createRoom(Game *game) {
+	std::vector<int>	roomNumber = getRandomNumbers(6);
+	game->createRoom(roomNumber);
 	std::cout << "create room" << std::endl;
-	game->setScene("createRoom");
+	game->setScene("lobby", &roomNumber);
+	// game->createRoom();
+}
+
+void	goToLobby(Game *game) {
+	std::cout << "go to lobby" << std::endl;
+	std::vector<int> *roomNumber = static_cast<std::vector<int> *>(game->getCurrentScene()->getInfo());
+	game->joinRoom(*roomNumber);
+	game->setScene("lobby", roomNumber);
 }
 
 void	joinRoom(Game *game) {
