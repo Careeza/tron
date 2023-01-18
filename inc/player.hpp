@@ -5,6 +5,7 @@
 # include <SDL.h>
 # include <vector>
 # include <map>
+# include "render.hpp"
 
 enum struct CELL_TYPE {
 	EMPTY,
@@ -54,7 +55,7 @@ private:
 	bool								alive;
 	SnakeBody							body;
 	Position							food;
-	SDL_Texture							*foodTexture;
+	AnimatedTexture						foodTexture;
 	std::map<DIRECTION, SDL_Texture*>	headTextures;
 };
 

@@ -44,7 +44,7 @@ void	LobbyScene::initScene(GameWindow& window, void *data) {
 	buttons.push_back(exit);
 }
 
-void	LobbyScene::renderGameObjects(GameWindow& window) {
+void	LobbyScene::renderObjects(GameWindow& window) {
 	if (roomNumber.size() > 0) {
 		std::string	roomNumberString = "";
 		for (int i = 0; i < roomNumber.size(); i++) {
@@ -57,4 +57,9 @@ void	LobbyScene::renderGameObjects(GameWindow& window) {
 
 void	*LobbyScene::getInfo() {
 	return (void *)&roomNumber;
+}
+
+void	LobbyScene::updateScene(GameWindow& window, int deltaTime) {
+	Scene::updateScene(window, deltaTime);
+	(void)window;
 }

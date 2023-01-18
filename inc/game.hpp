@@ -13,6 +13,9 @@
 # include <map>
 # include <vector>
 # include <string>
+#include <thread>
+#include <iostream>
+#include <atomic>
 
 # define CELL_SIZE 8
 # define FOOD_SIZE 45
@@ -36,6 +39,7 @@ public:
 	void	connectToNetwork();
 	void	createRoom(const std::vector<int>& roomNumber);
 	void	joinRoom(const std::vector<int>& roomNumber);
+	void	updateRoom();
 	void	disconnectFromNetwork();
 	void	setScene(std::string name, void *data = nullptr);
 	void	quitGame() { quit = true; }

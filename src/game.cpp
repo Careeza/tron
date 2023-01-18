@@ -14,11 +14,12 @@ void	Game::init() {
 }
 
 void	Game::initScenes() {
-	addScene("mainMenu", new MainMenuScene());
-	addScene("singlePlayer", new SinglePlayerScene());
-	addScene("joinRoom", new JoinRoomScene());
-	addScene("joinOrCreateRoom", new JoinOrCreateRoomScene());
-	addScene("lobby", new LobbyScene());
+	addScene("mainMenu", new MainMenuScene(this));
+	addScene("singlePlayer", new SinglePlayerScene(this));
+	addScene("joinRoom", new JoinRoomScene(this));
+	addScene("joinOrCreateRoom", new JoinOrCreateRoomScene(this));
+	addScene("lobby", new LobbyScene(this));
+	addScene("gameOver", new GameOverScene(this));
 }
 
 Scene	*Game::addScene(std::string name, Scene *scene) {
@@ -63,6 +64,7 @@ void	Game::connectToNetwork() {
 	while (!networkLogic.isConnected()) {
 		networkLogic.run();
 	}
+	std::cout << "connected" << std::endl;
 }
 
 void	Game::disconnectFromNetwork() {
@@ -75,8 +77,9 @@ void	Game::joinRoom(const std::vector<int>& roomNumber) {
 		roomName += std::to_string(n);
 	}
 	// std::cout << "join room " << roomName << std::endl;
-	ExitGames::Common::JString jRoomName = roomName.c_str();
-	std::cout << "join room " << jRoomName.UTF8Representation().cstr() << std::endl;
+	// ExitGames::Common::JString jRoomName = roomName.c_str();
+	ExitGames::Common::JString jRoomName = L"test";
+	std::cout << "join room " << "[" << jRoomName.UTF8Representation().cstr() << "]" << std::endl;
 	networkLogic.joinRoom(jRoomName);
 	while (!networkLogic.isRoomJoinedOrCreated()) {
 		networkLogic.run();
@@ -89,10 +92,15 @@ void	Game::createRoom(const std::vector<int>& roomNumber) {
 		roomName += std::to_string(n);
 	}
 	// std::cout << "creating room " << roomName << std::endl;
-	ExitGames::Common::JString jRoomName = roomName.c_str();
-	std::cout << "creating room " << jRoomName.UTF8Representation().cstr() << std::endl;
+	// ExitGames::Common::JString jRoomName = roomName.c_str();
+	ExitGames::Common::JString jRoomName = L"test";
+	std::cout << "creating room " << "[" << jRoomName.UTF8Representation().cstr() << "]" << std::endl;
 	networkLogic.createRoom(jRoomName);
 	while (!networkLogic.isRoomJoinedOrCreated()) {
 		networkLogic.run();
 	}
+}
+
+void	Game::updateRoom() {
+	networkLogic.run();
 }

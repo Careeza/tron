@@ -4,7 +4,8 @@
 #include <unistd.h>
 // #include "game.hpp"
 
-MyListener::MyListener() : ExitGames::LoadBalancing::Listener(), mIsConnected(false), roomJoinedOrCreated(false), nbPlayers(0) {}
+MyListener::MyListener() : ExitGames::LoadBalancing::Listener(), mIsConnected(false), roomJoinedOrCreated(false), nbPlayers(0), errorInConnection(false) {}
+
 void MyListener::debugReturn(int debugLevel, const ExitGames::Common::JString& string)
 {
 	std::cout << "debugReturn: " << string << std::endl;
@@ -13,6 +14,7 @@ void MyListener::debugReturn(int debugLevel, const ExitGames::Common::JString& s
 
 void MyListener::connectionErrorReturn(int errorCode)
 {
+	errorInConnection = true;
 	std::cerr << "Error in connection: " << errorCode << std::endl;
 	// Provide an implementation for the connectionErrorReturn function here
 }

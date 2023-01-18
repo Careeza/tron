@@ -70,7 +70,7 @@ void SinglePlayerScene::initScene(GameWindow& window, void *data) {
 
 //510 18 1392 x 1044
 //256 370
-void SinglePlayerScene::renderGameObjects(GameWindow& window) {
+void SinglePlayerScene::renderObjects(GameWindow& window) {
 	SDL_SetRenderTarget(window.getRenderer(), window.getVirtualWindow());
 	SDL_SetRenderDrawBlendMode(window.getRenderer(), SDL_BLENDMODE_NONE);
 	snake.render(window.getRenderer());
@@ -79,11 +79,14 @@ void SinglePlayerScene::renderGameObjects(GameWindow& window) {
 }
 
 void SinglePlayerScene::updateScene(GameWindow& window, int deltaTime) {
-	time += deltaTime;
+	Scene::updateScene(window, deltaTime);
 	if (time > SNAKE_SPEED) {
 		time -= SNAKE_SPEED;
 		snake.turn();
 		snake.move();
+		if (!snake.isAlive()) {
+			game->setScene("gameOver", new int(snake.getScore()));
+		}
 	}
 }
 

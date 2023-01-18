@@ -47,4 +47,25 @@ private:
 	float				ratioVirtual;
 };
 
+class AnimatedTexture {
+public:
+	AnimatedTexture();
+	~AnimatedTexture();
+	void init(SDL_Renderer *renderer, std::string path, int nbFramesPerLine, int frameCount, int frameTime);
+	void update(int deltaTime);
+	void render(SDL_Rect dstRect);
+private:
+	SDL_Renderer	*renderer;
+	SDL_Texture		*texture;
+	int				frameWidth;
+	int				frameHeight;
+	int				nbFramesPerLine;
+	int				frameCount;
+	int				frameTime;
+	int				currentFrame;
+	int				time;
+	int				width;
+	int				height;
+};
+
 #endif

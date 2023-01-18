@@ -52,6 +52,23 @@ void	NeoNumberRenderer::draw(SDL_Renderer *renderer, std::string str, int x, int
 	}
 }
 
+void	NeoNumberRenderer::drawLeft(SDL_Renderer *renderer, int number, int x, int y, float ratio) {
+	std::vector<int>	widthsTrandformed;
+	int					heightTransformed;
+	for (int i = 0; i < 10; i++) {
+		widthsTrandformed.push_back(widths[i] / ratio);
+	}
+	heightTransformed = height / ratio;
+	y -= heightTransformed / 2;
+	std::string str = std::to_string(number);
+	for (char c : str) {
+		SDL_Rect rect = {x, y, widthsTrandformed[c - '0'], heightTransformed};
+		SDL_Rect srcRect = {(200 - widths[c - '0']) / 2, 0, widths[c - '0'], height};
+		SDL_RenderCopy(renderer, textures[c - '0'], &srcRect, &rect);
+		x += widthsTrandformed[c - '0'];
+	}
+}
+
 int		NeoNumberRenderer::getWidth(int number, float ratio) {
 	std::vector<int>	widthsTrandformed;
 	std::string str = std::to_string(number);

@@ -13,6 +13,7 @@ class NeoNumberRenderer {
 		~NeoNumberRenderer();
 		void	init(SDL_Renderer *renderer);
 		void	draw(SDL_Renderer *renderer, int number, int x, int y, float ratio);
+		void	drawLeft(SDL_Renderer *renderer, int number, int x, int y, float ratio);
 		void	draw(SDL_Renderer *renderer, std::string number, int x, int y, float ratio);
 		int		getWidth(int number, float ratio);
 		int		getWidth(std::string number, float ratio);

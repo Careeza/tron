@@ -91,7 +91,7 @@ void JoinRoomScene::initScene(GameWindow& window, void *data) {
 	buttons.push_back(join);
 }
 
-void	JoinRoomScene::renderGameObjects(GameWindow& window) {
+void	JoinRoomScene::renderObjects(GameWindow& window) {
 	static Timer	timer;
 	static bool		draw = true;
 	int 			w = 0;

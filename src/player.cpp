@@ -19,11 +19,11 @@ Snake::~Snake() {
 }
 
 void		Snake::initPlayer(SDL_Renderer *renderer) {
-	headTextures[DIRECTION::UP] = IMG_LoadTexture(renderer, "ressources/motoBlueUp.png");
-	headTextures[DIRECTION::LEFT] = IMG_LoadTexture(renderer, "ressources/motoBlueLeft.png");
-	headTextures[DIRECTION::RIGHT] = IMG_LoadTexture(renderer, "ressources/motoBlueRight.png");
-	headTextures[DIRECTION::DOWN] = IMG_LoadTexture(renderer, "ressources/motoBlueDown.png");
-	foodTexture = IMG_LoadTexture(renderer, "ressources/diskBlue.png");
+	headTextures[DIRECTION::UP] = IMG_LoadTexture(renderer, "ressources/Blue/moto/motoUp.png");
+	headTextures[DIRECTION::LEFT] = IMG_LoadTexture(renderer, "ressources/Blue/moto/motoLeft.png");
+	headTextures[DIRECTION::RIGHT] = IMG_LoadTexture(renderer, "ressources/Blue/moto/motoRight.png");
+	headTextures[DIRECTION::DOWN] = IMG_LoadTexture(renderer, "ressources/Blue/moto/motoDown.png");
+	foodTexture.init(renderer, "ressources/Blue/disk/diskAnim.png", 28, 28, 16);
 }
 
 void	Snake::move() {
@@ -48,7 +48,8 @@ void	Snake::move() {
 		return;
 	} else if (map->at(body[0].second)[body[0].first] == CELL_TYPE::SNAKE) {
 		die();
-	} 
+		return;
+	}
 	//check if the head collide with the food
 	auto [x, y] = getHead();
 	SDL_Rect rect = {x * CELL_SIZE + 510, y * CELL_SIZE + 18, CELL_SIZE, CELL_SIZE};
@@ -61,6 +62,7 @@ void	Snake::move() {
 		spawnRandomScene(*map);
 	}
 	map->at(body[0].second)[body[0].first] = CELL_TYPE::SNAKE;
+	foodTexture.update(60);
 }
 
 void	Snake::turn() {
@@ -154,7 +156,8 @@ void	Snake::render(SDL_Renderer *renderer) {
 	SDL_RenderCopy(renderer, headTextures[direction], NULL, &rect);
 	auto [fx, fy] = food;
 	SDL_Rect rect2 = {fx * CELL_SIZE + 510 - (FOOD_SIZE - CELL_SIZE) / 2, fy * CELL_SIZE + 18 - (FOOD_SIZE - CELL_SIZE) / 2, FOOD_SIZE, FOOD_SIZE};
-	SDL_RenderCopy(renderer, foodTexture, NULL, &rect2);
+	// SDL_RenderCopy(renderer, foodTexture, NULL, &rect2);
+	foodTexture.render(rect2);
 }
 
 void	Snake::deletePlayer() {
@@ -162,5 +165,4 @@ void	Snake::deletePlayer() {
 	SDL_DestroyTexture(headTextures[DIRECTION::RIGHT]);
 	SDL_DestroyTexture(headTextures[DIRECTION::DOWN]);
 	SDL_DestroyTexture(headTextures[DIRECTION::LEFT]);
-	SDL_DestroyTexture(foodTexture);
 }

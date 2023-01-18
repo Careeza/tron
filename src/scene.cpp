@@ -1,7 +1,6 @@
 #include "game.hpp"
 #include <iostream>
 
-Scene::Scene() : time(0) {}
 Scene::~Scene() {
 	deleteScene();
 }
@@ -19,7 +18,7 @@ void			Scene::renderScene(GameWindow& window) {
 		}
 	}
 	SDL_SetTextureBlendMode(window.getVirtualWindow(), SDL_BLENDMODE_BLEND);
-	renderGameObjects(window);
+	renderObjects(window);
 }
 
 void			Scene::playMusic() {

@@ -1,5 +1,6 @@
 #include "render.hpp"
 #include "game.hpp"
+#include <cmath>
 #include <iostream>
 
 GameWindow::GameWindow() : window(NULL), renderer(NULL), width(0), height(0), highDPI(1) {}
@@ -14,7 +15,7 @@ void GameWindow::init() {
 	int w, h;
 
 	SDL_Init(SDL_INIT_VIDEO);
-	window = SDL_CreateWindow("Tron", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 0, 0, SDL_WINDOW_FULLSCREEN_DESKTOP | SDL_WINDOW_ALLOW_HIGHDPI);
+	window = SDL_CreateWindow("Tron", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 0, 0, SDL_WINDOW_FULLSCREEN_DESKTOP);
 	if (!window) {
 		std::cerr << "Window could not be created! SDL_Error: " << SDL_GetError() << std::endl;
 	}
@@ -113,3 +114,41 @@ int GameWindow::getNumberWidth(std::string number, float ratio) {
 int GameWindow::getNumberHeight(float ratio) {
 	return (neoNumberRenderer.getHeight(ratio));
 }
+
+AnimatedTexture::AnimatedTexture() : texture(NULL), renderer(NULL), width(0), height(0), frameWidth(0), frameHeight(0), nbFramesPerLine(0), frameCount(0), currentFrame(0), frameTime(0), time(0) {}
+
+AnimatedTexture::~AnimatedTexture() {
+	if (texture) {
+		SDL_DestroyTexture(texture);
+	}
+}
+
+void AnimatedTexture::init(SDL_Renderer *renderer, std::string path, int nbFramesPerLine, int frameCount, int frameTime) {
+	this->renderer = renderer;
+	this->frameCount = frameCount;
+	this->frameTime = frameTime;
+	texture = IMG_LoadTexture(renderer, path.c_str());
+	if (!texture) {
+		std::cerr << "Texture could not be created! SDL_Error: " << SDL_GetError() << std::endl;
+	}
+	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
+	this->frameWidth = width / nbFramesPerLine;
+	this->frameHeight = height / std::ceil(frameCount / static_cast<float>(nbFramesPerLine));
+	this->nbFramesPerLine = nbFramesPerLine;
+}
+
+void AnimatedTexture::update(int deltaTime) {
+	time += deltaTime;
+	if (time >= frameTime) {
+		time -= frameTime;
+		currentFrame += 1;
+		if (currentFrame >= frameCount) {
+			currentFrame = 0;
+		}
+	}
+}
+
+void AnimatedTexture::render(SDL_Rect dstRect) {
+	SDL_Rect srcRect = {frameWidth * (currentFrame % nbFramesPerLine), frameHeight * (currentFrame / nbFramesPerLine), frameWidth, frameHeight};
+	SDL_RenderCopy(renderer, texture, &srcRect, &dstRect);
+} 
