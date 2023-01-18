@@ -31,6 +31,7 @@ public:
 	SDL_Texture				*getVirtualWindow();
 	void					drawNumber(int number, int x, int y, float ratio = 5.0f);
 	void					drawNumber(std::string number, int x, int y, float ratio = 5.0f);
+	void					setColor(int color);
 	int						getNumberWidth(int number, float ratio);
 	int						getNumberWidth(std::string number, float ratio);
 	int						getNumberHeight(float ratio);

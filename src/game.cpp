@@ -2,7 +2,7 @@
 #include "timer.hpp"
 #include <algorithm>
 
-Game::Game() : quit(false), networkLogic(appID, appVersion) {}
+Game::Game() : quit(false), server(false), gameInfo() {}
 
 
 void	Game::init() {
@@ -57,50 +57,5 @@ void	Game::run() {
 	}
 }
 
-void	Game::connectToNetwork() {
-	networkLogic.connect();
-
-	std::cout << "waiting for connection..." << std::endl;
-	while (!networkLogic.isConnected()) {
-		networkLogic.run();
-	}
-	std::cout << "connected" << std::endl;
-}
-
-void	Game::disconnectFromNetwork() {
-	networkLogic.disconnect();
-}
-
-void	Game::joinRoom(const std::vector<int>& roomNumber) {
-	std::string	roomName = "";
-	for (int n : roomNumber) {
-		roomName += std::to_string(n);
-	}
-	// std::cout << "join room " << roomName << std::endl;
-	// ExitGames::Common::JString jRoomName = roomName.c_str();
-	ExitGames::Common::JString jRoomName = L"test";
-	std::cout << "join room " << "[" << jRoomName.UTF8Representation().cstr() << "]" << std::endl;
-	networkLogic.joinRoom(jRoomName);
-	while (!networkLogic.isRoomJoinedOrCreated()) {
-		networkLogic.run();
-	}
-}
-
-void	Game::createRoom(const std::vector<int>& roomNumber) {
-	std::string	roomName = "";
-	for (int n : roomNumber) {
-		roomName += std::to_string(n);
-	}
-	// std::cout << "creating room " << roomName << std::endl;
-	// ExitGames::Common::JString jRoomName = roomName.c_str();
-	ExitGames::Common::JString jRoomName = L"test";
-	std::cout << "creating room " << "[" << jRoomName.UTF8Representation().cstr() << "]" << std::endl;
-	networkLogic.createRoom(jRoomName);
-	while (!networkLogic.isRoomJoinedOrCreated()) {
-		networkLogic.run();
-	}
-}
-
 void	Game::updateRoom() {
-	networkLogic.run();
 }

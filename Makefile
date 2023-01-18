@@ -18,7 +18,9 @@ EXEC_DIR = bin
 PRECOMPILE = mkdir -p $(dir $@); mkdir -p $(dir $(DEPS_DIR)/$*); mkdir -p $(EXEC_DIR)
 
 EXEC=$(EXEC_DIR)/tron
-SRCS=$(wildcard $(SRCS_DIR)/*.cpp)
+
+include src.mk
+
 OBJS = $(patsubst $(SRCS_DIR)/%.cpp, $(OBJS_DIR)/%.o, $(SRCS))
 DEPS = $(patsubst $(SRCS_DIR)/%.cpp, $(DEPS_DIR)/%.d, $(SRCS))
 

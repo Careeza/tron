@@ -7,6 +7,7 @@
 # include "player.hpp"
 # include <vector>
 # include <SDL_mixer.h>
+# include "online.hpp"
 
 class Game;
 
@@ -68,7 +69,25 @@ public:
 	void	updateScene(GameWindow& window, int deltaTime) override;
 	void	*getInfo() override;
 private:
-	std::vector<int>	roomNumber;
+	std::vector<int>			roomNumber;
+	int							currentPlayer;
+	int							nbPlayers;
+	std::vector<SDL_Texture*>	playersNotReady;
+	std::vector<SDL_Texture*>	playersReady;
+	SDL_Texture					*noPlayer;
+	gameOnlineInfo				*gameInfo;
+};
+
+class OnlineGameScene : public Scene {
+public:
+	OnlineGameScene(Game *game_) : Scene(game_) {};
+	void	handleEvents(Game* game) override;
+	void	initScene(GameWindow& window, void *data = nullptr) override;
+	void	renderObjects(GameWindow& window) override;
+	void	updateScene(GameWindow& window, int deltaTime) override;
+private:
+	gameOnlineInfo	*gameInfo;
+	GameBoard		board;
 };
 
 //510 18 1392 x 1044
@@ -107,5 +126,7 @@ void	joinOrCreateRoom(Game *game);
 void	createRoom(Game *game);
 void	joinRoom(Game *game);
 void	goToLobby(Game *game);
+void	copyRoomNumber(Game *game);
+void	setReady(Game *game);
 
 #endif
