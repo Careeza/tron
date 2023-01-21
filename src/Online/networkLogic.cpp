@@ -206,6 +206,15 @@ void NetworkLogic::sendDirect(std::string str) {
 	int sent = mLoadBalancingClient.sendDirect(data, ExitGames::LoadBalancing::SendDirectOptions().setFallbackRelay(fallbackRelay));
 }
 
+void NetworkLogic::sendDirect(std::string str, int player) {
+	ExitGames::Common::JString data(str.c_str());
+	ExitGames::Common::JArray<int> players;
+
+	players.addElement(player);
+	const bool fallbackRelay = true;
+	int sent = mLoadBalancingClient.sendDirect(data, ExitGames::LoadBalancing::SendDirectOptions().setFallbackRelay(fallbackRelay).setTargetPlayers(players));
+}
+
 
 // protocol implementations
 
@@ -255,11 +264,16 @@ void NetworkLogic::customEventAction(int playerNr, nByte /*eventCode*/, const Ex
 
 void NetworkLogic::onDirectMessage(const ExitGames::Common::Object& msg, int remoteID, bool relay) {
 	if (isServer) {
-		mLoadBalancingClient.sendDirect(msg.toString(), ExitGames::LoadBalancing::SendDirectOptions().setFallbackRelay(true));
 		ExitGames::Common::JString data = ExitGames::Common::ValueObject<ExitGames::Common::JString>(msg).getDataCopy();
 		std::string str = data.UTF8Representation().cstr();
+		if (str[0] == '"') {
+			str = str.substr(1, str.length() - 2);
+		}
 		updateString = str;
 		update = true;
+		if (str[0] == 'R') {
+			mLoadBalancingClient.sendDirect(msg.toString(), ExitGames::LoadBalancing::SendDirectOptions().setFallbackRelay(true));
+		}
 	} else {
 		ExitGames::Common::JString data = ExitGames::Common::ValueObject<ExitGames::Common::JString>(msg).getDataCopy();
 		std::string str = data.UTF8Representation().cstr();

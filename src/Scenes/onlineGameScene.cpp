@@ -44,7 +44,7 @@ void OnlineGameScene::handleEvents(Game* game) {
 	}
 	if (direction != oldDirection) {
 		gameInfo->updateClient = true;
-		gameInfo->direction = direction;
+		gameInfo->direction = (int)direction;
 		gameInfo->updateType = UpdateType::UPDATE_DIRECTION;
 	}
 }
@@ -57,7 +57,12 @@ void OnlineGameScene::initScene(GameWindow& window, void *data) {
 
 void OnlineGameScene::updateScene(GameWindow& window, int deltaTime) {
 	gameOnlineInfo *gameInfo = &game->getGameInfo();
-	// board.updateBoard(window.getRenderer(), gameInfo->currentPlayer);
+	if (gameInfo->updateServer) {
+		if (gameInfo->updateType == UpdateType::UPDATE_GAME) {
+			board.stringToGameBoard(gameInfo->gameBoardStr);
+		}
+		gameInfo->updateServer = false;
+	}
 }
 
 void OnlineGameScene::renderObjects(GameWindow& window) {

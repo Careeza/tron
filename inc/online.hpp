@@ -9,7 +9,8 @@ enum UpdateType {
 	UPDATE_READY,
 	UPDATE_START,
 	UPDATE_DIRECTION,
-	UPDATE_NONE,
+	UPDATE_GAME,
+	UPDATE_NONE
 };
 
 struct	gameOnlineInfo {
@@ -21,7 +22,8 @@ struct	gameOnlineInfo {
 	bool		updateClient;
 	UpdateType	updateType;
 	std::vector<bool>		playerReady;
-	DIRECTION				direction;
+	int						direction;
+	std::string				gameBoardStr;
 };
 
 void	createClient(std::vector<int> roomNumber, gameOnlineInfo *info);

@@ -9,14 +9,15 @@ void	GameBoard::initBoard(SDL_Renderer *renderer, int nbPlayers_, int currentPla
 	nbPlayers = nbPlayers_;
 	currentPlayer = currentPlayer_;
 	std::vector<std::string>	color = {"Blue", "Green", "Orange", "Purple"};
-	std::vector<Position>		playerSpawnPosition({{10, 10}, {10, 164}, {120, 10}, {120, 164}});
+	std::vector<Position>		playerSpawnPosition({{10, 10}, {10, 120}, {164, 10}, {164, 120}});
 	std::vector<DIRECTION>		playerSpawnDirection({DIRECTION::RIGHT, DIRECTION::RIGHT, DIRECTION::LEFT, DIRECTION::LEFT});
 
 	map = std::vector<std::vector<CELL_TYPE>>(MAP_HEIGHT, std::vector<CELL_TYPE>(MAP_WIDTH, CELL_TYPE::EMPTY));
 	for (int i = 0; i < nbPlayers_; i++) {
-		players.emplace_back(playerSpawnPosition[i].first, playerSpawnPosition[i].second, playerSpawnDirection[i], &map);
+		players.push_back({playerSpawnPosition[i].first, playerSpawnPosition[i].second, playerSpawnDirection[i], &map});
+		players[i].initPlayer(renderer, i);
 	}
-	if (renderer) {
+	if (renderer != NULL) {
 		std::string boardTexturePath = "ressources/" + color[currentPlayer] + "/background.png";
 		boardTexture = IMG_LoadTexture(renderer, boardTexturePath.c_str());
 	} 
@@ -29,15 +30,18 @@ void	GameBoard::move() {
 }
 
 void	GameBoard::turn() {
-	players[currentPlayer].turn();
+	std::cout << "HERE" << std::endl;
+	for (int i = 0; i < nbPlayers; i++) {
+		players[i].turn();
+	}
 }
 
 void	GameBoard::setNextDirection(int player, DIRECTION direction) {
-	players[currentPlayer].setDirection(direction);
+	players[player].setNextDirection(direction);
 }
 
 DIRECTION	GameBoard::getNextDirection(int player) {
-	return players[currentPlayer].getNextDirection();
+	return players[player].getNextDirection();
 }
 
 void		GameBoard::setDirection(int player, DIRECTION direction) {

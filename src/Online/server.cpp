@@ -9,35 +9,37 @@
 #include "tools.hpp"
 #include "player.hpp"
 
-void	gameStarted(NetworkLogic &networkLogic) {
+void	gameStarted(NetworkLogic *networkLogic) {
+	std::cout << "SEGAFAULT 1" << std::endl;
 	GameBoard	gameBoard;
-	int			nbPlayer = networkLogic.getNumberOfPlayer();
-	std::vector<DIRECTION>	direction(nbPlayer);
+	int			nbPlayer = networkLogic->getNumberOfPlayer();
+	std::vector<DIRECTION>	direction;
 
-	for (int i = 0; i < nbPlayer; i++) {
-		direction[i] = gameBoard.getDirection(i);
-	}
 	gameBoard.initBoard(NULL, nbPlayer, 0);
+	for (int i = 0; i < nbPlayer; i++) {
+		direction.push_back(gameBoard.getDirection(i));
+	}
 	while (1) {
 		for (int i = 0; i < nbPlayer; i++) {
 			gameBoard.setNextDirection(i, DIRECTION::RIGHT);
 		}
-		if (networkLogic.isUpdate()) {
-			std::string str = networkLogic.getUpdate();
+		if (networkLogic->isUpdate()) {
+			std::string str = networkLogic->getUpdate();
 			if (str[0] == 'D') {
 				int n = str[1] - '0';
 				int d = str[2] - '0';
 				gameBoard.setNextDirection(n, (DIRECTION)d);
 			}
-			networkLogic.setUpdate(false);
+			networkLogic->setUpdate(false);
 		}
 		gameBoard.turn();
 		gameBoard.move();
-		networkLogic.sendDirect("G" + gameBoard.gameBoardToString());
-		networkLogic.run();
+		networkLogic->sendDirect(gameBoard.gameBoardToString());
+		networkLogic->run();
 		Console::get().update();
 		SLEEP(10);
 	}
+
 }
 
 void	server(bool *created, std::string roomName) {
@@ -89,7 +91,7 @@ void	server(bool *created, std::string roomName) {
 		if (shouldStart) {
 			std::cout << "Start game" << std::endl;
 			networkLogic.sendDirect("Start");
-			gameStarted(networkLogic);
+			gameStarted(&networkLogic);
 			break;
 		}
 		networkLogic.run();

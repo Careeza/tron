@@ -25,16 +25,9 @@ void	gameStartedClient(NetworkLogic &networkLogic, gameOnlineInfo *gameInfo) {
 		}
 		if (networkLogic.isUpdate()) {
 			std::string str = networkLogic.getUpdate();
-			if (str[0] == 'R') {
-				int n = std::stoi(str.substr(1)) - 1;
-				gameInfo->playerReady[n] = true;
-				gameInfo->updateType = UpdateType::UPDATE_READY;
-				gameInfo->updateServer = true;
-			} else if (str[0] == 'S') {
-				gameInfo->updateType = UpdateType::UPDATE_START;
-				gameInfo->updateServer = true;
-				gameStartedClient(networkLogic, gameInfo);
-			}
+			gameInfo->gameBoardStr = str;
+			gameInfo->updateServer = true;
+			gameInfo->updateType = UpdateType::UPDATE_GAME;
 			networkLogic.setUpdate(false);
 		}
 		networkLogic.run();

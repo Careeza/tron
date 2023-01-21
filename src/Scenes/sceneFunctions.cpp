@@ -60,6 +60,12 @@ void	setReady(Game *game) {
 	info->updateType = UpdateType::UPDATE_READY;
 }
 
+void	goToTwoPlayers(Game *game) {
+	std::cout << "HERE" << std::endl;
+	game->setScene("twoPlayer");
+	std::cout << "HERE" << std::endl;
+}
+
 void	goToLobby(Game *game) {
 	std::vector<int> 	roomNumber;
 	roomInformation		info;

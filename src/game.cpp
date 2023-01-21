@@ -20,6 +20,8 @@ void	Game::initScenes() {
 	addScene("joinOrCreateRoom", new JoinOrCreateRoomScene(this));
 	addScene("lobby", new LobbyScene(this));
 	addScene("gameOver", new GameOverScene(this));
+	addScene("onlineGame", new OnlineGameScene(this));
+	addScene("twoPlayer", new TwoPlayerLocalScene(this));
 }
 
 Scene	*Game::addScene(std::string name, Scene *scene) {
@@ -28,10 +30,14 @@ Scene	*Game::addScene(std::string name, Scene *scene) {
 }
 
 void	Game::setScene(std::string name, void *data) {
+	std::cout << "[HERE]" << std::endl;
 	currentScene->stopMusic();
+	std::cout << "[HERE 1]" << std::endl;
 	currentScene->deleteScene();
 	currentScene = scenes[name];
+	std::cout << "[HERE 2]" << std::endl;
 	currentScene->initScene(window, data);
+	std::cout << "[HERE 3]" << std::endl;
 	currentScene->playMusic();
 }
 

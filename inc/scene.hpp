@@ -104,6 +104,17 @@ private:
 	Map 	map;
 };
 
+class TwoPlayerLocalScene : public Scene {
+public:
+	TwoPlayerLocalScene(Game *game_) : Scene(game_) {};
+	void	handleEvents(Game* game) override;
+	void	initScene(GameWindow& window, void *data = nullptr) override;
+	void	renderObjects(GameWindow& window) override;
+	void	updateScene(GameWindow& window, int deltaTime) override;
+private:
+	GameBoard	board;
+};
+
 class GameOverScene : public Scene {
 public:
 	GameOverScene(Game *game_) : Scene(game_) {};
@@ -128,5 +139,6 @@ void	joinRoom(Game *game);
 void	goToLobby(Game *game);
 void	copyRoomNumber(Game *game);
 void	setReady(Game *game);
+void	goToTwoPlayers(Game *game);
 
 #endif

@@ -12,23 +12,29 @@ TronPlayer::TronPlayer(int x, int y, DIRECTION direction_, Map *map_) : score(0)
 
 void	TronPlayer::initPlayer(SDL_Renderer *renderer, int currentPlayer_) {
 	std::vector<std::string>	color = {"Blue", "Green", "Orange", "Purple"};
-	std::string	path = "ressources/" + color[currentPlayer_] + "/moto";
-	headTextures[DIRECTION::UP] = IMG_LoadTexture(renderer, (path + "motoUp.png").c_str());
-	headTextures[DIRECTION::LEFT] = IMG_LoadTexture(renderer, (path + "motoLeft.png").c_str());
-	headTextures[DIRECTION::RIGHT] = IMG_LoadTexture(renderer, (path + "motoRight.png").c_str());
-	headTextures[DIRECTION::DOWN] = IMG_LoadTexture(renderer, (path + "motoDown.png").c_str());
-	if (currentPlayer_ == 1) {
-		bodyColor = {0x6E, 0xE2, 0xFF, 0xFF};
-	} else if (currentPlayer_ == 2) {
-		bodyColor = {0x00, 0xFF, 0x00, 0xFF};
-	} else if (currentPlayer_ == 3) {
-		bodyColor = {0xFF, 0x7F, 0x00, 0xFF};
-	} else {
-		bodyColor = {0x7F, 0x00, 0xFF, 0xFF};
+	std::string	path = "ressources/" + color[currentPlayer_] + "/moto/";
+	if (renderer != NULL) {
+		headTextures[DIRECTION::UP] = IMG_LoadTexture(renderer, (path + "motoUp.png").c_str());
+		if (headTextures[DIRECTION::UP] == NULL) {
+			std::cout << "Error: " << SDL_GetError() << std::endl;
+		}
+		headTextures[DIRECTION::LEFT] = IMG_LoadTexture(renderer, (path + "motoLeft.png").c_str());
+		headTextures[DIRECTION::RIGHT] = IMG_LoadTexture(renderer, (path + "motoRight.png").c_str());
+		headTextures[DIRECTION::DOWN] = IMG_LoadTexture(renderer, (path + "motoDown.png").c_str());
+		if (currentPlayer_ == 0) {
+			bodyColor = {0x00, 0x76, 0xFF, 0xFF};
+		} else if (currentPlayer_ == 1) {
+			bodyColor = {0x00, 0xFF, 0x00, 0xFF};
+		} else if (currentPlayer_ == 2) {
+			bodyColor = {0xFF, 0x7F, 0x00, 0xFF};
+		} else {
+			bodyColor = {0x7F, 0x00, 0xFF, 0xFF};
+		}
 	}
 }
 
 void	TronPlayer::move() {
+	std::cout << "move" << std::endl;
 	if (!alive) {
 		return;
 	}
@@ -120,11 +126,11 @@ void	TronPlayer::render(SDL_Renderer *renderer) {
 		SDL_RenderFillRect(renderer, &rect);
 		drawRectBetweenPoints(renderer, x2 * CELL_SIZE + xStart, y2 * CELL_SIZE + yStart, x * CELL_SIZE + SNAKE_BODY_SIZE + xStart, y * CELL_SIZE + SNAKE_BODY_SIZE + yStart);
 	}
-	if (isAlive()) {
-		auto [x, y] = getHead();
-		SDL_Rect rect = {x * CELL_SIZE + 510 - (SNAKE_HEAD_SIZE - CELL_SIZE) / 2, y * CELL_SIZE + 18 - (SNAKE_HEAD_SIZE - CELL_SIZE) / 2, SNAKE_HEAD_SIZE, SNAKE_HEAD_SIZE};
-		SDL_RenderCopy(renderer, headTextures[direction], NULL, &rect);
-	}
+	// if (isAlive()) {
+	auto [x, y] = getHead();
+	SDL_Rect rect = {x * CELL_SIZE + 510 - (SNAKE_HEAD_SIZE - CELL_SIZE) / 2, y * CELL_SIZE + 18 - (SNAKE_HEAD_SIZE - CELL_SIZE) / 2, SNAKE_HEAD_SIZE, SNAKE_HEAD_SIZE};
+	SDL_RenderCopy(renderer, headTextures[direction], NULL, &rect);
+	// }
 }
 
 std::string	TronPlayer::playerToString() {

@@ -64,6 +64,7 @@ public:
 	void disconnect(void);
 	void sendEvent(void);
 	void sendDirect(std::string str);
+	void sendDirect(std::string str, int player);
 
 	Input getLastInput(void) const;
 	void setLastInput(Input newInput);

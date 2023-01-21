@@ -17,6 +17,7 @@ SRCS += src/Scenes/onlineGameScene.cpp
 SRCS += src/Scenes/scene.cpp
 SRCS += src/Scenes/sceneFunctions.cpp
 SRCS += src/Scenes/singlePlayerScene.cpp
+SRCS += src/Scenes/twoPlayerLocalScene.cpp
 SRCS += src/Tools/timer.cpp
 SRCS += src/Tools/tools.cpp
 SRCS += src/game.cpp

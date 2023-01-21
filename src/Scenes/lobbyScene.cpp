@@ -102,6 +102,7 @@ void	LobbyScene::updateScene(GameWindow& window, int deltaTime) {
 		gameInfo->updateServer = false;
 		if (gameInfo->updateType == UpdateType::UPDATE_START) {
 			std::cout << "START" << std::endl;
+			game->setScene("onlineGame", NULL);
 		}
 	}
 	(void)window;
