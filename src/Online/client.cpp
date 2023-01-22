@@ -24,11 +24,44 @@ void	gameStartedClient(NetworkLogic &networkLogic, gameOnlineInfo *gameInfo) {
 			}
 		}
 		if (networkLogic.isUpdate()) {
-			std::string str = networkLogic.getUpdate();
-			gameInfo->gameBoardStr = str;
-			gameInfo->updateServer = true;
-			gameInfo->updateType = UpdateType::UPDATE_GAME;
+			// std::string str = networkLogic.getUpdate();
+			// gameInfo->gameBoardStr = str;
+			// gameInfo->updateServer = true;
+			// gameInfo->updateType = UpdateType::UPDATE_GAME;
 			networkLogic.setUpdate(false);
+		}
+		networkLogic.run();
+		SLEEP(10);
+	}
+}
+
+void	lobbyClient(NetworkLogic &networkLogic, gameOnlineInfo *gameInfo) {
+	while (1) {
+		Console::get().update();
+		gameInfo->nbPlayers = networkLogic.getNumberOfPlayer();
+		if (gameInfo->updateClient) {
+			switch (gameInfo->updateType) {
+			case UpdateType::UPDATE_READY:
+				networkLogic.sendDirect("R" + std::to_string(gameInfo->currentPlayer));
+				break;
+			default:
+				break;
+			}
+			gameInfo->updateClient = false;
+		}
+		if (networkLogic.isUpdate()) {
+			std::vector<std::string> updates = networkLogic.getUpdate();
+				for (std::string str : updates) {
+					if (str[0] == 'R') {
+					int n = std::stoi(str.substr(1)) - 1;
+					gameInfo->playerReady[n] = true;
+					gameInfo->updateType = UpdateType::UPDATE_READY;
+				} else if (str[0] == 'S') {
+					gameInfo->updateType = UpdateType::UPDATE_START;
+					gameStartedClient(networkLogic, gameInfo);
+				}
+			}
+			gameInfo->updateServer = true;
 		}
 		networkLogic.run();
 		SLEEP(10);
@@ -57,38 +90,6 @@ void	client(bool *created, std::string roomName, gameOnlineInfo *gameInfo) {
 	}
 	gameInfo->currentPlayer = networkLogic.getCurrentNumber();
 	*created = true;
-	while (1) {
-		Console::get().update();
-		gameInfo->nbPlayers = networkLogic.getNumberOfPlayer();
-		if (gameInfo->updateClient) {
-			switch (gameInfo->updateType)
-			{
-			case UpdateType::UPDATE_READY:
-				networkLogic.sendDirect("R" + std::to_string(gameInfo->currentPlayer));
-				gameInfo->updateClient = false;
-				break;
-			
-			default:
-				break;
-			}
-		}
-		if (networkLogic.isUpdate()) {
-			std::string str = networkLogic.getUpdate();
-			if (str[0] == 'R') {
-				int n = std::stoi(str.substr(1)) - 1;
-				gameInfo->playerReady[n] = true;
-				gameInfo->updateType = UpdateType::UPDATE_READY;
-				gameInfo->updateServer = true;
-			} else if (str[0] == 'S') {
-				gameInfo->updateType = UpdateType::UPDATE_START;
-				gameInfo->updateServer = true;
-				gameStartedClient(networkLogic, gameInfo);
-			}
-			networkLogic.setUpdate(false);
-		}
-		networkLogic.run();
-		SLEEP(10);
-	}
 }
 
 void	createClient(std::vector<int> roomNumber, gameOnlineInfo *gameInfo) {

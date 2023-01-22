@@ -2,6 +2,8 @@
 
 # define NETWORKLOGIC_H
 
+#include <vector>
+#include <string>
 #include "outputListener.h"
 #include "LoadBalancing-cpp/inc/Client.h"
 
@@ -72,9 +74,9 @@ public:
 	State getState(void) const;
 	int getCurrentNumber() const {return currentPlayer;};
 	int getNumberOfPlayer() const {return nbPlayer;};
-	bool	isUpdate() const {return update;};
-	void	setUpdate(bool update) {this->update = update;};
-	std::string getUpdate() const {return updateString;};
+	bool						isUpdate() const {return update;};
+	void						setUpdate(bool update) {this->update = update;};
+	std::vector<std::string>	getUpdate();
 private:
 	void sendDirect(int64 count);
 
@@ -117,11 +119,11 @@ private:
 	Input mLastInput;
 	ExitGames::Common::JTime mLastSendTime;
 	bool isServer;
-	ExitGames::Common::JString mRoomName;
-	int 				nbPlayer;
-	int 				currentPlayer;
-	std::string			updateString;
-	bool				update;
+	ExitGames::Common::JString	mRoomName;
+	int 						nbPlayer;
+	int 						currentPlayer;
+	std::vector<std::string> 	updateInfo;
+	bool						update;
 };
 
 #endif

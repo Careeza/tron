@@ -80,6 +80,7 @@ class TronPlayer {
 		void		setBody(SnakeBody body_);
 		std::string	playerToString();
 		void		stringToPlayer(std::string str);
+		void		reset();
 	private:
 		int									score;
 		DIRECTION							direction;
@@ -89,6 +90,9 @@ class TronPlayer {
 		bool								alive;
 		SnakeBody							body;
 		std::vector<int>					bodyColor;
+		int									initialX;
+		int									initialY;
+		DIRECTION							initialDirection;
 };
 
 class GameBoard {
@@ -107,6 +111,9 @@ class GameBoard {
 		void		render(SDL_Renderer *renderer);
 		std::string	gameBoardToString();
 		void		stringToGameBoard(std::string str);
+		void		reset();
+		void		increaseScore(int player);
+		int			getScore(int player);
 	private:
 		std::vector<TronPlayer>							players;
 		Map												map;

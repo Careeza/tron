@@ -215,8 +215,12 @@ void NetworkLogic::sendDirect(std::string str, int player) {
 	int sent = mLoadBalancingClient.sendDirect(data, ExitGames::LoadBalancing::SendDirectOptions().setFallbackRelay(fallbackRelay).setTargetPlayers(players));
 }
 
-
-// protocol implementations
+std::vector<std::string>	NetworkLogic::getUpdate() {
+	std::vector<std::string> copy(updateInfo);
+	updateInfo.clear();
+	update = false;
+	return copy;
+}
 
 void NetworkLogic::debugReturn(int debugLevel, const ExitGames::Common::JString& string) {
 	mpOutputListener->debugReturn(debugLevel, string);
@@ -246,11 +250,16 @@ void NetworkLogic::serverErrorReturn(int errorCode) {
 void NetworkLogic::joinRoomEventAction(int playerNr, const ExitGames::Common::JVector<int>& /*playernrs*/, const ExitGames::LoadBalancing::Player& player) {
 	EGLOG(ExitGames::Common::DebugLevel::INFO, L"%ls joined the game", player.getName().cstr());
 	nbPlayer = playerNr - 1;
+	if (isServer and nbPlayer > 0) {
+		update = true;
+		updateInfo.push_back("J" + std::to_string(playerNr));
+	}
 	mpOutputListener->writeLine(L"");
 	mpOutputListener->writeLine(ExitGames::Common::JString(L"player ") + playerNr + L" " + player.getName() + L" has joined the game");
 }
 
 void NetworkLogic::leaveRoomEventAction(int playerNr, bool isInactive) {
+	
 	EGLOG(ExitGames::Common::DebugLevel::INFO, L"");
 	mpOutputListener->writeLine(L"");
 	mpOutputListener->writeLine(ExitGames::Common::JString(L"player ") + playerNr + L" has left the game");
@@ -263,28 +272,14 @@ void NetworkLogic::customEventAction(int playerNr, nByte /*eventCode*/, const Ex
 }
 
 void NetworkLogic::onDirectMessage(const ExitGames::Common::Object& msg, int remoteID, bool relay) {
-	if (isServer) {
-		ExitGames::Common::JString data = ExitGames::Common::ValueObject<ExitGames::Common::JString>(msg).getDataCopy();
-		std::string str = data.UTF8Representation().cstr();
-		if (str[0] == '"') {
-			str = str.substr(1, str.length() - 2);
-		}
-		updateString = str;
-		update = true;
-		if (str[0] == 'R') {
-			mLoadBalancingClient.sendDirect(msg.toString(), ExitGames::LoadBalancing::SendDirectOptions().setFallbackRelay(true));
-		}
-	} else {
-		ExitGames::Common::JString data = ExitGames::Common::ValueObject<ExitGames::Common::JString>(msg).getDataCopy();
-		std::string str = data.UTF8Representation().cstr();
-		//cut the first and last char
-		if (str[0] == '"') {
-			str = str.substr(1, str.length() - 2);
-		}
-		updateString = str;
-		std::cout << "received : [" << str << "]" << std::endl;
-		update = true;
+	ExitGames::Common::JString data = ExitGames::Common::ValueObject<ExitGames::Common::JString>(msg).getDataCopy();
+	std::string str = data.UTF8Representation().cstr();
+	if (str[0] == '"') {
+		str = str.substr(1, str.length() - 2);
 	}
+	updateInfo.push_back(str);
+	std::cout << "received : [" << str << "]" << std::endl;
+	update = true;
 }
 
 void NetworkLogic::connectReturn(int errorCode, const ExitGames::Common::JString& errorString, const ExitGames::Common::JString& region, const ExitGames::Common::JString& cluster) {

@@ -9,8 +9,8 @@ void	GameBoard::initBoard(SDL_Renderer *renderer, int nbPlayers_, int currentPla
 	nbPlayers = nbPlayers_;
 	currentPlayer = currentPlayer_;
 	std::vector<std::string>	color = {"Blue", "Green", "Orange", "Purple"};
-	std::vector<Position>		playerSpawnPosition({{10, 10}, {10, 120}, {164, 10}, {164, 120}});
-	std::vector<DIRECTION>		playerSpawnDirection({DIRECTION::RIGHT, DIRECTION::RIGHT, DIRECTION::LEFT, DIRECTION::LEFT});
+	std::vector<Position>		playerSpawnPosition({{10, 10}, {164, 120}, {164, 10},  {10, 120}});
+	std::vector<DIRECTION>		playerSpawnDirection({DIRECTION::RIGHT, DIRECTION::LEFT, DIRECTION::RIGHT, DIRECTION::LEFT});
 
 	map = std::vector<std::vector<CELL_TYPE>>(MAP_HEIGHT, std::vector<CELL_TYPE>(MAP_WIDTH, CELL_TYPE::EMPTY));
 	for (int i = 0; i < nbPlayers_; i++) {
@@ -30,7 +30,6 @@ void	GameBoard::move() {
 }
 
 void	GameBoard::turn() {
-	std::cout << "HERE" << std::endl;
 	for (int i = 0; i < nbPlayers; i++) {
 		players[i].turn();
 	}
@@ -96,4 +95,19 @@ void		GameBoard::stringToGameBoard(std::string str) {
 	for (int i = 0; i < nbPlayers_; i++) {
 		players[i].stringToPlayer(strVector[i + 1]);
 	}
+}
+
+void		GameBoard::reset() {
+	map = std::vector<std::vector<CELL_TYPE>>(MAP_HEIGHT, std::vector<CELL_TYPE>(MAP_WIDTH, CELL_TYPE::EMPTY));
+	for (int i = 0; i < nbPlayers; i++) {
+		players[i].reset();
+	}
+}
+
+void		GameBoard::increaseScore(int player) {
+	players[player].increaseScore(1);
+}
+
+int			GameBoard::getScore(int player) {
+	return players[player].getScore();
 }

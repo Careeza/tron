@@ -8,6 +8,9 @@
 TronPlayer::TronPlayer(int x, int y, DIRECTION direction_, Map *map_) : score(0), direction(direction_), nextDirection(direction_), map(map_), alive(true) {
 	body.push_back(std::make_pair(x, y));
 	map->at(y)[x] = CELL_TYPE::SNAKE;
+	initialX = x;
+	initialY = y;
+	initialDirection = direction_;
 }
 
 void	TronPlayer::initPlayer(SDL_Renderer *renderer, int currentPlayer_) {
@@ -34,7 +37,6 @@ void	TronPlayer::initPlayer(SDL_Renderer *renderer, int currentPlayer_) {
 }
 
 void	TronPlayer::move() {
-	std::cout << "move" << std::endl;
 	if (!alive) {
 		return;
 	}
@@ -151,4 +153,14 @@ void		TronPlayer::stringToPlayer(std::string str) {
 		ss >> x >> y;
 		body.push_back(std::make_pair(x, y));
 	}
+}
+
+void		TronPlayer::reset() {
+	alive = true;
+	direction = initialDirection;
+	nextDirection = initialDirection;
+	body.clear();
+	body.push_back({initialX, initialY});
+	map->at(initialY)[initialX] = CELL_TYPE::SNAKE;
+	// score = 0;
 }

@@ -49,10 +49,9 @@ void TwoPlayerLocalScene::handleEvents(Game* game) {
 	}
 	if (buttonPressed) {
 		buttonPressed->onClickEvent(game);
-	} else {
-		board.setNextDirection(0, directionP1);
-		board.setNextDirection(1, directionP2);
 	}
+	board.setNextDirection(0, directionP1);
+	board.setNextDirection(1, directionP2);
 }
 
 void TwoPlayerLocalScene::initScene(GameWindow& window, void *data) {
@@ -62,10 +61,32 @@ void TwoPlayerLocalScene::initScene(GameWindow& window, void *data) {
 
 void TwoPlayerLocalScene::updateScene(GameWindow& window, int deltaTime) {
 	Scene::updateScene(window, deltaTime);
-	if (time > SNAKE_SPEED) {
+	static bool start = false;
+
+	if (time > 2000 && !start) {
+		start = true;
+		time = 0;
+	}
+	if (!start) {
+		board.turn();
+		return;
+	}
+	while (time > SNAKE_SPEED) {
 		time -= SNAKE_SPEED;
 		board.turn();
 		board.move();
+		if (!board.isAlive(0)) {
+			std::cout << "Player 1 is dead" << std::endl;
+			start = false;
+			board.reset();
+			board.increaseScore(1);
+		} 
+		if (!board.isAlive(1)) {
+			std::cout << "Player 2 is dead" << std::endl;
+			start = false;
+			board.reset();
+			board.increaseScore(0);
+		}
 		// if (!snake.isAlive()) {
 		// 	game->setScene("gameOver", new int(snake.getScore()));
 		// }
@@ -74,4 +95,6 @@ void TwoPlayerLocalScene::updateScene(GameWindow& window, int deltaTime) {
 
 void TwoPlayerLocalScene::renderObjects(GameWindow& window) {
 	board.render(window.getRenderer());
+	window.drawNumber(board.getScore(0), 254, 370);
+	window.drawNumber(board.getScore(1), 254, 670);
 }
