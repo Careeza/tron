@@ -43,7 +43,7 @@ void	Game::run() {
 
 	currentScene = scenes["mainMenu"];
 	currentScene->initScene(window);
-	currentScene->playMusic();
+	// currentScene->playMusic();
 	gameTimer.start();
 	while (!quit) {
 		frameRate.start();
