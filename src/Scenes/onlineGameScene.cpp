@@ -100,7 +100,7 @@ void	OnlineGameScene::giveInfo(void *data) {
 	// board.initBoard
 	GameWindow& window = game->getWindow();
 	gameOnlineInfo *gameInfo = &game->getGameInfo();
-	board.initBoard(window.getRenderer(), gameInfo->nbPlayers, gameInfo->currentPlayer);
+	board.initBoard(window.getRenderer(), gameInfo->nbPlayers, gameInfo->currentPlayer - 1);
 }
 
 
