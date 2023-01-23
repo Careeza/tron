@@ -29,17 +29,9 @@ void	LobbyScene::handleEvents(Game* game) {
 	}
 }
 
-void	LobbyScene::initScene(GameWindow& window, void *data) {
+void	LobbyScene::initScene(GameWindow& window) {
 	gameInfo = &game->getGameInfo();
 	music = NULL;
-	roomInformation info = *(roomInformation*)data;
-	roomNumber = info.roomNumber;
-	if (game->isServer()) {
-		createServer(roomNumber);
-		createClient(roomNumber, gameInfo);
-	} else {
-		createClient(roomNumber, gameInfo);
-	}
 	nbPlayers = gameInfo->nbPlayers;
 	currentPlayer = gameInfo->currentPlayer;
 	std::string path = "ressources/party/p" + std::to_string(currentPlayer) + "_party.png";
@@ -56,11 +48,18 @@ void	LobbyScene::initScene(GameWindow& window, void *data) {
 	buttons.push_back(copy);
 	Button ready(window.getRenderer(), {748, 565, 418, 124}, NULL, setReady);
 	buttons.push_back(ready);
-
 }
 
-//50 - 50
-//1310 - 824
+void	LobbyScene::giveInfo(void *data) {
+	roomInformation *info = (roomInformation*)data;
+	roomNumber = info->roomNumber;
+	if (game->isServer()) {
+		createServer(roomNumber);
+		createClient(roomNumber, gameInfo);
+	} else {
+		createClient(roomNumber, gameInfo);
+	}
+}
 
 void	LobbyScene::renderObjects(GameWindow& window) {
 	if (roomNumber.size() > 0) {

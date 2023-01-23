@@ -49,7 +49,7 @@ void OnlineGameScene::handleEvents(Game* game) {
 	}
 }
 
-void OnlineGameScene::initScene(GameWindow& window, void *data) {
+void OnlineGameScene::initScene(GameWindow& window) {
 	std::cout << "[[OnlineGameScene]]" << std::endl;
 	gameOnlineInfo *gameInfo = &game->getGameInfo();
 	board.initBoard(window.getRenderer(), gameInfo->nbPlayers, gameInfo->nbPlayers);

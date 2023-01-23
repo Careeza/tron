@@ -47,6 +47,7 @@ public:
 	void		spawnRandomScene(Map &map);
 	void		render(SDL_Renderer *renderer);
 	void		deletePlayer();
+	void		spawnPlayer(int x, int y, int size, DIRECTION direction_, Map *map_);
 private:
 	int									score;
 	DIRECTION							direction;

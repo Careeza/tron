@@ -12,6 +12,12 @@
 # define VIRTUAL_W 1920
 # define VIRTUAL_H 1080
 
+enum struct DRAW_MODE {
+	LEFT,
+	RIGHT,
+	CENTER,
+};
+
 class GameWindow {
 public:
 	GameWindow();
@@ -29,8 +35,8 @@ public:
 	float					getRatioVirtual();
 	std::tuple<int, int>	transformPosition(int x, int y);
 	SDL_Texture				*getVirtualWindow();
-	void					drawNumber(int number, int x, int y, float ratio = 5.0f);
-	void					drawNumber(std::string number, int x, int y, float ratio = 5.0f);
+	void					drawNumber(int number, int x, int y, float ratio = 5.0f, DRAW_MODE mode = DRAW_MODE::CENTER);
+	void					drawNumber(std::string number, int x, int y, float ratio = 5.0f, DRAW_MODE mode = DRAW_MODE::CENTER);
 	void					setColor(int color);
 	int						getNumberWidth(int number, float ratio);
 	int						getNumberWidth(std::string number, float ratio);

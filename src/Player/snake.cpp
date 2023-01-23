@@ -166,3 +166,16 @@ void	Snake::deletePlayer() {
 	SDL_DestroyTexture(headTextures[DIRECTION::DOWN]);
 	SDL_DestroyTexture(headTextures[DIRECTION::LEFT]);
 }
+
+void		Snake::spawnPlayer(int x, int y, int size, DIRECTION direction_, Map *map_) {
+	body.clear();
+	score = 0;
+	direction = direction_;
+	nextDirection = direction_;
+	map = map_;
+	alive = true;
+	for (int i = 0; i < size; i++) {
+		body.push_back(std::make_pair(x, y));
+		map->at(y)[x] = CELL_TYPE::SNAKE;
+	}
+}

@@ -28,11 +28,11 @@ void JoinOrCreateRoomScene::handleEvents(Game* game) {
 	}
 }
 
-void JoinOrCreateRoomScene::initScene(GameWindow& window, void *data) {
+void JoinOrCreateRoomScene::initScene(GameWindow& window) {
 	background = IMG_LoadTexture(window.getRenderer(), "ressources/choose/chooser_no.png");
 	SDL_Texture *exitButtonOff = IMG_LoadTexture(window.getRenderer(), "ressources/menu/btn/btnOff.png");
 	SDL_Texture *exitButtonOn = IMG_LoadTexture(window.getRenderer(), "ressources/menu/btn/btnOff.png");
-	Button exit(window.getRenderer(), {108, 934, 185, 74}, exitButtonOff, exitGame);
+	Button exit(window.getRenderer(), {108, 934, 185, 74}, exitButtonOff, returnToMenu);
 	exit.addOverTexture(window.getRenderer(), exitButtonOn);
 
 	SDL_DestroyTexture(exitButtonOff);

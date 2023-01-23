@@ -70,7 +70,7 @@ void JoinRoomScene::handleEvents(Game* game) {
 	}
 }
 
-void JoinRoomScene::initScene(GameWindow& window, void *data) {
+void JoinRoomScene::initScene(GameWindow& window) {
 	background = IMG_LoadTexture(window.getRenderer(), "ressources/join/join.png");
 	SDL_Texture *exitButtonOff = IMG_LoadTexture(window.getRenderer(), "ressources/btnOff.png");
 	SDL_Texture *exitButtonOn = IMG_LoadTexture(window.getRenderer(), "ressources/btnOn.png");

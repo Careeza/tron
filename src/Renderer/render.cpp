@@ -93,12 +93,30 @@ SDL_Texture *GameWindow::getVirtualWindow() {
 	return (virtualWindow);
 }
 
-void GameWindow::drawNumber(int number, int x, int y, float ratio) {
-	neoNumberRenderer.draw(getRenderer(), number, x, y, ratio);
+void GameWindow::drawNumber(int number, int x, int y, float ratio, DRAW_MODE mode) {
+	switch (mode) {
+		case DRAW_MODE::LEFT:
+			neoNumberRenderer.drawLeft(getRenderer(), number, x, y, ratio);
+			break;
+		case DRAW_MODE::RIGHT:
+			break;
+		case DRAW_MODE::CENTER:
+			neoNumberRenderer.draw(getRenderer(), number, x, y, ratio);
+			break;
+	}
 }
 
-void GameWindow::drawNumber(std::string number, int x, int y, float ratio) {
-	neoNumberRenderer.draw(getRenderer(), number, x, y, ratio);
+void GameWindow::drawNumber(std::string number, int x, int y, float ratio, DRAW_MODE mode) {
+	switch (mode) {
+		case DRAW_MODE::LEFT:
+			// neoNumberRenderer.drawLeft(getRenderer(), number, x, y, ratio);
+			break;
+		case DRAW_MODE::RIGHT:
+			break;
+		case DRAW_MODE::CENTER:
+			neoNumberRenderer.draw(getRenderer(), number, x, y, ratio);
+			break;
+	}
 }
 
 void GameWindow::setColor(int color) {

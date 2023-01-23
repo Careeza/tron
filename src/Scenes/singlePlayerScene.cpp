@@ -2,6 +2,7 @@
 #include "player.hpp"
 #include "tools.hpp"
 #include <iostream>
+#include <fstream>
 
 void SinglePlayerScene::handleEvents(Game* game) {
 	static SDL_Event	event;
@@ -43,7 +44,7 @@ void SinglePlayerScene::handleEvents(Game* game) {
 	}
 }
 
-void SinglePlayerScene::initScene(GameWindow& window, void *data) {
+void SinglePlayerScene::initScene(GameWindow& window) {
 	std::cout << "[[SinglePlayerScene]]" << std::endl;
 	background = IMG_LoadTexture(window.getRenderer(), "ressources/game/background.png");
 	SDL_SetRenderTarget(window.getRenderer(), NULL);
@@ -74,7 +75,8 @@ void SinglePlayerScene::renderObjects(GameWindow& window) {
 	SDL_SetRenderTarget(window.getRenderer(), window.getVirtualWindow());
 	SDL_SetRenderDrawBlendMode(window.getRenderer(), SDL_BLENDMODE_NONE);
 	snake.render(window.getRenderer());
-	window.drawNumber(snake.getScore(), 254, 370);
+	window.drawNumber(snake.getScore(), 244, 400, 3);
+	window.drawNumber(bestScore, 244, 650, 3);
 	SDL_SetRenderTarget(window.getRenderer(), NULL);
 }
 
@@ -102,4 +104,20 @@ void SinglePlayerScene::deleteScene() {
 	}
 	Mix_FreeMusic(music);
 	snake.deletePlayer();
+}
+
+void	SinglePlayerScene::giveInfo(void *data) {
+	(void)data;
+	std::ifstream file("ressources/bestScore.txt");
+	if (!file.is_open()) {
+		std::cout << "Error opening file" << std::endl;
+		return;
+	}
+	std::string line;
+	std::getline(file, line);
+	file.close();
+	bestScore = std::stoi(line);
+	map = std::vector<std::vector<CELL_TYPE>>(MAP_HEIGHT, std::vector<CELL_TYPE>(MAP_WIDTH, CELL_TYPE::EMPTY));
+	snake.spawnPlayer(10, 10, 30, DIRECTION::RIGHT, &map);
+	snake.spawnRandomScene(map);
 }

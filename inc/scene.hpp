@@ -16,7 +16,8 @@ public:
 	Scene(Game *game_) : time(0), game(game_) {};
 	~Scene();
 	virtual void			handleEvents(Game* game) = 0;
-	virtual void			initScene(GameWindow& widnow, void *data = nullptr) = 0;
+	virtual void			initScene(GameWindow& widnow) = 0;
+	virtual void			giveInfo(void *data) {};
 	virtual void			renderObjects(GameWindow& window) {};
 	virtual void			updateScene(GameWindow& window, int deltaTime) {time += deltaTime;};
 	std::vector<Button>&	getButtons() { return buttons; };
@@ -37,7 +38,7 @@ class MainMenuScene : public Scene {
 public:
 	MainMenuScene(Game *game_) : Scene(game_) {};
 	void handleEvents(Game* game) override;
-	void initScene(GameWindow& window, void *data = nullptr) override;
+	void initScene(GameWindow& window) override;
 };
 
 
@@ -45,7 +46,7 @@ class JoinOrCreateRoomScene : public Scene {
 public:
 	JoinOrCreateRoomScene(Game *game_) : Scene(game_) {};
 	void handleEvents(Game* game) override;
-	void initScene(GameWindow& window, void *data = nullptr) override;
+	void initScene(GameWindow& window) override;
 private:
 };
 
@@ -53,7 +54,7 @@ class JoinRoomScene : public Scene {
 public:
 	JoinRoomScene(Game *game_) : Scene(game_) {};
 	void	handleEvents(Game* game) override;
-	void	initScene(GameWindow& window, void *data = nullptr) override;
+	void	initScene(GameWindow& window) override;
 	void	renderObjects(GameWindow& window) override;
 	void	*getInfo() override;
 private:
@@ -64,7 +65,8 @@ class LobbyScene : public Scene {
 public:
 	LobbyScene(Game *game_) : Scene(game_) {};
 	void	handleEvents(Game* game) override;
-	void	initScene(GameWindow& window, void *data = nullptr) override;
+	void	initScene(GameWindow& window) override;
+	void	giveInfo(void *data) override;
 	void	renderObjects(GameWindow& window) override;
 	void	updateScene(GameWindow& window, int deltaTime) override;
 	void	*getInfo() override;
@@ -82,7 +84,7 @@ class OnlineGameScene : public Scene {
 public:
 	OnlineGameScene(Game *game_) : Scene(game_) {};
 	void	handleEvents(Game* game) override;
-	void	initScene(GameWindow& window, void *data = nullptr) override;
+	void	initScene(GameWindow& window) override;
 	void	renderObjects(GameWindow& window) override;
 	void	updateScene(GameWindow& window, int deltaTime) override;
 private:
@@ -95,20 +97,22 @@ class SinglePlayerScene : public Scene {
 public:
 	SinglePlayerScene(Game *game_) : Scene(game_) {};
 	void	handleEvents(Game* game) override;
-	void	initScene(GameWindow& window, void *data = nullptr) override;
+	void	initScene(GameWindow& window) override;
+	void	giveInfo(void *data) override;
 	void	renderObjects(GameWindow& window) override;
 	void	updateScene(GameWindow& window, int deltaTime) override;
 	void	deleteScene() override;
 private:
 	Snake 	snake;
 	Map 	map;
+	int		bestScore;
 };
 
 class TwoPlayerLocalScene : public Scene {
 public:
 	TwoPlayerLocalScene(Game *game_) : Scene(game_) {};
 	void	handleEvents(Game* game) override;
-	void	initScene(GameWindow& window, void *data = nullptr) override;
+	void	initScene(GameWindow& window) override;
 	void	renderObjects(GameWindow& window) override;
 	void	updateScene(GameWindow& window, int deltaTime) override;
 private:
@@ -119,14 +123,17 @@ class GameOverScene : public Scene {
 public:
 	GameOverScene(Game *game_) : Scene(game_) {};
 	void	handleEvents(Game* game) override;
-	void	initScene(GameWindow& window, void *data = nullptr) override;
+	void	initScene(GameWindow& window) override;
+	void	giveInfo(void *data) override;
 	void	renderObjects(GameWindow& window) override;
 	void	updateScene(GameWindow& window, int deltaTime) override;
 	void	deleteScene() override;
 private:
 	SDL_Texture			*gameOverTexture;
 	AnimatedTexture		skullAnimation;
-	int			score;
+	AnimatedTexture		bestScoreAnimation;
+	int					score;
+	bool				bestScoreBeat;
 };
 
 Button	*handleButtons(Game *game, Scene *scene, SDL_Event& event);

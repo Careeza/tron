@@ -26,19 +26,15 @@ void	Game::initScenes() {
 
 Scene	*Game::addScene(std::string name, Scene *scene) {
 	scenes[name] = scene;
+	scene->initScene(window);
 	return (scene);
 }
 
 void	Game::setScene(std::string name, void *data) {
-	std::cout << "[HERE]" << std::endl;
-	currentScene->stopMusic();
-	std::cout << "[HERE 1]" << std::endl;
-	currentScene->deleteScene();
+	// currentScene->stopMusic();
 	currentScene = scenes[name];
-	std::cout << "[HERE 2]" << std::endl;
-	currentScene->initScene(window, data);
-	std::cout << "[HERE 3]" << std::endl;
-	currentScene->playMusic();
+	currentScene->giveInfo(data);
+	// currentScene->playMusic();
 }
 
 void	Game::run() {

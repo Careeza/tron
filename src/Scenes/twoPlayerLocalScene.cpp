@@ -54,7 +54,7 @@ void TwoPlayerLocalScene::handleEvents(Game* game) {
 	board.setNextDirection(1, directionP2);
 }
 
-void TwoPlayerLocalScene::initScene(GameWindow& window, void *data) {
+void TwoPlayerLocalScene::initScene(GameWindow& window) {
 	std::cout << "[[TwoPlayerLocalScene]]" << std::endl;
 	board.initBoard(window.getRenderer(), 2, 0);
 }
