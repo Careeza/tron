@@ -65,7 +65,7 @@ void	lobbyClient(NetworkLogic &networkLogic, gameOnlineInfo *gameInfo) {
 				for (std::string str : updates) {
 					if (str[0] == 'R') {
 					int n = std::stoi(str.substr(1)) - 1;
-					gameInfo->playerReady[n] = true;
+					gameInfo->playerReady[n] = !gameInfo->playerReady[n];
 					gameInfo->updateType = UpdateType::UPDATE_READY;
 				} else if (str[0] == 'S') {
 					gameInfo->updateType = UpdateType::UPDATE_START;
