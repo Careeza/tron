@@ -56,7 +56,9 @@ void TwoPlayerLocalScene::handleEvents(Game* game) {
 
 void TwoPlayerLocalScene::initScene(GameWindow& window) {
 	std::cout << "[[TwoPlayerLocalScene]]" << std::endl;
-	board.initBoard(window.getRenderer(), 2, 0);
+	board.initBoard(window.getRenderer(), 2, -1);
+	crownP1 = IMG_LoadTexture(window.getRenderer(), "ressources/twoPlayerLocal/blue_crown.png");
+	crownP2 = IMG_LoadTexture(window.getRenderer(), "ressources/twoPlayerLocal/orange_crown.png");
 }
 
 void TwoPlayerLocalScene::updateScene(GameWindow& window, int deltaTime) {
@@ -95,6 +97,13 @@ void TwoPlayerLocalScene::updateScene(GameWindow& window, int deltaTime) {
 
 void TwoPlayerLocalScene::renderObjects(GameWindow& window) {
 	board.render(window.getRenderer());
-	window.drawNumber(board.getScore(0), 254, 370);
-	window.drawNumber(board.getScore(1), 254, 670);
+	if (board.getScore(0) > board.getScore(1)) {
+		SDL_Rect rect = {97, 326, 327 , 253};
+		SDL_RenderCopy(window.getRenderer(), crownP1, NULL, &rect);
+	} else if (board.getScore(1) > board.getScore(0)) {
+		SDL_Rect rect = {97, 666, 327 , 253};
+		SDL_RenderCopy(window.getRenderer(), crownP2, NULL, &rect);
+	}
+	window.drawNumber(board.getScore(0), 260, 490, 3);
+	window.drawNumber(board.getScore(1), 254, 828, 3);
 }

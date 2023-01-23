@@ -35,6 +35,10 @@ void MainMenuScene::initScene(GameWindow& window) {
 	// Button multiPlayer(window.getRenderer(), {105, 540, 701, 111}, NULL, goToTwoPlayers);
 	Button multiPlayer(window.getRenderer(), {105, 540, 701, 111}, NULL, joinOrCreateRoom);
 	multiPlayer.addOverTexture(window.getRenderer(), {15, 166, 255, 152});
+
+	Button localVersus(window.getRenderer(), {105, 704, 701, 111}, NULL, goToTwoPlayers);
+	localVersus.addOverTexture(window.getRenderer(), {15, 166, 255, 152});
+
 	SDL_Texture *exitButtonOff = IMG_LoadTexture(window.getRenderer(), "ressources/menu/btn/btnOff.png");
 	SDL_Texture *exitButtonOn = IMG_LoadTexture(window.getRenderer(), "ressources/menu/btn/btnOn.png");
 	Button exit(window.getRenderer(), {108, 934, 185, 74}, exitButtonOff, exitGame);
@@ -46,7 +50,7 @@ void MainMenuScene::initScene(GameWindow& window) {
 	buttons.push_back(play);
 	buttons.push_back(multiPlayer);
 	buttons.push_back(exit);
-	// buttons.push_back(settings);
+	buttons.push_back(localVersus);
 	music = Mix_LoadMUS("ressources/mainMenu.mp3");
 	if (!music) {
 		fprintf(stderr, "Erreur lors du chargement de la musique [%s]: %s\n", "ressources/mainMenu.mp3", Mix_GetError());

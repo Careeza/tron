@@ -119,6 +119,8 @@ public:
 	void	updateScene(GameWindow& window, int deltaTime) override;
 private:
 	GameBoard	board;
+	SDL_Texture	*crownP1;
+	SDL_Texture	*crownP2;
 };
 
 class GameOverScene : public Scene {

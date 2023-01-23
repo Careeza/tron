@@ -5,7 +5,33 @@
 #include <iostream>
 #include <sstream>
 
+
+void	GameBoard::initBoardLocal(SDL_Renderer *renderer) {
+	nbPlayers = 2;
+	currentPlayer = 0;
+	std::vector<std::string>	color = {"Blue", "Orange", "Green", "Purple"};
+	std::vector<Position>		playerSpawnPosition({{10, 10}, {164, 120}, {164, 10},  {10, 120}});
+	std::vector<DIRECTION>		playerSpawnDirection({DIRECTION::RIGHT, DIRECTION::LEFT, DIRECTION::RIGHT, DIRECTION::LEFT});
+
+	map = std::vector<std::vector<CELL_TYPE>>(MAP_HEIGHT, std::vector<CELL_TYPE>(MAP_WIDTH, CELL_TYPE::EMPTY));
+	for (int i = 0; i < 2; i++) {
+		players.push_back({playerSpawnPosition[i].first, playerSpawnPosition[i].second, playerSpawnDirection[i], &map});
+		players[i].initPlayer(renderer, i);
+	}
+	if (renderer != NULL) {
+		std::string boardTexturePath = "ressources/twoPlayerLocal/background.png";
+		boardTexture = IMG_LoadTexture(renderer, boardTexturePath.c_str());
+	} 
+
+}
+
 void	GameBoard::initBoard(SDL_Renderer *renderer, int nbPlayers_, int currentPlayer_) {
+	std::cout << "[[--HERE--]] : " << currentPlayer_ << std::endl;
+	if (currentPlayer_ == -1) {
+		initBoardLocal(renderer);
+		std::cout << "[[HERE]]" << std::endl;
+		return ;
+	}
 	nbPlayers = nbPlayers_;
 	currentPlayer = currentPlayer_;
 	std::vector<std::string>	color = {"Blue", "Orange", "Green", "Purple"};
@@ -110,4 +136,12 @@ void		GameBoard::increaseScore(int player) {
 
 int			GameBoard::getScore(int player) {
 	return players[player].getScore();
+}
+
+Position	GameBoard::getHead(int player) {
+	return players[player].getHead();
+}
+
+void		GameBoard::updatePlayer(int player, int x, int y, DIRECTION direction_) {
+	players[player].updatePlayer(x, y, direction_);
 }

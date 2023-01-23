@@ -77,6 +77,18 @@ void	TronPlayer::setDirection(DIRECTION direction) {
 	this->direction = direction;
 }
 
+void	TronPlayer::updatePlayer(int x, int y, DIRECTION direction_) {
+	setNextDirection(direction_);
+	for (SnakeBody::iterator it = std::find(body.begin(), body.end(), std::make_pair(x, y)); it >= body.begin(); it--) {
+		map->at(it->second)[it->first] = CELL_TYPE::EMPTY;
+	}
+	if (std::find(body.begin(), body.end(), std::make_pair(x, y)) != body.end()) {
+		body.erase(body.begin(), std::find(body.begin(), body.end(), std::make_pair(x, y)));
+	}
+	body.insert(body.begin(), std::make_pair(x, y));
+	map->at(y)[x] = CELL_TYPE::SNAKE;
+}
+
 void	TronPlayer::setNextDirection(DIRECTION direction) {
 	this->nextDirection = direction;
 }

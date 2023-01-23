@@ -32,6 +32,10 @@ void	gameStartedClient(NetworkLogic &networkLogic, gameOnlineInfo *gameInfo) {
 					gameInfo->updateServer = true;
 					gameInfo->gameBoardStr = str;
 					gameInfo->updateType = UpdateType::UPDATE_GAME;
+				} else if (str[0] == 'S') {
+					gameInfo->updateServer = true;
+					gameInfo->gameBoardStr = str;
+					gameInfo->updateType = UpdateType::UPDATE_GAME;
 				}
 			}
 			// std::string str = networkLogic.getUpdate();

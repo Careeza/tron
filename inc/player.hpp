@@ -69,6 +69,7 @@ class TronPlayer {
 		void		turn();
 		void		setNextDirection(DIRECTION direction);
 		void		setDirection(DIRECTION direction);
+		void		updatePlayer(int x, int y, DIRECTION direction_);
 		DIRECTION	getDirection();
 		DIRECTION	getNextDirection();
 		void		increaseScore(int score);
@@ -101,12 +102,14 @@ class GameBoard {
 		GameBoard() {};
 		~GameBoard() {};
 		void		initBoard(SDL_Renderer *renderer, int nbPlayers_, int currentPlayer_);
+		void		initBoardLocal(SDL_Renderer *renderer);
 		void		move();
 		void		turn();
 		void		setNextDirection(int player, DIRECTION direction);
 		DIRECTION	getNextDirection(int player);
 		void		setDirection(int player, DIRECTION direction);
 		DIRECTION	getDirection(int player);
+		Position	getHead(int player);
 		bool		isAlive(int player);
 		void		die(int player);
 		void		render(SDL_Renderer *renderer);
@@ -115,6 +118,7 @@ class GameBoard {
 		void		reset();
 		void		increaseScore(int player);
 		int			getScore(int player);
+		void		updatePlayer(int player, int x, int y, DIRECTION direction_);
 	private:
 		std::vector<TronPlayer>							players;
 		Map												map;

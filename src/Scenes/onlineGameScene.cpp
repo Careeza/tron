@@ -1,9 +1,11 @@
+#include "networkLogic.h"
 #include "game.hpp"
 #include "tools.hpp"
 #include <iostream>
 #include "timer.hpp"
 #include <string>
 #include "online.hpp"
+#include <sstream>
 
 void OnlineGameScene::handleEvents(Game* game) {
 	static SDL_Event	event;
@@ -68,19 +70,32 @@ void OnlineGameScene::updateScene(GameWindow& window, int deltaTime) {
 	Scene::updateScene(window, deltaTime);
 	static bool start = false;
 
-	if (time > 2000 && !start) {
-		start = true;
-		time = 0;
-	}
-
 	gameOnlineInfo *gameInfo = &game->getGameInfo();
 	if (gameInfo->updateServer) {
 		if (gameInfo->updateType == UpdateType::UPDATE_GAME) {
 			std::string	str = gameInfo->gameBoardStr;
-			int n = str[1] - '0' - 1;
-			int d = str[2] - '0';
-			std::cout << "n: " << n << " d: " << d << std::endl;
-			board.setNextDirection(n, (DIRECTION)d);
+			if (str[0] == 'S') {
+				unsigned long sendAt = std::stoul(str.substr(2));
+				time = sendAt - GETTIMEMS();
+				start = true;
+			} else {
+				std::string		str1;
+				int				x;
+				int				y;
+				unsigned long	sendAt;
+				//lis x, y et le temps ou le message a ete recu a partir du 4eme caractere
+				std::stringstream ss(str);
+				ss >> str1 >> x >> y >> sendAt;
+				time = GETTIMEMS() - sendAt;
+
+				std::cout << "NEW TIME : " << time << std::endl;
+
+				int n = str1[1] - '0' - 1;
+				int d = str1[2] - '0';
+				std::cout << "n: " << n << " d: " << d << std::endl;
+				board.setNextDirection(n, (DIRECTION)d);
+				// board.updatePlayer(n, x, y, (DIRECTION)d);
+			}
 		}
 		gameInfo->updateServer = false;
 	}

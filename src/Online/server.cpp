@@ -8,42 +8,66 @@
 #include <thread>
 #include "tools.hpp"
 #include "player.hpp"
+#include "timer.hpp"
+
+void	simulateGame(NetworkLogic& networkLogic, GameBoard& board, int time) {
+	static bool start = false;
+
+	if (time > 2000 && !start) {
+		start = true;
+		time = 0;
+		unsigned long sendAt = GETTIMEMS();
+		std::string message = "S " + std::to_string(sendAt);
+		std::cout << "SENDING : " << message << std::endl;
+		networkLogic.sendDirect(message);
+	}
+	if (!start) {
+		board.turn();
+		return;
+	}
+	while (time > 15) {
+		time -= 15;
+		board.turn();
+		board.move();
+	}
+}
 
 void	gameStartedServer(NetworkLogic& networkLogic) {
-	// GameBoard	gameBoard;
-	// int			nbPlayer = networkLogic.getNumberOfPlayer();
-	// std::vector<DIRECTION>	direction;
+	GameBoard	gameBoard;
+	int			nbPlayer = networkLogic.getNumberOfPlayer();
+	Timer		gameTimer;
+	int			time = 0;
 
-	// gameBoard.initBoard(NULL, nbPlayer, 0);
+	gameBoard.initBoard(NULL, nbPlayer, 0);
 	// for (int i = 0; i < nbPlayer; i++) {
 	// 	direction.push_back(gameBoard.getDirection(i));
 	// }
+	gameTimer.start();
 	while (1) {
 		if (networkLogic.isUpdate()) {
 			std::vector<std::string> updates = networkLogic.getUpdate();
 			for (std::string str : updates) {
 				if (str[0] == 'D') {
-					// int n = str[1] - '0';
-					// int d = str[2] - '0';
-					// gameBoard.setNextDirection(n, (DIRECTION)d);
+					int n = str[1] - '0' - 1;
+					int d = str[2] - '0';
+					gameBoard.setNextDirection(n, (DIRECTION)d);
+					std::cout << "get HEAD : " << n << std::endl;
+					auto [x, y] = gameBoard.getHead(n);
 					std::cout << "SERVER SEND MESSAGE" << std::endl;
-					networkLogic.sendDirect(str);
+					unsigned long sendAt = GETTIMEMS();
+					std::string messsage = str + " " + std::to_string(x) + " " + std::to_string(y) + " " + std::to_string(sendAt);
+					networkLogic.sendDirect(messsage);
 				}
 				networkLogic.setUpdate(false);
 			}
 		}
+		time += gameTimer.getTicks();
+		simulateGame(networkLogic, gameBoard, time);
+		gameTimer.start();
 		networkLogic.run();
 		Console::get().update();
 		SLEEP(10);
-
 	}
-	// 	gameBoard.turn();
-	// 	gameBoard.move();
-	// 	networkLogic.sendDirect(gameBoard.gameBoardToString());
-	// 	networkLogic.run();
-	// 	Console::get().update();
-	// 	SLEEP(10);
-	// }
 }
 
 void	lobbyServer(NetworkLogic& networkLogic) {
