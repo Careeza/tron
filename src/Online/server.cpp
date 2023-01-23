@@ -57,7 +57,7 @@ void	lobbyServer(NetworkLogic& networkLogic) {
 				if (str[0] == 'R') {
 					int n = std::stoi(str.substr(1)) - 1;
 					std::cout << "Player " << n + 1 << " ready" << std::endl;
-					playerReady[n] = true;
+					playerReady[n] = !playerReady[n];
 					networkLogic.sendDirect(str);
 				} else if (str[0] == 'U') {
 					int n = std::stoi(str.substr(1)) - 1;
