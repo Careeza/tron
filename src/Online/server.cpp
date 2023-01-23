@@ -10,37 +10,40 @@
 #include "player.hpp"
 
 void	gameStartedServer(NetworkLogic& networkLogic) {
-	std::cout << "SEGAFAULT 1" << std::endl;
-	GameBoard	gameBoard;
-	int			nbPlayer = networkLogic.getNumberOfPlayer();
-	std::vector<DIRECTION>	direction;
+	// GameBoard	gameBoard;
+	// int			nbPlayer = networkLogic.getNumberOfPlayer();
+	// std::vector<DIRECTION>	direction;
 
-	gameBoard.initBoard(NULL, nbPlayer, 0);
-	for (int i = 0; i < nbPlayer; i++) {
-		direction.push_back(gameBoard.getDirection(i));
-	}
+	// gameBoard.initBoard(NULL, nbPlayer, 0);
+	// for (int i = 0; i < nbPlayer; i++) {
+	// 	direction.push_back(gameBoard.getDirection(i));
+	// }
 	while (1) {
-		for (int i = 0; i < nbPlayer; i++) {
-			gameBoard.setNextDirection(i, DIRECTION::RIGHT);
-		}
 		if (networkLogic.isUpdate()) {
 			std::vector<std::string> updates = networkLogic.getUpdate();
 			for (std::string str : updates) {
 				if (str[0] == 'D') {
-					int n = str[1] - '0';
-					int d = str[2] - '0';
-					gameBoard.setNextDirection(n, (DIRECTION)d);
+					// int n = str[1] - '0';
+					// int d = str[2] - '0';
+					// gameBoard.setNextDirection(n, (DIRECTION)d);
+					std::cout << "SERVER SEND MESSAGE" << std::endl;
+					networkLogic.sendDirect(str);
 				}
 				networkLogic.setUpdate(false);
 			}
 		}
-		gameBoard.turn();
-		gameBoard.move();
-		networkLogic.sendDirect(gameBoard.gameBoardToString());
 		networkLogic.run();
 		Console::get().update();
 		SLEEP(10);
+
 	}
+	// 	gameBoard.turn();
+	// 	gameBoard.move();
+	// 	networkLogic.sendDirect(gameBoard.gameBoardToString());
+	// 	networkLogic.run();
+	// 	Console::get().update();
+	// 	SLEEP(10);
+	// }
 }
 
 void	lobbyServer(NetworkLogic& networkLogic) {

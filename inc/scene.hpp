@@ -76,6 +76,7 @@ private:
 	int							nbPlayers;
 	std::vector<SDL_Texture*>	playersNotReady;
 	std::vector<SDL_Texture*>	playersReady;
+	std::vector<SDL_Texture*>	backgrounds;
 	SDL_Texture					*noPlayer;
 	gameOnlineInfo				*gameInfo;
 };
@@ -87,6 +88,7 @@ public:
 	void	initScene(GameWindow& window) override;
 	void	renderObjects(GameWindow& window) override;
 	void	updateScene(GameWindow& window, int deltaTime) override;
+	void	giveInfo(void *data) override;
 private:
 	gameOnlineInfo	*gameInfo;
 	GameBoard		board;

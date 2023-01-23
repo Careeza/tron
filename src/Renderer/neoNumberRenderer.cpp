@@ -6,9 +6,11 @@ NeoNumberRenderer::NeoNumberRenderer() : color(0) {
 }
 
 NeoNumberRenderer::~NeoNumberRenderer() {
+	std::cout << "[delete neoNumberRenderer]" << std::endl;
 }
 
 void	NeoNumberRenderer::init(SDL_Renderer *renderer) {
+	std::cout << "[init neoNumberRenderer]" << std::endl;
 	widths = {110, 90, 180, 180, 140, 180, 180, 130, 180, 170};
 	std::vector<std::string> color = {"Blue", "Orange", "Green", "Purple"};
 	height = 200;

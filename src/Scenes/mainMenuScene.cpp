@@ -32,6 +32,7 @@ void MainMenuScene::initScene(GameWindow& window) {
 	//make the background an SDL_TEXTUREACCESS_TARGET
 	Button play(window.getRenderer(), {105, 370, 701, 111}, NULL, playGame);
 	play.addOverTexture(window.getRenderer(), {15, 166, 255, 152});
+	// Button multiPlayer(window.getRenderer(), {105, 540, 701, 111}, NULL, goToTwoPlayers);
 	Button multiPlayer(window.getRenderer(), {105, 540, 701, 111}, NULL, joinOrCreateRoom);
 	multiPlayer.addOverTexture(window.getRenderer(), {15, 166, 255, 152});
 	SDL_Texture *exitButtonOff = IMG_LoadTexture(window.getRenderer(), "ressources/menu/btn/btnOff.png");

@@ -72,9 +72,11 @@ void	goToLobby(Game *game) {
 
 	if (game->isServer()) {
 		roomNumber = getRandomNumbers(6);
+		createServer(roomNumber);
 	} else {
 		roomNumber = *static_cast<std::vector<int> *>(game->getCurrentScene()->getInfo());
 	}
+	createClient(roomNumber, &game->getGameInfo());
 	info.roomNumber = roomNumber;
 	game->setScene("lobby", &info);
 }

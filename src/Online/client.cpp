@@ -16,14 +16,24 @@ void	gameStartedClient(NetworkLogic &networkLogic, gameOnlineInfo *gameInfo) {
 			switch (gameInfo->updateType)
 			{
 			case UpdateType::UPDATE_DIRECTION:
-				networkLogic.sendDirect("D" + std::to_string((int)gameInfo->direction));
-				gameInfo->updateClient = false;
+				std::cout << "SEND MESSAGE D" << std::endl;
+				networkLogic.sendDirect("D" + std::to_string(gameInfo->currentPlayer) + std::to_string((int)gameInfo->direction));
 				break;
 			default:
 				break;
 			}
+			gameInfo->updateClient = false;
 		}
 		if (networkLogic.isUpdate()) {
+			std::vector<std::string> updates = networkLogic.getUpdate();
+			for (std::string str : updates) {
+				std::cout << "RECEIVE MESSAGE : " << str << std::endl;
+				if (str[0] == 'D') {
+					gameInfo->updateServer = true;
+					gameInfo->gameBoardStr = str;
+					gameInfo->updateType = UpdateType::UPDATE_GAME;
+				}
+			}
 			// std::string str = networkLogic.getUpdate();
 			// gameInfo->gameBoardStr = str;
 			// gameInfo->updateServer = true;
@@ -42,6 +52,7 @@ void	lobbyClient(NetworkLogic &networkLogic, gameOnlineInfo *gameInfo) {
 		if (gameInfo->updateClient) {
 			switch (gameInfo->updateType) {
 			case UpdateType::UPDATE_READY:
+				std::cout << "SEND MESSAGE R" << std::endl;
 				networkLogic.sendDirect("R" + std::to_string(gameInfo->currentPlayer));
 				break;
 			default:
@@ -58,6 +69,7 @@ void	lobbyClient(NetworkLogic &networkLogic, gameOnlineInfo *gameInfo) {
 					gameInfo->updateType = UpdateType::UPDATE_READY;
 				} else if (str[0] == 'S') {
 					gameInfo->updateType = UpdateType::UPDATE_START;
+					gameInfo->updateServer = true;
 					gameStartedClient(networkLogic, gameInfo);
 				}
 			}
@@ -90,6 +102,7 @@ void	client(bool *created, std::string roomName, gameOnlineInfo *gameInfo) {
 	}
 	gameInfo->currentPlayer = networkLogic.getCurrentNumber();
 	*created = true;
+	lobbyClient(networkLogic, gameInfo);
 }
 
 void	createClient(std::vector<int> roomNumber, gameOnlineInfo *gameInfo) {
@@ -103,5 +116,5 @@ void	createClient(std::vector<int> roomNumber, gameOnlineInfo *gameInfo) {
 	while (!created) {
 		SLEEP(100);
 	}
-	std::cout << "Server created" << std::endl;
+	std::cout << "Server join" << std::endl;
 }

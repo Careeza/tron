@@ -32,18 +32,15 @@ void	LobbyScene::handleEvents(Game* game) {
 void	LobbyScene::initScene(GameWindow& window) {
 	gameInfo = &game->getGameInfo();
 	music = NULL;
-	nbPlayers = gameInfo->nbPlayers;
-	currentPlayer = gameInfo->currentPlayer;
-	std::string path = "ressources/party/p" + std::to_string(currentPlayer) + "_party.png";
-	background = IMG_LoadTexture(window.getRenderer(), path.c_str());
 	for (int i = 0; i < 4; i++) {
 		std::string pathNR = "ressources/party/p" + std::to_string(i + 1) + ".png";
 		std::string pathR = "ressources/party/p" + std::to_string(i + 1) + "_ready.png";
+		std::string pathbg = "ressources/party/p" + std::to_string(i + 1) + "_party.png";
 		playersNotReady.push_back(IMG_LoadTexture(window.getRenderer(), pathNR.c_str()));
 		playersReady.push_back(IMG_LoadTexture(window.getRenderer(), pathR.c_str()));
+		backgrounds.push_back(IMG_LoadTexture(window.getRenderer(), pathbg.c_str()));
 	}
 	noPlayer = IMG_LoadTexture(window.getRenderer(), "ressources/party/empty_party.png");
-	//1146 392
 	Button copy(window.getRenderer(), {1146, 392, 114, 124}, NULL, copyRoomNumber);
 	buttons.push_back(copy);
 	Button ready(window.getRenderer(), {748, 565, 418, 124}, NULL, setReady);
@@ -53,12 +50,9 @@ void	LobbyScene::initScene(GameWindow& window) {
 void	LobbyScene::giveInfo(void *data) {
 	roomInformation *info = (roomInformation*)data;
 	roomNumber = info->roomNumber;
-	if (game->isServer()) {
-		createServer(roomNumber);
-		createClient(roomNumber, gameInfo);
-	} else {
-		createClient(roomNumber, gameInfo);
-	}
+	currentPlayer = gameInfo->currentPlayer;
+	nbPlayers = info->nbPlayer;
+	background = backgrounds[currentPlayer - 1];
 }
 
 void	LobbyScene::renderObjects(GameWindow& window) {

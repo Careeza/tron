@@ -278,6 +278,9 @@ void NetworkLogic::onDirectMessage(const ExitGames::Common::Object& msg, int rem
 		str = str.substr(1, str.length() - 2);
 	}
 	updateInfo.push_back(str);
+	if (isServer) {
+		std::cout << "server received : [" << str << "]" << std::endl;
+	}
 	std::cout << "received : [" << str << "]" << std::endl;
 	update = true;
 }
@@ -288,8 +291,8 @@ void NetworkLogic::connectReturn(int errorCode, const ExitGames::Common::JString
 		mStateAccessor.setState(STATE_DISCONNECTING);
 		return;
 	}
-	EGLOG(ExitGames::Common::DebugLevel::INFO, L"connected to cluster " + cluster + L" of region " + region + L", user id = " + mLoadBalancingClient.getUserID());
-	mpOutputListener->writeLine(L"connected to cluster " + cluster + L" of region " + region + L", user id = " + mLoadBalancingClient.getUserID());
+	// EGLOG(ExitGames::Common::DebugLevel::INFO, L"connected to cluster " + cluster + L" of region " + region + L", user id = " + mLoadBalancingClient.getUserID());
+	// mpOutputListener->writeLine(L"connected to cluster " + cluster + L" of region " + region + L", user id = " + mLoadBalancingClient.getUserID());
 	mUserID = mLoadBalancingClient.getUserID();
 	mStateAccessor.setState(STATE_CONNECTED);
 }

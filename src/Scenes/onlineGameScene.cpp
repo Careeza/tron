@@ -51,19 +51,56 @@ void OnlineGameScene::handleEvents(Game* game) {
 
 void OnlineGameScene::initScene(GameWindow& window) {
 	std::cout << "[[OnlineGameScene]]" << std::endl;
-	gameOnlineInfo *gameInfo = &game->getGameInfo();
-	board.initBoard(window.getRenderer(), gameInfo->nbPlayers, gameInfo->nbPlayers);
+	background = IMG_LoadTexture(window.getRenderer(), "ressources/game/background.png");
+	// gameOnlineInfo *gameInfo = &game->getGameInfo();
+	// board.initBoard(window.getRenderer(), gameInfo->nbPlayers, gameInfo->nbPlayers);
+	SDL_Texture *exitButtonOff = IMG_LoadTexture(window.getRenderer(), "ressources/menu/btn/btnOff.png");
+	SDL_Texture *exitButtonOn = IMG_LoadTexture(window.getRenderer(), "ressources/menu/btn/btnOn.png");
+	Button exit(window.getRenderer(), {108, 934, 185, 74}, exitButtonOff, exitGame);
+	exit.addOverTexture(window.getRenderer(), exitButtonOn);
+	SDL_DestroyTexture(exitButtonOff);
+	SDL_DestroyTexture(exitButtonOn);
+	buttons.push_back(exit);
+	music = nullptr;
 }
 
 void OnlineGameScene::updateScene(GameWindow& window, int deltaTime) {
+	Scene::updateScene(window, deltaTime);
+	static bool start = false;
+
+	if (time > 2000 && !start) {
+		start = true;
+		time = 0;
+	}
+	if (!start) {
+		board.turn();
+		return;
+	}
+	while (time > SNAKE_SPEED) {
+		time -= SNAKE_SPEED;
+		board.turn();
+		board.move();
+	}
+
 	gameOnlineInfo *gameInfo = &game->getGameInfo();
 	if (gameInfo->updateServer) {
 		if (gameInfo->updateType == UpdateType::UPDATE_GAME) {
-			board.stringToGameBoard(gameInfo->gameBoardStr);
+			std::string	str = gameInfo->gameBoardStr;
+			int n = str[1] - '0';
+			int d = str[2] - '0';
+			board.setDirection(n, (DIRECTION)d);
 		}
 		gameInfo->updateServer = false;
 	}
 }
+
+void	OnlineGameScene::giveInfo(void *data) {
+	// board.initBoard
+	GameWindow& window = game->getWindow();
+	gameOnlineInfo *gameInfo = &game->getGameInfo();
+	board.initBoard(window.getRenderer(), gameInfo->nbPlayers, gameInfo->currentPlayer);
+}
+
 
 void OnlineGameScene::renderObjects(GameWindow& window) {
 	board.render(window.getRenderer());
