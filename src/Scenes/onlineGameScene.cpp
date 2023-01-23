@@ -8,8 +8,8 @@
 void OnlineGameScene::handleEvents(Game* game) {
 	static SDL_Event	event;
 	gameOnlineInfo *gameInfo = &game->getGameInfo();
-	DIRECTION			oldDirection = board.getDirection(gameInfo->currentPlayer);
-	DIRECTION			direction = board.getDirection(gameInfo->currentPlayer);
+	DIRECTION			oldDirection = board.getDirection(gameInfo->currentPlayer - 1);
+	DIRECTION			direction = board.getDirection(gameInfo->currentPlayer - 1);
 	Button				*buttonPressed = nullptr;
 	while (SDL_PollEvent(&event)) {
 		if (event.type == SDL_KEYDOWN) {
@@ -72,6 +72,19 @@ void OnlineGameScene::updateScene(GameWindow& window, int deltaTime) {
 		start = true;
 		time = 0;
 	}
+
+	gameOnlineInfo *gameInfo = &game->getGameInfo();
+	if (gameInfo->updateServer) {
+		if (gameInfo->updateType == UpdateType::UPDATE_GAME) {
+			std::string	str = gameInfo->gameBoardStr;
+			int n = str[1] - '0' - 1;
+			int d = str[2] - '0';
+			std::cout << "n: " << n << " d: " << d << std::endl;
+			board.setNextDirection(n, (DIRECTION)d);
+		}
+		gameInfo->updateServer = false;
+	}
+
 	if (!start) {
 		board.turn();
 		return;
@@ -80,17 +93,6 @@ void OnlineGameScene::updateScene(GameWindow& window, int deltaTime) {
 		time -= SNAKE_SPEED;
 		board.turn();
 		board.move();
-	}
-
-	gameOnlineInfo *gameInfo = &game->getGameInfo();
-	if (gameInfo->updateServer) {
-		if (gameInfo->updateType == UpdateType::UPDATE_GAME) {
-			std::string	str = gameInfo->gameBoardStr;
-			int n = str[1] - '0';
-			int d = str[2] - '0';
-			board.setDirection(n, (DIRECTION)d);
-		}
-		gameInfo->updateServer = false;
 	}
 }
 
