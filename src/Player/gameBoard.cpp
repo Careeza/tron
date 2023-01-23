@@ -8,7 +8,7 @@
 void	GameBoard::initBoard(SDL_Renderer *renderer, int nbPlayers_, int currentPlayer_) {
 	nbPlayers = nbPlayers_;
 	currentPlayer = currentPlayer_;
-	std::vector<std::string>	color = {"Blue", "Green", "Orange", "Purple"};
+	std::vector<std::string>	color = {"Blue", "Orange", "Green", "Purple"};
 	std::vector<Position>		playerSpawnPosition({{10, 10}, {164, 120}, {164, 10},  {10, 120}});
 	std::vector<DIRECTION>		playerSpawnDirection({DIRECTION::RIGHT, DIRECTION::LEFT, DIRECTION::RIGHT, DIRECTION::LEFT});
 
