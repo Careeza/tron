@@ -10,7 +10,7 @@
 #include "player.hpp"
 #include "timer.hpp"
 
-void	simulateGame(NetworkLogic& networkLogic, GameBoard& board, int time) {
+void	simulateGame(NetworkLogic& networkLogic, GameBoard& board, int& time) {
 	static bool start = false;
 
 	if (time > 2000 && !start) {

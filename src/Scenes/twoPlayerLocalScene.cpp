@@ -15,28 +15,28 @@ void TwoPlayerLocalScene::handleEvents(Game* game) {
 		if (event.type == SDL_KEYDOWN) {
 			switch (event.key.keysym.sym) {
 				case SDLK_UP:
-					directionP1 = DIRECTION::UP;
-					break;
-				case SDLK_w:
 					directionP2 = DIRECTION::UP;
 					break;
-				case SDLK_RIGHT:
-					directionP1 = DIRECTION::RIGHT;
+				case SDLK_w:
+					directionP1 = DIRECTION::UP;
 					break;
-				case SDLK_d:
+				case SDLK_RIGHT:
 					directionP2 = DIRECTION::RIGHT;
 					break;
-				case SDLK_DOWN:
-					directionP1 = DIRECTION::DOWN;
+				case SDLK_d:
+					directionP1 = DIRECTION::RIGHT;
 					break;
-				case SDLK_s:
+				case SDLK_DOWN:
 					directionP2 = DIRECTION::DOWN;
 					break;
+				case SDLK_s:
+					directionP1 = DIRECTION::DOWN;
+					break;
 				case SDLK_LEFT:
-					directionP1 = DIRECTION::LEFT;
+					directionP2 = DIRECTION::LEFT;
 					break;
 				case SDLK_a:
-					directionP2 = DIRECTION::LEFT;
+					directionP1 = DIRECTION::LEFT;
 					break;
 				case SDLK_ESCAPE:
 					game->quitGame();
