@@ -93,8 +93,8 @@ void OnlineGameScene::updateScene(GameWindow& window, int deltaTime) {
 				int n = str1[1] - '0' - 1;
 				int d = str1[2] - '0';
 				std::cout << "n: " << n << " d: " << d << std::endl;
-				// board.setNextDirection(n, (DIRECTION)d);
-				board.updatePlayer(n, x, y, (DIRECTION)d);
+				board.setNextDirection(n, (DIRECTION)d);
+				// board.updatePlayer(n, x, y, (DIRECTION)d);
 			}
 		}
 		gameInfo->updateServer = false;
