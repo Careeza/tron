@@ -21,9 +21,10 @@ struct	gameOnlineInfo {
 	bool		updateServer;
 	bool		updateClient;
 	UpdateType	updateType;
-	std::vector<bool>		playerReady;
-	int						direction;
-	std::string				gameBoardStr;
+	std::vector<bool>			playerReady;
+	int							direction;
+	// std::string					gameBoardStr;
+	std::vector<std::string>	infoUpdate;
 };
 
 void	createClient(std::vector<int> roomNumber, gameOnlineInfo *info);

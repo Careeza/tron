@@ -36,7 +36,7 @@ void	TronPlayer::initPlayer(SDL_Renderer *renderer, int currentPlayer_) {
 	}
 }
 
-void	TronPlayer::move() {
+void	TronPlayer::move(bool checkCollision) {
 	if (!alive) {
 		return;
 	}
@@ -49,6 +49,9 @@ void	TronPlayer::move() {
 		body[0].second++;
 	} else if (direction == DIRECTION::LEFT) {
 		body[0].first--;
+	}
+	if (!checkCollision) {
+		return;
 	}
 	if (body[0].first < 0 || body[0].first >= map->at(0).size() || body[0].second < 0 || body[0].second >= map->size()) {
 		die();
@@ -75,18 +78,6 @@ void	TronPlayer::turn() {
 
 void	TronPlayer::setDirection(DIRECTION direction) {
 	this->direction = direction;
-}
-
-void	TronPlayer::updatePlayer(int x, int y, DIRECTION direction_) {
-	setNextDirection(direction_);
-	for (SnakeBody::iterator it = std::find(body.begin(), body.end(), std::make_pair(x, y)); it >= body.begin(); it--) {
-		map->at(it->second)[it->first] = CELL_TYPE::EMPTY;
-	}
-	if (std::find(body.begin(), body.end(), std::make_pair(x, y)) != body.end()) {
-		body.erase(body.begin(), std::find(body.begin(), body.end(), std::make_pair(x, y)));
-	}
-	body.insert(body.begin(), std::make_pair(x, y));
-	map->at(y)[x] = CELL_TYPE::SNAKE;
 }
 
 void	TronPlayer::setNextDirection(DIRECTION direction) {
@@ -147,26 +138,6 @@ void	TronPlayer::render(SDL_Renderer *renderer) {
 	// }
 }
 
-std::string	TronPlayer::playerToString() {
-	std::string str = std::to_string(body.size()) + " ";
-	for (auto [x, y] : body) {
-		str += std::to_string(x) + " " + std::to_string(y) + " ";
-	}
-	return str;
-}
-
-void		TronPlayer::stringToPlayer(std::string str) {
-	std::stringstream ss(str);
-	int size;
-	ss >> size;
-	body.clear();
-	for (int i = 0; i < size; i++) {
-		int x, y;
-		ss >> x >> y;
-		body.push_back(std::make_pair(x, y));
-	}
-}
-
 void		TronPlayer::reset() {
 	alive = true;
 	direction = initialDirection;
@@ -175,4 +146,63 @@ void		TronPlayer::reset() {
 	body.push_back({initialX, initialY});
 	map->at(initialY)[initialX] = CELL_TYPE::SNAKE;
 	// score = 0;
+}
+
+Position	parsePosition(std::string str) {
+	std::vector<std::string> pos = split(str, ' ');
+	return {std::stoi(pos[0]), std::stoi(pos[1])};
+}
+
+void		TronPlayer::printPlayer() {
+	std::cout << "BODY :" << std::endl;
+	for (auto [x, y] : body) {
+		std::cout << x << " " << y << std::endl;
+	}
+}
+
+void		TronPlayer::fillPlayer(int x1, int y1, int x2, int y2) {
+	if (x1 == x2) {
+		if (y1 > y2) {
+			for (int i = y1; i >= y2; i--) {
+				body.insert(body.begin(), {x1, i});
+				map->at(i)[x1] = CELL_TYPE::SNAKE;
+			}
+		} else {
+			for (int i = y1; i <= y2; i++) {
+				body.insert(body.begin(), {x1, i});
+				map->at(i)[x1] = CELL_TYPE::SNAKE;
+			}
+		}
+	} else {
+		if (x1 > x2) {
+			for (int i = x1; i >= x2; i--) {
+				body.insert(body.begin(), {i, y1});
+				map->at(y1)[i] = CELL_TYPE::SNAKE;
+			}
+		} else {
+			for (int i = x1; i <= x2; i++) {
+				body.insert(body.begin(), {i, y1});
+				map->at(y1)[i] = CELL_TYPE::SNAKE;
+			}
+		}
+	}
+}
+
+void		TronPlayer::updatePlayer(std::vector<std::string>& updates, int start, int n) {
+	body.clear();
+	auto [xS, yS] = parsePosition(updates[start]);
+	std::cout << "xS: " << xS << " yS: " << yS << std::endl;
+	for (int i = 1; i < n; i++) {
+		auto [x, y] = parsePosition(updates[start + i]);
+		std::cout << "x: " << x << " y: " << y << std::endl;
+
+		fillPlayer(xS, yS, x, y);
+		xS = x;
+		yS = y;
+	}
+	std::cout << "HEAD :" << getHead().first << " " << getHead().second << std::endl;
+	std::cout << "BODY SIZE: " << body.size() << std::endl;
+	direction = (DIRECTION)std::stoi(updates[start + n]);
+	nextDirection = (DIRECTION)std::stoi(updates[start + n]);
+	std::cout << "DIRECTION: " << (int)direction << std::endl;
 }

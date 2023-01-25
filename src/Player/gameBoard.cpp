@@ -46,19 +46,26 @@ void	GameBoard::initBoard(SDL_Renderer *renderer, int nbPlayers_, int currentPla
 	if (renderer != NULL) {
 		std::string boardTexturePath = "ressources/" + color[currentPlayer] + "/background.png";
 		boardTexture = IMG_LoadTexture(renderer, boardTexturePath.c_str());
-	} 
+	}
+	std::cout << "Board initialized" << std::endl;
 }
 
-void	GameBoard::move() {
+void	GameBoard::move(bool checkCollision) {
 	for (int i = 0; i < nbPlayers; i++) {
-		players[i].move();
+		players[i].move(checkCollision);
 	}
 }
 
-void	GameBoard::turn() {
+bool	GameBoard::turn() {
+	bool	change = false;
 	for (int i = 0; i < nbPlayers; i++) {
+		DIRECTION	oldDirection = players[i].getDirection();
 		players[i].turn();
+		if (oldDirection != players[i].getDirection()) {
+			change = true;
+		}
 	}
+	return change;
 }
 
 void	GameBoard::setNextDirection(int player, DIRECTION direction) {
@@ -92,37 +99,6 @@ void		GameBoard::render(SDL_Renderer *renderer) {
 	}
 }
 
-std::string		GameBoard::gameBoardToString() {
-	std::string str = "";
-
-	str = std::to_string(nbPlayers) + "\n";
-	for (int i = 0; i < nbPlayers; i++) {
-		str += players[i].playerToString() + "\n";
-	}
-	return str;
-}
-
-std::vector<std::string> split(const std::string &s, char delim) {
-	std::vector<std::string> elems;
-	std::stringstream ss(s);
-	std::string item;
-	while (std::getline(ss, item, delim)) {
-		elems.push_back(item);
-	}
-	return elems;
-}
-
-void		GameBoard::stringToGameBoard(std::string str) {
-	std::vector<std::string>	strVector = split(str, '\n');
-	int							nbPlayers_ = std::stoi(strVector[0]);
-
-	nbPlayers = std::stoi(strVector[0]);
-	players.clear();
-	for (int i = 0; i < nbPlayers_; i++) {
-		players[i].stringToPlayer(strVector[i + 1]);
-	}
-}
-
 void		GameBoard::reset() {
 	map = std::vector<std::vector<CELL_TYPE>>(MAP_HEIGHT, std::vector<CELL_TYPE>(MAP_WIDTH, CELL_TYPE::EMPTY));
 	for (int i = 0; i < nbPlayers; i++) {
@@ -142,6 +118,15 @@ Position	GameBoard::getHead(int player) {
 	return players[player].getHead();
 }
 
-void		GameBoard::updatePlayer(int player, int x, int y, DIRECTION direction_) {
-	players[player].updatePlayer(x, y, direction_);
+void		GameBoard::updateGameBoard(std::vector<std::string>& updates, int n) {
+	map = std::vector<std::vector<CELL_TYPE>>(MAP_HEIGHT, std::vector<CELL_TYPE>(MAP_WIDTH, CELL_TYPE::EMPTY));
+	for (int i = 0; i < nbPlayers; i++) {
+		players[i].updatePlayer(updates, 3 + (n + 1) * i, n);
+	}
+}
+
+void		GameBoard::printGameBoard() {
+	for (TronPlayer p : players) {
+		p.printPlayer();
+	}
 }

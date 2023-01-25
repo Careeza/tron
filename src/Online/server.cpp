@@ -9,8 +9,29 @@
 #include "tools.hpp"
 #include "player.hpp"
 #include "timer.hpp"
+#include "game.hpp"
 
-void	simulateGame(NetworkLogic& networkLogic, GameBoard& board, int& time) {
+void	updatePositions(std::vector<std::vector<Position>>& positions, GameBoard& board, int nbPlayer) {
+	for (int i = 0; i < nbPlayer; i++) {
+		positions[i].push_back(board.getHead(i));
+	}
+}
+
+void	sendPositions(NetworkLogic& networkLogic, std::vector<std::vector<Position>>& positions, GameBoard& board) {
+	std::string	message = "P\n" + std::to_string(positions[0].size()) + "\n";
+	message += std::to_string(GETTIMEMS()) + "\n";
+	int			i = 0;
+	for (auto &pos : positions) {
+		for (auto &p : pos) {
+			message += std::to_string(p.first) + " " + std::to_string(p.second) + "\n";
+		}
+		message += std::to_string((int)board.getDirection(i)) + "\n";
+		i++;
+	}
+	networkLogic.sendDirect(message);
+}
+
+void	simulateGame(NetworkLogic& networkLogic, GameBoard& board, int& time, std::vector<std::vector<Position>>& positions, int nbPlayer) {
 	static bool start = false;
 
 	if (time > 2000 && !start) {
@@ -22,13 +43,22 @@ void	simulateGame(NetworkLogic& networkLogic, GameBoard& board, int& time) {
 		networkLogic.sendDirect(message);
 	}
 	if (!start) {
-		board.turn();
+		// board.turn();
 		return;
 	}
-	while (time > 15) {
-		time -= 15;
-		board.turn();
+	while (time > SNAKE_SPEED) {
+		time -= SNAKE_SPEED;
+		if (board.turn()) {
+			std::cout << "UPDATE" << std::endl;
+			updatePositions(positions, board, nbPlayer);
+			sendPositions(networkLogic, positions, board);
+		}
 		board.move();
+		for (int i = 0; i < nbPlayer; i++) {
+			if (board.isAlive(i) == false) {
+				networkLogic.sendDirect("D" + std::to_string(i + 1));
+			}
+		}
 	}
 }
 
@@ -38,7 +68,9 @@ void	gameStartedServer(NetworkLogic& networkLogic) {
 	Timer		gameTimer;
 	int			time = 0;
 
+	std::vector<std::vector<Position>>	positions(nbPlayer);
 	gameBoard.initBoard(NULL, nbPlayer, 0);
+	updatePositions(positions, gameBoard, nbPlayer);
 	// for (int i = 0; i < nbPlayer; i++) {
 	// 	direction.push_back(gameBoard.getDirection(i));
 	// }
@@ -51,18 +83,12 @@ void	gameStartedServer(NetworkLogic& networkLogic) {
 					int n = str[1] - '0' - 1;
 					int d = str[2] - '0';
 					gameBoard.setNextDirection(n, (DIRECTION)d);
-					std::cout << "get HEAD : " << n << std::endl;
-					auto [x, y] = gameBoard.getHead(n);
-					std::cout << "SERVER SEND MESSAGE" << std::endl;
-					unsigned long sendAt = GETTIMEMS();
-					std::string messsage = str + " " + std::to_string(x) + " " + std::to_string(y) + " " + std::to_string(sendAt);
-					networkLogic.sendDirect(messsage);
 				}
 				networkLogic.setUpdate(false);
 			}
 		}
 		time += gameTimer.getTicks();
-		simulateGame(networkLogic, gameBoard, time);
+		simulateGame(networkLogic, gameBoard, time, positions, nbPlayer);
 		gameTimer.start();
 		networkLogic.run();
 		Console::get().update();

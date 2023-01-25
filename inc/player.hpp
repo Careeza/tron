@@ -65,11 +65,10 @@ class TronPlayer {
 		TronPlayer() {};
 		TronPlayer(int x, int y, DIRECTION direction_, Map *map_);
 		void		initPlayer(SDL_Renderer *renderer, int currentPlayer_);
-		void		move();
+		void		move(bool checkCollision = true);
 		void		turn();
 		void		setNextDirection(DIRECTION direction);
 		void		setDirection(DIRECTION direction);
-		void		updatePlayer(int x, int y, DIRECTION direction_);
 		DIRECTION	getDirection();
 		DIRECTION	getNextDirection();
 		void		increaseScore(int score);
@@ -80,9 +79,10 @@ class TronPlayer {
 		void		die();
 		void		render(SDL_Renderer *renderer);
 		void		setBody(SnakeBody body_);
-		std::string	playerToString();
-		void		stringToPlayer(std::string str);
 		void		reset();
+		void		updatePlayer(std::vector<std::string>& updates, int start, int n);
+		void		fillPlayer(int x1, int y1, int x2, int y2);
+		void		printPlayer();
 	private:
 		int									score;
 		DIRECTION							direction;
@@ -103,8 +103,8 @@ class GameBoard {
 		~GameBoard() {};
 		void		initBoard(SDL_Renderer *renderer, int nbPlayers_, int currentPlayer_);
 		void		initBoardLocal(SDL_Renderer *renderer);
-		void		move();
-		void		turn();
+		void		move(bool checkCollision = true);
+		bool		turn();
 		void		setNextDirection(int player, DIRECTION direction);
 		DIRECTION	getNextDirection(int player);
 		void		setDirection(int player, DIRECTION direction);
@@ -113,12 +113,11 @@ class GameBoard {
 		bool		isAlive(int player);
 		void		die(int player);
 		void		render(SDL_Renderer *renderer);
-		std::string	gameBoardToString();
-		void		stringToGameBoard(std::string str);
 		void		reset();
 		void		increaseScore(int player);
 		int			getScore(int player);
-		void		updatePlayer(int player, int x, int y, DIRECTION direction_);
+		void		updateGameBoard(std::vector<std::string>& updates, int n);
+		void		printGameBoard();
 	private:
 		std::vector<TronPlayer>							players;
 		Map												map;

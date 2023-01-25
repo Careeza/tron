@@ -3,6 +3,7 @@
 #include <SDL.h>
 #include <SDL_render.h>
 #include <random>
+#include <sstream>
 
 SDL_Texture* copyTexture(SDL_Renderer *renderer, SDL_Texture *textureToCopy) {
 	if (!textureToCopy) {
@@ -87,4 +88,14 @@ std::vector<int> getRandomNumbers(int n, int min, int max) {
 		numbers.push_back(dist(gen));
 	}
 	return numbers;
+}
+
+std::vector<std::string> split(const std::string &s, char delim) {
+	std::vector<std::string> elems;
+	std::stringstream ss(s);
+	std::string item;
+	while (std::getline(ss, item, delim)) {
+		elems.push_back(item);
+	}
+	return elems;
 }

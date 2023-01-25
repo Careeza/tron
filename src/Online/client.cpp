@@ -25,24 +25,25 @@ void	gameStartedClient(NetworkLogic &networkLogic, gameOnlineInfo *gameInfo) {
 			gameInfo->updateClient = false;
 		}
 		if (networkLogic.isUpdate()) {
-			std::vector<std::string> updates = networkLogic.getUpdate();
-			for (std::string str : updates) {
-				std::cout << "RECEIVE MESSAGE : " << str << std::endl;
-				if (str[0] == 'D') {
-					gameInfo->updateServer = true;
-					gameInfo->gameBoardStr = str;
-					gameInfo->updateType = UpdateType::UPDATE_GAME;
-				} else if (str[0] == 'S') {
-					gameInfo->updateServer = true;
-					gameInfo->gameBoardStr = str;
-					gameInfo->updateType = UpdateType::UPDATE_GAME;
-				}
-			}
+			gameInfo->infoUpdate = networkLogic.getUpdate();
+			gameInfo->updateType = UpdateType::UPDATE_GAME;
+			gameInfo->updateServer = true;
+			// for (std::string str : updates) {
+			// 	std::cout << "RECEIVE MESSAGE : " << str << std::endl;
+			// 	if (str[0] == 'D') {
+			// 		gameInfo->updateServer = true;
+			// 		gameInfo->gameBoardStr = str;
+			// 		gameInfo->updateType = UpdateType::UPDATE_GAME;
+			// 	} else if (str[0] == 'S') {
+			// 		gameInfo->updateServer = true;
+			// 		gameInfo->gameBoardStr = str;
+			// 		gameInfo->updateType = UpdateType::UPDATE_GAME;
+			// 	}
+			// }
 			// std::string str = networkLogic.getUpdate();
 			// gameInfo->gameBoardStr = str;
 			// gameInfo->updateServer = true;
 			// gameInfo->updateType = UpdateType::UPDATE_GAME;
-			networkLogic.setUpdate(false);
 		}
 		networkLogic.run();
 		SLEEP(10);

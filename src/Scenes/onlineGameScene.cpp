@@ -10,8 +10,8 @@
 void OnlineGameScene::handleEvents(Game* game) {
 	static SDL_Event	event;
 	gameOnlineInfo *gameInfo = &game->getGameInfo();
-	DIRECTION			oldDirection = board.getDirection(gameInfo->currentPlayer - 1);
-	DIRECTION			direction = board.getDirection(gameInfo->currentPlayer - 1);
+	DIRECTION			direction;
+	bool				update = false;
 	Button				*buttonPressed = nullptr;
 	while (SDL_PollEvent(&event)) {
 		if (event.type == SDL_KEYDOWN) {
@@ -19,18 +19,22 @@ void OnlineGameScene::handleEvents(Game* game) {
 				case SDLK_UP:
 				case SDLK_w:
 					direction = DIRECTION::UP;
+					update = true;
 					break;
 				case SDLK_RIGHT:
 				case SDLK_d:
 					direction = DIRECTION::RIGHT;
+					update = true;
 					break;
 				case SDLK_DOWN:
 				case SDLK_s:
 					direction = DIRECTION::DOWN;
+					update = true;
 					break;
 				case SDLK_LEFT:
 				case SDLK_a:
 					direction = DIRECTION::LEFT;
+					update = true;
 					break;
 				case SDLK_ESCAPE:
 					game->quitGame();
@@ -44,7 +48,7 @@ void OnlineGameScene::handleEvents(Game* game) {
 	if (buttonPressed) {
 		buttonPressed->onClickEvent(game);
 	}
-	if (direction != oldDirection) {
+	if (update) {
 		gameInfo->updateClient = true;
 		gameInfo->direction = (int)direction;
 		gameInfo->updateType = UpdateType::UPDATE_DIRECTION;
@@ -69,46 +73,49 @@ void OnlineGameScene::initScene(GameWindow& window) {
 void OnlineGameScene::updateScene(GameWindow& window, int deltaTime) {
 	Scene::updateScene(window, deltaTime);
 	static bool start = false;
+	bool debug = false;
 
 	gameOnlineInfo *gameInfo = &game->getGameInfo();
 	if (gameInfo->updateServer) {
 		if (gameInfo->updateType == UpdateType::UPDATE_GAME) {
-			std::string	str = gameInfo->gameBoardStr;
-			if (str[0] == 'S') {
-				unsigned long sendAt = std::stoul(str.substr(2));
-				time = sendAt - GETTIMEMS();
-				start = true;
-			} else {
-				std::string		str1;
-				int				x;
-				int				y;
-				unsigned long	sendAt;
-				//lis x, y et le temps ou le message a ete recu a partir du 4eme caractere
-				std::stringstream ss(str);
-				ss >> str1 >> x >> y >> sendAt;
-				// time = GETTIMEMS() - sendAt;
-
-				std::cout << "NEW TIME : " << time << std::endl;
-
-				int n = str1[1] - '0' - 1;
-				int d = str1[2] - '0';
-				std::cout << "n: " << n << " d: " << d << std::endl;
-				board.setNextDirection(n, (DIRECTION)d);
-				// board.updatePlayer(n, x, y, (DIRECTION)d);
+			std::vector<std::string> updates = gameInfo->infoUpdate;
+			for (std::string str : updates) {
+				if (str[0] == 'S') {
+					board.reset();
+					unsigned long sendAt = std::stoul(str.substr(2));
+					time = sendAt - GETTIMEMS();
+					start = true;
+				} else if (str[0] == 'P') {
+					std::vector<std::string> infos = split(str, '\n');
+					int		n = std::stoi(infos[1]);
+					std::cout << "n: " << n << std::endl;
+					time += GETTIMEMS() - std::stoul(infos[2]);
+					std::cout << "time: " << time << std::endl;
+					board.updateGameBoard(infos, n);
+					debug = true;
+				} else if (str[0] == 'D') {
+					int n = std::stoi(str.substr(1));
+					std::cout << "kill " << n << std::endl;
+					board.die(n - 1);
+				}
 			}
 		}
 		gameInfo->updateServer = false;
 	}
 
 	if (!start) {
-		board.turn();
+		// board.turn();
 		return;
 	}
 	while (time > SNAKE_SPEED) {
 		time -= SNAKE_SPEED;
 		board.turn();
-		board.move();
+		board.move(false);
 	}
+	// if (debug) {
+	// 	board.printGameBoard();
+	// 	exit(0);
+	// }
 }
 
 void	OnlineGameScene::giveInfo(void *data) {
@@ -120,5 +127,6 @@ void	OnlineGameScene::giveInfo(void *data) {
 
 
 void OnlineGameScene::renderObjects(GameWindow& window) {
+	// std::cout << "RENDER" << std::endl;
 	board.render(window.getRenderer());
 }
